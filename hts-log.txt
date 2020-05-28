@@ -1,0 +1,18 @@
+HTTrack3.49-2+htsswf+htsjava launched on Fri, 24 Jan 2020 10:34:24 at http://corpthemes.com/html/oneadmin/?storefront=envato-elements +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" http://corpthemes.com/html/oneadmin/?storefront=envato-elements -O1 "F:\STUDY\admin_dash" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+10:34:26	Warning: 	Note: due to corpthemes.com remote robots.txt rules, links beginning with these path will be forbidden: /wp-admin/ (see in the options to disable this)
+10:37:10	Error: 	"Not Found" (404) at link corpthemes.com/html/oneadmin/You must include the utils.js file before tether.js (from corpthemes.com/html/oneadmin/javascript/tether.min.js)
+10:37:10	Error: 	"Not Found" (404) at link corpthemes.com/html/oneadmin/amcharts/ (from corpthemes.com/html/oneadmin/javascript/ammap.js)
+10:37:11	Error: 	"Not Found" (404) at link corpthemes.com/html/oneadmin/GET (from corpthemes.com/html/oneadmin/javascript/ammap.js)
+10:37:11	Error: 	"Not Found" (404) at link corpthemes.com/html/oneadmin/homeIcon.gif (from corpthemes.com/html/oneadmin/javascript/ammap.js)
+10:37:11	Error: 	"Not Found" (404) at link corpthemes.com/html/oneadmin/cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js (from corpthemes.com/html/oneadmin/javascript/jquery.mCustomScrollbar.js)
+10:37:11	Error: 	"Not Found" (404) at link corpthemes.com/html/oneadmin/stylesheets/mCSB_buttons.png (from corpthemes.com/html/oneadmin/stylesheets/mCustomScrollbar.css)
+
+HTTrack Website Copier/3.49-2 mirror complete in 2 minutes 53 seconds : 94 links scanned, 87 files written (3573973 bytes overall) [3599824 bytes received at 20808 bytes/sec], 328624 bytes transferred using HTTP compression in 8 files, ratio 28%, 3.4 requests per connection
+(6 errors, 1 warnings, 0 messages)
