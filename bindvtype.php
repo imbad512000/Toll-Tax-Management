@@ -5,13 +5,15 @@
 
 	$q = "SELECT * FROM `tbl_vehicle_category`";
 	$run = mysqli_query($con,$q); 
-	echo "<select class=
+	echo "<select name='type_of_vehicle' class=
 	corm-control'>";
 	while ($data = mysqli_fetch_assoc($run)) 
     {
     	?>
-           <option name="type_of_vehicle" data-style="btn-light" value="<?php echo $data["vehicle_type"]?>"><?php echo $data["vehicle_type"]; ?></option>
-         <?php
+<option data-style="btn-light" value="<?php echo $data["vehicle_type"]?>">
+    <?php echo $data["vehicle_type"]; ?>
+</option>
+<?php
     }
     echo "</select>";
 

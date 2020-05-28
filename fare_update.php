@@ -50,38 +50,38 @@
 
                     <?php
 
-            if(isset($_REQUEST['sub1'])){
+            // if(isset($_REQUEST['sub1'])){
 
-
-                $con = mysqli_connect("localhost","root","","start");
+            //     echo "This is for testing";        
+            //     $con = mysqli_connect("localhost","root","","start");
 
                 
-                // $C_id=$_REQUEST['id'];
-                $Vehicle_type=$_REQUEST['type_of_vehicle'];
-                $Tax_Amount=$_REQUEST['tamount'];
+            //     // $C_id=$_REQUEST['id'];
+            //     $Vehicle_type=$_REQUEST['type_of_vehicle'];
+            //     $Tax_Amount=$_REQUEST['tamount'];
 
 
-                $q="UPDATE `tbl_vehicle_category` SET `tax_amount`='$Tax_Amount' WHERE `vehicle_type`='$Vehicle_type'";
+            //     $q="UPDATE `tbl_vehicle_category` SET `tax_amount`='$Tax_Amount' WHERE `vehicle_type`='$Vehicle_type'";
 
                
-                //$res=mysqli_query($con,$q);
+            //     //$res=mysqli_query($con,$q);
 
-                $run=mysqli_query($con,$q);  
+            //     $run=mysqli_query($con,$q);  
             
                 
                
-                // if($res)
-                // {
-                //     header("location: Admin1.php");
-                // }
-                // else{
-                //     echo "Error :";
-                // }
-            }
+            //     // if($res)
+            //     // {
+            //     //     header("location: Admin1.php");
+            //     // }
+            //     // else{
+            //     //     echo "Error :";
+            //     // }
+            // }
 
-                ob_flush();
+            //     ob_flush();
 
-            ?>
+            // ?>
 
                 </a>
             </div>
@@ -465,12 +465,12 @@
                             });
 
                             function bindvtye() {
-                                // alert('addddd');
 
                                 var xmthttp = new XMLHttpRequest();
                                 xmthttp.open("GET", "bindvtype.php", false);
                                 xmthttp.send(null);
                                 document.getElementById("vtype").innerHTML = xmthttp.responseText;
+                                // alert(xmthttp.responseText);
                             }
                             </script>
                             <!-- Index js -->
@@ -482,3 +482,42 @@
 <!-- Mirrored from codervent.com/dashtreme/demo/dark-admin/vertical-layout/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Mar 2020 11:06:39 GMT -->
 
 </html>
+
+
+
+<?php
+
+            if(isset($_REQUEST['sub1'])){
+
+                // echo "This is for testing";        
+                $con = mysqli_connect("localhost","root","","start");
+
+                
+                // $C_id=$_REQUEST['id'];
+                $Vehicle_type=$_REQUEST['type_of_vehicle'];
+                $Tax_Amount=$_REQUEST['tamount'];
+
+                //echo "<script>alert('$Tax_Amount')</script>";
+                // echo "<script>alert('$Vehicle_type')</script>";
+
+                $q="UPDATE `tbl_vehicle_category` SET `tax_amount`='$Tax_Amount' WHERE `vehicle_type`='$Vehicle_type'";
+
+               
+                //$res=mysqli_query($con,$q);
+
+                $run=mysqli_query($con,$q);  
+              
+               
+                if($run)
+                {
+                    // header("location: Admin1.php");
+                    echo "<script>alert('Updated')</script>";
+                }
+                else{
+                    echo "Error :";
+                }
+            }
+
+                ob_flush();
+
+            ?>

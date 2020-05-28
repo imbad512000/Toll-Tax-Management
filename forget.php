@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="assets/css/bootstrap.css">
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<script src="assets/js/bootstrap.js" type="text/javascript" charset="utf-8" async defer></script>
-	<script src="assets/js/bootstrap.min.js" type="text/javascript" charset="utf-8" async defer></script>
-	<title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/bootstrap.js" type="text/javascript" charset="utf-8" async defer></script>
+    <script src="assets/js/bootstrap.min.js" type="text/javascript" charset="utf-8" async defer></script>
+    <title></title>
 </head>
-<body class="" background="assets/img/bg.jpg"  style="background-size: 100%">
-	<form action="#	" method="post" accept-charset="utf-8">
-		<div class="container m-5 card text-light bg-transparent m-auto+" style="font-weight: 650;">
-			<div class="card-header text-center font-weight-bold" style="font-size: 2em">
-				Forgot Password
-			</div>
-			<div class="card-body">
-				<div class="form-group row text-center">
-					<label class="col-2" for="fname" style="font-size: 18px">Email-id</label>
-					<input type="email" name="email" placeholder="Enter Registered Email-id" class="form-control col-6" required>
-				</div>
-				<!-- <div class="form-group row">
+
+<body class="" background="assets/img/bg.jpg" style="background-size: 100%">
+    <form action="#	" method="post" accept-charset="utf-8">
+        <div class="container m-5 card text-light bg-transparent m-auto+" style="font-weight: 650;">
+            <div class="card-header text-center font-weight-bold" style="font-size: 2em">
+                Forgot Password
+            </div>
+            <div class="card-body">
+                <div class="form-group row text-center">
+                    <label class="col-2" for="fname" style="font-size: 18px">Email-id</label>
+                    <input type="email" name="email" placeholder="Enter Registered Email-id" class="form-control col-6"
+                        required>
+                </div>
+                <!-- <div class="form-group row">
 					<label class="col-3" for="lname">Last Name</label>
 					<input type="text" name="lname" placeholder="Enter Last Name" class="form-control col-8" required>
 				</div>
@@ -50,17 +53,18 @@
 					<label class="col-3" for="dob">Date of Birth</label>
 					<input type="date" name="dob" placeholder="Enter Date of Birth" class="form-control col-8"
 					> -->
-				</div>
-				<div class="form-group row">
-					<input type="submit" name="dob4" value="Submit" class="btn btn-light offset-4 col-3 font-weight-bold">
-				</div>
-			</div>
-		</div>
-	</form>
+            </div>
+            <div class="form-group row">
+                <input type="submit" name="dob4" value="Submit" class="btn btn-light offset-4 col-3 font-weight-bold">
+            </div>
+        </div>
+        </div>
+    </form>
 </body>
+
 </html>
 
-			<?php
+<?php
 	
 
 
@@ -85,10 +89,11 @@
 						$count=mysqli_num_rows($res);
 						$row=mysqli_fetch_array($res);
 
+						
 
 						if($count>0){
 							echo $row['cust_reg_password'];
-
+							// print_r('$row');
 							$msg = "Hi $mail Your Password is {$row['cust_reg_password']}";
 							 //recipient email here
 							$rec = "$mail";
@@ -96,7 +101,6 @@
 							$sub="FORGOT PASSWORD";
 							mail($rec,$sub,$msg);
 							echo "Your Password has been sent to your registered-id.";
-							
 							header('location: final_login.php');
 
 						}
