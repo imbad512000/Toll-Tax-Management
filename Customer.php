@@ -66,13 +66,13 @@
                 <li>
                     <a href="passc.php" class="waves-effect">
                         <i class="zmdi zmdi-format-list-bulleted"></i> <span>Generate Pass</span>
-                    </a>
+
                 </li>
                 </li>
                 <!-- <li>
         <a href="receiptc.php" class="waves-effect">
           <i class="zmdi zmdi-format-list-bulleted"></i> <span>Generate Receipt</span>
-         </a>
+         </a>bhavik
          </li> -->
                 </li>
                 <li>
