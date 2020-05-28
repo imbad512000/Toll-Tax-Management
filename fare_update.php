@@ -138,7 +138,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="javaScript:void();" class="waves-effect">
+                    <a href="Entry_trial.php" class="waves-effect">
                         <i class="zmdi zmdi-invert-colors"></i> <span>Entry Detail</span>
 
                     </a>
