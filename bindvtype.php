@@ -6,7 +6,7 @@
 	$q = "SELECT * FROM `tbl_vehicle_category`";
 	$run = mysqli_query($con,$q); 
 	echo "<select name='type_of_vehicle' class=
-	corm-control'>";
+	'form-control'>";
 	while ($data = mysqli_fetch_assoc($run)) 
     {
     	?>
