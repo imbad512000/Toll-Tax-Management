@@ -72,7 +72,7 @@
                 <!-- <li>
         <a href="receiptc.php" class="waves-effect">
           <i class="zmdi zmdi-format-list-bulleted"></i> <span>Generate Receipt</span>
-         </a>bhavik
+         </a>bhavik Desai
          </li> -->
                 </li>
                 <li>
