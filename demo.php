@@ -20,7 +20,7 @@
                 <label for="n" class="btn btn-danger">File</label>
                 <input type="submit" name="sub" value="submit">
             </div>
-            Doing omething
+            Doing omething// doing
         </div>
     </form>
 </body>
