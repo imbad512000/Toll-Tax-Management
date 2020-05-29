@@ -58,13 +58,13 @@
                 
 
                 <li>
-                    <a href="passc.php" class="waves-effect">
+                    <a href="pass_create.php" class="waves-effect">
                         <i class="zmdi zmdi-format-list-bulleted"></i> <span>Create Pass</span>
                     </a>
 
                 </li>
                 <li>
-                    <a href="passc.php" class="waves-effect">
+                    <a href="search_p.php" class="waves-effect">
                         <i class="zmdi zmdi-format-list-bulleted"></i> <span>Search Pass</span>
                     </a>
                 </li>
