@@ -26,7 +26,7 @@
 
     <!-- Favicons
      ================================================== -->
-    <link rel="icon" type="image/logo.png" href="images/logo.png"  >
+    <link rel="icon" type="image/logo.png" href="images/logo.png">
 
 
     <!-- Fonts
@@ -128,7 +128,7 @@
 
                         </li>
                         <li><a href="about.php">About Us</a></li>
-                       
+
                         <li><a href="final_login.php">Sign in</a></li>
                         <li><a href="#">Sign Up<i class="fa fa-caret-down"></i></a>
                             <ul class="dropdown-menu">
@@ -287,7 +287,7 @@
 
     <!-- WHY PEOPLE CHOOSE US -->
 
-   <!--  <section class="bg-blue why-people-chose-us">
+    <!--  <section class="bg-blue why-people-chose-us">
         <div class="container">
             <div class="heading text-center animate bounceIn">
                 <h2>Why People Choose Us</h2>
@@ -346,9 +346,10 @@
                 </div>
             </div>
         </div>
-    </section> --> <!-- / WHY PEOPLE CHOOSE US -->
+    </section> -->
+    <!-- / WHY PEOPLE CHOOSE US -->
 
-<br><br><br>
+    <br><br><br>
 
     <!-- FUNFACTS -->
     <div class="funfacts two parallax">
@@ -397,7 +398,14 @@
                                     alt=""></a></div>
                     </div>
                     <div class="col-md-9 col-sm-9">
-                        <p>The National Highways Authority of India (NHAI) was constituted by an Act of Parliament, the National Highways Authority of India Act, 1988. It is responsible for the development, maintenance and management of National Highways entrusted to it and/or matters connected or incidental thereto. NHAI enters into Concession Agreements for design, construction, operation and maintenance of highways by DBFOT Concessionaires. The Concessionaire builds NH stretches and during operation and maintenance of the said stretch collects and retains the toll (user fee). In case of stretches developed on Govt. / NHAI Funds, NHAI engages OMT Concessionaire / User-Fee Collection Contractors.</p>
+                        <p>The National Highways Authority of India (NHAI) was constituted by an Act of Parliament, the
+                            National Highways Authority of India Act, 1988. It is responsible for the development,
+                            maintenance and management of National Highways entrusted to it and/or matters connected or
+                            incidental thereto. NHAI enters into Concession Agreements for design, construction,
+                            operation and maintenance of highways by DBFOT Concessionaires. The Concessionaire builds NH
+                            stretches and during operation and maintenance of the said stretch collects and retains the
+                            toll (user fee). In case of stretches developed on Govt. / NHAI Funds, NHAI engages OMT
+                            Concessionaire / User-Fee Collection Contractors.</p>
                     </div>
                 </div>
 
@@ -419,13 +427,13 @@
                                 <ul>
                                     <li><a href="main.php">Home</a></li>
                                     <li><a href="about.php">About Us</a></li>
-                                   
+
                                     <li><a href="#">Contact Us</a></li>
-                                     <li><a href="reg.php">Sign Up</a></li>
+                                    <li><a href="reg.php">Sign Up</a></li>
                                     <li><a href="final_login.php">Log In</a></li>
                                 </ul>
-                                 
-                                
+
+
                             </div>
                         </div>
                         <!--<div class="col-md-6">
