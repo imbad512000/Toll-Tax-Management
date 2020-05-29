@@ -124,11 +124,35 @@
 
                 <nav class="main-nav navbar-collapse collapse" id="primary-nav">
                     <ul class="nav nav-pills">
-                        <li class="active"><a href="#.">Home </a>
+                        <li ><a href="main.php">Home </a>
 
                         </li>
-                        <li><a href="about.php">About Us</a></li>
-                       
+                        <li class="active"><a href="about.php">About Us</a></li>
+                       <!--  <li class="dropdown"><a href="#.">Services <i class="fa fa-caret-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Financial Planning</a></li>
+                                <li><a href="#">Bonds</a></li>
+                                <li><a href="#">Commodities</a></li>
+                                <li><a href="#">Investment Trusts</a></li>
+                                <li class="dropdown-submenu"><a href="#.">Mutual Funds <i
+                                            class="fa fa-caret-right"></i></a> 
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Financial Planning</a></li>
+                                        <li><a href="#">Bonds</a></li>
+                                        <li><a href="#">Commodities</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Retirement</a></li>
+                                <li><a href="#">Trades</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Cases</a></li>
+                        <li class="dropdown"><a href="#.">News <i class="fa fa-caret-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">News One</a></li>
+                                <li><a href="#">News Two</a></li>
+                            </ul>
+                        </li>-->
                         <li><a href="final_login.php">Sign in</a></li>
                         <li><a href="#">Sign Up<i class="fa fa-caret-down"></i></a>
                             <ul class="dropdown-menu">
@@ -350,8 +374,19 @@
 
 <br><br><br>
 
+    <h2><center> National Highway Of India</center></h2>
+    <center><p style="width: 950px;">
+        <br>The National Highways Authority of India (NHAI) was constituted by an Act of Parliament, the National Highways Authority of India Act, 1988. It is responsible for the development, maintenance and management of National Highways entrusted to it and/or matters connected or incidental thereto. NHAI enters into Concession Agreements for design, construction, operation and maintenance of highways by DBFOT Concessionaires. The Concessionaire builds NH stretches and during operation and maintenance of the said stretch collects and retains the toll (user fee). In case of stretches developed on Govt. / NHAI Funds, NHAI engages OMT Concessionaire / User-Fee Collection Contractors.<br><br>
+
+During operation and maintenance of tolled stretches of National Highways (NHs), the DBFOT Concessionaires/ OMT Concessionaires / User Fee Collection Contractors have been mandated to collect user fee (toll) from road users. The applicable user-fee (toll) rates for various categories of vehicles shall be displayed at the respective Toll Plaza. Toll Information System (TIS) has been devised to put in place a mechanism, whereby the road users can ascertain through public domain the exact user fee (toll) rates for a particular plaza OR a particular journey between two stations through a selected route. In addition it will also help disseminate information about the concessions/ discounts to local and frequent users, provision of various facilities on toll road, important telephone numbers, etc.<br><br>
+
+MINISTRY OF ROAD TRANSPORT & HIGHWAYS
+The Ministry of Road Transport & Highways, an apex organisation under the Central Government, is entrusted with the task of formulating and administering, in consultation with other Central Ministries/Departments, State Governments/UT Administrations, organisations and individuals, policies for Road Transport, National Highways and Transport Research with a view to increasing the mobility and efficiency of the road transport system in the country.
+
+The Ministry has two wings : Roads wing and Transport wing.
+    </p> </center>
     <!-- FUNFACTS -->
-    <div class="funfacts two parallax">
+   <!--  <div class="funfacts two parallax">
         <div class="container">
             <div class="funfacts-inner">
                 <h2>Helping for Toll Detail</h2>
@@ -378,8 +413,8 @@
                     </div>
                 </div>
             </div>
-        </div><!-- / CONTAINER -->
-    </div><!-- / FUNFACTS -->
+        </div> --><!-- / CONTAINER -->
+    <!-- / FUNFACTS -->
 
     <!--
 		
@@ -396,14 +431,7 @@
                         <div class="footer-logo animate fadeInLeft"><a href="main.php"><img src="images/logo.png"
                                     alt=""></a></div>
                     </div>
-                    <div class="col-md-9 col-sm-9">
-                        <p>The National Highways Authority of India (NHAI) was constituted by an Act of Parliament, the National Highways Authority of India Act, 1988. It is responsible for the development, maintenance and management of National Highways entrusted to it and/or matters connected or incidental thereto. NHAI enters into Concession Agreements for design, construction, operation and maintenance of highways by DBFOT Concessionaires. The Concessionaire builds NH stretches and during operation and maintenance of the said stretch collects and retains the toll (user fee). In case of stretches developed on Govt. / NHAI Funds, NHAI engages OMT Concessionaire / User-Fee Collection Contractors.</p>
-                    </div>
-                </div>
-
-                <div class="height-50"></div>
-
-                <div class="footer-left">
+                     <div class="footer-left">
                     <div class="footer-address-widget clearfix">
                         <ul>
                             <li><i class="icon-telephone114"></i>+91 1800-11-6062<a href="http://tis.nhai.gov.in/">Toll
@@ -412,14 +440,24 @@
                                     Surat, Gujarat 394335</span></li>
                         </ul>
                     </div>
+                   <!--  <div class="col-md-9 col-sm-9">
+                        <p>The National Highways Authority of India (NHAI) was constituted by an Act of Parliament, the National Highways Authority of India Act, 1988. It is responsible for the development, maintenance and management of National Highways entrusted to it and/or matters connected or incidental thereto. NHAI enters into Concession Agreements for design, construction, operation and maintenance of highways by DBFOT Concessionaires. The Concessionaire builds NH stretches and during operation and maintenance of the said stretch collects and retains the toll (user fee). In case of stretches developed on Govt. / NHAI Funds, NHAI engages OMT Concessionaire / User-Fee Collection Contractors.</p>
+                    </div> -->
+                </div>
+                    <br><br>
+                <div class="height-50"></div>
+
+                <div class="footer-left">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="usefull-links-widget clearfix">
                                 <h4>Usefull Links</h4>
                                 <ul>
                                     <li><a href="main.php">Home</a></li>
-                                    <li><a href="about.php">About Us</a></li>
-                                   
+                                    <li><a href="#">About Us</a></li>
+                                    <!-- <li><a href="#">Services</a></li> -->
+                                   <!--  <li><a href="#.">Projects</a></li>
+                                    <li><a href="#">News</a></li> -->
                                     <li><a href="#">Contact Us</a></li>
                                      <li><a href="reg.php">Sign Up</a></li>
                                     <li><a href="final_login.php">Log In</a></li>
@@ -495,7 +533,6 @@
         </div>
 
     </footer>
-
 
 
 

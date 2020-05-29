@@ -40,9 +40,10 @@
  
   <!--Start sidebar-wrapper-->
    <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
-     <div class="brand-logo">
+     <div class="brand-logo" style="height: 80px;padding-top: 5px;">
+     
        <a href="emp_dash.php">
-        <img src="assets3/images/logo.png" class="logo-icon" alt="logo icon" style="width: 80%;">
+        <img src="assets3/images/logo.png" class="logo-icon" alt="logo icon" style="width: 30%;">
          <!-- <h5 class="logo-text"> Admin</h5> -->
        </a>
      </div>
@@ -98,7 +99,7 @@
 
 <!--Start topbar header-->
 <header class="topbar-nav">
- <nav id="header-setting" class="navbar navbar-expand fixed-top">
+ <nav id="header-setting" class="navbar navbar-expand fixed-top" style="height: 80px;">
   <ul class="navbar-nav mr-auto align-items-center">
     <li class="nav-item">
       <a class="nav-link toggle-menu" href="javascript:void();">

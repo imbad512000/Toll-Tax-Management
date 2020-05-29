@@ -1,6 +1,9 @@
 <?php
     ob_start();
 ?>
+<?php
+    ob_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +14,7 @@
     <script src="assets2s/js/bootstrap.min.js" type="text/javascript" charset="utf-8" async defer></script>
     <title>Login</title>
 </head>
+
 <!-- 
     <form action="#" method="post" accept-charset="utf-8">
         <div class="container m-5 card text-dark bg-transparent m-auto" style="font-weight: 650;">
@@ -36,7 +40,7 @@
         </div>
     </form>
 </body> -->
-<body class="" background="../files/assets2ts/img1/back.jpg" style="background-size: 100%">
+<body class="" background="assets/img/a1.jpg" style="background-size: 100%">
         <div class="account-pages mt-5 mb-5">/
             <div class="container">
                 <div class="row justify-content-center">

@@ -42,10 +42,11 @@
  <div id="wrapper">
  
   <!--Start sidebar-wrapper-->
-   <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
-     <div class="brand-logo">
+    <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
+     <div class="brand-logo" style="height: 80px;padding-top: 5px;">
+     
        <a href="emp_dash.php">
-        <img src="assets3/images/logo.png" class="logo-icon" alt="logo icon" style="width: 80%;">
+        <img src="assets3/images/logo.png" class="logo-icon" alt="logo icon" style="width: 30%;">
          <!-- <h5 class="logo-text"> Admin</h5> -->
        </a>
      </div>
@@ -101,7 +102,7 @@
 
 <!--Start topbar header-->
 <header class="topbar-nav">
- <nav id="header-setting" class="navbar navbar-expand fixed-top">
+ <nav id="header-setting" class="navbar navbar-expand fixed-top" style="height: 80px;">
   <ul class="navbar-nav mr-auto align-items-center">
     <li class="nav-item">
       <a class="nav-link toggle-menu" href="javascript:void();">
@@ -155,11 +156,11 @@
     <div class="container-fluid">
       
       <!--Start Dashboard Content-->
-
+       <br><br><br>
       <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-8 col-lg-6 col-xl-5">
-                        <div class="card" style="height: 900px; width:480px;>
+                        <div class="card" style="height: 800px; width:430px;>
 
                             <div class="card-body" >
                                 
@@ -259,20 +260,33 @@
     <div class="col-3">
     <input type="submit" name="sub1" value="Add" style="background-color:rgba();width: 150px;height: 40px;">
 
+<br><br><br><br>
+<!-- <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label"> <span class="text-danger"></span></label>
+    <div class="col-3">
+    <input type="submit" name="sub1" value="Add" style="background-color:rgba();width: 150px;height: 40px;">
+
 </div>
 </div> -->
+<br>
 </form>
 <!--End Row-->
+
+    
+     
+  
+
+   
   </div><!--End Row-->
 
 
         <!--End Row-->
-	
-	
+  
+  
       <!--End Dashboard Content-->
 <!--start overlay-->
-	  <div class="overlay toggle-menu"></div>
-	<!--end overlay-->
+    <div class="overlay toggle-menu"></div>
+  <!--end overlay-->
     </div>
     <!-- End container-fluid-->
     
@@ -280,28 +294,29 @@
    <!--Start Back To Top Button-->
     <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
     <!--End Back To Top Button-->
-
-    </div><!--End wrapper-->
-	
-	<!--Start footer-->
-	<!-- <footer class="footer">
+  </div>
+</div>
+</div>
+<br><br><br><br><br><br>
+  <!--Start footer-->
+ <!--  <footer class="footer">
       <div class="container">
         <div class="text-center">
           Copyright © 2020 Desinged by Siddharth Kansara | Bhavik Desai
         </div>
       </div>
     </footer> -->
-	<!--End footer-->
-	
-	
+  <!--End footer-->
   
   
+  
+  </div><!--End wrapper-->
 
   <!-- Bootstrap core JavaScript-->
   <script src="assets2/js/jquery.min.js"></script>
   <script src="assets2/js/popper.min.js"></script>
   <script src="assets2/js/bootstrap.min.js"></script>
-	
+  
  <!-- simplebar js -->
   <script src="assets2/plugins/simplebar/js/simplebar.js"></script>
   <!-- sidebar-menu js -->
@@ -322,6 +337,7 @@
   <script src="assets2/plugins/sparkline-charts/jquery.sparkline.min.js"></script>
   <script src="assets2/plugins/jquery-knob/excanvas.js"></script>
   <script src="assets2/plugins/jquery-knob/jquery.knob.js"></script>
+
     
     <script>
         $(function() {
@@ -336,7 +352,6 @@
 
 <!-- Mirrored from codervent.com/dashtreme/demo/dark-admin/vertical-layout/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Mar 2020 11:06:39 GMT -->
 </html>
-
 <?php
 
     if(isset($_REQUEST['sub1'])){
