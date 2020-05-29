@@ -41,9 +41,9 @@
 
         <!--Start sidebar-wrapper-->
         <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
-            <div class="brand-logo">
+        <div class="brand-logo" style="height: 80px;padding-top: 5px;">
                 <a href="Customer.php">
-                    <img src="assets3/images/logo.png" class="logo-icon" alt="logo icon" style="width: 80%;">
+                <img src="assets3/images/logo.png" class="logo-icon" alt="logo icon" style="width: 30%;">
                     <!-- <h5 class="logo-text"> Admin</h5> -->
                 </a>
             </div>
@@ -51,24 +51,24 @@
             <ul class="sidebar-menu">
                 <li class="sidebar-header">MAIN NAVIGATION</li>
                 <li>
-                    <a href="Customer.php" class="waves-effect">
-                        <i class="zmdi zmdi-view-dashboard"></i> <span>Dashboard</span>
-                    </a>
+                   
                 </li>
-                </li>
-                <li>
-                    <a href="#" class="waves-effect">
-                        <i class="zmdi zmdi-view-dashboard"></i> <span>Toll Detail</span>
-                    </a>
-                </li>
-                </li>
+                
+              
+                
 
                 <li>
                     <a href="passc.php" class="waves-effect">
-                        <i class="zmdi zmdi-format-list-bulleted"></i> <span>Generate Pass</span>
+                        <i class="zmdi zmdi-format-list-bulleted"></i> <span>Create Pass</span>
+                    </a>
 
                 </li>
+                <li>
+                    <a href="passc.php" class="waves-effect">
+                        <i class="zmdi zmdi-format-list-bulleted"></i> <span>Search Pass</span>
+                    </a>
                 </li>
+                
                 <!-- <li>
         <a href="receiptc.php" class="waves-effect">
           <i class="zmdi zmdi-format-list-bulleted"></i> <span>Generate Receipt</span>
@@ -83,7 +83,7 @@
                 </li>
                 <li>
                     <a href="#" class="waves-effect">
-                        <i class="zmdi zmdi-card-travel"></i> <span>Payement Detail</span>
+                        <i class="zmdi zmdi-view-dashboard"></i> <span>Toll Detail</span>
                     </a>
                 </li>
 
@@ -92,7 +92,7 @@
 
         <!--Start topbar header-->
         <header class="topbar-nav">
-            <nav id="header-setting" class="navbar navbar-expand fixed-top">
+        <nav id="header-setting" class="navbar navbar-expand fixed-top" style="height: 80px;">
                 <ul class="navbar-nav mr-auto align-items-center">
                     <li class="nav-item">
                         <a class="nav-link toggle-menu" href="javascript:void();">
@@ -141,7 +141,7 @@
             </nav>
         </header>
         <!--End topbar header-->
-
+        <br><br>
         <div class="clearfix"></div>
 
         <div class="content-wrapper">

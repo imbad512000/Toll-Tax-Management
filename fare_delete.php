@@ -44,9 +44,10 @@
 
         <!--Start sidebar-wrapper-->
         <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
-            <div class="brand-logo">
+        <div class="brand-logo" style="height: 80px;padding-top: 5px;">
+     
                 <a href="Admin1.php">
-                    <img src="assets3/images/logo.png" class="logo-icon" alt="logo icon" style="width: 80%;">
+                <img src="assets3/images/logo.png" class="logo-icon" alt="logo icon" style="width: 30%;">
 
                 </a>
             </div>
@@ -54,9 +55,7 @@
             <ul class="sidebar-menu">
                 <li class="sidebar-header">MAIN NAVIGATION</li>
                 <li>
-                    <a href="Admin1.php" class="waves-effect">
-                        <i class="zmdi zmdi-view-dashboard"></i> <span>Dashboard</span>
-                    </a>
+                    
                 </li>
                 </li>
                 <li>
@@ -113,7 +112,7 @@
 
         <!--Start topbar header-->
         <header class="topbar-nav">
-            <nav id="header-setting" class="navbar navbar-expand fixed-top">
+        <nav id="header-setting" class="navbar navbar-expand fixed-top" style="height: 80px;">
                 <ul class="navbar-nav mr-auto align-items-center">
                     <li class="nav-item">
                         <a class="nav-link toggle-menu" href="javascript:void();">
@@ -300,6 +299,7 @@
                         <!-- <div class="row">
 <div class="col-sm-12">
  -->
+                        <br><br>
                         <!-- <div class="account-pages mt-5 mb-5">/
  -->
                         <div class="container">

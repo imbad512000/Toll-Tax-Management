@@ -46,9 +46,9 @@
 
         <!--Start sidebar-wrapper-->
         <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
-            <div class="brand-logo">
+        <div class="brand-logo" style="height: 80px;padding-top: 5px;">
                 <a href="Admin1.php">
-                    <img src="assets3/images/logo.png" class="logo-icon" alt="logo icon" style="width: 80%;">
+                    <img src="assets3/images/logo.png" class="logo-icon" alt="logo icon" style="width: 30%;">
 
                 </a>
             </div>
@@ -57,9 +57,7 @@
             <ul class="sidebar-menu">
                 <li class="sidebar-header">MAIN NAVIGATION</li>
                 <li>
-                    <a href="Admin1.php" class="waves-effect">
-                        <i class="zmdi zmdi-view-dashboard"></i> <span>Dashboard</span>
-                    </a>
+                    
                 </li>
                 </li>
                 <li>
@@ -115,7 +113,7 @@
 
         <!--Start topbar header-->
         <header class="topbar-nav">
-            <nav id="header-setting" class="navbar navbar-expand fixed-top">
+        <nav id="header-setting" class="navbar navbar-expand fixed-top" style="height: 80px;">
                 <ul class="navbar-nav mr-auto align-items-center">
                     <li class="nav-item">
                         <a class="nav-link toggle-menu" href="javascript:void();">
@@ -289,7 +287,7 @@
             </nav>
         </header>
         <!--End topbar header-->
-
+        <br><br>
         <div class="clearfix"></div>
 
         <div class="content-wrapper">
@@ -398,11 +396,12 @@
             <!-- End container-fluid-->
 
         </div>
+        
         <!--End content-wrapper-->
         <!--Start Back To Top Button-->
         <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
         <!--End Back To Top Button-->
-
+        <br><br><br><br><br><br><br><br><br><br><br><br>
         <!--Start footer-->
         <footer class="footer">
             <div class="container">

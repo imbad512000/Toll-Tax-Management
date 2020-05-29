@@ -51,9 +51,7 @@
    <ul class="sidebar-menu">
       <li class="sidebar-header">MAIN NAVIGATION</li>
       <li>
-        <a href="emp_dash.php" class="waves-effect">
-          <i class="zmdi zmdi-view-dashboard"></i> <span>Dashboard</span>
-        </a>
+        
 		  </li>
       </li>
       

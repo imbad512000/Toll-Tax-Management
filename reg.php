@@ -11,32 +11,8 @@
     <script src="assets2/js/bootstrap.min.js" type="text/javascript" charset="utf-8" async defer></script>
     <title></title>
 </head>
-<!-- 
-    <form action="#" method="post" accept-charset="utf-8">
-        <div class="container m-5 card text-dark bg-transparent m-auto" style="font-weight: 650;">
-            <div class="card-header text-center font-weight-bold" style="font-size: 2em">
-                Sign In
-            </div>
-            <div class="card-body">
-                <div class="form-group row">
-                    <label class="col-3" for="fname">E-mail</label>
-                    <input type="email" name="email" placeholder="Enter Email-id" class="form-control col-8" required>
-                </div>
-                <div class="form-group row">
-                    <label class="col-3" for="lname">Password</label>
-                    <input type="password" name="pass" placeholder="Enter Password" class="form-control col-8" required>
-                </div>
-                <div class="form-group row">
-                    <input type="submit" name="sub1" value="Login" class="btn btn-light offset-4 col-4 font-weight-bold"> 
-                </div>
 
-                <center><a href="forget.php" style="text-decoration-line: none">forget passwoord</a></center>
-
-            </div>
-        </div>
-    </form>
-</body> -->
-<body class="" background="../files/assets/img1/1.jpg" style="background-size: 100%">
+<body class="" background="assets/img/1.jpg" style="background-size: 150%">
         <div class="account-pages mt-5 mb-5">
             <div class="container">
                 <div class="row justify-content-center">
