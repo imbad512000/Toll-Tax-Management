@@ -34,7 +34,6 @@
 
 </head>
 
-<body>
 
     <!-- Start wrapper-->
     <div id="wrapper">
