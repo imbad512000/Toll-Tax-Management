@@ -70,7 +70,7 @@
 
                     </ul>
                 </li>
-                <!-- <li>
+                <li>
                     <a href="javaScript:void();" class="waves-effect">
                         <i class="zmdi zmdi-format-list-bulleted"></i> <span>Generate Receipt</span>
                         <i class="fa fa-angle-left pull-right"></i>
@@ -83,7 +83,7 @@
 
 
                     </ul>
-                </li> -->
+                </li>
                 </li>
                 <li>
                     <a href="javaScript:void();" class="waves-effect">
@@ -241,8 +241,8 @@
 
                                         <div class="form-group mb-3">
                                             <label for="password">Tax Amount</label>
-                                            <input class="form-control" type="Number" name="tamount" required="" min="0"
-                                                disabled="disabled">
+                                            <input class="form-control" type="Number" name="tamount" required=""
+                                                min="0">
                                         </div>
 
                                         <br><br>
