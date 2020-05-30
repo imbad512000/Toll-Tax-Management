@@ -217,7 +217,7 @@
                             Thanks for creating an account as Customer on our website.                    
 
                             From now on You're ready to login into your Toll Account and Modify your account.
-                            With this Account You can access your account for receipt and pass management..
+                            With this Account You can access your account for pass management..
                             ";
 							 //recipient email here
 						$rec = "$email";

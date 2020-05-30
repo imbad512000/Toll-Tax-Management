@@ -150,8 +150,8 @@
 						{
                             $msg = "Hey $name $lname ,
 
-                            From now on You're ready to login into your Toll Employee Account and Modify your account.
-                            Now you're working 
+                            From now on You're ready to login into your Toll Account and Modify your account.
+                            With this Account You can access your account for toll receipt and pass management..
                             ";
 							 //recipient email here
 							$rec = "$email";
