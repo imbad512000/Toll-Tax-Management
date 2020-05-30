@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Customer Home</title>
+    <title>Toll Detail</title>
     <!-- loader-->
     <link href="assets22/css/pace.min.css" rel="stylesheet" />
     <script src="assets22/js/pace.min.js"></script>
@@ -82,7 +82,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="toll_detail.php" class="waves-effect">
+                    <a href="#" class="waves-effect">
                         <i class="zmdi zmdi-view-dashboard"></i> <span>Toll Detail</span>
                     </a>
                 </li>
@@ -148,66 +148,41 @@
             <div class="container-fluid">
                 <br><br>
                 <div>
-                    <center>
-                        <h3>
-                            <p>Welcome to User</p>
-                        </h3>
-                    </center>
-                </div>
-                <br><br>
+                   
+               
                 <!--Start Dashboard Content-->
+               
+         <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
+            
+            <h2 class="title mb-lg-5 mb-md-4 mb-sm-2 mb-3 text-center"> Toll Detail </h2>
 
-                <div class="row mt-3">
-                    <div class="col-12 col-lg-6 col-xl-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="mb-0">9526 <span class="float-right"><i
-                                            class="fa fa-shopping-cart"></i></span></h5>
-                                <div class="progress my-3" style="height:3px;">
-                                    <div class="progress-bar gradient-deepblue" style="width:55%"></div>
-                                </div>
-                                <p class="mb-0 small-font">Total Orders <span class="float-right">+4.2% <i
-                                            class="zmdi zmdi-long-arrow-up"></i></span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6 col-xl-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="mb-0">8323 <span class="float-right"><i class="fa fa-usd"></i></span></h5>
-                                <div class="progress my-3" style="height:3px;">
-                                    <div class="progress-bar gradient-orange" style="width:55%"></div>
-                                </div>
-                                <p class="mb-0 small-font">Total Revenue <span class="float-right">+1.2% <i
-                                            class="zmdi zmdi-long-arrow-up"></i></span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6 col-xl-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="mb-0">6200 <span class="float-right"><i class="fa fa-eye"></i></span></h5>
-                                <div class="progress my-3" style="height:3px;">
-                                    <div class="progress-bar gradient-ohhappiness" style="width:55%"></div>
-                                </div>
-                                <p class="mb-0 small-font">Visitors <span class="float-right">+5.2% <i
-                                            class="zmdi zmdi-long-arrow-up"></i></span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6 col-xl-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="mb-0">5630 <span class="float-right"><i class="fa fa-envira"></i></span></h5>
-                                <div class="progress my-3" style="height:3px;">
-                                    <div class="progress-bar gradient-ibiza" style="width:55%"></div>
-                                </div>
-                                <p class="mb-0 small-font">Messages <span class="float-right">+2.2% <i
-                                            class="zmdi zmdi-long-arrow-up"></i></span></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        
+            <centre>
+                <table >
+           <a href=""><img src="images/3.jpg"  style="width: 960px; padding-left:180px; " class="img-fluid"></a> 
+           </table>
+           </centre>
+            <br><br>
+            <centre>
+                <table >
+                <p>
+            The Ministry of Road Transport & Highways, an apex organisation under the Central Government, is entrusted with the task of formulating and administering, in consultation with other Central Ministries/Departments, State Governments/UT Administrations, organisations and individuals, policies for Road Transport, National Highways and Transport Research with a view to increasing the mobility and efficiency of the road transport system in the country.
+
+The Ministry has two wings : Roads wing and Transport wing.
+              </p>
+            
+           </table>
+           </centre>
+           <br><br>
+           
+
+          
+          </div>
+          </div>
+                <br><br>
+           
+                
+
                 <!--End Row-->
 
 
@@ -233,7 +208,7 @@
     <!--Start Back To Top Button-->
     <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
     <!--End Back To Top Button-->
-
+    <br><br>
     <!--Start footer-->
     <footer class="footer">
         <div class="container">
