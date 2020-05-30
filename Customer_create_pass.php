@@ -1,5 +1,5 @@
 <?php
-    ob_start();
+  ob_start();  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Admin Home</title>
+    <title>Generate Pass</title>
     <!-- loader-->
     <link href="assets22/css/pace.min.css" rel="stylesheet" />
     <script src="assets22/js/pace.min.js"></script>
@@ -37,7 +37,7 @@
 
 </head>
 
-<body onload="bindvtye()">
+<body>
 
     <!-- Start wrapper-->
     <div id="wrapper">
@@ -45,7 +45,7 @@
         <!--Start sidebar-wrapper-->
         <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
             <div class="brand-logo" style="height: 80px;padding-top: 5px;">
-                <a href="Admin1.php">
+                <a href="Customer.php">
                     <img src="assets3/images/logo.png" class="logo-icon" alt="logo icon" style="width: 30%;">
                     <!-- <h5 class="logo-text"> Admin</h5> -->
                 </a>
@@ -57,36 +57,35 @@
 
                 </li>
                 </li>
-                <li>
-                    <a href="employee_reg.php" class="waves-effect">
-                        <i class="zmdi zmdi-layers"></i>
-                        <span>Add Employment</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="employee_detail.php" class="waves-effect">
-                        <i class="zmdi zmdi-card-travel"></i>
-                        <span>Employee Detail</span>
-
-                    </a>
-                </li>
-
 
                 <li>
                     <a href="javaScript:void();" class="waves-effect">
-                        <i class="zmdi zmdi-format-list-bulleted"></i> <span>Fare detail</span>
+                        <i class="zmdi zmdi-format-list-bulleted"></i> <span>Generate Pass</span>
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="sidebar-submenu">
-                        <li><a href="fare_add.php"><i class="zmdi zmdi-dot-circle-alt"></i> Add Vehicle Category</a>
+                        <li><a href="Customer_create_pass.php"><i class="zmdi zmdi-dot-circle-alt"></i> Create Pass</a>
                         </li>
-                        <li><a href="fare_update.php"><i class="zmdi zmdi-dot-circle-alt"></i> Update Vehicle
-                                Category</a></li>
-                        <li><a href="fare_delete.php"><i class="zmdi zmdi-dot-circle-alt"></i> Delete Vehicle
-                                Category</a></li>
+                        <li><a href="Customer_search_pass.php"><i class="zmdi zmdi-dot-circle-alt"></i> Search Pass</a>
+                        </li>
+
 
                     </ul>
                 </li>
+                <!-- <li>
+                    <a href="javaScript:void();" class="waves-effect">
+                        <i class="zmdi zmdi-format-list-bulleted"></i> <span>Generate Receipt</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="sidebar-submenu">
+                        <li><a href="create_receipt.php"><i class="zmdi zmdi-dot-circle-alt"></i> Create Receipt</a>
+                        </li>
+                        <li><a href="search_receipt.php"><i class="zmdi zmdi-dot-circle-alt"></i> Search Receipt</a>
+                        </li>
+
+
+                    </ul>
+                </li> -->
                 </li>
                 <li>
                     <a href="javaScript:void();" class="waves-effect">
@@ -95,15 +94,10 @@
                     </a>
                 </li>
                 <li>
-                    <a href="Customer_detail.php" class="waves-effect">
-                        <i class="zmdi zmdi-card-travel"></i> <span>Customer Detail</span>
+                    <a href="#" class="waves-effect">
+                        <i class="zmdi zmdi-card-travel"></i> <span>Payement Detail</span>
                     </a>
                 </li>
-                <li>
-                    <a href="javaScript:void();" class="waves-effect">
-                        <i class="zmdi zmdi-invert-colors"></i> <span>Entry Detail</span>
-
-                    </a>
 
         </div>
         <!--End sidebar-wrapper-->
@@ -161,82 +155,116 @@
         <!--End topbar header-->
 
         <div class="clearfix"></div>
-        <br><br>
+
         <div class="content-wrapper">
             <div class="container-fluid">
 
                 <!--Start Dashboard Content-->
-
-                <div class="row mt-3">
-
+                <br><br>
+                <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-md-8 col-lg-6 col-xl-1">
-                            <div class="card" style="height: 580px; width:450px;">
+                        <div class="col-md-8 col-lg-6 col-xl-5">
+                            <div class="card" style="height: 1010px; width: 450px;">
 
                                 <div class="card-body p-4">
 
 
 
                                     <center>
-                                        <h3 class="auth-title">Entry Detail</h3>
+                                        <h3 class="auth-title">Create Pass</h3>
                                     </center>
-                                    <br><br>
+                                    <br><br><br>
 
                                     <form action="#">
 
+                                        <!-- <div class="form-group mb-3">
+                                        <label for="id"> Category Id</label>
+                                        <input class="form-control" type="Number" id="cid" name="id" required="" min="0">
+                                    </div>  -->
+
                                         <div class="form-group mb-3">
-                                            <label for="" class="col-5 col-form-label" style="margin-left:-8px;">Vehicle
-                                                Type<span class="text-danger"></span></label>
-                                            <div id="vtype">
-                                            </div>
+                                            <label for="password">Pass Holder Name</label>
+                                            <input class="form-control" type="text" name="hname" required=""
+                                                placeholder="Enter your Holder Name">
                                         </div>
 
                                         <div class="form-group mb-3">
-                                            <label for="" class="col-5 col-form-label" style="margin-left:-8px;">Vehicle
-                                                Number</label>
-                                            <input class="form-control" type="text" name="pass" required=""
-                                                placeholder="Enter your Vehicle Number">
+                                            <label for="password">Pass Date</label>
+                                            <input class="form-control" type="date" name="pdate" required="">
                                         </div>
 
                                         <div class="form-group mb-3">
-                                            <div class="row">
-                                                <label for="" class="col-6 ml-1 col-form-label"
-                                                    style="margin-left:-8px;">Entry
-                                                    Duration<span class="text-danger"></span></label>
-                                                <label for="" class="col-5 ml-3 col-form-label"
-                                                    style="margin-left:-8px;">Entry
-                                                    Duration<span class="text-danger"></span></label>
-                                            </div>
+                                            <label for="password">Pass Time</label>
+                                            <input class="form-control" type="Time" name="ptime">
+                                        </div>
 
-                                            <div class="row">
-                                                <select name="entry" class="form-control ml-3 col-5">
-                                                    <option>Weekly</option>
-                                                    <option>Monthly</option>
-                                                    <option>Yearly</option>
+                                        <div class="form-group mb-3">
+                                            <label for="inputEmail3" class="col-5 col-form-label">Type of Journey<span
+                                                    class="text-danger"></span></label>
+                                            <div class="">
+                                                <select class="form-control" name="type_of_vehicle"
+                                                    data-style="btn-light">
+                                                    <option>Select Journey Type</option>
+                                                    <option value="sin">Single</option>
+                                                    <option value="ret">Return</option>
+                                                    <!-- <option value="B">Bus</option> -->
                                                 </select>
-                                                <div class="ml-5 col-5" id="">
-                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group mb-3">
+                                            <label for="inputEmail3" class="col-5 col-form-label">Vehicle Class<span
+                                                    class="text-danger"></span></label>
+                                            <div class="">
+                                                <select class="form-control" name="type_of_vehicle"
+                                                    data-style="btn-light">
+                                                    <option>Select Vehical Type</option>
+                                                    <option value="2W">2 Wheeler</option>
+                                                    <option value="4W">4 Wheeler</option>
+                                                    <option value="B">Bus</option>
+                                                </select>
+
                                             </div>
                                         </div>
 
                                         <div class="form-group mb-3">
-                                            <label for="password" class="col-5 col-form-label"
-                                                style="margin-left:-8px;">Tax Amount</label>
-                                            <input class="form-control" type="Number" name="tamount" required=""
-                                                min="0">
+                                            <label for="password">Vehicle Number</label>
+                                            <input class="form-control" type="text" name="vno" required="" min="0"
+                                                max="10" placeholder="Enter your Vehicle Number">
+                                        </div>
+
+                                        <div class="form-group mb-3">
+                                            <label for="password">Exipry Date</label>
+                                            <input class="form-control" type="date" name="edate" required="">
+                                        </div>
+
+
+                                        <div class="form-group mb-3">
+                                            <label for="password">Tax Amount</label>
+                                            <input class="form-control" type="Number" name="tamount" required="" min="0"
+                                                disabled="disabled">
                                         </div>
 
                                         <br><br>
                                         <div class="form-group mb-0 text-center">
-                                            <button class="btn btn-danger btn-block" type="submit" name="sub1">
-                                                Add </button>
+                                            <button class="btn btn-danger btn-block" type="submit" name="sub1"> Create
+                                                Pass </button>
                                         </div>
 
 
+                                        <br><br><br><br>
+                                        <!-- <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label"> <span class="text-danger"></span></label>
+    <div class="col-3">
+    <input type="submit" name="sub1" value="Add" style="background-color:rgba();width: 150px;height: 40px;">
 
-
-                                        </select>
-                                        <!--End Row-->
+</div>
+</div> -->
+                                        <br>
+                                    </form>
+                                    <!--End Row-->
 
 
 
@@ -308,20 +336,9 @@
                     $(function() {
                         $(".knob").knob();
                     });
-
-
-                    function bindvtye() {
-
-                        var xmthttp = new XMLHttpRequest();
-                        xmthttp.open("GET", "bindvtype.php", false);
-                        xmthttp.send(null);
-                        document.getElementById("vtype").innerHTML = xmthttp.responseText;
-                        // alert(xmthttp.responseText);
-                    }
                     </script>
-
-                    <script src="assets2/js/index.js">
-                    </script>
+                    <!-- Index js -->
+                    <script src="assets2/js/index.js"></script>
 
 
 </body>
@@ -329,20 +346,36 @@
 <!-- Mirrored from codervent.com/dashtreme/demo/dark-admin/vertical-layout/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Mar 2020 11:06:39 GMT -->
 
 </html>
-
-
-
 <?php
-    // $con=mysqli_connect("localhost","root","","start");
 
-    // if(isset($_REQUEST('sub1')))
-    // {
-    //     $vehicle_type=$_REQUEST['type_of_vehicle'];
-    //     $number=$_REQUEST['pass'];
-    //     $amount=$_REQUEST['tamount'];
-        
-    //     $query="SELECT COUNT(`vehicle_no`) FROM `tbl_toll_receipt_details` WHERE ";
-    // }
+    if(isset($_REQUEST['sub1'])){
+
+      $con=mysqli_connect("localhost","root","","start");
+
+      // $toll_id=$_REQEST['id'];
+      $pass_holder_name=$_REQUEST['hname'];
+      $pass_date=$_REQUEST['pdate'];
+      $pass_time=$_REQUEST['ptime'];
+      $type_of_journey_1=$_REQUEST['type_of_vehicle'];
+      $vehicle_class=$_REQUEST['type_of_class'];
+      $vehicle_number=$_REQUEST['vno'];
+      $exipry_date=$_REQUEST['edate'];
+      $Tax_amount=$_REQUEST['tamount'];
+
+      $q="INSERT INTO `tbl_toll_pass_details`(`toll_pass_id`, `toll_pass_holder_name`, `toll_pass_date`, `toll_pass_time`, `toll_pass_type`, `toll_pass_vehicle_class`, `toll_pass_vehicle_no`, `toll_pass_duration`, `toll_pass_amount`) VALUES ('','$pass_holder_name','$pass_date','$pass_time','$type_of_journey_1','$vehicle_class','$vehicle_number','$exipry_date','$Tax_amount')";
+
+      $res=mysqli_query($con,$q);
+
+      if($res){
+        header("location: search_pass.php");
+      }
+      else{
+        echo "<script>alert('Error in Query')</script>";
+      }
+
+
+    }
+    ob_flush();
 
 
 ?>

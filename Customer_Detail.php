@@ -67,7 +67,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="javaScript:void();" class="waves-effect">
+                    <a href="employee_detail.php" class="waves-effect">
                         <i class="zmdi zmdi-card-travel"></i>
                         <span>Employee Detail</span>
 
@@ -295,11 +295,11 @@
                 <!-- Breadcrumb-->
                 <div class="row pt-2 pb-2">
                     <div class="col-sm-9">
-                        <h4 class="page-title">Employee</h4>
+                        <h4 class="page-title">Customer Side</h4>
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="javaScript:void();"> Register Employee Detail</a></li>
+                            <li class="breadcrumb-item"><a href="javaScript:void();"> Register Customer Detail</a></li>
                             <li class="breadcrumb-item"><a href="javaScript:void();">Tables</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Employees Detail</li>
+                            <li class="breadcrumb-item active" aria-current="page">Customers Detail</li>
                         </ol>
                     </div>
                     <div class="col-sm-3">

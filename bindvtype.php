@@ -9,7 +9,7 @@
 	'form-control'>";
 	while ($data = mysqli_fetch_assoc($run)) 
     {
-    	?>
+    	?>e
 <option data-style="btn-light" value="<?php echo $data["vehicle_type"]?>">
     <?php echo $data["vehicle_type"]; ?>
 </option>

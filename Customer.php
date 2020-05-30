@@ -50,21 +50,18 @@
 
             <ul class="sidebar-menu">
                 <li class="sidebar-header">MAIN NAVIGATION</li>
-                <li>
-
-                </li>
 
 
 
 
                 <li>
-                    <a href="pass_create.php" class="waves-effect">
+                    <a href="Customer_create_pass.php" class="waves-effect">
                         <i class="zmdi zmdi-format-list-bulleted"></i> <span>Create Pass</span>
                     </a>
 
                 </li>
                 <li>
-                    <a href="search_p.php" class="waves-effect">
+                    <a href="Customer_search_pass.php" class="waves-effect">
                         <i class="zmdi zmdi-format-list-bulleted"></i> <span>Search Pass</span>
                     </a>
                 </li>

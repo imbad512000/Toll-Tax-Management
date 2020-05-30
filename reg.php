@@ -3,6 +3,7 @@
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets2/css/bootstrap.css">
@@ -13,73 +14,82 @@
 </head>
 
 <body class="" background="assets/img/1.jpg" style="background-size: 150%">
-        <div class="account-pages mt-5 mb-5">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-8 col-lg-6 col-xl-5">
-                        <div class="card">
+    <div class="account-pages mt-5 mb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6 col-xl-5">
+                    <div class="card">
 
-                            <div class="card-body p-4" style="border-style: solid;">
-                                
-                               
-
-                                
-                                <center><h3 class="auth-title">Registration</h3></center>
-                                <br>
-                                <form action="#">
-
-                                    <div class="form-group mb-3">
-                                        <label for="fn">First Name</label>
-                                        <input class="form-control" type="text" id="fn" name="fname" required="required" placeholder="Enter your First Name">
-                                    </div>
-                                    <div class="form-group mb-3">
-                                        <label for="ln">Last Name</label>
-                                        <input class="form-control" type="text" id="ln" name="lname" required="required" placeholder="Enter your Last Name">
-                                    </div>
-                                    <div class="form-group row">
-                                     <label class="col-3 offset-0" >Gender</label>
-                                        <input type="radio" name="gender" value="Male" class="mt-0">
-                                         <label class="col-2" for="male">Male</label>
-                                            <input type="radio" name="gender" value="Female" class="ml-5">
-                                            <label class="ml-3" for="female">Female</label>
-                                         </div>
-
-                                    <div class="form-group mb-3">
-                                        <label for="em">Email Address</label>
-                                        <input class="form-control" type="email" id="em" name="email" required="required" placeholder="Enter your Email Address">
-                                    </div>
-                                    <div class="form-group mb-3">
-                                        <label for="password">Password</label>
-                                        <input class="form-control" type="password" name="pass" required="required" id="password" placeholder="Enter your Password">
-                                    </div>
-                                    <div class="form-group mb-3">
-                                        <label for="cpassword">Re-Password</label>
-                                        <input class="form-control" type="password" name="repass" required="required" id="password" placeholder="Enter your  Re-Password">
-                                    </div>
-
-                                    <div class="form-group mb-3">
-                                        <label for="phone">Phone No</label>
-                                        <input class="form-control" type="tel" name="phno" required="required" id="phno" placeholder="Enter your Phone No" pattern="[0-9]{10}">
-                                    </div>
-                                    
-                                     <div class="form-group mb-3">
-                                        <label for="dob">Date Of Birth</label>
-                                        <input class="form-control" type="Date" name="dob" required="required" id="dob" >
-                                    </div>
-                                    <div class="form-group mb-0 text-center">
-                                        <button class="btn btn-danger btn-block" type="submit" name="sub1"> Register </button>
-                                    </div>
-
-                                </form><br>
+                        <div class="card-body p-4" style="border-style: solid;">
 
 
-                                <div class="row mt-3">
-                            <div class="col-12 text-center">
-                               Already having account?&nbsp;&nbsp;<a href="final_login.php"> Sign In</a>
-                            </div> <!-- end col -->
-                        </div><br><br>
 
- <?php
+
+                            <center>
+                                <h3 class="auth-title">Registration</h3>
+                            </center>
+                            <br>
+                            <form action="#">
+
+                                <div class="form-group mb-3">
+                                    <label for="fn">First Name</label>
+                                    <input class="form-control" type="text" id="fn" name="fname" required="required"
+                                        placeholder="Enter your First Name">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="ln">Last Name</label>
+                                    <input class="form-control" type="text" id="ln" name="lname" required="required"
+                                        placeholder="Enter your Last Name">
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-3 offset-0">Gender</label>
+                                    <input type="radio" name="gender" value="Male" class="mt-0">
+                                    <label class="col-2" for="male">Male</label>
+                                    <input type="radio" name="gender" value="Female" class="ml-5">
+                                    <label class="ml-3" for="female">Female</label>
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label for="em">Email Address</label>
+                                    <input class="form-control" type="email" id="em" name="email" required="required"
+                                        placeholder="Enter your Email Address">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="password">Password</label>
+                                    <input class="form-control" type="password" name="pass" required="required"
+                                        id="password" placeholder="Enter your Password">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="cpassword">Re-Password</label>
+                                    <input class="form-control" type="password" name="repass" required="required"
+                                        id="password" placeholder="Enter your  Re-Password">
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label for="phone">Phone No</label>
+                                    <input class="form-control" type="tel" name="phno" required="required" id="phno"
+                                        placeholder="Enter your Phone No" pattern="[0-9]{10}">
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label for="dob">Date Of Birth</label>
+                                    <input class="form-control" type="Date" name="dob" required="required" id="dob">
+                                </div>
+                                <div class="form-group mb-0 text-center">
+                                    <button class="btn btn-danger btn-block" type="submit" name="sub1"> Register
+                                    </button>
+                                </div>
+
+                            </form><br>
+
+
+                            <div class="row mt-3">
+                                <div class="col-12 text-center">
+                                    Already having account?&nbsp;&nbsp;<a href="final_login.php"> Sign In</a>
+                                </div> <!-- end col -->
+                            </div><br><br>
+
+                            <?php
     // if(isset($_REQUEST['sub1']))
     // {
 
@@ -202,12 +212,28 @@
 
                                         if($res) 
                                         {
-                                            header('location: final_login.php');
-                                        }
-                                        else
-                                        {
-                                            echo "Error ";
-                                        }
+                        $msg = "Hey $name $lname ,
+
+                            Thanks for creating an account as Customer on our website.                    
+
+                            From now on You're ready to login into your Toll Account and Modify your account.
+                            With this Account You can access your account for receipt and pass management..
+                            ";
+							 //recipient email here
+						$rec = "$email";
+							 //send 
+                        $sub="Registration Confirmation";
+                        
+                            mail($rec,$sub,$msg);
+                            
+							echo "Registered";
+
+                        header('location: final_login.php');
+                    }
+                    else
+                    {
+                        echo "Error ";
+                    }
 
                     
     
@@ -216,20 +242,21 @@
     ?>
 
 
-                            </div> <!-- end card-body -->
-                        </div>
-                        <!-- end card -->
+                        </div> <!-- end card-body -->
+                    </div>
+                    <!-- end card -->
 
 
-                        
-                        <!-- end row -->
 
-                    </div> <!-- end col -->
-                </div>
-                <!-- end row -->
+                    <!-- end row -->
+
+                </div> <!-- end col -->
             </div>
-            <!-- end container -->
+            <!-- end row -->
         </div>
-        <!-- end page -->
+        <!-- end container -->
+    </div>
+    <!-- end page -->
     <!-- </body> -->
+
 </html>
