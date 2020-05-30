@@ -98,7 +98,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="waves-effect">
+                    <a href="Customer_Detail.php" class="waves-effect">
                         <i class="zmdi zmdi-card-travel"></i> <span>Customer Detail</span>
                     </a>
                 </li>
@@ -335,9 +335,7 @@
                                                 <th>Gender</th>
                                                 <th>Email Address</th>
                                                 <th>Password</th>
-                                                <th>Phone Number</th>
                                                 <th>Date Of Birth</th>
-                                                <th>Aadhar-Card Number</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -354,20 +352,20 @@
                                                 <?php
                             $con=mysqli_connect("localhost","root","","start");
 
-                            $q="SELECT * FROM `tbl_employee_registration`";
+                            $q="SELECT * FROM `tbl_customer_registration`";
 
                             $res=mysqli_query($con,$q);
 
                               while($data=mysqli_fetch_assoc($res)){
                                 
-                                echo "<tr><td>".$data["emp_reg_first_name"]."</td>";
-                                echo "<td>".$data["emp_reg_last_name"]."</td>";
-                                echo "<td>".$data["emp_reg_gender"]."</td>";
-                                echo "<td>".$data["emp_reg_email"]."</td>";
-                                echo "<td>".$data["emp_reg_password"]."</td>";
-                                echo "<td>".$data["emp_reg_contact_num"]."</td>";
-                                echo "<td>".$data["emp_reg_DOB"]."</td>";
-                                echo "<td>".$data["emp_aadharcard_number"]."</td></tr>";
+                                echo "<tr><td>".$data["cust_reg_first_name"]."</td>";
+                                echo "<td>".$data["cust_reg_last_name"]."</td>";
+                                echo "<td>".$data["cust_reg_gender"]."</td>";
+                                echo "<td>".$data["cust_reg_email"]."</td>";
+                                echo "<td>".$data["cust_reg_password"]."</td>";
+                                // echo "<td>".$data["emp_reg_contact_num"]."</td>";
+                                echo "<td>".$data["cust_reg_DOB"]."</td></tr>";
+                                // echo "<td>".$data["emp_aadharcard_number"]."</td></tr>";
 
                             }
 
