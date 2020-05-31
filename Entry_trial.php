@@ -67,7 +67,6 @@
                     <a href="employee_detail.php" class="waves-effect">
                         <i class="zmdi zmdi-card-travel"></i>
                         <span>Employee Detail</span>
-
                     </a>
                 </li>
 
@@ -209,12 +208,13 @@
                                             </div>
 
                                             <div class="row">
-                                                <select name="entry" class="form-control ml-3 col-5">
+                                                <select name="entry" id="entry" onclick="function_duration()"
+                                                    class="form-control ml-3 col-5">
                                                     <option>Weekly</option>
                                                     <option>Monthly</option>
                                                     <option>Yearly</option>
                                                 </select>
-                                                <div class="ml-5 col-5" id="">
+                                                <div class="ml-5 col-5" id="dayname">
                                                 </div>
                                             </div>
                                         </div>
@@ -231,9 +231,6 @@
                                             <button class="btn btn-danger btn-block" type="submit" name="sub1">
                                                 Add </button>
                                         </div>
-
-
-
 
                                         </select>
                                         <!--End Row-->
@@ -309,6 +306,27 @@
                         $(".knob").knob();
                     });
 
+                    function function_duration() {
+                        var data = document.getElementById("entry").value;
+                        if (data == "Weekly") {
+                            var xmthttp = new XMLHttpRequest();
+                            xmthttp.open("GET", "dayname.php", false);
+                            xmthttp.send(null);
+                            document.getElementById("dayname").innerHTML = xmthttp.responseText;
+                        }
+                        if (data == "Monthly") {
+                            var xmthttp = new XMLHttpRequest();
+                            xmthttp.open("GET", "monthname.php", false);
+                            xmthttp.send(null);
+                            document.getElementById("dayname").innerHTML = xmthttp.responseText;
+                        }
+                        if (data == "Yearly") {
+                            var xmthttp = new XMLHttpRequest();
+                            xmthttp.open("GET", "Yearname.php", false);
+                            xmthttp.send(null);
+                            document.getElementById("dayname").innerHTML = xmthttp.responseText;
+                        }
+                    }
 
                     function bindvtye() {
 
