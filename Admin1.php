@@ -35,261 +35,275 @@
 </head>
 
 
-    <!-- Start wrapper-->
-    <div id="wrapper">
+<!-- Start wrapper-->
+<div id="wrapper">
 
-        <!--Start sidebar-wrapper-->
-        <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
-            <div class="brand-logo" style="height: 80px;padding-top: 5px;">
+    <!--Start sidebar-wrapper-->
+    <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
+        <div class="brand-logo" style="height: 80px;padding-top: 5px;">
 
-                <a href="Admin1.php">
-                    <img src="assets3/images/logo.png" class="logo-icon" alt="logo icon" style="width: 30%;">
-                    <!-- <h5 class="logo-text"> Admin</h5> -->
+            <a href="Admin1.php">
+                <img src="assets3/images/logo.png" class="logo-icon" alt="logo icon" style="width: 30%;">
+                <!-- <h5 class="logo-text"> Admin</h5> -->
+            </a>
+        </div>
+
+        <ul class="sidebar-menu">
+            <li class="sidebar-header">MAIN NAVIGATION</li>
+            <li>
+
+            </li>
+            </li>
+            <li>
+                <a href="employee_reg.php" class="waves-effect">
+                    <i class="zmdi zmdi-layers"></i>
+                    <span>Add Employment</span>
                 </a>
-            </div>
+            </li>
+            <li>
+                <a href="employee_detail.php" class="waves-effect">
+                    <i class="zmdi zmdi-card-travel"></i>
+                    <span>Employee Detail</span>
 
-            <ul class="sidebar-menu">
-                <li class="sidebar-header">MAIN NAVIGATION</li>
-                <li>
+                </a>
+            </li>
 
-                </li>
-                </li>
-                <li>
-                    <a href="employee_reg.php" class="waves-effect">
-                        <i class="zmdi zmdi-layers"></i>
-                        <span>Add Employment</span>
+            <li>
+                <a href="Search_employee.php" class="waves-effect">
+                    <i class="zmdi zmdi-layers"></i>
+                    <span>Search Employee</span>
+                </a>
+            </li>
+
+
+            <li>
+                <a href="javaScript:void();" class="waves-effect">
+                    <i class="zmdi zmdi-format-list-bulleted"></i> <span>Fare detail</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="sidebar-submenu">
+                    <li><a href="fare_add.php"><i class="zmdi zmdi-dot-circle-alt"></i> Add Vehicle Category</a>
+                    </li>
+                    <li><a href="fare_update.php"><i class="zmdi zmdi-dot-circle-alt"></i> Update Vehicle
+                            Category</a></li>
+                    <li><a href="fare_delete.php"><i class="zmdi zmdi-dot-circle-alt"></i> Delete Vehicle
+                            Category</a></li>
+
+                </ul>
+            </li>
+            </li>
+            <li>
+                <a href="javaScript:void();" class="waves-effect">
+                    <i class="zmdi zmdi-lock"></i> <span>Online Transaction</span>
+
+                </a>
+            </li>
+            <li>
+                <a href="Customer_detail.php" class="waves-effect">
+                    <i class="zmdi zmdi-card-travel"></i> <span>Customer Detail</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="Search_customer.php" class="waves-effect">
+                    <i class="zmdi zmdi-card-travel"></i> <span>Search Customer</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="Entry_trial.php" class="waves-effect">
+                    <i class="zmdi zmdi-invert-colors"></i> <span>Entry Detail</span>
+
+                </a>
+
+    </div>
+    <!--End sidebar-wrapper-->
+
+    <!--Start topbar header-->
+    <header class="topbar-nav">
+        <nav id="header-setting" class="navbar navbar-expand fixed-top" style="height: 80px;">
+            <ul class="navbar-nav mr-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link toggle-menu" href="javascript:void();">
+                        <i class="icon-menu menu-icon"></i>
                     </a>
                 </li>
-                <li>
-                    <a href="employee_detail.php" class="waves-effect">
-                        <i class="zmdi zmdi-card-travel"></i>
-                        <span>Employee Detail</span>
+                <li class="nav-item">
+                    <form class="search-bar">
+                        <input type="text" class="form-control" placeholder="Enter keywords">
 
-                    </a>
+                        <a href="javascript:void();"><i class="icon-magnifier"></i></a>
+                    </form>
                 </li>
+            </ul>
 
-
-                <li>
-                    <a href="javaScript:void();" class="waves-effect">
-                        <i class="zmdi zmdi-format-list-bulleted"></i> <span>Fare detail</span>
-                        <i class="fa fa-angle-left pull-right"></i>
+            <ul class="navbar-nav align-items-center right-nav-link">
+                <li class="nav-item">
+                    <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown" href="#">
+                        <span class="user-profile"><img src="assets2/images/avatars/avatar-13.png" class="img-circle"
+                                alt="user avatar"></span>
                     </a>
-                    <ul class="sidebar-submenu">
-                        <li><a href="fare_add.php"><i class="zmdi zmdi-dot-circle-alt"></i> Add Vehicle Category</a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li class="dropdown-item user-details">
+                            <a href="javaScript:void();">
+                                <div class="media">
+                                    <div class="avatar"><img class="align-self-start mr-3"
+                                            src="assets2/images/avatars/avatar-13.png" alt="user avatar"></div>
+                                    <div class="media-body">
+                                        <h6 class="mt-2 user-title">Sarajhon Mccoy</h6>
+                                        <p class="user-subtitle">mccoy@example.com</p>
+                                    </div>
+                                </div>
+                            </a>
                         </li>
-                        <li><a href="fare_update.php"><i class="zmdi zmdi-dot-circle-alt"></i> Update Vehicle
-                                Category</a></li>
-                        <li><a href="fare_delete.php"><i class="zmdi zmdi-dot-circle-alt"></i> Delete Vehicle
-                                Category</a></li>
-
+                        <li class="dropdown-divider"></li>
+                        <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li>
+                        <li class="dropdown-divider"></li>
+                        <li class="dropdown-item"><i class="icon-wallet mr-2"></i> Account</li>
+                        <li class="dropdown-divider"></li>
+                        <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
+                        <li class="dropdown-divider"></li>
+                        <li class="dropdown-item"><a href="main.php"><i class="icon-power mr-2"></i> Logout</li></a>
                     </ul>
                 </li>
-                </li>
-                <li>
-                    <a href="javaScript:void();" class="waves-effect">
-                        <i class="zmdi zmdi-lock"></i> <span>Online Transaction</span>
+            </ul>
+        </nav>
+    </header>
+    <!--End topbar header-->
 
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="waves-effect">
-                        <i class="zmdi zmdi-card-travel"></i> <span>Customer Detail</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Entry_trial.php" class="waves-effect">
-                        <i class="zmdi zmdi-invert-colors"></i> <span>Entry Detail</span>
+    <div class="clearfix"></div>
 
-                    </a>
+    <div class="content-wrapper">
+        <div class="container-fluid">
 
-        </div>
-        <!--End sidebar-wrapper-->
+            <!--Start Dashboard Content-->
 
-        <!--Start topbar header-->
-        <header class="topbar-nav">
-            <nav id="header-setting" class="navbar navbar-expand fixed-top" style="height: 80px;">
-                <ul class="navbar-nav mr-auto align-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link toggle-menu" href="javascript:void();">
-                            <i class="icon-menu menu-icon"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <form class="search-bar">
-                            <input type="text" class="form-control" placeholder="Enter keywords">
-
-                            <a href="javascript:void();"><i class="icon-magnifier"></i></a>
-                        </form>
-                    </li>
-                </ul>
-
-                <ul class="navbar-nav align-items-center right-nav-link">
-                    <li class="nav-item">
-                        <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown" href="#">
-                            <span class="user-profile"><img src="assets2/images/avatars/avatar-13.png"
-                                    class="img-circle" alt="user avatar"></span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-right">
-                            <li class="dropdown-item user-details">
-                                <a href="javaScript:void();">
-                                    <div class="media">
-                                        <div class="avatar"><img class="align-self-start mr-3"
-                                                src="assets2/images/avatars/avatar-13.png" alt="user avatar"></div>
-                                        <div class="media-body">
-                                            <h6 class="mt-2 user-title">Sarajhon Mccoy</h6>
-                                            <p class="user-subtitle">mccoy@example.com</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="dropdown-divider"></li>
-                            <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li>
-                            <li class="dropdown-divider"></li>
-                            <li class="dropdown-item"><i class="icon-wallet mr-2"></i> Account</li>
-                            <li class="dropdown-divider"></li>
-                            <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
-                            <li class="dropdown-divider"></li>
-                            <li class="dropdown-item"><a href="main.php"><i class="icon-power mr-2"></i> Logout</li></a>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <!--End topbar header-->
-
-        <div class="clearfix"></div>
-
-        <div class="content-wrapper">
-            <div class="container-fluid">
-
-                <!--Start Dashboard Content-->
-
-                <div class="row mt-3">
-                    <div class="col-12 col-lg-6 col-xl-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="mb-0">9526 <span class="float-right"><i
-                                            class="fa fa-shopping-cart"></i></span></h5>
-                                <div class="progress my-3" style="height:3px;">
-                                    <div class="progress-bar gradient-deepblue" style="width:55%"></div>
-                                </div>
-                                <p class="mb-0 small-font">Total Orders <span class="float-right">+4.2% <i
-                                            class="zmdi zmdi-long-arrow-up"></i></span></p>
+            <div class="row mt-3">
+                <div class="col-12 col-lg-6 col-xl-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="mb-0">9526 <span class="float-right"><i class="fa fa-shopping-cart"></i></span>
+                            </h5>
+                            <div class="progress my-3" style="height:3px;">
+                                <div class="progress-bar gradient-deepblue" style="width:55%"></div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6 col-xl-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="mb-0">8323 <span class="float-right"><i class="fa fa-usd"></i></span></h5>
-                                <div class="progress my-3" style="height:3px;">
-                                    <div class="progress-bar gradient-orange" style="width:55%"></div>
-                                </div>
-                                <p class="mb-0 small-font">Total Revenue <span class="float-right">+1.2% <i
-                                            class="zmdi zmdi-long-arrow-up"></i></span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6 col-xl-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="mb-0">6200 <span class="float-right"><i class="fa fa-eye"></i></span></h5>
-                                <div class="progress my-3" style="height:3px;">
-                                    <div class="progress-bar gradient-ohhappiness" style="width:55%"></div>
-                                </div>
-                                <p class="mb-0 small-font">Visitors <span class="float-right">+5.2% <i
-                                            class="zmdi zmdi-long-arrow-up"></i></span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6 col-xl-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="mb-0">5630 <span class="float-right"><i class="fa fa-envira"></i></span></h5>
-                                <div class="progress my-3" style="height:3px;">
-                                    <div class="progress-bar gradient-ibiza" style="width:55%"></div>
-                                </div>
-                                <p class="mb-0 small-font">Messages <span class="float-right">+2.2% <i
-                                            class="zmdi zmdi-long-arrow-up"></i></span></p>
-                            </div>
+                            <p class="mb-0 small-font">Total Orders <span class="float-right">+4.2% <i
+                                        class="zmdi zmdi-long-arrow-up"></i></span></p>
                         </div>
                     </div>
                 </div>
-                <!--End Row-->
-
-
-
-
-
-
+                <div class="col-12 col-lg-6 col-xl-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="mb-0">8323 <span class="float-right"><i class="fa fa-usd"></i></span></h5>
+                            <div class="progress my-3" style="height:3px;">
+                                <div class="progress-bar gradient-orange" style="width:55%"></div>
+                            </div>
+                            <p class="mb-0 small-font">Total Revenue <span class="float-right">+1.2% <i
+                                        class="zmdi zmdi-long-arrow-up"></i></span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="mb-0">6200 <span class="float-right"><i class="fa fa-eye"></i></span></h5>
+                            <div class="progress my-3" style="height:3px;">
+                                <div class="progress-bar gradient-ohhappiness" style="width:55%"></div>
+                            </div>
+                            <p class="mb-0 small-font">Visitors <span class="float-right">+5.2% <i
+                                        class="zmdi zmdi-long-arrow-up"></i></span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="mb-0">5630 <span class="float-right"><i class="fa fa-envira"></i></span></h5>
+                            <div class="progress my-3" style="height:3px;">
+                                <div class="progress-bar gradient-ibiza" style="width:55%"></div>
+                            </div>
+                            <p class="mb-0 small-font">Messages <span class="float-right">+2.2% <i
+                                        class="zmdi zmdi-long-arrow-up"></i></span></p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!--End Row-->
 
 
-            <!--End Row-->
 
 
-            <!--End Dashboard Content-->
-            <!--start overlay-->
-            <div class="overlay toggle-menu"></div>
-            <!--end overlay-->
+
+
         </div>
-        <!-- End container-fluid-->
+        <!--End Row-->
 
+
+        <!--End Row-->
+
+
+        <!--End Dashboard Content-->
+        <!--start overlay-->
+        <div class="overlay toggle-menu"></div>
+        <!--end overlay-->
     </div>
-    <!--End content-wrapper-->
-    <!--Start Back To Top Button-->
-    <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
-    <!--End Back To Top Button-->
+    <!-- End container-fluid-->
 
-    <!--Start footer-->
-    <footer class="footer">
-        <div class="container">
-            <div class="text-center">
-                Copyright © 2020 Desinged by Siddharth Kansara | Bhavik Desai
-            </div>
+</div>
+<!--End content-wrapper-->
+<!--Start Back To Top Button-->
+<a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+<!--End Back To Top Button-->
+
+<!--Start footer-->
+<footer class="footer">
+    <div class="container">
+        <div class="text-center">
+            Copyright © 2020 Desinged by Siddharth Kansara | Bhavik Desai
         </div>
-    </footer>
-    <!--End footer-->
-
-
-
     </div>
-    <!--End wrapper-->
+</footer>
+<!--End footer-->
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="assets2/js/jquery.min.js"></script>
-    <script src="assets2/js/popper.min.js"></script>
-    <script src="assets2/js/bootstrap.min.js"></script>
 
-    <!-- simplebar js -->
-    <script src="assets2/plugins/simplebar/js/simplebar.js"></script>
-    <!-- sidebar-menu js -->
-    <script src="assets2/js/sidebar-menu.js"></script>
-    <!-- loader scripts -->
-    <script src="assets2/js/jquery.loading-indicator.html"></script>
-    <!-- Custom scripts -->
-    <script src="assets2/js/app-script.js"></script>
-    <!-- Chart js -->
 
-    <script src="assets2/plugins/Chart.js/Chart.min.js"></script>
-    <!-- Vector map JavaScript -->
-    <script src="assets2/plugins/vectormap/jquery-jvectormap-2.0.2.min.js"></script>
-    <script src="assets2/plugins/vectormap/jquery-jvectormap-world-mill-en.js"></script>
-    <!-- Easy Pie Chart JS -->
-    <script src="assets2/plugins/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
-    <!-- Sparkline JS -->
-    <script src="assets2/plugins/sparkline-charts/jquery.sparkline.min.js"></script>
-    <script src="assets2/plugins/jquery-knob/excanvas.js"></script>
-    <script src="assets2/plugins/jquery-knob/jquery.knob.js"></script>
+</div>
+<!--End wrapper-->
 
-    <script>
-    $(function() {
-        $(".knob").knob();
-    });
-    </script>
-    <!-- Index js -->
-    <script src="assets2/js/index.js"></script>
+<!-- Bootstrap core JavaScript-->
+<script src="assets2/js/jquery.min.js"></script>
+<script src="assets2/js/popper.min.js"></script>
+<script src="assets2/js/bootstrap.min.js"></script>
+
+<!-- simplebar js -->
+<script src="assets2/plugins/simplebar/js/simplebar.js"></script>
+<!-- sidebar-menu js -->
+<script src="assets2/js/sidebar-menu.js"></script>
+<!-- loader scripts -->
+<script src="assets2/js/jquery.loading-indicator.html"></script>
+<!-- Custom scripts -->
+<script src="assets2/js/app-script.js"></script>
+<!-- Chart js -->
+
+<script src="assets2/plugins/Chart.js/Chart.min.js"></script>
+<!-- Vector map JavaScript -->
+<script src="assets2/plugins/vectormap/jquery-jvectormap-2.0.2.min.js"></script>
+<script src="assets2/plugins/vectormap/jquery-jvectormap-world-mill-en.js"></script>
+<!-- Easy Pie Chart JS -->
+<script src="assets2/plugins/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+<!-- Sparkline JS -->
+<script src="assets2/plugins/sparkline-charts/jquery.sparkline.min.js"></script>
+<script src="assets2/plugins/jquery-knob/excanvas.js"></script>
+<script src="assets2/plugins/jquery-knob/jquery.knob.js"></script>
+
+<script>
+$(function() {
+    $(".knob").knob();
+});
+</script>
+<!-- Index js -->
+<script src="assets2/js/index.js"></script>
 
 
 </body>

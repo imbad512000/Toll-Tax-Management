@@ -74,6 +74,13 @@
                     </a>
                 </li>
 
+                <li>
+                    <a href="Search_employee.php" class="waves-effect">
+                        <i class="zmdi zmdi-layers"></i>
+                        <span>Search Employee</span>
+                    </a>
+                </li>
+
 
                 <li>
                     <a href="javaScript:void();" class="waves-effect">
@@ -102,6 +109,13 @@
                         <i class="zmdi zmdi-card-travel"></i> <span>Customer Detail</span>
                     </a>
                 </li>
+
+                <li>
+                    <a href="Search_customer.php" class="waves-effect">
+                        <i class="zmdi zmdi-card-travel"></i> <span>Search Customer</span>
+                    </a>
+                </li>
+
                 <li>
                     <a href="Entry_trial.php" class="waves-effect">
                         <i class="zmdi zmdi-invert-colors"></i> <span>Entry Detail</span>

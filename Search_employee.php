@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Admin Home</title>
+    <title>Search employee</title>
     <!-- loader-->
     <link href="assets22/css/pace.min.css" rel="stylesheet" />
     <script src="assets22/js/pace.min.js"></script>
@@ -37,7 +37,7 @@
 
 </head>
 
-<body onload="bindvtye()">
+<body>
 
     <!-- Start wrapper-->
     <div id="wrapper">
@@ -45,6 +45,7 @@
         <!--Start sidebar-wrapper-->
         <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
             <div class="brand-logo" style="height: 80px;padding-top: 5px;">
+
                 <a href="Admin1.php">
                     <img src="assets3/images/logo.png" class="logo-icon" alt="logo icon" style="width: 30%;">
                     <!-- <h5 class="logo-text"> Admin</h5> -->
@@ -67,6 +68,7 @@
                     <a href="employee_detail.php" class="waves-effect">
                         <i class="zmdi zmdi-card-travel"></i>
                         <span>Employee Detail</span>
+
                     </a>
                 </li>
 
@@ -101,7 +103,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="Customer_detail.php" class="waves-effect">
+                    <a href="" class="waves-effect">
                         <i class="zmdi zmdi-card-travel"></i> <span>Customer Detail</span>
                     </a>
                 </li>
@@ -172,82 +174,146 @@
             </nav>
         </header>
         <!--End topbar header-->
-
-        <div class="clearfix"></div>
         <br><br>
+        <div class="clearfix"></div>
+
         <div class="content-wrapper">
             <div class="container-fluid">
 
                 <!--Start Dashboard Content-->
 
-                <div class="row mt-3">
+                <div class="container">
+                    <div class="row justify-content">
+                        <div class="col-md-8 col-lg-9 col-xl-5">
+                            <div class="card" style="height: 650px; width: 1010px;">
 
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 col-lg-6 col-xl-1">
-                            <div class="card" style="height: 580px; width:450px;">
-
-                                <div class="card-body p-4">
-
+                                <div class="card-body p-10">
 
 
-                                    <center>
-                                        <h3 class="auth-title">Entry Detail</h3>
-                                    </center>
+
+                                    <h4 class="auth-title">Search Employee</h4>
                                     <br><br>
 
                                     <form action="#">
 
                                         <div class="form-group mb-3">
-                                            <label for="" class="col-5 col-form-label" style="margin-left:-8px;">Vehicle
-                                                Type<span class="text-danger"></span></label>
-                                            <div id="vtype">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group mb-3">
-                                            <label for="" class="col-5 col-form-label" style="margin-left:-8px;">Vehicle
-                                                Number</label>
-                                            <input class="form-control" type="text" name="pass" required=""
-                                                placeholder="Enter your Vehicle Number">
-                                        </div>
-
-                                        <div class="form-group mb-3">
                                             <div class="row">
-                                                <label for="" class="col-6 ml-1 col-form-label"
-                                                    style="margin-left:-8px;">
-                                                    Duration<span class="text-danger"></span></label>
-                                                <label for="" class="col-5 ml-3 col-form-label"
-                                                    style="margin-left:-8px;">Entry
-                                                    Duration<span class="text-danger"></span></label>
+                                                <input class="form-control col-5 ml-2" type="text" id="cid" name="name"
+                                                    required="" placeholder="Search Employee detail">
+                                                <button class="btn btn-danger btn-block col-1 ml-2" type="submit"
+                                                    name="sub1"><i class="fa fa-search"></i></button>
                                             </div>
 
+
                                             <div class="row">
-                                                <select name="entry" id="entry" onclick="function_duration()"
-                                                    class="form-control ml-3 col-5">
-                                                    <option>Weekly</option>
-                                                    <option>Monthly</option>
-                                                    <option>Yearly</option>
-                                                </select>
-                                                <div class="ml-5 col-5" id="dayname">
+                                                <div class="col-lg-12">
+                                                    <div class="card">
+                                                        <div class="card-header"><i class="fa fa-table"></i> Detail
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table id="example" class="table table-bordered">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Employee First Name</th>
+                                                                            <th>Employee last Name</th>
+                                                                            <th>Gender</th>
+                                                                            <th>Employee Email</th>
+                                                                            <th>Employee Contact Number</th>
+                                                                            <th>Date of Birth</th>
+                                                                            <th>Aadhar-card Number</th>
+                                                                            <!-- <th>Tax Amount</th> -->
+
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <!-- <th><?php //$fname ?></th>
+                        <th><?php //$lname ?></th>
+                        <th><?php //$Gender?></th>
+                        <th><?php //$Email ?></th>
+                        <th><?php //$Password ?></th>
+                        <th><?php //$PhoneNumber ?></th>
+                        <th><?php //$DateOfBirth ?></th>
+                        <th><?php //$AadharCardNumber ?></th> -->
+
+                                                                            <?php
+
+                          
+
+                          if(isset($_REQUEST['sub1'])){
+                                $id=$_REQUEST['name'];
+                                $q1="SELECT * FROM `tbl_employee_registration` WHERE CONCAT(`emp_reg_id`,`emp_reg_first_name`,`emp_reg_last_name`,`emp_reg_gender`,`emp_reg_email`,`emp_reg_password`,`emp_reg_contact_num`,`emp_reg_DOB`,`emp_aadharcard_number`)LIKE'%".$id."%'";
+                                $search_result= filterTable($q1);
+                          }
+                          else{
+                              $q1="SELECT * FROM `tbl_employee_registration`";
+                              $search_result= filterTable($q1);
+                              
+                          }
+
+
+                          function filterTable($q1){
+
+                            $con=mysqli_connect("localhost","root","","start");  
+                            $filter_result=mysqli_query($con,$q1);
+                            return $filter_result;
+
+                                
+                          }
+
+
+                            
+
+                            // $q="SELECT * FROM `tbl_toll_receipt_details`";
+
+                            // $res=mysqli_query($con,$q);
+
+                              while($data=mysqli_fetch_array($search_result)){
+                                  
+                                // echo "<tr><td>".$data["toll_receipt_id"]."</td>";
+                                echo "<td>".$data["emp_reg_first_name"]."</td>";
+                                echo "<td>".$data["emp_reg_last_name"]."</td>";
+                                echo "<td>".$data["emp_reg_gender"]."</td>";
+                                echo "<td>".$data["emp_reg_email"]."</td>";
+                                echo "<td>".$data["emp_reg_contact_num"]."</td>";
+                                echo "<td>".$data["emp_reg_DOB"]."</td>";
+                                echo "<td>".$data["emp_aadharcard_number"]."</td></tr>";
+                                // echo "<td>".$data["toll_pass_amount"]."</td></tr>";
+
+                            }
+
+                            // if($res){
+                            //   echo "";
+                            // }
+                            // else{
+                            //   echo "<h2>Error</h2>";
+                            // }
+
+                        ?>
+
+
+                                                                        </tr>
+                                                                        </tfoot>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
+                                            </div><!-- End Row-->
 
-                                        <div class="form-group mb-3">
-                                            <label for="password" class="col-5 col-form-label"
-                                                style="margin-left:-8px;">Tax Amount</label>
-                                            <input class="form-control" type="Number" name="tamount" required=""
-                                                min="0">
-                                        </div>
 
-                                        <br><br>
-                                        <div class="form-group mb-0 text-center">
-                                            <button class="btn btn-danger btn-block" type="submit" name="sub1">
-                                                Add </button>
-                                        </div>
+                                            <br><br><br><br>
+                                            <!-- <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label"> <span class="text-danger"></span></label>
+    <div class="col-3">
+    <input type="submit" name="sub1" value="Add" style="background-color:rgba();width: 150px;height: 40px;">
 
-                                        </select>
-                                        <!--End Row-->
+</div>
+</div> -->
+                                            <br>
+                                    </form>
+                                    <!--End Row-->
 
 
 
@@ -275,19 +341,26 @@
                         <!--End Back To Top Button-->
 
                         <!--Start footer-->
-                        <footer class="footer">
-                            <div class="container">
-                                <div class="text-center">
-                                    Copyright © 2020 Desinged by Siddharth Kansara | Bhavik Desai
-                                </div>
-                            </div>
-                        </footer>
+                        <!-- <footer class="footer">
+      <div class="container">
+        <div class="text-center">
+          Copyright © 2020 Desinged by Siddharth Kansara | Bhavik Desai
+        </div>
+      </div>
+    </footer> -->
                         <!--End footer-->
 
 
 
                     </div>
                     <!--End wrapper-->
+                    <footer class="footer">
+                        <div class="container">
+                            <div class="text-center">
+                                Copyright © 2020 Desinged by Siddharth Kansara | Bhavik Desai
+                            </div>
+                        </div>
+                    </footer>
 
                     <!-- Bootstrap core JavaScript-->
                     <script src="assets2/js/jquery.min.js"></script>
@@ -319,41 +392,9 @@
                     $(function() {
                         $(".knob").knob();
                     });
-
-                    function function_duration() {
-                        var data = document.getElementById("entry").value;
-                        if (data == "Weekly") {
-                            var xmthttp = new XMLHttpRequest();
-                            xmthttp.open("GET", "dayname.php", false);
-                            xmthttp.send(null);
-                            document.getElementById("dayname").innerHTML = xmthttp.responseText;
-                        }
-                        if (data == "Monthly") {
-                            var xmthttp = new XMLHttpRequest();
-                            xmthttp.open("GET", "monthname.php", false);
-                            xmthttp.send(null);
-                            document.getElementById("dayname").innerHTML = xmthttp.responseText;
-                        }
-                        if (data == "Yearly") {
-                            var xmthttp = new XMLHttpRequest();
-                            xmthttp.open("GET", "Yearname.php", false);
-                            xmthttp.send(null);
-                            document.getElementById("dayname").innerHTML = xmthttp.responseText;
-                        }
-                    }
-
-                    function bindvtye() {
-
-                        var xmthttp = new XMLHttpRequest();
-                        xmthttp.open("GET", "bindvtype.php", false);
-                        xmthttp.send(null);
-                        document.getElementById("vtype").innerHTML = xmthttp.responseText;
-                        // alert(xmthttp.responseText);
-                    }
                     </script>
-
-                    <script src="assets2/js/index.js">
-                    </script>
+                    <!-- Index js -->
+                    <script src="assets2/js/index.js"></script>
 
 
 </body>
@@ -361,20 +402,3 @@
 <!-- Mirrored from codervent.com/dashtreme/demo/dark-admin/vertical-layout/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Mar 2020 11:06:39 GMT -->
 
 </html>
-
-
-
-<?php
-    // $con=mysqli_connect("localhost","root","","start");
-
-    // if(isset($_REQUEST('sub1')))
-    // {
-    //     $vehicle_type=$_REQUEST['type_of_vehicle'];
-    //     $number=$_REQUEST['pass'];
-    //     $amount=$_REQUEST['tamount'];
-        
-    //     $query="SELECT COUNT(`vehicle_no`) FROM `tbl_toll_receipt_details` WHERE ";
-    // }
-
-
-?>
