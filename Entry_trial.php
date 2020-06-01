@@ -233,19 +233,77 @@
                                             </div>
                                         </div>
 
-                                        <div class="form-group mb-3">
-                                            <label for="password" class="col-5 col-form-label"
-                                                style="margin-left:-8px;">Tax Amount</label>
-                                            <input class="form-control" type="Number" name="tamount" required=""
-                                                min="0">
-                                        </div>
-
                                         <br><br>
                                         <div class="form-group mb-0 text-center">
-                                            <button class="btn btn-danger btn-block" type="submit" name="sub1">
+                                            <button class="btn btn-danger btn-block" type="submit" name="submit">
                                                 Add </button>
                                         </div>
+                                        <div class="form-group mb-0 text-center">
+                                            <?php
+    
 
+    if(isset($_REQUEST['submit']))
+    {
+        $con=mysqli_connect("localhost","root","","start");
+        $vehicle_type=$_REQUEST['type_of_vehicle'];
+        $number=$_REQUEST['pass'];
+        // $amount=$_REQUEST['tamount'];
+        
+      
+        if ($_REQUEST['entry'] == 'Weekly') {
+            $day_name=$_REQUEST['day_name'];
+            $q="SELECT COUNT(tbl_toll_receipt_details.toll_receipt_id) AS V FROM tbl_toll_receipt_details WHERE tbl_toll_receipt_details.toll_receipt_date<=now() AND tbl_toll_receipt_details.toll_receipt_date>DATE_SUB(NOW(), INTERVAL 7 DAY) AND DAYNAME(tbl_toll_receipt_details.toll_receipt_date)='$day_name' AND tbl_toll_receipt_details.vehicle_no='$number'";
+            $res=mysqli_query($con,$q);
+
+            // $data=mysqli_fetch_array($res);
+        
+            // echo "<table>";
+
+            // echo "<tr><td>".$data["V"]."</td></tr>";
+
+            // echo "</table>"; 
+        }
+        elseif ($_REQUEST['entry'] == 'Monthly') {
+            $month_name=$_REQUEST['month_name'];
+            $q="SELECT COUNT(tbl_toll_receipt_details.toll_receipt_id) AS V FROM tbl_toll_receipt_details WHERE YEAR(tbl_toll_receipt_details.toll_receipt_date)=YEAR(NOW()) AND MONTHNAME(tbl_toll_receipt_details.toll_receipt_date)='$month_name' AND tbl_toll_receipt_details.vehicle_no='$number'";
+            $res=mysqli_query($con,$q);
+
+            // $data=mysqli_fetch_array($res);
+        
+            // echo "<table>";
+
+            // echo "<tr><td>".$data["V"]."</td></tr>";
+
+            // echo "</table>"; 
+        }
+        elseif ($_REQUEST['entry'] == 'Yearly') {
+                                            $year_name=$_REQUEST['year_name'];
+                                            echo "<table><tr><td>".$year_name."</td></tr></table>";
+                                            $q="SELECT COUNT(tbl_toll_receipt_details.toll_receipt_id) AS V FROM tbl_toll_receipt_details WHERE YEAR(tbl_toll_receipt_details.toll_receipt_date)='$year_name' AND tbl_toll_receipt_details.vehicle_no='$number'";
+                                            $res=mysqli_query($con,$q);
+                                            // if($res){
+                                            // echo "TEST";
+                                            // }
+
+                                            }
+
+                                            $data=mysqli_fetch_array($res);
+
+                                            echo "<table>";
+
+                                                echo "<tr>
+                                                    <td>".$data["V"]."</td>
+                                                </tr>";
+
+                                                echo "</table>";
+
+
+
+                                            }
+
+
+                                            ?>
+                                        </div>
                                         </select>
                                         <!--End Row-->
 
@@ -361,20 +419,3 @@
 <!-- Mirrored from codervent.com/dashtreme/demo/dark-admin/vertical-layout/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Mar 2020 11:06:39 GMT -->
 
 </html>
-
-
-
-<?php
-    $con=mysqli_connect("localhost","root","","start");
-
-    if(isset($_REQUEST('sub1')))
-    {
-        $vehicle_type=$_REQUEST['type_of_vehicle'];
-        $number=$_REQUEST['pass'];
-        $amount=$_REQUEST['tamount'];
-        
-        $query="SELECT COUNT(`vehicle_no`) FROM `tbl_toll_receipt_details` WHERE ";
-    }
-
-
-?>

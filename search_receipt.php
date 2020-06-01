@@ -66,7 +66,7 @@
                     </a>
                     <ul class="sidebar-submenu">
                         <li><a href="create_pass.php"><i class="zmdi zmdi-dot-circle-alt"></i> Create Pass</a></li>
-                        <li><a href="#"><i class="zmdi zmdi-dot-circle-alt"></i> Search Pass</a></li>
+                        <li><a href="Search_pass.php"><i class="zmdi zmdi-dot-circle-alt"></i> Search Pass</a></li>
 
 
                     </ul>

@@ -37,7 +37,7 @@
 
 </head>
 
-<body>
+<body onload="bindvtye()">
 
     <!-- Start wrapper-->
     <div id="wrapper">
@@ -200,7 +200,7 @@
                                             <label for="inputEmail3" class="col-5 col-form-label">Type of Journey<span
                                                     class="text-danger"></span></label>
                                             <div class="">
-                                                <select class="form-control" name="type_of_vehicle"
+                                                <select class="form-control" name="type_of_vehicle_1"
                                                     data-style="btn-light">
                                                     <option>Select Journey Type</option>
                                                     <option value="sin">Single</option>
@@ -213,17 +213,9 @@
 
 
                                         <div class="form-group mb-3">
-                                            <label for="inputEmail3" class="col-5 col-form-label">Vehicle Class<span
-                                                    class="text-danger"></span></label>
-                                            <div class="">
-                                                <select class="form-control" name="type_of_vehicle"
-                                                    data-style="btn-light">
-                                                    <option>Select Vehical Type</option>
-                                                    <option value="2W">2 Wheeler</option>
-                                                    <option value="4W">4 Wheeler</option>
-                                                    <option value="B">Bus</option>
-                                                </select>
-
+                                            <label for="inputEmail3" class="col-5 col-form-label">Vehicle
+                                                Type<span class="text-danger"></span></label>
+                                            <div id="vtype">
                                             </div>
                                         </div>
 
@@ -334,6 +326,15 @@
                     $(function() {
                         $(".knob").knob();
                     });
+
+                    function bindvtye() {
+
+                        var xmthttp = new XMLHttpRequest();
+                        xmthttp.open("GET", "bindvtype.php", false);
+                        xmthttp.send(null);
+                        document.getElementById("vtype").innerHTML = xmthttp.responseText;
+                        // alert(xmthttp.responseText);
+                    }
                     </script>
                     <!-- Index js -->
                     <script src="assets2/js/index.js"></script>
@@ -354,11 +355,14 @@
       $pass_holder_name=$_REQUEST['hname'];
       $pass_date=$_REQUEST['pdate'];
       $pass_time=$_REQUEST['ptime'];
-      $type_of_journey_1=$_REQUEST['type_of_vehicle'];
-      $vehicle_class=$_REQUEST['type_of_class'];
+      $type_of_journey_1=$_REQUEST['type_of_vehicle_1'];
+      $vehicle_class=$_REQUEST['type_of_vehicle'];
       $vehicle_number=$_REQUEST['vno'];
       $exipry_date=$_REQUEST['edate'];
       $Tax_amount=$_REQUEST['tamount'];
+
+
+    //   echo "$type_of_journey_1";  
 
       $q="INSERT INTO `tbl_toll_pass_details`(`toll_pass_id`, `toll_pass_holder_name`, `toll_pass_date`, `toll_pass_time`, `toll_pass_type`, `toll_pass_vehicle_class`, `toll_pass_vehicle_no`, `toll_pass_duration`, `toll_pass_amount`) VALUES ('','$pass_holder_name','$pass_date','$pass_time','$type_of_journey_1','$vehicle_class','$vehicle_number','$exipry_date','$Tax_amount')";
 
