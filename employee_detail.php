@@ -98,12 +98,14 @@
                     </ul>
                 </li>
                 </li>
+
                 <li>
                     <a href="javaScript:void();" class="waves-effect">
                         <i class="zmdi zmdi-lock"></i> <span>Online Transaction</span>
 
                     </a>
                 </li>
+
                 <li>
                     <a href="Customer_detail.php" class="waves-effect">
                         <i class="zmdi zmdi-card-travel"></i> <span>Customer Detail</span>
