@@ -339,7 +339,7 @@
 
                                                 <div class="form-group mb-3">
                                                     <label for="inputEmail3" class="col-5 col-form-label">Vehicle
-                                                        Type<span class="text-danger">*</span></label>
+                                                        Type<span class="text-danger"></span></label>
                                                     <div id="vtype">
                                                     </div>
                                                 </div>

@@ -365,16 +365,16 @@
 
 
 <?php
-    // $con=mysqli_connect("localhost","root","","start");
+    $con=mysqli_connect("localhost","root","","start");
 
-    // if(isset($_REQUEST('sub1')))
-    // {
-    //     $vehicle_type=$_REQUEST['type_of_vehicle'];
-    //     $number=$_REQUEST['pass'];
-    //     $amount=$_REQUEST['tamount'];
+    if(isset($_REQUEST('sub1')))
+    {
+        $vehicle_type=$_REQUEST['type_of_vehicle'];
+        $number=$_REQUEST['pass'];
+        $amount=$_REQUEST['tamount'];
         
-    //     $query="SELECT COUNT(`vehicle_no`) FROM `tbl_toll_receipt_details` WHERE ";
-    // }
+        $query="SELECT COUNT(`vehicle_no`) FROM `tbl_toll_receipt_details` WHERE ";
+    }
 
 
 ?>
