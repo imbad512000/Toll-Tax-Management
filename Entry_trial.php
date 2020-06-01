@@ -224,7 +224,7 @@
                                             <div class="row">
                                                 <select name="entry" id="entry" onclick="function_duration()"
                                                     class="form-control ml-3 col-5">
-                                                    <option>Weekly</option>
+                                                    <!-- <option>Weekly</option> -->
                                                     <option>Monthly</option>
                                                     <option>Yearly</option>
                                                 </select>
@@ -250,20 +250,20 @@
         // $amount=$_REQUEST['tamount'];
         
       
-        if ($_REQUEST['entry'] == 'Weekly') {
-            $day_name=$_REQUEST['day_name'];
-            $q="SELECT COUNT(tbl_toll_receipt_details.toll_receipt_id) AS V FROM tbl_toll_receipt_details WHERE tbl_toll_receipt_details.toll_receipt_date<=now() AND tbl_toll_receipt_details.toll_receipt_date>DATE_SUB(NOW(), INTERVAL 7 DAY) AND DAYNAME(tbl_toll_receipt_details.toll_receipt_date)='$day_name' AND tbl_toll_receipt_details.vehicle_no='$number'";
-            $res=mysqli_query($con,$q);
+        // if ($_REQUEST['entry'] == 'Weekly') {
+        //     $day_name=$_REQUEST['day_name'];
+        //     $q="SELECT COUNT(tbl_toll_receipt_details.toll_receipt_id) AS V FROM tbl_toll_receipt_details WHERE tbl_toll_receipt_details.toll_receipt_date<=now() AND tbl_toll_receipt_details.toll_receipt_date>DATE_SUB(NOW(), INTERVAL 7 DAY) AND DAYNAME(tbl_toll_receipt_details.toll_receipt_date)='$day_name' AND tbl_toll_receipt_details.vehicle_no='$number'";
+        //     $res=mysqli_query($con,$q);
 
-            // $data=mysqli_fetch_array($res);
+        //     // $data=mysqli_fetch_array($res);
         
-            // echo "<table>";
+        //     // echo "<table>";
 
-            // echo "<tr><td>".$data["V"]."</td></tr>";
+        //     // echo "<tr><td>".$data["V"]."</td></tr>";
 
-            // echo "</table>"; 
-        }
-        elseif ($_REQUEST['entry'] == 'Monthly') {
+        //     // echo "</table>"; 
+        // }
+        if ($_REQUEST['entry'] == 'Monthly') {
             $month_name=$_REQUEST['month_name'];
             $q="SELECT COUNT(tbl_toll_receipt_details.toll_receipt_id) AS V FROM tbl_toll_receipt_details WHERE YEAR(tbl_toll_receipt_details.toll_receipt_date)=YEAR(NOW()) AND MONTHNAME(tbl_toll_receipt_details.toll_receipt_date)='$month_name' AND tbl_toll_receipt_details.vehicle_no='$number'";
             $res=mysqli_query($con,$q);
@@ -380,12 +380,12 @@
 
                     function function_duration() {
                         var data = document.getElementById("entry").value;
-                        if (data == "Weekly") {
-                            var xmthttp = new XMLHttpRequest();
-                            xmthttp.open("GET", "dayname.php", false);
-                            xmthttp.send(null);
-                            document.getElementById("dayname").innerHTML = xmthttp.responseText;
-                        }
+                        // if (data == "Weekly") {
+                        //     var xmthttp = new XMLHttpRequest();
+                        //     xmthttp.open("GET", "dayname.php", false);
+                        //     xmthttp.send(null);
+                        //     document.getElementById("dayname").innerHTML = xmthttp.responseText;
+                        // }
                         if (data == "Monthly") {
                             var xmthttp = new XMLHttpRequest();
                             xmthttp.open("GET", "monthname.php", false);
