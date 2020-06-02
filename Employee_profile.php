@@ -1,5 +1,5 @@
 <?php
-    ob_start();
+  ob_start();  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Admin Home</title>
+    <title>Generate Pass</title>
     <!-- loader-->
     <link href="assets22/css/pace.min.css" rel="stylesheet" />
     <script src="assets22/js/pace.min.js"></script>
@@ -45,7 +45,7 @@
         <!--Start sidebar-wrapper-->
         <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
             <div class="brand-logo" style="height: 80px;padding-top: 5px;">
-                <a href="Admin1.php">
+                <a href="Customer.php">
                     <img src="assets3/images/logo.png" class="logo-icon" alt="logo icon" style="width: 30%;">
                     <!-- <h5 class="logo-text"> Admin</h5> -->
                 </a>
@@ -57,39 +57,30 @@
 
                 </li>
                 </li>
-                <li>
-                    <a href="employee_reg.php" class="waves-effect">
-                        <i class="zmdi zmdi-layers"></i>
-                        <span>Add Employment</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="employee_detail.php" class="waves-effect">
-                        <i class="zmdi zmdi-card-travel"></i>
-                        <span>Employee Detail</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="Search_employee.php" class="waves-effect">
-                        <i class="zmdi zmdi-layers"></i>
-                        <span>Search Employee</span>
-                    </a>
-                </li>
-
 
                 <li>
                     <a href="javaScript:void();" class="waves-effect">
-                        <i class="zmdi zmdi-format-list-bulleted"></i> <span>Fare detail</span>
+                        <i class="zmdi zmdi-format-list-bulleted"></i> <span>Generate Pass</span>
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="sidebar-submenu">
-                        <li><a href="fare_add.php"><i class="zmdi zmdi-dot-circle-alt"></i> Add Vehicle Category</a>
+                        <li><a href="create_pass.php"><i class="zmdi zmdi-dot-circle-alt"></i> Create Pass</a></li>
+                        <li><a href="search_pass.php"><i class="zmdi zmdi-dot-circle-alt"></i> Search Pass</a></li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="javaScript:void();" class="waves-effect">
+                        <i class="zmdi zmdi-format-list-bulleted"></i> <span>Generate Receipt</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="sidebar-submenu">
+                        <li><a href="create_receipt.php"><i class="zmdi zmdi-dot-circle-alt"></i> Create Receipt</a>
                         </li>
-                        <li><a href="fare_update.php"><i class="zmdi zmdi-dot-circle-alt"></i> Update Vehicle
-                                Category</a></li>
-                        <li><a href="fare_delete.php"><i class="zmdi zmdi-dot-circle-alt"></i> Delete Vehicle
-                                Category</a></li>
+                        <li><a href="search_receipt.php"><i class="zmdi zmdi-dot-circle-alt"></i> Search Receipt</a>
+                        </li>
+
 
                     </ul>
                 </li>
@@ -101,22 +92,10 @@
                     </a>
                 </li>
                 <li>
-                    <a href="Customer_detail.php" class="waves-effect">
-                        <i class="zmdi zmdi-card-travel"></i> <span>Customer Detail</span>
+                    <a href="#" class="waves-effect">
+                        <i class="zmdi zmdi-card-travel"></i> <span>Payement Detail</span>
                     </a>
                 </li>
-
-                <li>
-                    <a href="Search_customer.php" class="waves-effect">
-                        <i class="zmdi zmdi-card-travel"></i> <span>Search Customer</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="Entry_trial.php" class="waves-effect">
-                        <i class="zmdi zmdi-invert-colors"></i> <span>Entry Detail</span>
-
-                    </a>
 
         </div>
         <!--End sidebar-wrapper-->
@@ -147,7 +126,7 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-right">
                             <li class="dropdown-item user-details">
-                                <a href="Welcome.php">
+                                <a href="#">
                                     <div class="media">
                                         <div class="avatar"><img class="align-self-start mr-3"
                                                 src="assets2/images/avatars/avatar-13.png" alt="user avatar"></div>
@@ -174,137 +153,112 @@
         <!--End topbar header-->
 
         <div class="clearfix"></div>
-        <br><br>
+
         <div class="content-wrapper">
             <div class="container-fluid">
 
                 <!--Start Dashboard Content-->
-
-                <div class="row mt-3">
-
+                <br><br>
+                <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-md-8 col-lg-6 col-xl-1">
-                            <div class="card" style="height: 580px; width:450px;">
+                        <div class="col-md-8 col-lg-6 col-xl-5">
+                            <div class="card" style="height: 1010px; width: 450px;">
 
                                 <div class="card-body p-4">
 
 
 
                                     <center>
-                                        <h3 class="auth-title">Entry Detail</h3>
+                                        <h3 class="auth-title">Create Pass</h3>
                                     </center>
-                                    <br><br>
+                                    <br><br><br>
 
                                     <form action="#">
 
+                                        <!-- <div class="form-group mb-3">
+                                        <label for="id"> Category Id</label>
+                                        <input class="form-control" type="Number" id="cid" name="id" required="" min="0">
+                                    </div>  -->
+
                                         <div class="form-group mb-3">
-                                            <label for="" class="col-5 col-form-label" style="margin-left:-8px;">Vehicle
+                                            <label for="password">Pass Holder Name</label>
+                                            <input class="form-control" type="text" name="hname" required=""
+                                                placeholder="Enter your Holder Name">
+                                        </div>
+
+                                        <div class="form-group mb-3">
+                                            <label for="password">Pass Date</label>
+                                            <input class="form-control" type="date" name="pdate" required="">
+                                        </div>
+
+                                        <div class="form-group mb-3">
+                                            <label for="password">Pass Time</label>
+                                            <input class="form-control" type="Time" name="ptime">
+                                        </div>
+
+                                        <div class="form-group mb-3">
+                                            <label for="inputEmail3" class="col-5 col-form-label">Type of Journey<span
+                                                    class="text-danger"></span></label>
+                                            <div class="">
+                                                <select class="form-control" name="type_of_vehicle_1"
+                                                    data-style="btn-light">
+                                                    <option>Select Journey Type</option>
+                                                    <option value="sin">Single</option>
+                                                    <option value="ret">Return</option>
+                                                    <!-- <option value="B">Bus</option> -->
+                                                </select>
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group mb-3">
+                                            <label for="inputEmail3" class="col-5 col-form-label">Vehicle
                                                 Type<span class="text-danger"></span></label>
                                             <div id="vtype">
                                             </div>
                                         </div>
 
                                         <div class="form-group mb-3">
-                                            <label for="" class="col-5 col-form-label" style="margin-left:-8px;">Vehicle
-                                                Number</label>
-                                            <input class="form-control" type="text" name="pass" required=""
-                                                placeholder="Enter your Vehicle Number">
+                                            <label for="password">Vehicle Number</label>
+                                            <input class="form-control" type="text" name="vno" required="" min="0"
+                                                max="10" placeholder="Enter your Vehicle Number">
                                         </div>
 
                                         <div class="form-group mb-3">
-                                            <div class="row">
-                                                <label for="" class="col-6 ml-1 col-form-label"
-                                                    style="margin-left:-8px;">
-                                                    Duration<span class="text-danger"></span></label>
-                                                <label for="" class="col-5 ml-3 col-form-label"
-                                                    style="margin-left:-8px;">Entry
-                                                    Duration<span class="text-danger"></span></label>
-                                            </div>
-
-                                            <div class="row">
-                                                <select name="entry" id="entry" onclick="function_duration()"
-                                                    class="form-control ml-3 col-5">
-                                                    <!-- <option>Weekly</option> -->
-                                                    <option>Monthly</option>
-                                                    <option>Yearly</option>
-                                                </select>
-                                                <div class="ml-5 col-5" id="dayname">
-                                                </div>
-                                            </div>
+                                            <label for="password">Exipry Date</label>
+                                            <input class="form-control" type="date" name="edate" required="">
                                         </div>
 
 
-                                        <br>
-                                        <div class="mb-0 text-center">
-                                            <button class="btn btn-danger" type="submit" name="submit">
-                                                &nbsp; &nbsp; &nbsp; Search &nbsp; &nbsp; &nbsp</button>
+                                        <div class="form-group mb-3">
+                                            <label for="password">Tax Amount</label>
+                                            <input class="form-control" type="Number" name="tamount" required=""
+                                                min="0">
                                         </div>
+
+                                        <br><br>
                                         <div class="form-group mb-0 text-center">
-                                            <?php
-    
-
-    if(isset($_REQUEST['submit']))
-    {
-        $con=mysqli_connect("localhost","root","","start");
-        $vehicle_type=$_REQUEST['type_of_vehicle'];
-        $number=$_REQUEST['pass'];
-        // $amount=$_REQUEST['tamount'];
-        
-      
-        // if ($_REQUEST['entry'] == 'Weekly') {
-        //     $day_name=$_REQUEST['day_name'];
-        //     $q="SELECT COUNT(tbl_toll_receipt_details.toll_receipt_id) AS V FROM tbl_toll_receipt_details WHERE tbl_toll_receipt_details.toll_receipt_date<=now() AND tbl_toll_receipt_details.toll_receipt_date>DATE_SUB(NOW(), INTERVAL 7 DAY) AND DAYNAME(tbl_toll_receipt_details.toll_receipt_date)='$day_name' AND tbl_toll_receipt_details.vehicle_no='$number'";
-        //     $res=mysqli_query($con,$q);
-
-        //     // $data=mysqli_fetch_array($res);
-        
-        //     // echo "<table>";
-
-        //     // echo "<tr><td>".$data["V"]."</td></tr>";
-
-        //     // echo "</table>"; 
-        // }
-        if ($_REQUEST['entry'] == 'Monthly') {
-            $month_name=$_REQUEST['month_name'];
-            $q="SELECT COUNT(tbl_toll_receipt_details.toll_receipt_id) AS V FROM tbl_toll_receipt_details WHERE YEAR(tbl_toll_receipt_details.toll_receipt_date)=YEAR(NOW()) AND MONTHNAME(tbl_toll_receipt_details.toll_receipt_date)='$month_name' AND tbl_toll_receipt_details.vehicle_no='$number'";
-            $res=mysqli_query($con,$q);
-
-            // $data=mysqli_fetch_array($res);
-        
-            // echo "<table>";
-
-            // echo "<tr><td>".$data["V"]."</td></tr>";
-
-            // echo "</table>"; 
-        }
-        elseif ($_REQUEST['entry'] == 'Yearly') {
-                                            $year_name=$_REQUEST['year_name'];
-                                            echo "<table><tr><td>".$year_name."</td></tr></table>";
-                                            $q="SELECT COUNT(tbl_toll_receipt_details.toll_receipt_id) AS V FROM tbl_toll_receipt_details WHERE YEAR(tbl_toll_receipt_details.toll_receipt_date)='$year_name' AND tbl_toll_receipt_details.vehicle_no='$number'";
-                                            $res=mysqli_query($con,$q);
-                                            // if($res){
-                                            // echo "TEST";
-                                            // }
-
-                                            }
-
-                                            $data=mysqli_fetch_array($res);
-
-                                            ?>
-                                            <hr style="color:white;width:100%;height:0.5px;">
-                                            <label class="btn btn text-white">Number of
-                                                Entries:</label>
-                                            <label class="btn btn-sm btn-info"><?php echo$data['V']?></label>
-                                            <?php
-
-
-                                            }
-
-
-                                            ?>
+                                            <button class="btn btn-danger btn-block" type="submit" name="sub1"> Create
+                                                Pass </button>
                                         </div>
-                                        </select>
-                                        <!--End Row-->
+
+
+                                        <br><br><br><br>
+                                        <!-- <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label"> <span class="text-danger"></span></label>
+    <div class="col-3">
+    <input type="submit" name="sub1" value="Add" style="background-color:rgba();width: 150px;height: 40px;">
+
+</div>
+</div> -->
+                                        <br>
+                                    </form>
+                                    <!--End Row-->
+
+
+
+
 
 
                                 </div>
@@ -373,28 +327,6 @@
                         $(".knob").knob();
                     });
 
-                    function function_duration() {
-                        var data = document.getElementById("entry").value;
-                        // if (data == "Weekly") {
-                        //     var xmthttp = new XMLHttpRequest();
-                        //     xmthttp.open("GET", "dayname.php", false);
-                        //     xmthttp.send(null);
-                        //     document.getElementById("dayname").innerHTML = xmthttp.responseText;
-                        // }
-                        if (data == "Monthly") {
-                            var xmthttp = new XMLHttpRequest();
-                            xmthttp.open("GET", "monthname.php", false);
-                            xmthttp.send(null);
-                            document.getElementById("dayname").innerHTML = xmthttp.responseText;
-                        }
-                        if (data == "Yearly") {
-                            var xmthttp = new XMLHttpRequest();
-                            xmthttp.open("GET", "Yearname.php", false);
-                            xmthttp.send(null);
-                            document.getElementById("dayname").innerHTML = xmthttp.responseText;
-                        }
-                    }
-
                     function bindvtye() {
 
                         var xmthttp = new XMLHttpRequest();
@@ -404,9 +336,8 @@
                         // alert(xmthttp.responseText);
                     }
                     </script>
-
-                    <script src="assets2/js/index.js">
-                    </script>
+                    <!-- Index js -->
+                    <script src="assets2/js/index.js"></script>
 
 
 </body>
@@ -414,3 +345,39 @@
 <!-- Mirrored from codervent.com/dashtreme/demo/dark-admin/vertical-layout/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Mar 2020 11:06:39 GMT -->
 
 </html>
+<?php
+
+    if(isset($_REQUEST['sub1'])){
+
+      $con=mysqli_connect("localhost","root","","start");
+
+      // $toll_id=$_REQEST['id'];
+      $pass_holder_name=$_REQUEST['hname'];
+      $pass_date=$_REQUEST['pdate'];
+      $pass_time=$_REQUEST['ptime'];
+      $type_of_journey_1=$_REQUEST['type_of_vehicle_1'];
+      $vehicle_class=$_REQUEST['type_of_vehicle'];
+      $vehicle_number=$_REQUEST['vno'];
+      $exipry_date=$_REQUEST['edate'];
+      $Tax_amount=$_REQUEST['tamount'];
+
+
+    //   echo "$type_of_journey_1";  
+
+      $q="INSERT INTO `tbl_toll_pass_details`(`toll_pass_id`, `toll_pass_holder_name`, `toll_pass_date`, `toll_pass_time`, `toll_pass_type`, `toll_pass_vehicle_class`, `toll_pass_vehicle_no`, `toll_pass_duration`, `toll_pass_amount`) VALUES ('','$pass_holder_name','$pass_date','$pass_time','$type_of_journey_1','$vehicle_class','$vehicle_number','$exipry_date','$Tax_amount')";
+
+      $res=mysqli_query($con,$q);
+
+      if($res){
+        header("location: search_pass.php");
+      }
+      else{
+        echo "<script>alert('Error in Query')</script>";
+      }
+
+
+    }
+    ob_flush();
+
+
+?>
