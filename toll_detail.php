@@ -159,27 +159,33 @@
         
             <centre>
                 <table >
-           <a href=""><img src="images/3.jpg"  style="width: 2260px; " class="img-fluid"></a> 
+           <a href=""><img src="images/3.jpg"  style="width: 2100px;height: 375px; " class="img-fluid"></a> 
            </table>
            </centre>
             <br><br>
             <centre>
                 <table >
-                <p>
+                <h8>
             The Ministry of Road Transport & Highways, an apex organisation under the Central Government, is entrusted with the task of formulating and administering, in consultation with other Central Ministries/Departments, State Governments/UT Administrations, organisations and individuals, policies for Road Transport, National Highways and Transport Research with a view to increasing the mobility and efficiency of the road transport system in the country.
 
 The Ministry has two wings : Roads wing and Transport wing.
-              </p>
+        <br><br>
+        MAIN RESPONSIBILITIES<br>
+> Planning, development and maintenance of National Highways in the country.<br>
+> Extends technical and financial support to State Governments for the development of state roads and the roads of inter-state connectivity and economic importance<br>
+> Evolves standard specifications for roads and bridges in the country.<br>
+> Serves as a repository of technical knowledge on roads and bridges.<br>
+              </h8>
             
            </table>
            </centre>
-           <br><br>
+          
            
 
           
           </div>
           </div>
-                <br><br>
+               
            
                 
 
@@ -198,22 +204,22 @@ The Ministry has two wings : Roads wing and Transport wing.
 
             <!--End Dashboard Content-->
             <!--start overlay-->
-            <div class="overlay toggle-menu"></div>
-            <!--end overlay-->
-        </div>
+          
         <!-- End container-fluid-->
 
-    </div>
+    
     <!--End content-wrapper-->
     <!--Start Back To Top Button-->
     <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
     <!--End Back To Top Button-->
-    <br><br>
+    
     <!--Start footer-->
     <footer class="footer">
-        <div class="container">
-            <div class="text-center">
+        <div class="container" style="align:bottom;>
+      
+          <div class=" text-center">
                 Copyright © 2020 Desinged by Siddharth Kansara | Bhavik Desai
+      
             </div>
         </div>
     </footer>
