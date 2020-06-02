@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Generate Pass</title>
+    <title>Profile Account</title>
     <!-- loader-->
     <link href="assets22/css/pace.min.css" rel="stylesheet" />
     <script src="assets22/js/pace.min.js"></script>
@@ -45,7 +45,7 @@
         <!--Start sidebar-wrapper-->
         <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
             <div class="brand-logo" style="height: 80px;padding-top: 5px;">
-                <a href="Customer.php">
+                <a href="emp_dash.php">
                     <img src="assets3/images/logo.png" class="logo-icon" alt="logo icon" style="width: 30%;">
                     <!-- <h5 class="logo-text"> Admin</h5> -->
                 </a>
@@ -140,7 +140,7 @@
                             <li class="dropdown-divider"></li>
                             <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li>
                             <li class="dropdown-divider"></li>
-                            <li class="dropdown-item"><i class="icon-wallet mr-2"></i> Account</li>
+                            <li class="dropdown-item"><a href="Employee_profile.php"><i class="icon-wallet mr-2"></i> Account</li>
                             <li class="dropdown-divider"></li>
                             <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
                             <li class="dropdown-divider"></li>
@@ -162,108 +162,127 @@
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-8 col-lg-6 col-xl-5">
-                            <div class="card" style="height: 1010px; width: 450px;">
+                            <div class="card" style="height: 650px; width: 700px;">
 
                                 <div class="card-body p-4">
 
 
-
-                                    <center>
-                                        <h3 class="auth-title">Create Pass</h3>
-                                    </center>
-                                    <br><br><br>
-
-                                    <form action="#">
-
-                                        <!-- <div class="form-group mb-3">
-                                        <label for="id"> Category Id</label>
-                                        <input class="form-control" type="Number" id="cid" name="id" required="" min="0">
-                                    </div>  -->
-
-                                        <div class="form-group mb-3">
-                                            <label for="password">Pass Holder Name</label>
-                                            <input class="form-control" type="text" name="hname" required=""
-                                                placeholder="Enter your Holder Name">
-                                        </div>
-
-                                        <div class="form-group mb-3">
-                                            <label for="password">Pass Date</label>
-                                            <input class="form-control" type="date" name="pdate" required="">
-                                        </div>
-
-                                        <div class="form-group mb-3">
-                                            <label for="password">Pass Time</label>
-                                            <input class="form-control" type="Time" name="ptime">
-                                        </div>
-
-                                        <div class="form-group mb-3">
-                                            <label for="inputEmail3" class="col-5 col-form-label">Type of Journey<span
-                                                    class="text-danger"></span></label>
-                                            <div class="">
-                                                <select class="form-control" name="type_of_vehicle_1"
-                                                    data-style="btn-light">
-                                                    <option>Select Journey Type</option>
-                                                    <option value="sin">Single</option>
-                                                    <option value="ret">Return</option>
-                                                    <!-- <option value="B">Bus</option> -->
-                                                </select>
-
-                                            </div>
-                                        </div>
-
-
-                                        <div class="form-group mb-3">
-                                            <label for="inputEmail3" class="col-5 col-form-label">Vehicle
-                                                Type<span class="text-danger"></span></label>
-                                            <div id="vtype">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group mb-3">
-                                            <label for="password">Vehicle Number</label>
-                                            <input class="form-control" type="text" name="vno" required="" min="0"
-                                                max="10" placeholder="Enter your Vehicle Number">
-                                        </div>
-
-                                        <div class="form-group mb-3">
-                                            <label for="password">Exipry Date</label>
-                                            <input class="form-control" type="date" name="edate" required="">
-                                        </div>
-
-
-                                        <div class="form-group mb-3">
-                                            <label for="password">Tax Amount</label>
-                                            <input class="form-control" type="Number" name="tamount" required=""
-                                                min="0">
-                                        </div>
-
-                                        <br><br>
-                                        <div class="form-group mb-0 text-center">
-                                            <button class="btn btn-danger btn-block" type="submit" name="sub1"> Create
-                                                Pass </button>
-                                        </div>
-
-
-                                        <br><br><br><br>
-                                        <!-- <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label"> <span class="text-danger"></span></label>
-    <div class="col-3">
-    <input type="submit" name="sub1" value="Add" style="background-color:rgba();width: 150px;height: 40px;">
-
+                                <div class="container">
+                                <centre><h4>Profile Account</h4></centre>
+                                <br><br>
+    <div class="row my-2">
+        <div class="col-lg-8 order-lg-2">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a href="" data-target="#profile" data-toggle="tab" class="nav-link active">Profile</a>
+                </li>
+               
+                <li class="nav-item">
+                    <a href="" data-target="#edit" data-toggle="tab" class="nav-link">Edit</a>
+                </li>
+            </ul>
+            <div class="tab-content py-4">
+                <div class="tab-pane active" id="profile">
+                    <h5 class="mb-3">User Profile</h5>
+                    <div class="row">
+                        <!-- <div class="col-md-6">
+                            <h6>About</h6>
+                            <p>
+                                Web Designer, UI/UX Engineer
+                            </p>
+                            <h6>Hobbies</h6>
+                            <p>
+                                Indie music, skiing and hiking. I love the great outdoors.
+                            </p>
+                        </div> -->
+                       
+                       
+                    </div>
+                    <!--/row-->
+                </div>
+                
+                <div class="tab-pane" id="edit">
+                    <form role="form">
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">First name</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" type="text" value="Jane">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Last name</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" type="text" value="Bishop">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Email</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" type="email" value="email@gmail.com">
+                            </div>
+                        </div>
+                       
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Address</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" type="text" value="" placeholder="Street">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label"></label>
+                           
+                            <div class="col-lg-4">
+                                <input class="form-control" type="text" value="" placeholder="State">
+                            </div>
+                            <div class="col-lg-4">
+                                <input class="form-control" type="text" value="" placeholder="City">
+                            </div>
+                        </div>
+                       
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Password</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" type="password" value="11111122333">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Confirm password</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" type="password" value="11111122333">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label"></label>
+                            <div class="col-lg-9">
+                                <input type="reset" class="btn btn-secondary" value="Cancel">
+                                <input type="button" class="btn btn-primary" value="Save Changes">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 order-lg-1 text-center">
+            <img src="//placehold.it/350" class="mx-auto img-fluid img-circle d-block" alt="avatar">
+            <h6 class="mt-2">Upload a different photo</h6>
+            <!-- <label class="custom-file">
+                <input type="file" id="file" class="custom-file-input">
+                <span class="custom-file-control">Choose file</span>
+            </label> -->
+            <label class="col-lg-3 col-form-label form-control-label"></label>
+                            <div class="col-lg-9">
+                               <input type="file"  value="Choose File">
+                            </div>
+        </div>
+    </div>
 </div>
-</div> -->
-                                        <br>
-                                    </form>
-                                    <!--End Row-->
+                                    
+                                 
 
-
-
-
-
-
+                                    
                                 </div>
                                 <!--End Row-->
-
+                                
 
                                 <!--End Row-->
 
@@ -345,39 +364,39 @@
 <!-- Mirrored from codervent.com/dashtreme/demo/dark-admin/vertical-layout/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Mar 2020 11:06:39 GMT -->
 
 </html>
-<?php
+<?php 
 
-    if(isset($_REQUEST['sub1'])){
+    // if(isset($_REQUEST['sub1'])){
 
-      $con=mysqli_connect("localhost","root","","start");
+    //   $con=mysqli_connect("localhost","root","","start");
 
       // $toll_id=$_REQEST['id'];
-      $pass_holder_name=$_REQUEST['hname'];
-      $pass_date=$_REQUEST['pdate'];
-      $pass_time=$_REQUEST['ptime'];
-      $type_of_journey_1=$_REQUEST['type_of_vehicle_1'];
-      $vehicle_class=$_REQUEST['type_of_vehicle'];
-      $vehicle_number=$_REQUEST['vno'];
-      $exipry_date=$_REQUEST['edate'];
-      $Tax_amount=$_REQUEST['tamount'];
+    //   $pass_holder_name=$_REQUEST['hname'];
+    //   $pass_date=$_REQUEST['pdate'];
+    //   $pass_time=$_REQUEST['ptime'];
+    //   $type_of_journey_1=$_REQUEST['type_of_vehicle_1'];
+    //   $vehicle_class=$_REQUEST['type_of_vehicle'];
+    //   $vehicle_number=$_REQUEST['vno'];
+    //   $exipry_date=$_REQUEST['edate'];
+    //   $Tax_amount=$_REQUEST['tamount'];
 
 
     //   echo "$type_of_journey_1";  
 
-      $q="INSERT INTO `tbl_toll_pass_details`(`toll_pass_id`, `toll_pass_holder_name`, `toll_pass_date`, `toll_pass_time`, `toll_pass_type`, `toll_pass_vehicle_class`, `toll_pass_vehicle_no`, `toll_pass_duration`, `toll_pass_amount`) VALUES ('','$pass_holder_name','$pass_date','$pass_time','$type_of_journey_1','$vehicle_class','$vehicle_number','$exipry_date','$Tax_amount')";
+    //   $q="INSERT INTO `tbl_toll_pass_details`(`toll_pass_id`, `toll_pass_holder_name`, `toll_pass_date`, `toll_pass_time`, `toll_pass_type`, `toll_pass_vehicle_class`, `toll_pass_vehicle_no`, `toll_pass_duration`, `toll_pass_amount`) VALUES ('','$pass_holder_name','$pass_date','$pass_time','$type_of_journey_1','$vehicle_class','$vehicle_number','$exipry_date','$Tax_amount')";
 
-      $res=mysqli_query($con,$q);
+    //   $res=mysqli_query($con,$q);
 
-      if($res){
-        header("location: search_pass.php");
-      }
-      else{
-        echo "<script>alert('Error in Query')</script>";
-      }
+    //   if($res){
+    //     header("location: search_pass.php");
+    //   }
+    //   else{
+    //     echo "<script>alert('Error in Query')</script>";
+    //   }
 
 
-    }
-    ob_flush();
+    // }
+    // ob_flush();
 
 
 ?>
