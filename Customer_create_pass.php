@@ -1,5 +1,5 @@
-<?php 
-    ob_start();
+<?php
+  ob_start();  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Employee Home</title>
+    <title>Generate Pass</title>
     <!-- loader-->
     <link href="assets22/css/pace.min.css" rel="stylesheet" />
     <script src="assets22/js/pace.min.js"></script>
@@ -37,7 +37,7 @@
 
 </head>
 
-<body onload="bindvtye()">
+<body>
 
     <!-- Start wrapper-->
     <div id="wrapper">
@@ -45,8 +45,7 @@
         <!--Start sidebar-wrapper-->
         <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
             <div class="brand-logo" style="height: 80px;padding-top: 5px;">
-
-                <a href="emp_dash.php">
+                <a href="Customer.php">
                     <img src="assets3/images/logo.png" class="logo-icon" alt="logo icon" style="width: 30%;">
                     <!-- <h5 class="logo-text"> Admin</h5> -->
                 </a>
@@ -65,13 +64,15 @@
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="sidebar-submenu">
-                        <li><a href="create_pass.php"><i class="zmdi zmdi-dot-circle-alt"></i> Create Pass</a></li>
-                        <li><a href="search_pass.php"><i class="zmdi zmdi-dot-circle-alt"></i> Search Pass</a></li>
+                        <li><a href="Customer_create_pass.php"><i class="zmdi zmdi-dot-circle-alt"></i> Create Pass</a>
+                        </li>
+                        <li><a href="Customer_search_pass.php"><i class="zmdi zmdi-dot-circle-alt"></i> Search Pass</a>
+                        </li>
 
 
                     </ul>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="javaScript:void();" class="waves-effect">
                         <i class="zmdi zmdi-format-list-bulleted"></i> <span>Generate Receipt</span>
                         <i class="fa fa-angle-left pull-right"></i>
@@ -84,7 +85,7 @@
 
 
                     </ul>
-                </li>
+                </li> -->
                 </li>
                 <li>
                     <a href="javaScript:void();" class="waves-effect">
@@ -159,22 +160,22 @@
             <div class="container-fluid">
 
                 <!--Start Dashboard Content-->
-                <br><br><br>
+                <br><br>
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-8 col-lg-6 col-xl-5">
-                            <div class="card" style="height: 1090px; width: 480px;">
+                            <div class="card" style="height: 1010px; width: 450px;">
 
                                 <div class="card-body p-4">
 
 
 
                                     <center>
-                                        <h3 class="auth-title">Create Receipt</h3>
+                                        <h3 class="auth-title">Create Pass</h3>
                                     </center>
                                     <br><br><br>
 
-                                    <form action="" method="post">
+                                    <form action="#">
 
                                         <!-- <div class="form-group mb-3">
                                         <label for="id"> Category Id</label>
@@ -182,45 +183,26 @@
                                     </div>  -->
 
                                         <div class="form-group mb-3">
-                                            <label for="password">Toll Booth Name</label>
-                                            <input class="form-control" type="text" name="tbname" required=""
-                                                placeholder="Enter your Toll Booth Name">
+                                            <label for="password">Pass Holder Name</label>
+                                            <input class="form-control" type="text" name="hname" required=""
+                                                placeholder="Enter your Holder Name">
                                         </div>
 
                                         <div class="form-group mb-3">
-                                            <label for="password">Toll Booth Number</label>
-                                            <input class="form-control" type="tel" name="tbno" min="0">
-                                        </div>
-
-                                        <div class="form-group mb-3">
-                                            <label for="password">Toll Employee Name</label>
-                                            <input class="form-control" type="text" name="ename" required=""
-                                                placeholder="Enter your employee name">
-                                        </div>
-
-
-                                        <div class="form-group mb-3">
-                                            <label for="password">Receipt Date</label>
+                                            <label for="password">Pass Date</label>
                                             <input class="form-control" type="date" name="pdate" required="">
                                         </div>
 
                                         <div class="form-group mb-3">
-                                            <label for="password">Receipt Time</label>
+                                            <label for="password">Pass Time</label>
                                             <input class="form-control" type="Time" name="ptime">
-                                        </div>
-
-                                        <div class="form-group mb-3">
-                                            <label for="inputEmail3" class="col-5 col-form-label">Vehicle
-                                                Category<span class="text-danger"></span></label>
-                                            <div id="vtype">
-                                            </div>
                                         </div>
 
                                         <div class="form-group mb-3">
                                             <label for="inputEmail3" class="col-5 col-form-label">Type of Journey<span
                                                     class="text-danger"></span></label>
                                             <div class="">
-                                                <select class="form-control" name="type_of_journey"
+                                                <select class="form-control" name="type_of_vehicle"
                                                     data-style="btn-light">
                                                     <option>Select Journey Type</option>
                                                     <option value="sin">Single</option>
@@ -232,27 +214,43 @@
                                         </div>
 
 
+                                        <div class="form-group mb-3">
+                                            <label for="inputEmail3" class="col-5 col-form-label">Vehicle Class<span
+                                                    class="text-danger"></span></label>
+                                            <div class="">
+                                                <select class="form-control" name="type_of_vehicle"
+                                                    data-style="btn-light">
+                                                    <option>Select Vehical Type</option>
+                                                    <option value="2W">2 Wheeler</option>
+                                                    <option value="4W">4 Wheeler</option>
+                                                    <option value="B">Bus</option>
+                                                </select>
 
+                                            </div>
+                                        </div>
 
                                         <div class="form-group mb-3">
                                             <label for="password">Vehicle Number</label>
-                                            <input class="form-control" type="text" name="vno" required=""
-                                                placeholder="Enter your Vehicle Number">
-                                            <!-- pattern="[G][J][0-9][0-9][A-Z][A-Z][0-9][0-9][0-9][0-9]" -->
+                                            <input class="form-control" type="text" name="vno" required="" min="0"
+                                                max="10" placeholder="Enter your Vehicle Number">
                                         </div>
 
+                                        <div class="form-group mb-3">
+                                            <label for="password">Exipry Date</label>
+                                            <input class="form-control" type="date" name="edate" required="">
+                                        </div>
 
 
                                         <div class="form-group mb-3">
                                             <label for="password">Tax Amount</label>
-                                            <input class="form-control" type="tel" name="tamount" required="">
-                                            <!-- disabled="disabled" -->
+                                            <input class="form-control" type="Number" name="tamount" required="" min="0"
+                                                disabled="disabled">
                                         </div>
 
                                         <br><br>
                                         <div class="form-group mb-0 text-center">
                                             <button class="btn btn-danger btn-block" type="submit" name="sub1"> Create
-                                                Receipt </button>
+                                                Pass </button>
                                         </div>
 
 
@@ -338,15 +336,6 @@
                     $(function() {
                         $(".knob").knob();
                     });
-
-                    function bindvtye() {
-
-                        var xmthttp = new XMLHttpRequest();
-                        xmthttp.open("GET", "bindvtype.php", false);
-                        xmthttp.send(null);
-                        document.getElementById("vtype").innerHTML = xmthttp.responseText;
-                        // alert(xmthttp.responseText);
-                    }
                     </script>
                     <!-- Index js -->
                     <script src="assets2/js/index.js"></script>
@@ -357,8 +346,6 @@
 <!-- Mirrored from codervent.com/dashtreme/demo/dark-admin/vertical-layout/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Mar 2020 11:06:39 GMT -->
 
 </html>
-
-
 <?php
 
     if(isset($_REQUEST['sub1'])){
@@ -366,22 +353,21 @@
       $con=mysqli_connect("localhost","root","","start");
 
       // $toll_id=$_REQEST['id'];
-      $toll_booth=$_REQUEST['tbname'];
-      $toll_booth_no=$_REQUEST['tbno'];
-      $toll_emp_name=$_REQUEST['ename'];
-      $receipt_date=$_REQUEST['pdate'];
-      $receipt_time=$_REQUEST['ptime'];
-      $vehcile_category=$_REQUEST['type_of_vehicle'];
-      $type_journey=$_REQUEST['type_of_journey'];
-      $Vehicle_no=$_REQUEST['vno'];
+      $pass_holder_name=$_REQUEST['hname'];
+      $pass_date=$_REQUEST['pdate'];
+      $pass_time=$_REQUEST['ptime'];
+      $type_of_journey_1=$_REQUEST['type_of_vehicle'];
+      $vehicle_class=$_REQUEST['type_of_class'];
+      $vehicle_number=$_REQUEST['vno'];
+      $exipry_date=$_REQUEST['edate'];
       $Tax_amount=$_REQUEST['tamount'];
 
-      $q="INSERT INTO `tbl_toll_receipt_details`(`toll_receipt_id`, `toll_booth_name`, `toll_booth_no`, `toll_emp_name`, `toll_receipt_date`, `toll_receipt_time`, `type_of_vehicle`, `journey_type`,`vehicle_no`, `toll_amount`) VALUES ('','$toll_booth','$toll_booth_no','$toll_emp_name','$receipt_date','$receipt_time','$vehcile_category','$type_journey','$Vehicle_no','$Tax_amount')";
+      $q="INSERT INTO `tbl_toll_pass_details`(`toll_pass_id`, `toll_pass_holder_name`, `toll_pass_date`, `toll_pass_time`, `toll_pass_type`, `toll_pass_vehicle_class`, `toll_pass_vehicle_no`, `toll_pass_duration`, `toll_pass_amount`) VALUES ('','$pass_holder_name','$pass_date','$pass_time','$type_of_journey_1','$vehicle_class','$vehicle_number','$exipry_date','$Tax_amount')";
 
       $res=mysqli_query($con,$q);
 
       if($res){
-        header("location: search_receipt.php");
+        header("location: search_pass.php");
       }
       else{
         echo "<script>alert('Error in Query')</script>";

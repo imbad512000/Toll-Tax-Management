@@ -1,4 +1,4 @@
-<?php 
+<?php
     ob_start();
 ?>
 <!DOCTYPE html>
@@ -37,7 +37,7 @@
 
 </head>
 
-<body onload="bindvtye()">
+<body>
 
     <!-- Start wrapper-->
     <div id="wrapper">
@@ -46,7 +46,7 @@
         <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
             <div class="brand-logo" style="height: 80px;padding-top: 5px;">
 
-                <a href="emp_dash.php">
+                <a href="Customer.php">
                     <img src="assets3/images/logo.png" class="logo-icon" alt="logo icon" style="width: 30%;">
                     <!-- <h5 class="logo-text"> Admin</h5> -->
                 </a>
@@ -65,13 +65,15 @@
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="sidebar-submenu">
-                        <li><a href="create_pass.php"><i class="zmdi zmdi-dot-circle-alt"></i> Create Pass</a></li>
-                        <li><a href="search_pass.php"><i class="zmdi zmdi-dot-circle-alt"></i> Search Pass</a></li>
+                        <li><a href="Customer_create_pass.php"><i class="zmdi zmdi-dot-circle-alt"></i> Create Pass</a>
+                        </li>
+                        <li><a href="Customer_search_pass.php"><i class="zmdi zmdi-dot-circle-alt"></i> Search Pass</a>
+                        </li>
 
 
                     </ul>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="javaScript:void();" class="waves-effect">
                         <i class="zmdi zmdi-format-list-bulleted"></i> <span>Generate Receipt</span>
                         <i class="fa fa-angle-left pull-right"></i>
@@ -85,7 +87,7 @@
 
                     </ul>
                 </li>
-                </li>
+                </li> -->
                 <li>
                     <a href="javaScript:void();" class="waves-effect">
                         <i class="zmdi zmdi-lock"></i> <span>Online Transaction</span>
@@ -152,119 +154,142 @@
             </nav>
         </header>
         <!--End topbar header-->
-
+        <br><br>
         <div class="clearfix"></div>
 
         <div class="content-wrapper">
             <div class="container-fluid">
 
                 <!--Start Dashboard Content-->
-                <br><br><br>
+
                 <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 col-lg-6 col-xl-5">
-                            <div class="card" style="height: 1090px; width: 480px;">
+                    <div class="row justify-content">
+                        <div class="col-md-8 col-lg-9 col-xl-5">
+                            <div class="card" style="height: 650px; width: 1010px;">
 
-                                <div class="card-body p-4">
+                                <div class="card-body p-10">
 
 
 
-                                    <center>
-                                        <h3 class="auth-title">Create Receipt</h3>
-                                    </center>
+                                    <h3 class="auth-title">Search Pass</h3>
                                     <br><br><br>
 
-                                    <form action="" method="post">
-
-                                        <!-- <div class="form-group mb-3">
-                                        <label for="id"> Category Id</label>
-                                        <input class="form-control" type="Number" id="cid" name="id" required="" min="0">
-                                    </div>  -->
+                                    <form action="#">
 
                                         <div class="form-group mb-3">
-                                            <label for="password">Toll Booth Name</label>
-                                            <input class="form-control" type="text" name="tbname" required=""
-                                                placeholder="Enter your Toll Booth Name">
-                                        </div>
-
-                                        <div class="form-group mb-3">
-                                            <label for="password">Toll Booth Number</label>
-                                            <input class="form-control" type="tel" name="tbno" min="0">
-                                        </div>
-
-                                        <div class="form-group mb-3">
-                                            <label for="password">Toll Employee Name</label>
-                                            <input class="form-control" type="text" name="ename" required=""
-                                                placeholder="Enter your employee name">
-                                        </div>
-
-
-                                        <div class="form-group mb-3">
-                                            <label for="password">Receipt Date</label>
-                                            <input class="form-control" type="date" name="pdate" required="">
-                                        </div>
-
-                                        <div class="form-group mb-3">
-                                            <label for="password">Receipt Time</label>
-                                            <input class="form-control" type="Time" name="ptime">
-                                        </div>
-
-                                        <div class="form-group mb-3">
-                                            <label for="inputEmail3" class="col-5 col-form-label">Vehicle
-                                                Category<span class="text-danger"></span></label>
-                                            <div id="vtype">
+                                            <div class="row">
+                                                <input class="form-control col-5 ml-2" type="text" id="cid" name="name"
+                                                    required="" placeholder="Search Pass">
+                                                <button class="btn btn-danger btn-block col-1 ml-2" type="submit"
+                                                    name="sub1"><i class="fa fa-search"></i></button>
                                             </div>
-                                        </div>
-
-                                        <div class="form-group mb-3">
-                                            <label for="inputEmail3" class="col-5 col-form-label">Type of Journey<span
-                                                    class="text-danger"></span></label>
-                                            <div class="">
-                                                <select class="form-control" name="type_of_journey"
-                                                    data-style="btn-light">
-                                                    <option>Select Journey Type</option>
-                                                    <option value="sin">Single</option>
-                                                    <option value="ret">Return</option>
-                                                    <!-- <option value="B">Bus</option> -->
-                                                </select>
-
-                                            </div>
-                                        </div>
 
 
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="card">
+                                                        <div class="card-header"><i class="fa fa-table"></i> Detail
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table id="example" class="table table-bordered">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Pass holder name</th>
+                                                                            <th>Pass date</th>
+                                                                            <th>Pass time</th>
+                                                                            <th>Type of Journey</th>
+                                                                            <th>Vehicle Class</th>
+                                                                            <th>Vehicle Number</th>
+                                                                            <th>Duration of Pass</th>
+                                                                            <th>Tax Amount</th>
+
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <!-- <th><?php //$fname ?></th>
+                        <th><?php //$lname ?></th>
+                        <th><?php //$Gender?></th>
+                        <th><?php //$Email ?></th>
+                        <th><?php //$Password ?></th>
+                        <th><?php //$PhoneNumber ?></th>
+                        <th><?php //$DateOfBirth ?></th>
+                        <th><?php //$AadharCardNumber ?></th> -->
+
+                                                                            <?php
+
+                          
+
+                          if(isset($_REQUEST['sub1'])){
+                                $id=$_REQUEST['name'];
+                                $q1="SELECT * FROM `tbl_toll_pass_details` WHERE CONCAT(`toll_pass_id`,`toll_pass_holder_name`,`toll_pass_date`,`toll_pass_time`,`toll_pass_type`,`toll_pass_vehicle_class`,`toll_pass_vehicle_no`,`toll_pass_duration`,`toll_pass_amount`)LIKE '%".$id."%'";
+                                $search_result= filterTable($q1);
+                          }
+                          else{
+                              $q1="SELECT * FROM `tbl_toll_pass_details`";
+                              $search_result= filterTable($q1);
+                          }
 
 
-                                        <div class="form-group mb-3">
-                                            <label for="password">Vehicle Number</label>
-                                            <input class="form-control" type="text" name="vno" required=""
-                                                placeholder="Enter your Vehicle Number">
-                                            <!-- pattern="[G][J][0-9][0-9][A-Z][A-Z][0-9][0-9][0-9][0-9]" -->
-                                        </div>
+                          function filterTable($q1){
+
+                            $con=mysqli_connect("localhost","root","","start");  
+                            $filter_result=mysqli_query($con,$q1);
+                            return $filter_result;
+
+                          }
 
 
+                            
 
-                                        <div class="form-group mb-3">
-                                            <label for="password">Tax Amount</label>
-                                            <input class="form-control" type="tel" name="tamount" required="">
-                                            <!-- disabled="disabled" -->
-                                        </div>
+                            // $q="SELECT * FROM `tbl_toll_receipt_details`";
 
-                                        <br><br>
-                                        <div class="form-group mb-0 text-center">
-                                            <button class="btn btn-danger btn-block" type="submit" name="sub1"> Create
-                                                Receipt </button>
-                                        </div>
+                            // $res=mysqli_query($con,$q);
+
+                              while($data=mysqli_fetch_array($search_result)){
+                                  
+                                // echo "<tr><td>".$data["toll_receipt_id"]."</td>";
+                                echo "<td>".$data["toll_pass_holder_name"]."</td>";
+                                echo "<td>".$data["toll_pass_date"]."</td>";
+                                echo "<td>".$data["toll_pass_time"]."</td>";
+                                echo "<td>".$data["toll_pass_type"]."</td>";
+                                echo "<td>".$data["toll_pass_vehicle_class"]."</td>";
+                                echo "<td>".$data["toll_pass_vehicle_no"]."</td>";
+                                echo "<td>".$data["toll_pass_duration"]."</td>";
+                                echo "<td>".$data["toll_pass_amount"]."</td></tr>";
+
+                            }
+
+                            // if($res){
+                            //   echo "";
+                            // }
+                            // else{
+                            //   echo "<h2>Error</h2>";
+                            // }
+
+                        ?>
 
 
-                                        <br><br><br><br>
-                                        <!-- <div class="form-group row">
+                                                                        </tr>
+                                                                        </tfoot>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div><!-- End Row-->
+
+
+                                            <br><br><br><br>
+                                            <!-- <div class="form-group row">
     <label for="inputEmail3" class="col-sm-2 col-form-label"> <span class="text-danger"></span></label>
     <div class="col-3">
     <input type="submit" name="sub1" value="Add" style="background-color:rgba();width: 150px;height: 40px;">
 
 </div>
 </div> -->
-                                        <br>
+                                            <br>
                                     </form>
                                     <!--End Row-->
 
@@ -294,19 +319,26 @@
                         <!--End Back To Top Button-->
 
                         <!--Start footer-->
-                        <footer class="footer">
-                            <div class="container">
-                                <div class="text-center">
-                                    Copyright © 2020 Desinged by Siddharth Kansara | Bhavik Desai
-                                </div>
-                            </div>
-                        </footer>
+                        <!-- <footer class="footer">
+      <div class="container">
+        <div class="text-center">
+          Copyright © 2020 Desinged by Siddharth Kansara | Bhavik Desai
+        </div>
+      </div>
+    </footer> -->
                         <!--End footer-->
 
 
 
                     </div>
                     <!--End wrapper-->
+                    <footer class="footer">
+                        <div class="container">
+                            <div class="text-center">
+                                Copyright © 2020 Desinged by Siddharth Kansara | Bhavik Desai
+                            </div>
+                        </div>
+                    </footer>
 
                     <!-- Bootstrap core JavaScript-->
                     <script src="assets2/js/jquery.min.js"></script>
@@ -338,15 +370,6 @@
                     $(function() {
                         $(".knob").knob();
                     });
-
-                    function bindvtye() {
-
-                        var xmthttp = new XMLHttpRequest();
-                        xmthttp.open("GET", "bindvtype.php", false);
-                        xmthttp.send(null);
-                        document.getElementById("vtype").innerHTML = xmthttp.responseText;
-                        // alert(xmthttp.responseText);
-                    }
                     </script>
                     <!-- Index js -->
                     <script src="assets2/js/index.js"></script>
@@ -357,39 +380,3 @@
 <!-- Mirrored from codervent.com/dashtreme/demo/dark-admin/vertical-layout/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Mar 2020 11:06:39 GMT -->
 
 </html>
-
-
-<?php
-
-    if(isset($_REQUEST['sub1'])){
-
-      $con=mysqli_connect("localhost","root","","start");
-
-      // $toll_id=$_REQEST['id'];
-      $toll_booth=$_REQUEST['tbname'];
-      $toll_booth_no=$_REQUEST['tbno'];
-      $toll_emp_name=$_REQUEST['ename'];
-      $receipt_date=$_REQUEST['pdate'];
-      $receipt_time=$_REQUEST['ptime'];
-      $vehcile_category=$_REQUEST['type_of_vehicle'];
-      $type_journey=$_REQUEST['type_of_journey'];
-      $Vehicle_no=$_REQUEST['vno'];
-      $Tax_amount=$_REQUEST['tamount'];
-
-      $q="INSERT INTO `tbl_toll_receipt_details`(`toll_receipt_id`, `toll_booth_name`, `toll_booth_no`, `toll_emp_name`, `toll_receipt_date`, `toll_receipt_time`, `type_of_vehicle`, `journey_type`,`vehicle_no`, `toll_amount`) VALUES ('','$toll_booth','$toll_booth_no','$toll_emp_name','$receipt_date','$receipt_time','$vehcile_category','$type_journey','$Vehicle_no','$Tax_amount')";
-
-      $res=mysqli_query($con,$q);
-
-      if($res){
-        header("location: search_receipt.php");
-      }
-      else{
-        echo "<script>alert('Error in Query')</script>";
-      }
-
-
-    }
-    ob_flush();
-
-
-?>

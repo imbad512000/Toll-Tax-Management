@@ -46,7 +46,7 @@
 
         <!--Start sidebar-wrapper-->
         <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
-        <div class="brand-logo" style="height: 80px;padding-top: 5px;">
+            <div class="brand-logo" style="height: 80px;padding-top: 5px;">
                 <a href="Admin1.php">
                     <img src="assets3/images/logo.png" class="logo-icon" alt="logo icon" style="width: 30%;">
 
@@ -57,7 +57,7 @@
             <ul class="sidebar-menu">
                 <li class="sidebar-header">MAIN NAVIGATION</li>
                 <li>
-                    
+
                 </li>
                 </li>
                 <li>
@@ -71,6 +71,13 @@
                         <i class="zmdi zmdi-card-travel"></i>
                         <span>Employee Detail</span>
 
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Search_employee.php" class="waves-effect">
+                        <i class="zmdi zmdi-layers"></i>
+                        <span>Search Employee</span>
                     </a>
                 </li>
 
@@ -91,17 +98,26 @@
                     </ul>
                 </li>
                 </li>
+
                 <li>
                     <a href="javaScript:void();" class="waves-effect">
                         <i class="zmdi zmdi-lock"></i> <span>Online Transaction</span>
 
                     </a>
                 </li>
+
                 <li>
-                    <a href="#" class="waves-effect">
+                    <a href="Customer_detail.php" class="waves-effect">
                         <i class="zmdi zmdi-card-travel"></i> <span>Customer Detail</span>
                     </a>
                 </li>
+
+                <li>
+                    <a href="Search_customer.php" class="waves-effect">
+                        <i class="zmdi zmdi-card-travel"></i> <span>Search Customer</span>
+                    </a>
+                </li>
+
                 <li>
                     <a href="Entry_trial.php" class="waves-effect">
                         <i class="zmdi zmdi-invert-colors"></i> <span>Entry Detail</span>
@@ -113,7 +129,7 @@
 
         <!--Start topbar header-->
         <header class="topbar-nav">
-        <nav id="header-setting" class="navbar navbar-expand fixed-top" style="height: 80px;">
+            <nav id="header-setting" class="navbar navbar-expand fixed-top" style="height: 80px;">
                 <ul class="navbar-nav mr-auto align-items-center">
                     <li class="nav-item">
                         <a class="nav-link toggle-menu" href="javascript:void();">
@@ -396,7 +412,7 @@
             <!-- End container-fluid-->
 
         </div>
-        
+
         <!--End content-wrapper-->
         <!--Start Back To Top Button-->
         <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>

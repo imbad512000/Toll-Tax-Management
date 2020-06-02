@@ -44,10 +44,10 @@
 
         <!--Start sidebar-wrapper-->
         <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
-        <div class="brand-logo" style="height: 80px;padding-top: 5px;">
-     
+            <div class="brand-logo" style="height: 80px;padding-top: 5px;">
+
                 <a href="Admin1.php">
-                <img src="assets3/images/logo.png" class="logo-icon" alt="logo icon" style="width: 30%;">
+                    <img src="assets3/images/logo.png" class="logo-icon" alt="logo icon" style="width: 30%;">
 
                 </a>
             </div>
@@ -55,7 +55,7 @@
             <ul class="sidebar-menu">
                 <li class="sidebar-header">MAIN NAVIGATION</li>
                 <li>
-                    
+
                 </li>
                 </li>
                 <li>
@@ -70,6 +70,13 @@
                         <i class="zmdi zmdi-card-travel"></i>
                         <span>Employee Detail</span>
 
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Search_employee.php" class="waves-effect">
+                        <i class="zmdi zmdi-layers"></i>
+                        <span>Search Employee</span>
                     </a>
                 </li>
 
@@ -97,10 +104,17 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="waves-effect">
+                    <a href="Customer_detail.php" class="waves-effect">
                         <i class="zmdi zmdi-card-travel"></i> <span>Customer Detail</span>
                     </a>
                 </li>
+
+                <li>
+                    <a href="Search_customer.php" class="waves-effect">
+                        <i class="zmdi zmdi-card-travel"></i> <span>Search Customer</span>
+                    </a>
+                </li>
+
                 <li>
                     <a href="Entry_trial.php" class="waves-effect">
                         <i class="zmdi zmdi-invert-colors"></i> <span>Entry Detail</span>
@@ -112,7 +126,7 @@
 
         <!--Start topbar header-->
         <header class="topbar-nav">
-        <nav id="header-setting" class="navbar navbar-expand fixed-top" style="height: 80px;">
+            <nav id="header-setting" class="navbar navbar-expand fixed-top" style="height: 80px;">
                 <ul class="navbar-nav mr-auto align-items-center">
                     <li class="nav-item">
                         <a class="nav-link toggle-menu" href="javascript:void();">
@@ -325,7 +339,7 @@
 
                                                 <div class="form-group mb-3">
                                                     <label for="inputEmail3" class="col-5 col-form-label">Vehicle
-                                                        Type<span class="text-danger">*</span></label>
+                                                        Type<span class="text-danger"></span></label>
                                                     <div id="vtype">
                                                     </div>
                                                 </div>

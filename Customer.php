@@ -41,34 +41,31 @@
 
         <!--Start sidebar-wrapper-->
         <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
-        <div class="brand-logo" style="height: 80px;padding-top: 5px;">
+            <div class="brand-logo" style="height: 80px;padding-top: 5px;">
                 <a href="Customer.php">
-                <img src="assets3/images/logo.png" class="logo-icon" alt="logo icon" style="width: 30%;">
+                    <img src="assets3/images/logo.png" class="logo-icon" alt="logo icon" style="width: 30%;">
                     <!-- <h5 class="logo-text"> Admin</h5> -->
                 </a>
             </div>
 
             <ul class="sidebar-menu">
                 <li class="sidebar-header">MAIN NAVIGATION</li>
-                <li>
-                   
-                </li>
-                
-              
-                
+
+
+
 
                 <li>
-                    <a href="pass_create.php" class="waves-effect">
+                    <a href="Customer_create_pass.php" class="waves-effect">
                         <i class="zmdi zmdi-format-list-bulleted"></i> <span>Create Pass</span>
                     </a>
 
                 </li>
                 <li>
-                    <a href="search_p.php" class="waves-effect">
+                    <a href="Customer_search_pass.php" class="waves-effect">
                         <i class="zmdi zmdi-format-list-bulleted"></i> <span>Search Pass</span>
                     </a>
                 </li>
-                
+
                 <!-- <li>
         <a href="receiptc.php" class="waves-effect">
           <i class="zmdi zmdi-format-list-bulleted"></i> <span>Generate Receipt</span>
@@ -92,7 +89,7 @@
 
         <!--Start topbar header-->
         <header class="topbar-nav">
-        <nav id="header-setting" class="navbar navbar-expand fixed-top" style="height: 80px;">
+            <nav id="header-setting" class="navbar navbar-expand fixed-top" style="height: 80px;">
                 <ul class="navbar-nav mr-auto align-items-center">
                     <li class="nav-item">
                         <a class="nav-link toggle-menu" href="javascript:void();">

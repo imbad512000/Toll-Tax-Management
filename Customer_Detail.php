@@ -1,6 +1,7 @@
 <?php
     ob_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,13 +18,14 @@
     <link href="assets2/css/pace.min.css" rel="stylesheet" />
     <script src="assets2/js/pace.min.js"></script>
     <!--favicon-->
-    <link rel="icon" href="assets3/images/logo.png" type="logo-icon" />
-    <!-- Vector CSS -->
-    <link href="assets2/plugins/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+    <link rel="icon" href="assets2/images/favicon.ico" type="image/x-icon">
     <!-- simplebar CSS-->
     <link href="assets2/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
     <!-- Bootstrap core CSS-->
     <link href="assets2/css/bootstrap.min.css" rel="stylesheet" />
+    <!--Data Tables -->
+    <link href="assets2/plugins/bootstrap-datatable/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="assets2/plugins/bootstrap-datatable/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
     <!-- animate CSS-->
     <link href="assets2/css/animate.css" rel="stylesheet" type="text/css" />
     <!-- Icons CSS-->
@@ -51,6 +53,7 @@
                 </a>
             </div>
 
+
             <ul class="sidebar-menu">
                 <li class="sidebar-header">MAIN NAVIGATION</li>
                 <li>
@@ -65,7 +68,6 @@
                 </li>
                 <li>
                     <a href="employee_detail.php" class="waves-effect">
-
                         <i class="zmdi zmdi-card-travel"></i>
                         <span>Employee Detail</span>
 
@@ -103,7 +105,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="Customer_detail.php" class="waves-effect">
+                    <a href="Customer_Detail.php" class="waves-effect">
                         <i class="zmdi zmdi-card-travel"></i> <span>Customer Detail</span>
                     </a>
                 </li>
@@ -299,146 +301,175 @@
             </nav>
         </header>
         <!--End topbar header-->
-
+        <br><br>
         <div class="clearfix"></div>
 
         <div class="content-wrapper">
             <div class="container-fluid">
-
-                <!--Start Dashboard Content-->
-
-                <form action="#">
-                    <div class="page-body">
-                        <!-- <div class="row">
-<div class="col-sm-12">
- -->
-                        <!-- <div class="account-pages mt-5 mb-5">/
- --> <br><br>
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-md-8 col-lg-6 col-xl-5">
-                                    <div class="card" style="height: 525px;">
-
-                                        <div class="card-body p-4">
-
-
-
-                                            <center>
-                                                <h3 class="auth-title">Add Vehicle Category</h3>
-                                            </center>
-                                            <br><br><br>
-
-                                            <form action="#">
-
-                                                <!-- <div class="form-group mb-3">
-                                        <label for="id"> Category Id</label>
-                                        <input class="form-control" type="Number" id="cid" name="id" required="" min="0">
-                                    </div>  -->
-
-                                                <div class="form-group mb-3">
-                                                    <label for="password">Vehicle Type</label>
-                                                    <input class="form-control" type="text" name="pass" required=""
-                                                        placeholder="Enter your Vehicle Type">
-                                                </div>
-
-                                                <div class="form-group mb-3">
-                                                    <label for="password">Tax Amount</label>
-                                                    <input class="form-control" type="Number" name="tamount" required=""
-                                                        min="0">
-                                                </div>
-
-                                                <br><br>
-                                                <div class="form-group mb-0 text-center">
-                                                    <button class="btn btn-danger btn-block" type="submit" name="sub1">
-                                                        Add </button>
-                                                </div>
-
-
-                                                <br><br><br><br>
-                                                <!-- <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label"> <span class="text-danger"></span></label>
-    <div class="col-3">
-    <input type="submit" name="sub1" value="Add" style="background-color:rgba();width: 150px;height: 40px;">
-
-</div>
-</div> -->
-                                                <br>
-                                            </form>
-
-
-
-
-
-
-                                        </div>
-                                        <!--End Row-->
-
-
-                                        <!--End Row-->
-
-
-                                        <!--End Dashboard Content-->
-                                        <!--start overlay-->
-                                        <div class="overlay toggle-menu"></div>
-                                        <!--end overlay-->
-                                    </div>
-                                    <!-- End container-fluid-->
-
-                                </div>
-                                <!--End content-wrapper-->
-                                <!--Start Back To Top Button-->
-                                <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i>
-                                </a>
-                                <!--End Back To Top Button-->
-                                <br><br>
-                                <!--Start footer-->
-                                <footer class="footer">
-                                    <div class="container">
-                                        <div class="text-center">
-                                            Copyright © 2020 Desinged by Siddharth Kansara | Bhavik Desai
-                                        </div>
-                                    </div>
-                                </footer>
-                                <!--End footer-->
-
-
-
+                <!-- Breadcrumb-->
+                <div class="row pt-2 pb-2">
+                    <div class="col-sm-9">
+                        <h4 class="page-title">Customer Side</h4>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="javaScript:void();"> Register Customer Detail</a></li>
+                            <li class="breadcrumb-item"><a href="javaScript:void();">Tables</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Customers Detail</li>
+                        </ol>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="btn-group float-sm-right">
+                            <button type="button" class="btn btn-light waves-effect waves-light"><i
+                                    class="fa fa-cog mr-1"></i> Setting</button>
+                            <button type="button"
+                                class="btn btn-light dropdown-toggle dropdown-toggle-split waves-effect waves-light"
+                                data-toggle="dropdown">
+                                <span class="caret"></span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="javaScript:void();" class="dropdown-item">Action</a>
+                                <a href="javaScript:void();" class="dropdown-item">Another action</a>
+                                <a href="javaScript:void();" class="dropdown-item">Something else here</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="javaScript:void();" class="dropdown-item">Separated link</a>
                             </div>
-                            <!--End wrapper-->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header"><i class="fa fa-table"></i> Detail</div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table id="example" class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>Gender</th>
+                                                <th>Email Address</th>
+                                                <th>Password</th>
+                                                <th>Date Of Birth</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <!-- <th><?php //$fname ?></th>
+                        <th><?php //$lname ?></th>
+                        <th><?php //$Gender?></th>
+                        <th><?php //$Email ?></th>
+                        <th><?php //$Password ?></th>
+                        <th><?php //$PhoneNumber ?></th>
+                        <th><?php //$DateOfBirth ?></th>
+                        <th><?php //$AadharCardNumber ?></th> -->
 
-                            <!-- Bootstrap core JavaScript-->
-                            <script src="assets2/js/jquery.min.js"></script>
-                            <script src="assets2/js/popper.min.js"></script>
-                            <script src="assets2/js/bootstrap.min.js"></script>
+                                                <?php
+                            $con=mysqli_connect("localhost","root","","start");
 
-                            <!-- simplebar js -->
-                            <script src="assets2/plugins/simplebar/js/simplebar.js"></script>
-                            <!-- sidebar-menu js -->
-                            <script src="assets2/js/sidebar-menu.js"></script>
-                            <!-- loader scripts -->
-                            <script src="assets2/js/jquery.loading-indicator.html"></script>
-                            <!-- Custom scripts -->
-                            <script src="assets2/js/app-script.js"></script>
-                            <!-- Chart js -->
+                            $q="SELECT * FROM `tbl_customer_registration`";
 
-                            <script src="assets2/plugins/Chart.js/Chart.min.js"></script>
-                            <!-- Vector map JavaScript -->
-                            <script src="assets2/plugins/vectormap/jquery-jvectormap-2.0.2.min.js"></script>
-                            <script src="assets2/plugins/vectormap/jquery-jvectormap-world-mill-en.js"></script>
-                            <!-- Easy Pie Chart JS -->
-                            <script src="assets2/plugins/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
-                            <!-- Sparkline JS -->
-                            <script src="assets2/plugins/sparkline-charts/jquery.sparkline.min.js"></script>
-                            <script src="assets2/plugins/jquery-knob/excanvas.js"></script>
-                            <script src="assets2/plugins/jquery-knob/jquery.knob.js"></script>
+                            $res=mysqli_query($con,$q);
 
-                            <script>
-                            $(function() {
-                                $(".knob").knob();
-                            });
-                            </script>
-                            <!-- Index js -->
-                            <script src="assets2/js/index.js"></script>
+                              while($data=mysqli_fetch_assoc($res)){
+                                
+                                echo "<tr><td>".$data["cust_reg_first_name"]."</td>";
+                                echo "<td>".$data["cust_reg_last_name"]."</td>";
+                                echo "<td>".$data["cust_reg_gender"]."</td>";
+                                echo "<td>".$data["cust_reg_email"]."</td>";
+                                echo "<td>".$data["cust_reg_password"]."</td>";
+                                // echo "<td>".$data["emp_reg_contact_num"]."</td>";
+                                echo "<td>".$data["cust_reg_DOB"]."</td></tr>";
+                                // echo "<td>".$data["emp_aadharcard_number"]."</td></tr>";
+
+                            }
+
+                            // if($res){
+                            //   echo "";
+                            // }
+                            // else{
+                            //   echo "<h2>Error</h2>";
+                            // }
+
+                        ?>
+
+
+                                            </tr>
+                                            </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End Row-->
+                <!--start overlay-->
+                <div class="overlay toggle-menu"></div>
+                <!--end overlay-->
+            </div>
+            <!-- End container-fluid-->
+
+        </div>
+
+        <!--End content-wrapper-->
+        <!--Start Back To Top Button-->
+        <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+        <!--End Back To Top Button-->
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <!--Start footer-->
+        <footer class="footer">
+            <div class="container">
+                <div class="text-center">
+                    Copyright © 2020 Desinged by Siddharth Kansara | Bhavik Desai
+                </div>
+            </div>
+        </footer>
+        <!--End footer-->
+
+
+
+    </div>
+    <!--End wrapper-->
+
+    <script src="assets2/js/jquery.min.js"></script>
+    <script src="assets2/js/popper.min.js"></script>
+    <script src="assets2/js/bootstrap.min.js"></script>
+
+    <!-- simplebar js -->
+    <script src="assets2/plugins/simplebar/js/simplebar.js"></script>
+    <!-- sidebar-menu js -->
+    <script src="assets2/js/sidebar-menu.js"></script>
+
+    <!-- Custom scripts -->
+    <script src="assets2/js/app-script.js"></script>
+
+    <!--Data Tables js-->
+    <script src="assets2/plugins/bootstrap-datatable/js/jquery.dataTables.min.js"></script>
+    <script src="assets2/plugins/bootstrap-datatable/js/dataTables.bootstrap4.min.js"></script>
+    <script src="assets2/plugins/bootstrap-datatable/js/dataTables.buttons.min.js"></script>
+    <script src="assets2/plugins/bootstrap-datatable/js/buttons.bootstrap4.min.js"></script>
+    <script src="assets2/plugins/bootstrap-datatable/js/jszip.min.js"></script>
+    <script src="assets2/plugins/bootstrap-datatable/js/pdfmake.min.js"></script>
+    <script src="assets2/plugins/bootstrap-datatable/js/vfs_fonts.js"></script>
+    <script src="assets2/plugins/bootstrap-datatable/js/buttons.html5.min.js"></script>
+    <script src="assets2/plugins/bootstrap-datatable/js/buttons.print.min.js"></script>
+    <script src="assets2/plugins/bootstrap-datatable/js/buttons.colVis.min.js"></script>
+
+    <script>
+    $(document).ready(function() {
+        //Default data table
+        $('#default-datatable').DataTable();
+
+
+        var table = $('#example').DataTable({
+            lengthChange: false,
+            buttons: ['copy', 'excel', 'pdf', 'print', 'colvis']
+        });
+
+        table.buttons().container()
+            .appendTo('#example_wrapper .col-md-6:eq(0)');
+
+    });
+    </script>
+
 
 
 </body>
@@ -446,49 +477,3 @@
 <!-- Mirrored from codervent.com/dashtreme/demo/dark-admin/vertical-layout/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Mar 2020 11:06:39 GMT -->
 
 </html>
-
-
-<?php
-    
-       $con = mysqli_connect("localhost","root","","start");
-
-    if(isset($_REQUEST['sub1']))
-    {
-
-
-        // $C_id=$_REQUEST['id'];
-        $Vehicle_type=$_REQUEST['pass'];
-        $Tax_Amount=$_REQUEST['tamount'];
-
-        $sq = "SELECT  `vehicle_type` FROM `tbl_vehicle_category` WHERE `vehicle_type`='$Vehicle_type'";
-
-                    $value = mysqli_query($con,$sq);
-                    $insert = mysqli_fetch_assoc($value);   
-                    
-                                //echo $demail['cust_reg_email'];
-                                //$add = $insert['category_id'];
-                                $add=$insert['vehicle_type'];
-                                //$add=$insert['tax_amount'];                   
-                    
-
-                             if($add==$Vehicle_type){
-                                        echo "<center><h4>User exist already</h4></center>";
-                                }
-                                else{
-                                        //echo "User not exist";
-                                        $q = "INSERT INTO `tbl_vehicle_category`(`category_id`, `vehicle_type`, `tax_amount`) VALUES ('$C_id','$Vehicle_type','$Tax_Amount')";
-
-                                        $res = mysqli_query($con,$q); 
-
-                                        if($res)
-                                        {
-                                            header("location: Admin1.php");
-                                        }
-                                        else
-                                        {
-                                            echo "Not";    
-                                        }
-                                    }
-                        }
-                        ob_flush();
-?>
