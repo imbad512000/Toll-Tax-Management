@@ -141,25 +141,25 @@
             </nav>
         </header>
         <!--End topbar header-->
-        <br><br>
+        <br>
         <div class="clearfix"></div>
 
         <div class="content-wrapper">
             <div class="container-fluid">
-                <br><br>
+              
                 <div>
                              
                
                 <!--Start Dashboard Content-->
                
-         <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
+         <!-- <div class="container py-lg-5 py-md-4 py-sm-4 py-3"> -->
             
-            <h2 class="title mb-lg-5 mb-md-4 mb-sm-2 mb-3 text-center"> Toll Detail </h2>
+            <!-- <h2 class="title  text-center" style="padding:25px"> Toll Detail </h2> -->
 
         
             <centre>
                 <table >
-           <a href=""><img src="images/3.jpg"  style="width: 960px; padding-left:180px; " class="img-fluid"></a> 
+           <a href=""><img src="images/3.jpg"  style="width: 2260px; " class="img-fluid"></a> 
            </table>
            </centre>
             <br><br>
