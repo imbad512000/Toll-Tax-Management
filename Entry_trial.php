@@ -233,10 +233,11 @@
                                             </div>
                                         </div>
 
-                                        <br><br>
-                                        <div class="form-group mb-0 text-center">
-                                            <button class="btn btn-danger btn-block" type="submit" name="submit">
-                                                Add </button>
+
+                                        <br>
+                                        <div class="mb-0 text-center">
+                                            <button class="btn btn-danger" type="submit" name="submit">
+                                                &nbsp; &nbsp; &nbsp; Search &nbsp; &nbsp; &nbsp</button>
                                         </div>
                                         <div class="form-group mb-0 text-center">
                                             <?php
@@ -289,14 +290,12 @@
 
                                             $data=mysqli_fetch_array($res);
 
-                                            echo "<table>";
-
-                                                echo "<tr>
-                                                    <td>".$data["V"]."</td>
-                                                </tr>";
-
-                                                echo "</table>";
-
+                                            ?>
+                                            <hr style="color:white;width:100%;height:0.5px;">
+                                            <label class="btn btn text-white">Number of
+                                                Entries:</label>
+                                            <label class="btn btn-sm btn-info"><?php echo$data['V']?></label>
+                                            <?php
 
 
                                             }
