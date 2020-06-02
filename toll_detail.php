@@ -41,9 +41,9 @@
 
         <!--Start sidebar-wrapper-->
         <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
-        <div class="brand-logo" style="height: 80px;padding-top: 5px;">
+            <div class="brand-logo" style="height: 80px;padding-top: 5px;">
                 <a href="Customer.php">
-                <img src="assets3/images/logo.png" class="logo-icon" alt="logo icon" style="width: 30%;">
+                    <img src="assets3/images/logo.png" class="logo-icon" alt="logo icon" style="width: 30%;">
                     <!-- <h5 class="logo-text"> Admin</h5> -->
                 </a>
             </div>
@@ -51,11 +51,11 @@
             <ul class="sidebar-menu">
                 <li class="sidebar-header">MAIN NAVIGATION</li>
                 <li>
-                   
+
                 </li>
-                
-              
-                
+
+
+
 
                 <li>
                     <a href="pass_create.php" class="waves-effect">
@@ -68,7 +68,7 @@
                         <i class="zmdi zmdi-format-list-bulleted"></i> <span>Search Pass</span>
                     </a>
                 </li>
-                
+
                 <!-- <li>
         <a href="receiptc.php" class="waves-effect">
           <i class="zmdi zmdi-format-list-bulleted"></i> <span>Generate Receipt</span>
@@ -92,7 +92,7 @@
 
         <!--Start topbar header-->
         <header class="topbar-nav">
-        <nav id="header-setting" class="navbar navbar-expand fixed-top" style="height: 80px;">
+            <nav id="header-setting" class="navbar navbar-expand fixed-top" style="height: 80px;">
                 <ul class="navbar-nav mr-auto align-items-center">
                     <li class="nav-item">
                         <a class="nav-link toggle-menu" href="javascript:void();">
@@ -146,82 +146,89 @@
 
         <div class="content-wrapper">
             <div class="container-fluid">
-              
+
                 <div>
-                             
-               
-                <!--Start Dashboard Content-->
-               
-         <!-- <div class="container py-lg-5 py-md-4 py-sm-4 py-3"> -->
-            
-            <!-- <h2 class="title  text-center" style="padding:25px"> Toll Detail </h2> -->
 
-        
-            <centre>
-                <table >
-           <a href=""><img src="images/3.jpg"  style="width: 2100px;height: 375px; " class="img-fluid"></a> 
-           </table>
-           </centre>
-            <br><br>
-            <centre>
-                <table >
-                <h8>
-            The Ministry of Road Transport & Highways, an apex organisation under the Central Government, is entrusted with the task of formulating and administering, in consultation with other Central Ministries/Departments, State Governments/UT Administrations, organisations and individuals, policies for Road Transport, National Highways and Transport Research with a view to increasing the mobility and efficiency of the road transport system in the country.
 
-The Ministry has two wings : Roads wing and Transport wing.
-        <br><br>
-        MAIN RESPONSIBILITIES<br>
-> Planning, development and maintenance of National Highways in the country.<br>
-> Extends technical and financial support to State Governments for the development of state roads and the roads of inter-state connectivity and economic importance<br>
-> Evolves standard specifications for roads and bridges in the country.<br>
-> Serves as a repository of technical knowledge on roads and bridges.<br>
-              </h8>
-            
-           </table>
-           </centre>
-          
-           
+                    <!--Start Dashboard Content-->
 
-          
-          </div>
-          </div>
-               
-           
-                
+                    <!-- <div class="container py-lg-5 py-md-4 py-sm-4 py-3"> -->
 
-                <!--End Row-->
+                    <!-- <h2 class="title  text-center" style="padding:25px"> Toll Detail </h2> -->
+
+
+                    <centre>
+                        <table>
+                            <a href=""><img src="images/3.jpg" style="width: 1800px;height: 275px; "
+                                    class="img-fluid"></a>
+                        </table>
+                    </centre>
+                    <br><br>
+                    <centre>
+                        <table>
+                            <h8>
+                                The Ministry of Road Transport & Highways, an apex organisation under the Central
+                                Government, is entrusted with the task of formulating and administering, in consultation
+                                with other Central Ministries/Departments, State Governments/UT Administrations,
+                                organisations and individuals, policies for Road Transport, National Highways and
+                                Transport Research with a view to increasing the mobility and efficiency of the road
+                                transport system in the country.
+
+                                The Ministry has two wings : Roads wing and Transport wing.
+                                <br><br>
+                                MAIN RESPONSIBILITIES<br>
+                                > Planning, development and maintenance of National Highways in the country.<br>
+                                > Extends technical and financial support to State Governments for the development of
+                                state roads and the roads of inter-state connectivity and economic importance<br>
+                                > Evolves standard specifications for roads and bridges in the country.<br>
+                                > Serves as a repository of technical knowledge on roads and bridges.<br>
+                            </h8>
+
+                        </table>
+                    </centre>
 
 
 
 
-
+                </div>
             </div>
-            <!--End Row-->
+
+
 
 
             <!--End Row-->
 
 
-            <!--End Dashboard Content-->
-            <!--start overlay-->
-          
+
+
+
+        </div>
+        <!--End Row-->
+
+
+        <!--End Row-->
+
+
+        <!--End Dashboard Content-->
+        <!--start overlay-->
+
         <!-- End container-fluid-->
 
-    
-    <!--End content-wrapper-->
-    <!--Start Back To Top Button-->
-    <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
-    <!--End Back To Top Button-->
-    
-    <!--Start footer-->
-    <footer class="footer">
-        <div class="container" style="align:bottom;>
+
+        <!--End content-wrapper-->
+        <!--Start Back To Top Button-->
+        <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+        <!--End Back To Top Button-->
+
+        <!--Start footer-->
+        <footer class="footer">
+            <div class="container" style="align:bottom;>
       
           <div class=" text-center">
                 Copyright © 2020 Desinged by Siddharth Kansara | Bhavik Desai
-      
+
             </div>
-        </div>
+    </div>
     </footer>
     <!--End footer-->
 
