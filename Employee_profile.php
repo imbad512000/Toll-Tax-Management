@@ -163,16 +163,16 @@
                 <div class="container">
                     <div class="row justify-content-left mr-20">
                         <div class="col-md-8 col-lg-6 col-xl-5">
-                            <div class="card" style="height: 700px; width: 700px;">
+                            <div class="card" style="height: 1080px; width: 700px;">
 
                                 <div class="card-body p-4">
 
 
                                     <div class="container">
-                                        <centre>
+                                        <!-- <centre>
                                             <h3>Profile</h3>
-                                        </centre>
-                                        <br>
+                                        </centre> -->
+
                                         <div class="row my-2">
                                             <div class="col-lg-8 order-lg-2">
                                                 <ul class="nav nav-tabs">
@@ -188,7 +188,8 @@
                                                 </ul>
                                                 <div class="tab-content py-4">
                                                     <div class="tab-pane active" id="profile">
-                                                        <h5 class="mb-3">User Profile</h5>
+                                                        <h3 class="mb-2" style="font-family:cursive">Profile
+                                                            Picture</h3>
                                                         <div class="row">
                                                             <!-- <div class="col-md-6">
                             <h6>About</h6>
@@ -200,6 +201,19 @@
                                 Indie music, skiing and hiking. I love the great outdoors.
                             </p>
                         </div> -->
+                                                            <label class="col-lg-7 col-form-label form-control-label">
+                                                                <input type="file" id="file" class="custom-file-input">
+                                                                <span class="custom-file-control">
+                                                                    <h5 style="font-family:cursive">
+                                                                        - Choose file</h5>
+                                                                </span>
+                                                            </label>
+                                                            <label
+                                                                class="col-lg-6 col-form-label form-control-label"></label>
+                                                            <div class="col-lg-11">
+                                                                <input type="file">
+                                                                <!-- value="Choose File" -->
+                                                            </div>
 
 
                                                         </div>
@@ -208,11 +222,21 @@
 
                                                     <div class="tab-pane" id="edit">
                                                         <form role="form">
-                                                            <br>
+
+
+
+                                                            <label>
+                                                                <h4 style="font-family:cursive">Account Information</h4>
+                                                            </label>
+                                                            <br><br>
+                                                            <!-- </div> -->
+
                                                             <div class="form-group row">
                                                                 <label
-                                                                    class="col-lg-3 col-form-label form-control-label">First
-                                                                    name</label>
+                                                                    class="col-lg-4 col-form-label form-control-label">
+                                                                    <h6 style="font-family:cursive">First
+                                                                        name</h6>
+                                                                </label>
                                                                 <div class="col-lg-9">
                                                                     <input class="form-control" type="text"
                                                                         placeholder="Enter your first name">
@@ -220,8 +244,10 @@
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label
-                                                                    class="col-lg-3 col-form-label form-control-label">Last
-                                                                    name</label>
+                                                                    class="col-lg-4 col-form-label form-control-label">
+                                                                    <h6 style="font-family:cursive">Last
+                                                                        name</h6>
+                                                                </label>
                                                                 <div class="col-lg-9">
                                                                     <input class="form-control" type="text"
                                                                         placeholder="Enter your last name">
@@ -229,7 +255,9 @@
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label
-                                                                    class="col-lg-3 col-form-label form-control-label">Email</label>
+                                                                    class="col-lg-4 col-form-label form-control-label">
+                                                                    <h6 style="font-family:cursive">Email</h6>
+                                                                </label>
                                                                 <div class="col-lg-9">
                                                                     <input class="form-control" type="email"
                                                                         placeholder="Enter your email">
@@ -238,7 +266,9 @@
 
                                                             <div class="form-group row">
                                                                 <label
-                                                                    class="col-lg-3 col-form-label form-control-label">Address</label>
+                                                                    class="col-lg-4 col-form-label form-control-label">
+                                                                    <h6 style="font-family:cursive">Address</h6>
+                                                                </label>
                                                                 <div class="col-lg-9">
                                                                     <input class="form-control" type="text" value=""
                                                                         placeholder="Enter full address">
@@ -246,7 +276,9 @@
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label
-                                                                    class="col-lg-3 col-form-label form-control-label">State</label>
+                                                                    class="col-lg-4 col-form-label form-control-label">
+                                                                    <h6 style="font-family:cursive">State</h6>
+                                                                </label>
 
                                                                 <div class="col-lg-9">
                                                                     <input class="form-control" type="text" value=""
@@ -256,7 +288,9 @@
 
                                                             <div class="form-group row">
                                                                 <label
-                                                                    class="col-lg-3 col-form-label form-control-label">City</label>
+                                                                    class="col-lg-4 col-form-label form-control-label">
+                                                                    <h6 style="font-family:cursive">City</h6>
+                                                                </label>
                                                                 <div class="col-lg-9">
                                                                     <input class="form-control" type="password"
                                                                         Placeholder="Enter City">
@@ -265,7 +299,9 @@
 
                                                             <div class="form-group row">
                                                                 <label
-                                                                    class="col-lg-3 col-form-label form-control-label">Password</label>
+                                                                    class="col-lg-4 col-form-label form-control-label">
+                                                                    <h6 style="font-family:cursive">Password</h6>
+                                                                </label>
                                                                 <div class="col-lg-9">
                                                                     <input class="form-control" type="password"
                                                                         Placeholder="Enter password">
@@ -273,8 +309,10 @@
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label
-                                                                    class="col-lg-3 col-form-label form-control-label">Confirm
-                                                                    password</label>
+                                                                    class="col-lg-4 col-form-label form-control-label">
+                                                                    <h6 style="font-family:cursive">Confirm
+                                                                        password</h6>
+                                                                </label>
                                                                 <div class="col-lg-9">
                                                                     <input class="form-control" type="password"
                                                                         placeholder="Re-enter your password">
@@ -282,114 +320,117 @@
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label
-                                                                    class="col-lg-3 col-form-label form-control-label"></label>
-                                                                <div class="col-lg-9">
-                                                                    <input type="reset" class="btn btn-secondary"
-                                                                        name="sub1" value="Cancel">
-                                                                    <input type="Submit" class="btn btn-primary"
-                                                                        name="sub2" value="SAVE CHANGES">
+                                                                    class="col-lg-4 col-form-label form-control-label"></label>
+                                                                <div class="col-lg-9s">
+                                                                    <h6 style="font-family:cursive"><input type="Submit"
+                                                                            class="btn btn-primary" name="sub2"
+                                                                            value="SAVE CHANGES"></h6>
+                                                                    <h6 style="font-family:cursive"><input type="reset"
+                                                                            class="btn btn-secondary" name="sub1"
+                                                                            value="Cancel"></h6>
+
                                                                 </div>
                                                             </div>
                                                         </form>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-4 order-lg-1 text-center">
-                                                <img src="//placehold.it/350"
+                                            <!-- <div class="col-lg-4 order-lg-1 text-center"> -->
+                                            <!-- <img src="//placehold.it/350"
                                                     class="mx-auto img-fluid img-circle d-block" alt="avatar">
-                                                <h6 class="mt-2">Upload a different photo</h6>
-                                                <!-- <label class="custom-file">
-                <input type="file" id="file" class="custom-file-input">
-                <span class="custom-file-control">Choose file</span>
-            </label> -->
-                                                <label class="col-lg-3 col-form-label form-control-label"></label>
-                                                <div class="col-lg-9">
-                                                    <input type="file" value="Choose File">
-                                                </div>
-                                            </div>
+                                                <h6 class="mt-2">Upload a different photo</h6> -->
+                                            <!-- <label class="custom-file">
+                                                <input type="file" id="file" class="custom-file-input">
+                                                <span class="custom-file-control">Choose file</span>
+                                            </label>
+                                            <label class="col-lg-3 col-form-label form-control-label"></label>
+                                            <div class="col-lg-9">
+                                                <input type="file" value="Choose File">
+                                            </div> -->
                                         </div>
                                     </div>
-
-
-
-
                                 </div>
-                                <!--End Row-->
 
 
-                                <!--End Row-->
 
 
-                                <!--End Dashboard Content-->
-                                <!--start overlay-->
-                                <div class="overlay toggle-menu"></div>
-                                <!--end overlay-->
                             </div>
-                            <!-- End container-fluid-->
+                            <!--End Row-->
 
+
+                            <!--End Row-->
+
+
+                            <!--End Dashboard Content-->
+                            <!--start overlay-->
+                            <div class="overlay toggle-menu"></div>
+                            <!--end overlay-->
                         </div>
-                        <!--End content-wrapper-->
-                        <!--Start Back To Top Button-->
-                        <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
-                        <!--End Back To Top Button-->
-
-                        <!--Start footer-->
-                        <footer class="footer">
-                            <div class="container">
-                                <div class="text-center">
-                                    Copyright © 2020 Desinged by Siddharth Kansara | Bhavik Desai
-                                </div>
-                            </div>
-                        </footer>
-                        <!--End footer-->
-
-
+                        <!-- End container-fluid-->
 
                     </div>
-                    <!--End wrapper-->
+                    <!--End content-wrapper-->
+                    <!--Start Back To Top Button-->
+                    <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+                    <!--End Back To Top Button-->
 
-                    <!-- Bootstrap core JavaScript-->
-                    <script src="assets2/js/jquery.min.js"></script>
-                    <script src="assets2/js/popper.min.js"></script>
-                    <script src="assets2/js/bootstrap.min.js"></script>
+                    <!--Start footer-->
+                    <footer class="footer">
+                        <div class="container">
+                            <div class="text-center">
+                                Copyright © 2020 Desinged by Siddharth Kansara | Bhavik Desai
+                            </div>
+                        </div>
+                    </footer>
+                    <!--End footer-->
 
-                    <!-- simplebar js -->
-                    <script src="assets2/plugins/simplebar/js/simplebar.js"></script>
-                    <!-- sidebar-menu js -->
-                    <script src="assets2/js/sidebar-menu.js"></script>
-                    <!-- loader scripts -->
-                    <script src="assets2/js/jquery.loading-indicator.html"></script>
-                    <!-- Custom scripts -->
-                    <script src="assets2/js/app-script.js"></script>
-                    <!-- Chart js -->
 
-                    <script src="assets2/plugins/Chart.js/Chart.min.js"></script>
-                    <!-- Vector map JavaScript -->
-                    <script src="assets2/plugins/vectormap/jquery-jvectormap-2.0.2.min.js"></script>
-                    <script src="assets2/plugins/vectormap/jquery-jvectormap-world-mill-en.js"></script>
-                    <!-- Easy Pie Chart JS -->
-                    <script src="assets2/plugins/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
-                    <!-- Sparkline JS -->
-                    <script src="assets2/plugins/sparkline-charts/jquery.sparkline.min.js"></script>
-                    <script src="assets2/plugins/jquery-knob/excanvas.js"></script>
-                    <script src="assets2/plugins/jquery-knob/jquery.knob.js"></script>
 
-                    <script>
-                    $(function() {
-                        $(".knob").knob();
-                    });
+                </div>
+                <!--End wrapper-->
 
-                    function bindvtye() {
+                <!-- Bootstrap core JavaScript-->
+                <script src="assets2/js/jquery.min.js"></script>
+                <script src="assets2/js/popper.min.js"></script>
+                <script src="assets2/js/bootstrap.min.js"></script>
 
-                        var xmthttp = new XMLHttpRequest();
-                        xmthttp.open("GET", "bindvtype.php", false);
-                        xmthttp.send(null);
-                        document.getElementById("vtype").innerHTML = xmthttp.responseText;
-                        // alert(xmthttp.responseText);
-                    }
-                    </script>
-                    <!-- Index js -->
-                    <script src="assets2/js/index.js"></script>
+                <!-- simplebar js -->
+                <script src="assets2/plugins/simplebar/js/simplebar.js"></script>
+                <!-- sidebar-menu js -->
+                <script src="assets2/js/sidebar-menu.js"></script>
+                <!-- loader scripts -->
+                <script src="assets2/js/jquery.loading-indicator.html"></script>
+                <!-- Custom scripts -->
+                <script src="assets2/js/app-script.js"></script>
+                <!-- Chart js -->
+
+                <script src="assets2/plugins/Chart.js/Chart.min.js"></script>
+                <!-- Vector map JavaScript -->
+                <script src="assets2/plugins/vectormap/jquery-jvectormap-2.0.2.min.js"></script>
+                <script src="assets2/plugins/vectormap/jquery-jvectormap-world-mill-en.js"></script>
+                <!-- Easy Pie Chart JS -->
+                <script src="assets2/plugins/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+                <!-- Sparkline JS -->
+                <script src="assets2/plugins/sparkline-charts/jquery.sparkline.min.js"></script>
+                <script src="assets2/plugins/jquery-knob/excanvas.js"></script>
+                <script src="assets2/plugins/jquery-knob/jquery.knob.js"></script>
+
+                <script>
+                $(function() {
+                    $(".knob").knob();
+                });
+
+                function bindvtye() {
+
+                    var xmthttp = new XMLHttpRequest();
+                    xmthttp.open("GET", "bindvtype.php", false);
+                    xmthttp.send(null);
+                    document.getElementById("vtype").innerHTML = xmthttp.responseText;
+                    // alert(xmthttp.responseText);
+                }
+                </script>
+                <!-- Index js -->
+                <script src="assets2/js/index.js"></script>
 
 
 </body>
