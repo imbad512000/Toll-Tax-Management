@@ -140,7 +140,8 @@
                             <li class="dropdown-divider"></li>
                             <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li>
                             <li class="dropdown-divider"></li>
-                            <li class="dropdown-item"><a href="Employee_profile.php"><i class="icon-wallet mr-2"></i> Account</li>
+                            <li class="dropdown-item"><a href="Employee_profile.php"><i class="icon-wallet mr-2"></i>
+                                    Account</li>
                             <li class="dropdown-divider"></li>
                             <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
                             <li class="dropdown-divider"></li>
@@ -160,32 +161,36 @@
                 <!--Start Dashboard Content-->
                 <br><br>
                 <div class="container">
-                    <div class="row justify-content-center">
+                    <div class="row justify-content-left mr-20">
                         <div class="col-md-8 col-lg-6 col-xl-5">
-                            <div class="card" style="height: 650px; width: 700px;">
+                            <div class="card" style="height: 700px; width: 700px;">
 
                                 <div class="card-body p-4">
 
 
-                                <div class="container">
-                                <centre><h4>Profile Account</h4></centre>
-                                <br><br>
-    <div class="row my-2">
-        <div class="col-lg-8 order-lg-2">
-            <ul class="nav nav-tabs">
-                <li class="nav-item">
-                    <a href="" data-target="#profile" data-toggle="tab" class="nav-link active">Profile</a>
-                </li>
-               
-                <li class="nav-item">
-                    <a href="" data-target="#edit" data-toggle="tab" class="nav-link">Edit</a>
-                </li>
-            </ul>
-            <div class="tab-content py-4">
-                <div class="tab-pane active" id="profile">
-                    <h5 class="mb-3">User Profile</h5>
-                    <div class="row">
-                        <!-- <div class="col-md-6">
+                                    <div class="container">
+                                        <centre>
+                                            <h3>Profile</h3>
+                                        </centre>
+                                        <br>
+                                        <div class="row my-2">
+                                            <div class="col-lg-8 order-lg-2">
+                                                <ul class="nav nav-tabs">
+                                                    <li class="nav-item">
+                                                        <a href="" data-target="#profile" data-toggle="tab"
+                                                            class="nav-link active">Profile</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a href="" data-target="#edit" data-toggle="tab"
+                                                            class="nav-link">Edit</a>
+                                                    </li>
+                                                </ul>
+                                                <div class="tab-content py-4">
+                                                    <div class="tab-pane active" id="profile">
+                                                        <h5 class="mb-3">User Profile</h5>
+                                                        <div class="row">
+                                                            <!-- <div class="col-md-6">
                             <h6>About</h6>
                             <p>
                                 Web Designer, UI/UX Engineer
@@ -195,94 +200,122 @@
                                 Indie music, skiing and hiking. I love the great outdoors.
                             </p>
                         </div> -->
-                       
-                       
-                    </div>
-                    <!--/row-->
-                </div>
-                
-                <div class="tab-pane" id="edit">
-                    <form role="form">
-                        <div class="form-group row">
-                            <label class="col-lg-3 col-form-label form-control-label">First name</label>
-                            <div class="col-lg-9">
-                                <input class="form-control" type="text" value="Jane">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-lg-3 col-form-label form-control-label">Last name</label>
-                            <div class="col-lg-9">
-                                <input class="form-control" type="text" value="Bishop">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-lg-3 col-form-label form-control-label">Email</label>
-                            <div class="col-lg-9">
-                                <input class="form-control" type="email" value="email@gmail.com">
-                            </div>
-                        </div>
-                       
-                        <div class="form-group row">
-                            <label class="col-lg-3 col-form-label form-control-label">Address</label>
-                            <div class="col-lg-9">
-                                <input class="form-control" type="text" value="" placeholder="Street">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-lg-3 col-form-label form-control-label"></label>
-                           
-                            <div class="col-lg-4">
-                                <input class="form-control" type="text" value="" placeholder="State">
-                            </div>
-                            <div class="col-lg-4">
-                                <input class="form-control" type="text" value="" placeholder="City">
-                            </div>
-                        </div>
-                       
-                        <div class="form-group row">
-                            <label class="col-lg-3 col-form-label form-control-label">Password</label>
-                            <div class="col-lg-9">
-                                <input class="form-control" type="password" value="11111122333">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-lg-3 col-form-label form-control-label">Confirm password</label>
-                            <div class="col-lg-9">
-                                <input class="form-control" type="password" value="11111122333">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-lg-3 col-form-label form-control-label"></label>
-                            <div class="col-lg-9">
-                                <input type="reset" class="btn btn-secondary" value="Cancel">
-                                <input type="button" class="btn btn-primary" value="Save Changes">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 order-lg-1 text-center">
-            <img src="//placehold.it/350" class="mx-auto img-fluid img-circle d-block" alt="avatar">
-            <h6 class="mt-2">Upload a different photo</h6>
-            <!-- <label class="custom-file">
+
+
+                                                        </div>
+                                                        <!--/row-->
+                                                    </div>
+
+                                                    <div class="tab-pane" id="edit">
+                                                        <form role="form">
+                                                            <br>
+                                                            <div class="form-group row">
+                                                                <label
+                                                                    class="col-lg-3 col-form-label form-control-label">First
+                                                                    name</label>
+                                                                <div class="col-lg-9">
+                                                                    <input class="form-control" type="text"
+                                                                        placeholder="Enter your first name">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label
+                                                                    class="col-lg-3 col-form-label form-control-label">Last
+                                                                    name</label>
+                                                                <div class="col-lg-9">
+                                                                    <input class="form-control" type="text"
+                                                                        placeholder="Enter your last name">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label
+                                                                    class="col-lg-3 col-form-label form-control-label">Email</label>
+                                                                <div class="col-lg-9">
+                                                                    <input class="form-control" type="email"
+                                                                        placeholder="Enter your email">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group row">
+                                                                <label
+                                                                    class="col-lg-3 col-form-label form-control-label">Address</label>
+                                                                <div class="col-lg-9">
+                                                                    <input class="form-control" type="text" value=""
+                                                                        placeholder="Enter full address">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label
+                                                                    class="col-lg-3 col-form-label form-control-label">State</label>
+
+                                                                <div class="col-lg-9">
+                                                                    <input class="form-control" type="text" value=""
+                                                                        placeholder="Enter State">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group row">
+                                                                <label
+                                                                    class="col-lg-3 col-form-label form-control-label">City</label>
+                                                                <div class="col-lg-9">
+                                                                    <input class="form-control" type="password"
+                                                                        Placeholder="Enter City">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group row">
+                                                                <label
+                                                                    class="col-lg-3 col-form-label form-control-label">Password</label>
+                                                                <div class="col-lg-9">
+                                                                    <input class="form-control" type="password"
+                                                                        Placeholder="Enter password">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label
+                                                                    class="col-lg-3 col-form-label form-control-label">Confirm
+                                                                    password</label>
+                                                                <div class="col-lg-9">
+                                                                    <input class="form-control" type="password"
+                                                                        placeholder="Re-enter your password">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label
+                                                                    class="col-lg-3 col-form-label form-control-label"></label>
+                                                                <div class="col-lg-9">
+                                                                    <input type="reset" class="btn btn-secondary"
+                                                                        name="sub1" value="Cancel">
+                                                                    <input type="Submit" class="btn btn-primary"
+                                                                        name="sub2" value="SAVE CHANGES">
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 order-lg-1 text-center">
+                                                <img src="//placehold.it/350"
+                                                    class="mx-auto img-fluid img-circle d-block" alt="avatar">
+                                                <h6 class="mt-2">Upload a different photo</h6>
+                                                <!-- <label class="custom-file">
                 <input type="file" id="file" class="custom-file-input">
                 <span class="custom-file-control">Choose file</span>
             </label> -->
-            <label class="col-lg-3 col-form-label form-control-label"></label>
-                            <div class="col-lg-9">
-                               <input type="file"  value="Choose File">
-                            </div>
-        </div>
-    </div>
-</div>
-                                    
-                                 
+                                                <label class="col-lg-3 col-form-label form-control-label"></label>
+                                                <div class="col-lg-9">
+                                                    <input type="file" value="Choose File">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                                    
+
+
+
                                 </div>
                                 <!--End Row-->
-                                
+
 
                                 <!--End Row-->
 
