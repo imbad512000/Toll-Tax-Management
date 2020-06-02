@@ -69,7 +69,6 @@
     ================================================== -->
     <script src="js/modernizr.js"></script>
 
-
 </head>
 
 <body class="fixed-header">
