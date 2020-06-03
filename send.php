@@ -7,3 +7,7 @@ $sub="MAIL";
 mail($rec,$sub,$msg);
  	echo "mail sent successfully";
 ?>
+
+
+
+
