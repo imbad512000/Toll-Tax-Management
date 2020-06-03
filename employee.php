@@ -1,11 +1,12 @@
 <?php
     ob_start();
+    session_start();
 ?>
 <!DOCTYPE html>
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="w3th=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets2/css/bootstrap.css">
     <link rel="stylesheet" href="assets2/css/bootstrap.min.css">
     <script src="assets2/js/bootstrap.js" type="text/javascript" charset="utf-8" async defer></script>
@@ -54,7 +55,7 @@
                                 <h3 class="auth-title">Registration</h3>
                             </center>
                             <br>
-                            <form action="#">
+                            <form action="#" method="post">
 
                                 <div class="form-group mb-3">
                                     <label for="fn">First Name</label>
@@ -128,7 +129,10 @@
 					// }else
 					// {
 					// 	echo "not";
-					// }
+                    // }
+
+                    // $data = $_SESSION["Emp_data"];
+                    // $_SESSION["emp_id"]=$data["login_Referance_id"];
 					$name=$_REQUEST['fname'];
 					$lname=$_REQUEST['lname'];
 					$gender=$_REQUEST['gender'];
@@ -143,12 +147,12 @@
 					$q="INSERT INTO `tbl_employee_registration`(`emp_reg_id`, `emp_reg_first_name`, `emp_reg_last_name`, `emp_reg_gender`, `emp_reg_email`, `emp_reg_password`, `emp_reg_contact_num`, `emp_reg_DOB`, `emp_aadharcard_number`) VALUES ('','$name','$lname','$gender','$email','$password','$contact','$DOB','$aadhar')";
                     
                     
-                    // print_r($_REQUEST);
+                    print_r($_REQUEST);
 					$res=mysqli_query($con,$q); 
 
 						if($res)
 						{
-                            $msg = "Hey $name $lname ,
+                             $msg = "Hey $name $lname ,
 
                             From now on You're ready to login into your Toll Account and Modify your account.
                             With this Account You can access your account for toll receipt and pass management..
@@ -157,7 +161,15 @@
 							$rec = "$email";
 							 //send 
 							$sub="Registration Confirmation";
-							mail($rec,$sub,$msg);
+                            
+                            if(mail($rec,$sub,$msg)){
+                                echo "Send";
+                            }else{
+                                echo "not";
+                            }
+                            
+
+
 							echo "Registered";
 
 

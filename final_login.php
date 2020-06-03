@@ -1,8 +1,6 @@
 <?php
     ob_start();
-?>
-<?php
-    ob_start();
+    session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -122,7 +120,7 @@
                 $res = mysqli_query($con,$q); 
                  
                 $data = mysqli_fetch_assoc($res);       
-
+                
                 $row = mysqli_num_rows($res);
 
                 if($row>0){
@@ -139,6 +137,7 @@
                         header("location: Customer.php");
 
                     }elseif($type == "EM"){
+                        $_SESSION["Emp_data"]=$data;   
                         header("location: emp_dash.php");
                     }
                     elseif($type == "AD"){

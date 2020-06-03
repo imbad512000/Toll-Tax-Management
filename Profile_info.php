@@ -446,28 +446,28 @@
 					// {
 					// 	echo "not";
                     // }
-                    $data = $_SESSION["Emp_data"];
-                    $id=$data["login_Referance_id"];
+                    // $data = $_SESSION["Emp_data"];
+                    // $id=$data["login_Referance_id"];
 					$name=$_REQUEST['fname'];
 					$lname=$_REQUEST['lname'];
-					// $gender=$_REQUEST['gender'];
+					$gender=$_REQUEST['gender'];
 					$email =$_REQUEST['email'];	
-					// $password=$_REQUEST['pass'];
-					// $repeat_password=$_REQUEST['repass'];
+					$password=$_REQUEST['pass'];
+					$repeat_password=$_REQUEST['repass'];
 					$contact=$_REQUEST['phno'];
-					// $DOB=$_REQUEST['dob'];
-					// $aadhar=$_REQUEST['aadhar'];
+					$DOB=$_REQUEST['dob'];
+					$aadhar=$_REQUEST['aadhar'];
 
 				
-					$q="UPDATE `tbl_employee_registration` SET `emp_reg_first_name`='$name',`emp_reg_last_name`='$lname',`emp_reg_email`='$email',`emp_reg_contact_num`='$contact' WHERE `emp_reg_id`='$id'";
+					$q="SELECT * FROM `tbl_employee_registration`";
                     
                     
-                    print_r($_REQUEST);
+                    // print_r($_REQUEST);
 					$res=mysqli_query($con,$q); 
 
 						if($res)
 						{
-							header('location: Profile_info.php');
+							echo "SHOW";
 						}
 						else
 						{
