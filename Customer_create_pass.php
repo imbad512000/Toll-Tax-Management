@@ -37,7 +37,7 @@
 
 </head>
 
-<body>
+<body onload="bindvtye()">
 
     <!-- Start wrapper-->
     <div id="wrapper">
@@ -202,9 +202,8 @@
                                             <label for="inputEmail3" class="col-5 col-form-label">Type of Journey<span
                                                     class="text-danger"></span></label>
                                             <div class="">
-                                                <select class="form-control" name="type_of_vehicle"
+                                                <select class="form-control" name="type_of_vehicle1"
                                                     data-style="btn-light">
-                                                    <option>Select Journey Type</option>
                                                     <option value="sin">Single</option>
                                                     <option value="ret">Return</option>
                                                     <!-- <option value="B">Bus</option> -->
@@ -217,15 +216,7 @@
                                         <div class="form-group mb-3">
                                             <label for="inputEmail3" class="col-5 col-form-label">Vehicle Class<span
                                                     class="text-danger"></span></label>
-                                            <div class="">
-                                                <select class="form-control" name="type_of_vehicle"
-                                                    data-style="btn-light">
-                                                    <option>Select Vehical Type</option>
-                                                    <option value="2W">2 Wheeler</option>
-                                                    <option value="4W">4 Wheeler</option>
-                                                    <option value="B">Bus</option>
-                                                </select>
-
+                                            <div id="vtype">
                                             </div>
                                         </div>
 
@@ -244,7 +235,7 @@
                                         <div class="form-group mb-3">
                                             <label for="password">Tax Amount</label>
                                             <input class="form-control" type="Number" name="tamount" required="" min="0"
-                                                disabled="disabled">
+                                               >
                                         </div>
 
                                         <br><br>
@@ -336,6 +327,16 @@
                     $(function() {
                         $(".knob").knob();
                     });
+
+                    function bindvtye() {
+
+                    var xmthttp = new XMLHttpRequest();
+                    xmthttp.open("GET", "bindvtype.php", false);
+                    xmthttp.send(null);
+                    document.getElementById("vtype").innerHTML = xmthttp.responseText;
+                    // alert(xmthttp.responseText);
+                    }
+
                     </script>
                     <!-- Index js -->
                     <script src="assets2/js/index.js"></script>
@@ -356,8 +357,8 @@
       $pass_holder_name=$_REQUEST['hname'];
       $pass_date=$_REQUEST['pdate'];
       $pass_time=$_REQUEST['ptime'];
-      $type_of_journey_1=$_REQUEST['type_of_vehicle'];
-      $vehicle_class=$_REQUEST['type_of_class'];
+      $type_of_journey_1=$_REQUEST['type_of_vehicle1'];
+      $vehicle_class=$_REQUEST['type_of_vehicle'];
       $vehicle_number=$_REQUEST['vno'];
       $exipry_date=$_REQUEST['edate'];
       $Tax_amount=$_REQUEST['tamount'];
@@ -367,7 +368,7 @@
       $res=mysqli_query($con,$q);
 
       if($res){
-        header("location: search_pass.php");
+        header("location: Customer_search_pass.php");
       }
       else{
         echo "<script>alert('Error in Query')</script>";

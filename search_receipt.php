@@ -139,12 +139,12 @@
                                 </a>
                             </li>
                             <li class="dropdown-divider"></li>
-                            <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li>
+                            <!-- <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li>
+                            <li class="dropdown-divider"></li> -->
+                            <li class="dropdown-item"><a href="Employee_profile.php"><i class="icon-wallet mr-2"></i> Account</li>
                             <li class="dropdown-divider"></li>
-                            <li class="dropdown-item"><i class="icon-wallet mr-2"></i> Account</li>
-                            <li class="dropdown-divider"></li>
-                            <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
-                            <li class="dropdown-divider"></li>
+                            <!-- <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
+                            <li class="dropdown-divider"></li> -->
                             <li class="dropdown-item"><a href="main.php"><i class="icon-power mr-2"></i> Logout</li></a>
                         </ul>
                     </li>
@@ -170,22 +170,26 @@
 
 
                                     <h3 class="auth-title">Search Receipt</h3>
-                                    <br><br><br>
+                                    <br><br>
 
                                     <form action="search_receipt.php" method="post">
 
                                         <div class="form-group mb-3">
-                                            <div class="col-5">
-                                                <label for="id">Search Value</label>
-                                                <input class="form-control" type="text" id="cid" name="id" required="">
+                                        <div class="row">
+                                                <input class="form-control col-5 ml-2" type="text" id="cid" name="name"
+                                                    required="" placeholder="Search Receipt">
+                                                <button class="btn btn-danger btn-block col-1 ml-2" type="submit"
+                                                    name="sub1"><i class="fa fa-search"></i></button>
+                                            </div>
                                             </div>
 
 
-                                            <br><br>
+                                           
+                                            <!-- <br><br>
                                             <div class="form-group mb-0 text-center">
                                                 <button class="btn btn-danger btn-block" type="submit" name="sub1">
                                                     Search Receipt </button>
-                                            </div>
+                                            </div> -->
 
                                             <div class="row">
                                                 <div class="col-lg-12">

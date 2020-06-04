@@ -139,13 +139,13 @@
                                 </a>
                             </li>
                             <li class="dropdown-divider"></li>
-                            <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li>
-                            <li class="dropdown-divider"></li>
+                            <!-- <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li>
+                            <li class="dropdown-divider"></li> -->
                             <li class="dropdown-item"><a href="Employee_profile.php"><i class="icon-wallet mr-2"></i>
                                     Account</li>
                             <li class="dropdown-divider"></li>
-                            <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
-                            <li class="dropdown-divider"></li>
+                            <!-- <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
+                            <li class="dropdown-divider"></li> -->
                             <li class="dropdown-item"><a href="main.php"><i class="icon-power mr-2"></i> Logout</li></a>
                         </ul>
                     </li>
@@ -164,7 +164,7 @@
                 <div class="container">
                     <div class="row justify-content-left mr-20">
                         <div class="col-md-8 col-lg-6 col-xl-5">
-                            <div class="card" style="height: 700px; width: 600px;">
+                            <div class="card" style="height: 830px; width: 600px;">
 
                                 <div class="card-body p-4">
 
@@ -202,7 +202,13 @@
                                 Indie music, skiing and hiking. I love the great outdoors.
                             </p>
                         </div> -->
-                        <!-- <div style="width: 125px;height: 125px; position: relative;border-radius: 50%;">
+
+                        <label>
+                             <h4 style="font-family:cursive">Edit Profile</h4>
+                        </label>
+                        <br><br>
+
+                        <div style="width: 125px;height: 125px; position: relative;border-radius: 50%;">
                                                 <img src="../img/" onclick="triggerClick()" id="profileDisplay"  style="display: block;margin: -5px auto;" class="w-100 h-100">
                                                 <input type="file" class="form-control" name="faculty_pic" name="profileImage" id="profileImage" onchange="displayImage(this)" accept="image/*" style="display: none;" value="<?php echo $date['STUDENT_PROFILE_PIC'] ?>" required>
                                             </div>
@@ -218,19 +224,12 @@
                                                             </div>
 
 
-                                                        </div> -->
+                                                        </div>
                                                         <!--/row-->
                                                     </div>
 
                                                     <div class="tab-pane" id="edit">
                                                         <form role="form">
-
-
-
-                                                            <label>
-                                                                <h4 style="font-family:cursive">Edit Profile</h4>
-                                                            </label>
-                                                            <br><br>
                                                             <!-- </div> -->
 
                                                             <div class="form-group row">
@@ -241,7 +240,7 @@
                                                                 </label>
                                                                 <div class="col-lg-11">
                                                                     <input class="form-control" type="text" name="fname"
-                                                                        placeholder="Enter your first name">
+                                                                        placeholder="Enter your first name" required>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
@@ -252,7 +251,7 @@
                                                                 </label>
                                                                 <div class="col-lg-11">
                                                                     <input class="form-control" type="text" name="lname"
-                                                                        placeholder="Enter your last name">
+                                                                        placeholder="Enter your last name" required>
                                                                 </div>
                                                             </div>
 
@@ -263,7 +262,7 @@
                                                                 </label>
                                                                 <div class="col-lg-11">
                                                                     <input class="form-control" type="email" name="email"
-                                                                        placeholder="Enter your email">
+                                                                        placeholder="Enter your email" required>
                                                                 </div>
                                                             </div>
 
@@ -274,7 +273,7 @@
                                                                 </label>
                                                                 <div class="col-lg-11">
                                                                     <input class="form-control" type="number" name="phno"
-                                                                        Placeholder="Enter Contact number">
+                                                                        Placeholder="Enter Contact number" required>
                                                                 </div>
                                                             </div>
 
@@ -320,9 +319,10 @@
                                                                     <h6 style="font-family:cursive"><input type="Submit"
                                                                             class="btn btn-primary" name="sub2"
                                                                             value="SAVE"></h6>
-                                                                    <!-- <h6 style="font-family:cursive"><input type="reset"
-                                                                            class="btn btn-secondary" name="sub2"
-                                                                            value="Cancel"></h6> -->
+                                                                            <br>
+                                                                    <h4 style="font-family:cursive"><input type="submit"
+                                                                            class="btn btn-secondary" name="change"
+                                                                            value="Change Password"></h4>
 
                                                                 </div>
                                                             </div>
@@ -424,6 +424,23 @@
                 //     // alert(xmthttp.responseText);
                 // }
 
+                function triggerClick() {
+                    document.querySelector('#profileImage').click();
+                }
+
+                function displayImage(e) 
+                {
+                    if(e.files[0]){
+                        var reader = new FileReader();
+
+                        reader.onload = function(e){
+                            document.querySelector('#profileDisplay').setAttribute('src',e.target.result);
+
+                        }
+                        reader.readAsDataURL(e.files[0]);
+                    }
+                }
+
                 </script>
                 <!-- Index js -->
                 <script src="assets2/js/index.js"></script>
@@ -462,7 +479,7 @@
 					$q="UPDATE `tbl_employee_registration` SET `emp_reg_first_name`='$name',`emp_reg_last_name`='$lname',`emp_reg_email`='$email',`emp_reg_contact_num`='$contact' WHERE `emp_reg_id`='$id'";
                     
                     
-                    print_r($_REQUEST);
+                    // print_r($_REQUEST);
 					$res=mysqli_query($con,$q); 
 
 						if($res)
@@ -471,11 +488,17 @@
 						}
 						else
 						{
-							echo "Error";
+                            echo "error";
                         }
                         
                     ob_flush();
 
-					}
+                    }
+
+                    
+                    
+                    
+
+                    
 
 ?>

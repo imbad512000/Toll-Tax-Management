@@ -37,7 +37,7 @@
 
 </head>
 
-<body>
+<body onload="bindvtye()">
 
     <!-- Start wrapper-->
     <div id="wrapper">
@@ -370,6 +370,16 @@
                     $(function() {
                         $(".knob").knob();
                     });
+
+                    function bindvtye() {
+
+                    var xmthttp = new XMLHttpRequest();
+                    xmthttp.open("GET", "bindvtype.php", false);
+                    xmthttp.send(null);
+                    document.getElementById("vtype").innerHTML = xmthttp.responseText;
+                    // alert(xmthttp.responseText);
+                    }
+
                     </script>
                     <!-- Index js -->
                     <script src="assets2/js/index.js"></script>

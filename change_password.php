@@ -10,25 +10,28 @@
 </head>
 <body class="" background="assets/img/password1.jpg" style="background-size: 100%">
 	<form action="#" method="post" accept-charset="utf-8">
-		<div class="container m-5 card text-light bg-transparent m-auto" style="font-weight: 650;">
-			<div class="card-header text-center font-weight-bold" style="font-size: 2em">
+		<div class="container m-5 text-light bg-transparent m-auto" style="font-weight: 650;">
+			<br><br><br>
+			<div class="text font-weight-bold" style="margin-left: 160px;font-size: 3em">
 			 	Change Password
 			</div>
+			<br>
 			<div class="card-body">
-				<div class="form-group row">
+				<div class="form-group row" style="font-size: 1.5em">
 					<label class="col-3" for="fname">Old Password</label>
-					<input type="text" name="pass1" placeholder="Enter Old password" class="form-control col-8" required>
+					<input type="text" name="pass1" placeholder="Enter Old password" class="form-control col-4" required>
 				</div>
-				<div class="form-group row">
+				<div class="form-group row" style="font-size: 1.5em">
 					<label class="col-3" for="fname">New Password</label>
-					<input type="text" name="pass2" placeholder="Enter new password" class="form-control col-8" required>
+					<input type="text" name="pass2" placeholder="Enter new password" class="form-control col-4" required>
 				</div>
-				<div class="form-group row">
+				<div class="form-group row" style="font-size: 1.5em">
 					<label class="col-3" for="lname">Re-type Password</label>
-					<input type="password" name="pass3" placeholder="Re-enter new password" class="form-control col-8" required>
+					<input type="password" name="pass3" placeholder="Re-enter new password" class="form-control col-4" required>
 				</div>
-				<div class="form-group row">
-					<input type="submit" name="sub2" value="Submit" class="btn btn-light offset-4 col-4 font-weight-bold"> 
+				<br>
+				<div class="form-group row" style="font-size: 2em">
+					<input type="submit" name="sub2" value="Submit" class="btn btn-light offset-4 col-2 font-weight-bold"> 
 				</div>
 			</div>
 		</div>

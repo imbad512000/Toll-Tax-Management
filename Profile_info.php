@@ -228,7 +228,7 @@
 
 
                                                             <label>
-                                                                <h4 style="font-family:cursive">Edit Profile</h4>
+                                                                <h4 style="font-family:cursive">Account Information</h4>
                                                             </label>
                                                             <br><br>
                                                             <!-- </div> -->
@@ -239,10 +239,10 @@
                                                                     <h6 style="font-family:cursive">First
                                                                         name</h6>
                                                                 </label>
-                                                                <div class="col-lg-11">
+                                                                <!-- <div class="col-lg-11">
                                                                     <input class="form-control" type="text" name="fname"
                                                                         placeholder="Enter your first name">
-                                                                </div>
+                                                                </div> -->
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label
@@ -250,10 +250,10 @@
                                                                     <h6 style="font-family:cursive">Last
                                                                         name</h6>
                                                                 </label>
-                                                                <div class="col-lg-11">
+                                                                <!-- <div class="col-lg-11">
                                                                     <input class="form-control" type="text" name="lname"
                                                                         placeholder="Enter your last name">
-                                                                </div>
+                                                                </div> -->
                                                             </div>
 
                                                             <div class="form-group row">
@@ -261,10 +261,10 @@
                                                                     class="col-lg-4 col-form-label form-control-label">
                                                                     <h6 style="font-family:cursive">Email</h6>
                                                                 </label>
-                                                                <div class="col-lg-11">
+                                                                <!-- <div class="col-lg-11">
                                                                     <input class="form-control" type="email" name="email"
                                                                         placeholder="Enter your email">
-                                                                </div>
+                                                                </div> -->
                                                             </div>
 
                                                             <div class="form-group row">
@@ -272,60 +272,13 @@
                                                                     class="col-lg-6 col-form-label form-control-label">
                                                                     <h6 style="font-family:cursive">Contact Number</h6>
                                                                 </label>
-                                                                <div class="col-lg-11">
+                                                                <!-- <div class="col-lg-11">
                                                                     <input class="form-control" type="number" name="phno"
                                                                         Placeholder="Enter Contact number">
-                                                                </div>
+                                                                </div> -->
                                                             </div>
-
-                                                            <!-- <div class="form-group row">
-                                                                <label
-                                                                    class="col-lg-10 col-form-label form-control-label">
-                                                                    <h6 style="font-family:cursive">Address</h6>
-                                                                </label>
-                                                                <div class="col-lg-11">
-                                                                    <input class="form-control" type="text"
-                                                                        placeholder="Enter full address">
-                                                                </div>
-                                                            </div> -->
-                                                           
 
                                                             
-
-                                                            <!-- <div class="form-group row">
-                                                                <label
-                                                                    class="col-lg-4 col-form-label form-control-label">
-                                                                    <h6 style="font-family:cursive">Password</h6>
-                                                                </label>
-                                                                <div class="col-lg-9">
-                                                                    <input class="form-control" type="password"
-                                                                        Placeholder="Enter password">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group row">
-                                                                <label
-                                                                    class="col-lg-4 col-form-label form-control-label">
-                                                                    <h6 style="font-family:cursive">Confirm
-                                                                        password</h6>
-                                                                </label>
-                                                                <div class="col-lg-9">
-                                                                    <input class="form-control" type="password"
-                                                                        placeholder="Re-enter your password">
-                                                                </div>
-                                                            </div> -->
-                                                            <div class="form-group row">
-                                                                <label
-                                                                    class="col-lg-4 col-form-label form-control-label"></label>
-                                                                <div class="col-lg-9">
-                                                                    <h6 style="font-family:cursive"><input type="Submit"
-                                                                            class="btn btn-primary" name="sub2"
-                                                                            value="SAVE"></h6>
-                                                                    <!-- <h6 style="font-family:cursive"><input type="reset"
-                                                                            class="btn btn-secondary" name="sub2"
-                                                                            value="Cancel"></h6> -->
-
-                                                                </div>
-                                                            </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -424,6 +377,8 @@
                 //     // alert(xmthttp.responseText);
                 // }
 
+                
+
                 </script>
                 <!-- Index js -->
                 <script src="assets2/js/index.js"></script>
@@ -439,43 +394,28 @@
 
     $con=mysqli_connect("localhost","root","","start");
 
-                    if(isset($_REQUEST['sub2'])){
-                    // if($con){
-					// 	echo "con";
-					// }else
-					// {
-					// 	echo "not";
-                    // }
-                    // $data = $_SESSION["Emp_data"];
-                    // $id=$data["login_Referance_id"];
-					$name=$_REQUEST['fname'];
-					$lname=$_REQUEST['lname'];
-					$gender=$_REQUEST['gender'];
-					$email =$_REQUEST['email'];	
-					$password=$_REQUEST['pass'];
-					$repeat_password=$_REQUEST['repass'];
-					$contact=$_REQUEST['phno'];
-					$DOB=$_REQUEST['dob'];
-					$aadhar=$_REQUEST['aadhar'];
-
-				
-					$q="SELECT * FROM `tbl_employee_registration`";
                     
-                    
-                    // print_r($_REQUEST);
-					$res=mysqli_query($con,$q); 
+    // if($_SESSION["emp_reg_id"]==true){
+    //     echo "Oii"." ".$_SESSION["emp_reg_id"];
+    // }
+    // else{
+    //     header('location : Employee_profile.php');
+    // }
 
-						if($res)
-						{
-							echo "SHOW";
-						}
-						else
-						{
-							echo "Error";
-                        }
+    // $imgname = $_FILES["faculty_pic"]["name"];
+    // $tmpname = $_FILES["faculty_pic"]["tmp_name"];
+    
+    // move_uploaded_file($tmpname, "../Image/$imgname");
+
+    
+    $data = $_SESSION["Emp_data"];
+    $id=$data["login_Referance_id"];
+
+    $q="SELECT * FROM `tbl_employee_registration` WHERE `emp_reg_id`='$id'";
+
+    $res=mysqli_query($con,$q);
+    
+    $row=mysqli_fetch_array($res);
                         
-                    ob_flush();
-
-					}
-
+    print_r($row);
 ?>

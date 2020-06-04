@@ -311,3 +311,8 @@ $(function() {
 <!-- Mirrored from codervent.com/dashtreme/demo/dark-admin/vertical-layout/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Mar 2020 11:06:39 GMT -->
 
 </html>
+
+<?php
+    $con=mysqli_connect("localhost","root","","start");
+    
+?>

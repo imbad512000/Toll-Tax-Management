@@ -139,7 +139,7 @@
                             <li class="dropdown-divider"></li>
                             <li class="dropdown-item"><a href="Employee_profile.php"><i class="icon-wallet mr-2"></i>Account</li>
                             <!-- <li class="dropdown-divider"></li>
-        <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li> -->
+        <li class="dropdown-item"><i class="icon-settings mr-2"></i></li> -->
                             <li class="dropdown-divider"></li>
                             <li class="dropdown-item"><a href="main.php"><i class="icon-power mr-2"></i> Logout</li></a>
                         </ul>

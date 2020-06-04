@@ -37,7 +37,7 @@
 
 </head>
 
-<body>
+<body onload="bindvtye()">
 
     <!-- Start wrapper-->
     <div id="wrapper">
@@ -139,12 +139,12 @@
                                 </a>
                             </li>
                             <li class="dropdown-divider"></li>
-                            <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li>
+                            <!-- <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li>
+                            <li class="dropdown-divider"></li> -->
+                            <li class="dropdown-item"><a href="Employee_profile.php"><i class="icon-wallet mr-2"></i> Account</li>
                             <li class="dropdown-divider"></li>
-                            <li class="dropdown-item"><i class="icon-wallet mr-2"></i> Account</li>
-                            <li class="dropdown-divider"></li>
-                            <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
-                            <li class="dropdown-divider"></li>
+                            <!-- <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
+                            <li class="dropdown-divider"></li> -->
                             <li class="dropdown-item"><a href="main.php"><i class="icon-power mr-2"></i> Logout</li></a>
                         </ul>
                     </li>
@@ -368,6 +368,16 @@
                     $(function() {
                         $(".knob").knob();
                     });
+
+                    function bindvtye() {
+
+                        var xmthttp = new XMLHttpRequest();
+                        xmthttp.open("GET", "bindvtype.php", false);
+                        xmthttp.send(null);
+                        document.getElementById("vtype").innerHTML = xmthttp.responseText;
+                        // alert(xmthttp.responseText);
+                        }
+
                     </script>
                     <!-- Index js -->
                     <script src="assets2/js/index.js"></script>

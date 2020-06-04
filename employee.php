@@ -131,8 +131,14 @@
 					// 	echo "not";
                     // }
 
-                    // $data = $_SESSION["Emp_data"];
-                    // $_SESSION["emp_id"]=$data["login_Referance_id"];
+                    $data = $_SESSION["Emp_data"];
+                    $_SESSION["emp_id"]=$data["login_Referance_id"];
+
+                    // $imgname = $_FILES["faculty_pic"]["name"];
+                    // $tmpname = $_FILES["faculty_pic"]["tmp_name"];
+                    
+                    // move_uploaded_file($tmpname, "../img/$imgname");
+
 					$name=$_REQUEST['fname'];
 					$lname=$_REQUEST['lname'];
 					$gender=$_REQUEST['gender'];
@@ -144,10 +150,10 @@
 					$aadhar=$_REQUEST['aadhar'];
 
 				
-					$q="INSERT INTO `tbl_employee_registration`(`emp_reg_id`, `emp_reg_first_name`, `emp_reg_last_name`, `emp_reg_gender`, `emp_reg_email`, `emp_reg_password`, `emp_reg_contact_num`, `emp_reg_DOB`, `emp_aadharcard_number`) VALUES ('','$name','$lname','$gender','$email','$password','$contact','$DOB','$aadhar')";
+                $q="INSERT INTO `tbl_employee_registration`(`emp_reg_id`, `emp_reg_first_name`, `emp_reg_last_name`, `emp_reg_gender`, `emp_reg_email`, `emp_reg_password`, `emp_reg_contact_num`, `emp_reg_DOB`, `emp_aadharcard_number`) VALUES ('','$name','$lname','$gender','$email','$password','$contact','$DOB','$aadhar')";
                     
                     
-                    print_r($_REQUEST);
+                    // print_r($_REQUEST);
 					$res=mysqli_query($con,$q); 
 
 						if($res)
@@ -170,7 +176,7 @@
                             
 
 
-							echo "Registered";
+							// echo "Registered";
 
 
 							header('location: final_login.php');
