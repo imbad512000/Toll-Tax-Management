@@ -99,6 +99,7 @@
                 </li>
 
         </div>
+        </div>
         <!--End sidebar-wrapper-->
 
         <!--Start topbar header-->
@@ -164,7 +165,7 @@
                 <div class="container">
                     <div class="row justify-content-left mr-20">
                         <div class="col-md-8 col-lg-6 col-xl-5">
-                            <div class="card" style="height: 830px; width: 600px;">
+                            <div class="card" style="height: 400px; width: 600px;">
 
                                 <div class="card-body p-4">
 
@@ -204,79 +205,33 @@
                         </div> -->
 
                         <label>
-                             <h4 style="font-family:cursive">Edit Profile</h4>
+                             <h4 style="font-family:cursive">Change Password</h4>
                         </label>
                         <br><br>
 
-                        <div style="width: 125px;height: 125px; position: relative;border-radius: 50%;">
-                                                <img src="../img/" onclick="triggerClick()" id="profileDisplay"  style="display: block;margin: -5px auto;" class="w-100 h-100">
-                                                <input type="file" class="form-control" name="faculty_pic" name="profileImage" id="profileImage" onchange="displayImage(this)" accept="image/*" style="display: none;" value="<?php echo $date['STUDENT_PROFILE_PIC'] ?>" required>
-                                            </div>
-                                            <div class="form-group row">
-                                                                <label
-                                                                    class="col-lg-4 col-form-label form-control-label"></label>
-                                                                <div class="col-lg-9">
-                                                                    <h6 style="font-family:cursive"><input type="Submit"
-                                                                            class="btn btn-primary" name="upload"
-                                                                            value="upload"></h6>
+                      
+                                            
+                                            <div class="card-body">
+				<div class="form-group row" style="font-size: 1.5em">
+					<label class="col-5" for="fname">Old Password</label>
+					<input type="text" name="pass1" placeholder="Enter Old password" class="form-control col-7" required>
+				</div>
+				<div class="form-group row" style="font-size: 1.5em">
+					<label class="col-5" for="fname">New Password</label>
+					<input type="text" name="pass2" placeholder="Enter new password" class="form-control col-7" required>
+				</div>
+				<div class="form-group row" style="font-size: 1.5em">
+					<label class="col-5" for="lname">Confirm Password</label>
+					<input type="password" name="pass3" placeholder="Re-enter new password" class="form-control col-7" required>
+				</div>
+				<br>
+				<div class="form-group row" style="font-size: 2em">
+					<input type="submit" name="sub2" value="Submit" class="btn btn-light offset-4 col-4 font-weight-bold"> 
+				</div>
+			</div>
+                                                   
 
-                                                                </div>
-                                                            </div>
-
-
-                                                        </div>
-                                                        <!--/row-->
-                                                    </div>
-
-                                                    <div class="tab-pane" id="edit">
-                                                        <form role="form">
-                                                            <!-- </div> -->
-
-                                                            <div class="form-group row">
-                                                                <label
-                                                                    class="col-lg-6 col-form-label form-control-label">
-                                                                    <h6 style="font-family:cursive">First
-                                                                        name</h6>
-                                                                </label>
-                                                                <div class="col-lg-11">
-                                                                    <input class="form-control" type="text" name="fname"
-                                                                        placeholder="Enter your first name" required>
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group row">
-                                                                <label
-                                                                    class="col-lg-4 col-form-label form-control-label">
-                                                                    <h6 style="font-family:cursive">Last
-                                                                        name</h6>
-                                                                </label>
-                                                                <div class="col-lg-11">
-                                                                    <input class="form-control" type="text" name="lname"
-                                                                        placeholder="Enter your last name" required>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="form-group row">
-                                                                <label
-                                                                    class="col-lg-4 col-form-label form-control-label">
-                                                                    <h6 style="font-family:cursive">Email</h6>
-                                                                </label>
-                                                                <div class="col-lg-11">
-                                                                    <input class="form-control" type="email" name="email"
-                                                                        placeholder="Enter your email" required>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="form-group row">
-                                                                <label
-                                                                    class="col-lg-6 col-form-label form-control-label">
-                                                                    <h6 style="font-family:cursive">Contact Number</h6>
-                                                                </label>
-                                                                <div class="col-lg-11">
-                                                                    <input class="form-control" type="number" name="phno"
-                                                                        Placeholder="Enter Contact number" required>
-                                                                </div>
-                                                            </div>
-
+                                                            
                                                             <!-- <div class="form-group row">
                                                                 <label
                                                                     class="col-lg-10 col-form-label form-control-label">
@@ -312,19 +267,7 @@
                                                                         placeholder="Re-enter your password">
                                                                 </div>
                                                             </div> -->
-                                                            <div class="form-group row">
-                                                                <label
-                                                                    class="col-lg-4 col-form-label form-control-label"></label>
-                                                                <div class="col-lg-9">
-                                                                    <h6 style="font-family:cursive"><input type="Submit"
-                                                                            class="btn btn-primary" name="sub2"
-                                                                            value="SAVE"></h6>
-                                                                            <br>
-                                                                            <a href="change_pass.php"><h4 style="font-family:cursive"><input type="submit"
-                                                                            class="btn btn-secondary" name="change"
-                                                                            value="Change Password"></h4></a>
-
-                                                                </div>
+                                                           
                                                             </div>
                                                     </div>
                                                 </div>
@@ -454,51 +397,46 @@
 
 <?php
 
-    $con=mysqli_connect("localhost","root","","start");
+	if(isset($_REQUEST['sub2']))
+	{
 
-                    if(isset($_REQUEST['sub2'])){
-                    // if($con){
-					// 	echo "con";
-					// }else
-					// {
-					// 	echo "not";
-                    // }
-                    $data = $_SESSION["Emp_data"];
-                    $id=$data["login_Referance_id"];
-					$name=$_REQUEST['fname'];
-					$lname=$_REQUEST['lname'];
-					// $gender=$_REQUEST['gender'];
-					$email =$_REQUEST['email'];	
-					// $password=$_REQUEST['pass'];
-					// $repeat_password=$_REQUEST['repass'];
-					$contact=$_REQUEST['phno'];
-					// $DOB=$_REQUEST['dob'];
-					// $aadhar=$_REQUEST['aadhar'];
+	$con = mysqli_connect("localhost","root","","start");
 
-				
-					$q="UPDATE `tbl_employee_registration` SET `emp_reg_first_name`='$name',`emp_reg_last_name`='$lname',`emp_reg_email`='$email',`emp_reg_contact_num`='$contact' WHERE `emp_reg_id`='$id'";
-                    
-                    
-                    // print_r($_REQUEST);
-					$res=mysqli_query($con,$q); 
+	session_start();
+	
+	$old_pass=$_REQUEST['pass1'];
+	$password=$_REQUEST['pass2'];
+	$retype_password=$_REQUEST['pass3'];
 
-						if($res)
-						{
-							header('location: Profile_info.php');
-						}
-						else
-						{
-                            echo "error";
-                        }
-                        
-                    ob_flush();
+	$aa = "SELECT * FROM `tbl_customer_registration` WHERE `cust_reg_password`='$old_pass'";
+	$q1=mysqli_query($con,$aa);
+	$data=mysqli_fetch_assoc($q1);
+	$row=mysqli_num_rows($q1);
+	$pass = "";
+	if($row == 1){
+		$pass = $data["cust_reg_password"];
+	}
 
-                    }
+			if($pass==$old_pass)
+			 {
+					if($password==$retype_password)
+					{
+						$q=mysqli_query($con,"UPDATE `tbl_customer_registration` SET `cust_reg_password`='$password' WHERE `cust_reg_password`='$old_pass'");
+							
+							if($q)
+							{
+								header('location: final_login.php');
+								// echo "Password successfully changed";
+							}
 
-                    
-                    
-                    
-
-                    
+					}
+				}
+				else
+				{
+					echo "<script>alert('Old password and New password not match')</script>";
+				}
+			
+	}
+	
 
 ?>

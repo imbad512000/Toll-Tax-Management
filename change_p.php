@@ -320,9 +320,9 @@
                                                                             class="btn btn-primary" name="sub2"
                                                                             value="SAVE"></h6>
                                                                             <br>
-                                                                            <a href="change_pass.php"><h4 style="font-family:cursive"><input type="submit"
+                                                                    <h4 style="font-family:cursive"><input type="submit"
                                                                             class="btn btn-secondary" name="change"
-                                                                            value="Change Password"></h4></a>
+                                                                            value="Change Password"></h4>
 
                                                                 </div>
                                                             </div>

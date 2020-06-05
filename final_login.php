@@ -84,7 +84,7 @@
 
                             <div class="row mt-3">
                                 <div class="col-12 text-center">
-                                    <p> <a href="pages-recoverpw.html" class="text-muted ml-1">Forgot your password?</a>
+                                    <p> <a href="forget.php" class="text-muted ml-1">Forgot your password?</a>
                                     </p>
                                     <p class="text-muted">Don't have an account? <a href="main.php" class=""
                                             ss="text-muted ml-1"><b class="font-weight-semibold">Sign Up</b></a></p>
