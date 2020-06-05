@@ -3,63 +3,91 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <script src="assets/js/bootstrap.js" type="text/javascript" charset="utf-8" async defer></script>
-    <script src="assets/js/bootstrap.min.js" type="text/javascript" charset="utf-8" async defer></script>
-    <title></title>
+    <link rel="stylesheet" href="assets2/css/bootstrap.css">
+    <link rel="stylesheet" href="assets2/css/bootstrap.min.css">
+    <script src="assets2/js/bootstrap.js" type="text/javascript" charset="utf-8" async defer></script>
+    <script src="assets2s/js/bootstrap.min.js" type="text/javascript" charset="utf-8" async defer></script>
+    <title>Login</title>
 </head>
 
-<body class="" background="assets/img/bg.jpg" style="background-size: 100%">
-    <form action="#	" method="post" accept-charset="utf-8">
-        <div class="container m-5 card text-light bg-transparent m-auto+" style="font-weight: 650;">
+<!-- 
+    <form action="#" method="post" accept-charset="utf-8">
+        <div class="container m-5 card text-dark bg-transparent m-auto" style="font-weight: 650;">
             <div class="card-header text-center font-weight-bold" style="font-size: 2em">
-                Forgot Password
+                Sign In
             </div>
             <div class="card-body">
-                <div class="form-group row text-center">
-                    <label class="col-2" for="fname" style="font-size: 18px">Email-id</label>
-                    <input type="email" name="email" placeholder="Enter Registered Email-id" class="form-control col-6"
-                        required>
+                <div class="form-group row">
+                    <label class="col-3" for="fname">E-mail</label>
+                    <input type="email" name="email" placeholder="Enter Email-id" class="form-control col-8" required>
                 </div>
-                <!-- <div class="form-group row">
-					<label class="col-3" for="lname">Last Name</label>
-					<input type="text" name="lname" placeholder="Enter Last Name" class="form-control col-8" required>
-				</div>
-				<div class="form-group row">
-					<label class="col-3">Gender</label>
-					<input type="radio" name="gender" value="Male" class="mt-1">
-					<label class="col-3" for="male">Male</label>
-					<input type="radio" name="gender" value="Female" class="mt-1">
-					<label class="col-3" for="female">Female</label>
-				</div>
-				<div class="form-group row">
-					<label class="col-3" for="email">Email</label>
-					<input type="email" name="email" placeholder="Enter Email" class="form-control col-8" required>
-				</div>
-				<div class="form-group row">
-					<label class="col-3" for="pass">Password</label>
-					<input type="password" name="pass" placeholder="Enter Password" class="form-control col-8" required>
-				</div>
-				<div class="form-group row">
-					<label class="col-3" for="repass">Re-type Password</label>
-					<input type="password" name="repass" placeholder="Enter Re-type Password" class="form-control col-8" required>
-				</div>
-				<div class="form-group row">
-					<label class="col-3" for="phno">Phone Number</label>
-					<input type="tel" name="phno" placeholder="Enter Phone Number" class="form-control col-8" pattern="[0-9]{10}" required>
-				</div>
-				<div class="form-group row">
-					<label class="col-3" for="dob">Date of Birth</label>
-					<input type="date" name="dob" placeholder="Enter Date of Birth" class="form-control col-8"
-					> -->
+                <div class="form-group row">
+                    <label class="col-3" for="lname">Password</label>
+                    <input type="password" name="pass" placeholder="Enter Password" class="form-control col-8" required>
+                </div>
+                <div class="form-group row">
+                    <input type="submit" name="sub1" value="Login" class="btn btn-light offset-4 col-4 font-weight-bold"> 
+                </div>
+
+                <center><a href="forget.php" style="text-decoration-line: none">forget passwoord</a></center>
+
             </div>
-            <div class="form-group row">
-                <input type="submit" name="dob4" value="Submit" class="btn btn-light offset-4 col-3 font-weight-bold">
-            </div>
-        </div>
         </div>
     </form>
+</body> -->
+<br><br><br><br><br><br>
+<body class="" background="assets/img/a1.jpg" style="background-size: 100%">
+    <div class="account-pages mt-5 mb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6 col-xl-9">
+                    <div class="card">
+
+                        <div class="card-body p-4" style="border-style: solid" ;>
+
+
+                            <center>
+                                <h3 class="auth-title">Forget Password</h3>
+                            </center>
+                            <br>
+
+                            <form action="#">
+
+		
+            <div class="card-body">
+                <div class="form-group row text-center">
+                    <label class="col-4" for="fname" style="font-size: 18px">Email-id</label>
+                    <input type="email" name="email" placeholder="Enter Registered Email-id" class="form-control col-6"
+                        required>
+                </div><br><br>
+				<div class="form-group row">
+                <input type="submit" name="dob4" value="Submit" class="btn btn-light offset-4 col-3 font-weight-bold" style="background-color:lightgrey;">
+            </div>
+			</div>
+			</div>
+                            </form><br>
+
+                           
+                            <br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+           
+        </div>
+        </div>
+    
 </body>
 
 </html>
