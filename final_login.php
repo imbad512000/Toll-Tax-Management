@@ -134,10 +134,11 @@
 
                 if($row == 1){
                     if($type == "CU"){
+                        $_SESSION["cust_data"]=$data;  
                         header("location: Customer.php");
 
                     }elseif($type == "EM"){
-                        $_SESSION["Emp_data"]=$data;   
+                        // $_SESSION["Emp_data"]=$data;   
                         header("location: emp_dash.php");
                     }
                     elseif($type == "AD"){

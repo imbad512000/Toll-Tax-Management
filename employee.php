@@ -131,8 +131,8 @@
 					// 	echo "not";
                     // }
 
-                    $data = $_SESSION["Emp_data"];
-                    $_SESSION["emp_id"]=$data["login_Referance_id"];
+                    // $data = $_SESSION["Emp_data"];
+                    // $_SESSION["emp_id"]=$data["login_Referance_id"];
 
                     // $imgname = $_FILES["faculty_pic"]["name"];
                     // $tmpname = $_FILES["faculty_pic"]["tmp_name"];

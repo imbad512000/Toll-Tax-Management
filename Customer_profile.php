@@ -1,6 +1,6 @@
 <?php
-  ob_start();
-  session_start();  
+    ob_start();
+    session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Profile Account</title>
+    <title>Employee Home</title>
     <!-- loader-->
     <link href="assets22/css/pace.min.css" rel="stylesheet" />
     <script src="assets22/js/pace.min.js"></script>
@@ -46,7 +46,8 @@
         <!--Start sidebar-wrapper-->
         <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
             <div class="brand-logo" style="height: 80px;padding-top: 5px;">
-                <a href="emp_dash.php">
+
+                <a href="Customer.php">
                     <img src="assets3/images/logo.png" class="logo-icon" alt="logo icon" style="width: 30%;">
                     <!-- <h5 class="logo-text"> Admin</h5> -->
                 </a>
@@ -65,13 +66,15 @@
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="sidebar-submenu">
-                        <li><a href="create_pass.php"><i class="zmdi zmdi-dot-circle-alt"></i> Create Pass</a></li>
-                        <li><a href="search_pass.php"><i class="zmdi zmdi-dot-circle-alt"></i> Search Pass</a></li>
+                        <li><a href="Customer_create_pass.php"><i class="zmdi zmdi-dot-circle-alt"></i> Create Pass</a>
+                        </li>
+                        <li><a href="Customer_search_pass.php"><i class="zmdi zmdi-dot-circle-alt"></i> Search Pass</a>
+                        </li>
 
 
                     </ul>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="javaScript:void();" class="waves-effect">
                         <i class="zmdi zmdi-format-list-bulleted"></i> <span>Generate Receipt</span>
                         <i class="fa fa-angle-left pull-right"></i>
@@ -85,7 +88,7 @@
 
                     </ul>
                 </li>
-                </li>
+                </li> -->
                 <li>
                     <a href="javaScript:void();" class="waves-effect">
                         <i class="zmdi zmdi-lock"></i> <span>Online Transaction</span>
@@ -127,7 +130,7 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-right">
                             <li class="dropdown-item user-details">
-                                <a href="#">
+                                <a href="javaScript:void();">
                                     <div class="media">
                                         <div class="avatar"><img class="align-self-start mr-3"
                                                 src="assets2/images/avatars/avatar-13.png" alt="user avatar"></div>
@@ -139,13 +142,12 @@
                                 </a>
                             </li>
                             <li class="dropdown-divider"></li>
-                            <!-- <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li>
-                            <li class="dropdown-divider"></li> -->
-                            <li class="dropdown-item"><a href="Employee_profile.php"><i class="icon-wallet mr-2"></i>
-                                    Account</li>
+                            <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li>
                             <li class="dropdown-divider"></li>
-                            <!-- <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
-                            <li class="dropdown-divider"></li> -->
+                            <li class="dropdown-item"><i class="icon-wallet mr-2"></i> Account</li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
+                            <li class="dropdown-divider"></li>
                             <li class="dropdown-item"><a href="main.php"><i class="icon-power mr-2"></i> Logout</li></a>
                         </ul>
                     </li>
@@ -153,13 +155,14 @@
             </nav>
         </header>
         <!--End topbar header-->
-
+        <br><br>
         <div class="clearfix"></div>
 
         <div class="content-wrapper">
             <div class="container-fluid">
 
                 <!--Start Dashboard Content-->
+
                 <br><br>
                 <div class="container">
                     <div class="row justify-content-left mr-20">
@@ -266,7 +269,7 @@
                                                                 </div>
                                                             </div>
 
-                                                            <div class="form-group row">
+                                                            <!-- <div class="form-group row">
                                                                 <label
                                                                     class="col-lg-6 col-form-label form-control-label">
                                                                     <h6 style="font-family:cursive">Contact Number</h6>
@@ -275,7 +278,7 @@
                                                                     <input class="form-control" type="number" name="phno"
                                                                         Placeholder="Enter Contact number" required>
                                                                 </div>
-                                                            </div>
+                                                            </div> -->
 
                                                             <!-- <div class="form-group row">
                                                                 <label
@@ -348,82 +351,96 @@
 
 
                             </div>
-                            <!--End Row-->
+                                    <!--End Row-->
 
 
-                            <!--End Row-->
 
 
-                            <!--End Dashboard Content-->
-                            <!--start overlay-->
-                            <div class="overlay toggle-menu"></div>
-                            <!--end overlay-->
+
+
+                                </div>
+                                <!--End Row-->
+
+
+                                <!--End Row-->
+
+
+                                <!--End Dashboard Content-->
+                                <!--start overlay-->
+                                <div class="overlay toggle-menu"></div>
+                                <!--end overlay-->
+                            </div>
+                            <!-- End container-fluid-->
+
                         </div>
-                        </form>
-                        <!-- End container-fluid-->
+                        <!--End content-wrapper-->
+                        <!--Start Back To Top Button-->
+                        <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+                        <!--End Back To Top Button-->
+
+                        <!--Start footer-->
+                        <!-- <footer class="footer">
+      <div class="container">
+        <div class="text-center">
+          Copyright © 2020 Desinged by Siddharth Kansara | Bhavik Desai
+        </div>
+      </div>
+    </footer> -->
+                        <!--End footer-->
+
+
 
                     </div>
-                    <!--End content-wrapper-->
-                    <!--Start Back To Top Button-->
-                    <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
-                    <!--End Back To Top Button-->
-
-                    <!--Start footer-->
-                    <footer class="footer">
+                    <!--End wrapper-->
+                    <!-- <footer class="footer">
                         <div class="container">
                             <div class="text-center">
                                 Copyright © 2020 Desinged by Siddharth Kansara | Bhavik Desai
                             </div>
                         </div>
-                    </footer>
-                    <!--End footer-->
+                    </footer> -->
 
+                    <!-- Bootstrap core JavaScript-->
+                    <script src="assets2/js/jquery.min.js"></script>
+                    <script src="assets2/js/popper.min.js"></script>
+                    <script src="assets2/js/bootstrap.min.js"></script>
 
+                    <!-- simplebar js -->
+                    <script src="assets2/plugins/simplebar/js/simplebar.js"></script>
+                    <!-- sidebar-menu js -->
+                    <script src="assets2/js/sidebar-menu.js"></script>
+                    <!-- loader scripts -->
+                    <script src="assets2/js/jquery.loading-indicator.html"></script>
+                    <!-- Custom scripts -->
+                    <script src="assets2/js/app-script.js"></script>
+                    <!-- Chart js -->
 
-                </div>
-                <!--End wrapper-->
+                    <script src="assets2/plugins/Chart.js/Chart.min.js"></script>
+                    <!-- Vector map JavaScript -->
+                    <script src="assets2/plugins/vectormap/jquery-jvectormap-2.0.2.min.js"></script>
+                    <script src="assets2/plugins/vectormap/jquery-jvectormap-world-mill-en.js"></script>
+                    <!-- Easy Pie Chart JS -->
+                    <script src="assets2/plugins/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+                    <!-- Sparkline JS -->
+                    <script src="assets2/plugins/sparkline-charts/jquery.sparkline.min.js"></script>
+                    <script src="assets2/plugins/jquery-knob/excanvas.js"></script>
+                    <script src="assets2/plugins/jquery-knob/jquery.knob.js"></script>
 
-                <!-- Bootstrap core JavaScript-->
-                <script src="assets2/js/jquery.min.js"></script>
-                <script src="assets2/js/popper.min.js"></script>
-                <script src="assets2/js/bootstrap.min.js"></script>
+                    <script>
+                    $(function() {
+                        $(".knob").knob();
+                    });
 
-                <!-- simplebar js -->
-                <script src="assets2/plugins/simplebar/js/simplebar.js"></script>
-                <!-- sidebar-menu js -->
-                <script src="assets2/js/sidebar-menu.js"></script>
-                <!-- loader scripts -->
-                <script src="assets2/js/jquery.loading-indicator.html"></script>
-                <!-- Custom scripts -->
-                <script src="assets2/js/app-script.js"></script>
-                <!-- Chart js -->
+                    function bindvtye() {
 
-                <script src="assets2/plugins/Chart.js/Chart.min.js"></script>
-                <!-- Vector map JavaScript -->
-                <script src="assets2/plugins/vectormap/jquery-jvectormap-2.0.2.min.js"></script>
-                <script src="assets2/plugins/vectormap/jquery-jvectormap-world-mill-en.js"></script>
-                <!-- Easy Pie Chart JS -->
-                <script src="assets2/plugins/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
-                <!-- Sparkline JS -->
-                <script src="assets2/plugins/sparkline-charts/jquery.sparkline.min.js"></script>
-                <script src="assets2/plugins/jquery-knob/excanvas.js"></script>
-                <script src="assets2/plugins/jquery-knob/jquery.knob.js"></script>
+                    var xmthttp = new XMLHttpRequest();
+                    xmthttp.open("GET", "bindvtype.php", false);
+                    xmthttp.send(null);
+                    document.getElementById("vtype").innerHTML = xmthttp.responseText;
+                    // alert(xmthttp.responseText);
+                    }
 
-                <script>
-                $(function() {
-                    $(".knob").knob();
-                });
-
-                // function bindvtye() {
-
-                //     var xmthttp = new XMLHttpRequest();
-                //     xmthttp.open("GET", "bindvtype.php", false);
-                //     xmthttp.send(null);
-                //     document.getElementById("vtype").innerHTML = xmthttp.responseText;
-                //     // alert(xmthttp.responseText);
-                // }
-
-                function triggerClick() {
+                    function triggerClick() {
                     document.querySelector('#profileImage').click();
                 }
 
@@ -440,9 +457,9 @@
                     }
                 }
 
-                </script>
-                <!-- Index js -->
-                <script src="assets2/js/index.js"></script>
+                    </script>
+                    <!-- Index js -->
+                    <script src="assets2/js/index.js"></script>
 
 
 </body>
@@ -462,20 +479,21 @@
 					// {
 					// 	echo "not";
                     // }
-                    $data = $_SESSION["Emp_data"];
+                    $data = $_SESSION["Cust_data"];
                     $id=$data["login_Referance_id"];
+
 					$name=$_REQUEST['fname'];
 					$lname=$_REQUEST['lname'];
 					// $gender=$_REQUEST['gender'];
 					$email =$_REQUEST['email'];	
 					// $password=$_REQUEST['pass'];
 					// $repeat_password=$_REQUEST['repass'];
-					$contact=$_REQUEST['phno'];
+					// $contact=$_REQUEST['phno'];
 					// $DOB=$_REQUEST['dob'];
 					// $aadhar=$_REQUEST['aadhar'];
 
 				
-					$q="UPDATE `tbl_employee_registration` SET `emp_reg_first_name`='$name',`emp_reg_last_name`='$lname',`emp_reg_email`='$email',`emp_reg_contact_num`='$contact' WHERE `emp_reg_id`='$id'";
+					$q="UPDATE `tbl_customer_registration` SET `cust_reg_first_name`='$name',`cust_reg_last_name`='$lname',`cust_reg_email`='$email' WHERE `cust_reg_id`=`$id`";
                     
                     
                     // print_r($_REQUEST);
@@ -483,7 +501,7 @@
 
 						if($res)
 						{
-							header('location: Profile_info.php');
+							header('location: Welocome_info.php');
 						}
 						else
 						{

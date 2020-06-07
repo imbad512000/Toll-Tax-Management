@@ -99,11 +99,10 @@
                 <li>
                     <a href="javaScript:void();" class="waves-effect">
                         <i class="zmdi zmdi-lock"></i> <span>Online Transaction</span>
-
                     </a>
                 </li>
                 <li>
-                    <a href="" class="waves-effect">
+                    <a href="Customer_detail.php" class="waves-effect">
                         <i class="zmdi zmdi-card-travel"></i> <span>Customer Detail</span>
                     </a>
                 </li>
