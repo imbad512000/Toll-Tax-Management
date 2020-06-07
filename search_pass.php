@@ -99,6 +99,7 @@
                 </li>
 
         </div>
+        </div>
         <!--End sidebar-wrapper-->
 
         <!--Start topbar header-->
