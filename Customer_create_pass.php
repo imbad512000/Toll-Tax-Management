@@ -185,7 +185,7 @@
                                         <div class="form-group mb-3">
                                             <label for="password">Pass Holder Name</label>
                                             <input class="form-control" type="text" name="hname" required=""
-                                                placeholder="Enter your Holder Name">
+                                                placeholder="Enter your Holder Name" minlength="3" maxlength="15">
                                         </div>
 
                                         <div class="form-group mb-3">

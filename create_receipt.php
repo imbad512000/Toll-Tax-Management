@@ -184,24 +184,24 @@
                                         <div class="form-group mb-3">
                                             <label for="password">Toll Booth Name</label>
                                             <input class="form-control" type="text" name="tbname" required=""
-                                                placeholder="Enter your Toll Booth Name">
+                                                placeholder="Enter your Toll Booth Name" minlength="3" maxlength="15">
                                         </div>
 
                                         <div class="form-group mb-3">
                                             <label for="password">Toll Booth Number</label>
-                                            <input class="form-control" type="tel" name="tbno" min="0">
+                                            <input class="form-control" type="number" name="tbno" min="0" max="13">
                                         </div>
 
                                         <div class="form-group mb-3">
                                             <label for="password">Toll Employee Name</label>
                                             <input class="form-control" type="text" name="ename" required=""
-                                                placeholder="Enter your employee name">
+                                                placeholder="Enter your employee name" minlength="3" maxlength="15">
                                         </div>
 
 
                                         <div class="form-group mb-3">
                                             <label for="password">Receipt Date</label>
-                                            <input class="form-control" type="date" name="pdate" required="">
+                                            <input class="form-control" type="date" name="pdate" required="" min="2020-01-01" max="2020-12-31">
                                         </div>
 
                                         <div class="form-group mb-3">
@@ -222,7 +222,7 @@
                                             <div class="">
                                                 <select class="form-control" name="type_of_journey"
                                                     data-style="btn-light">
-                                                    <option>Select Journey Type</option>
+                                                    <!-- <option>Select Journey Type</option> -->
                                                     <option value="sin">Single</option>
                                                     <option value="ret">Return</option>
                                                     <!-- <option value="B">Bus</option> -->
@@ -237,7 +237,7 @@
                                         <div class="form-group mb-3">
                                             <label for="password">Vehicle Number</label>
                                             <input class="form-control" type="text" name="vno" required=""
-                                                placeholder="Enter your Vehicle Number">
+                                                placeholder="Enter your Vehicle Number" pattern="[A-Z][A-Z][0-9][0-9][A-Za-z][A-Za-z][0-9][0-9][0-9][0-9]">
                                             <!-- pattern="[G][J][0-9][0-9][A-Z][A-Z][0-9][0-9][0-9][0-9]" -->
                                         </div>
 
@@ -245,7 +245,7 @@
 
                                         <div class="form-group mb-3">
                                             <label for="password">Tax Amount</label>
-                                            <input class="form-control" type="tel" name="tamount" required="">
+                                            <input class="form-control" type="number" name="tamount" required="">
                                             <!-- disabled="disabled" -->
                                         </div>
 

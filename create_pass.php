@@ -183,7 +183,7 @@
                                         <div class="form-group mb-3">
                                             <label for="password">Pass Holder Name</label>
                                             <input class="form-control" type="text" name="hname" required=""
-                                                placeholder="Enter your Holder Name">
+                                                placeholder="Enter your Holder Name" minlength="3" maxlength="15">
                                         </div>
 
                                         <div class="form-group mb-3">
@@ -202,7 +202,7 @@
                                             <div class="">
                                                 <select class="form-control" name="type_of_vehicle_1"
                                                     data-style="btn-light">
-                                                    <option>Select Journey Type</option>
+                                                    <!-- <option>Select Journey Type</option> -->
                                                     <option value="sin">Single</option>
                                                     <option value="ret">Return</option>
                                                     <!-- <option value="B">Bus</option> -->

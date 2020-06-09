@@ -218,13 +218,13 @@
                                                         <div class="form-group row">
                                                             <label class="col-3" for="fname">First Name</label>
                                                             <input type="text" name="fname"
-                                                                placeholder="Enter First Name"
-                                                                class="form-control col-7  " required>
+                                                                placeholder="Enter First Name" minlength="3" maxlength="15"
+                                                                class="form-control col-7" required>
                                                         </div>
                                                         <div class="form-group row">
                                                             <label class="col-3" for="lname">Last Name</label>
                                                             <input type="text" name="lname"
-                                                                placeholder="Enter Last Name" class="form-control col-7"
+                                                                placeholder="Enter Last Name" minlength="3" maxlength="15" class="form-control col-7"
                                                                 required>
                                                         </div>
                                                         <div class="form-group row">
@@ -238,7 +238,7 @@
                                                         <div class="form-group row">
                                                             <label class="col-3" for="email">Email</label>
                                                             <input type="email" name="email" placeholder="Enter Email"
-                                                                class="form-control col-7" required>
+                                                                class="form-control col-7" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                                                         </div>
                                                         <div class="form-group row">
                                                             <label class="col-3" for="pass">Password</label>
@@ -315,7 +315,7 @@
                     
 
                              if($uemail==$email){
-                                        echo "<center><h4>User exist already</h4></center>";
+                                        echo "<script>alert('User exist already');</script>";
                                 }
                                 else{
                                         //echo "User not exist";

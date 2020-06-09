@@ -60,7 +60,7 @@
                                 <div class="form-group mb-3">
                                     <label for="emailaddress">Email address</label>
                                     <input class="form-control" type="email" id="emailaddress" name="email" required=""
-                                        placeholder="Enter your email">
+                                        placeholder="Enter your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                                 </div>
 
                                 <div class="form-group mb-3">

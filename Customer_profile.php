@@ -243,7 +243,7 @@
                                                                 </label>
                                                                 <div class="col-lg-11">
                                                                     <input class="form-control" type="text" name="fname"
-                                                                        placeholder="Enter your first name" required>
+                                                                        placeholder="Enter your first name" pattern="[A-Za-z]{3}" required>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
@@ -254,7 +254,7 @@
                                                                 </label>
                                                                 <div class="col-lg-11">
                                                                     <input class="form-control" type="text" name="lname"
-                                                                        placeholder="Enter your last name" required>
+                                                                        placeholder="Enter your last name" pattern="[A-Za-z]{3}" required>
                                                                 </div>
                                                             </div>
 

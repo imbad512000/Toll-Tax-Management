@@ -35,12 +35,12 @@
                                 <div class="form-group mb-3">
                                     <label for="fn">First Name</label>
                                     <input class="form-control" type="text" id="fn" name="fname" required="required"
-                                        placeholder="Enter your First Name">
+                                        placeholder="Enter your First Name" minlength="3" maxlength="15">
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="ln">Last Name</label>
                                     <input class="form-control" type="text" id="ln" name="lname" required="required"
-                                        placeholder="Enter your Last Name">
+                                        placeholder="Enter your Last Name" minlength="3" maxlength="15">
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-3 offset-0">Gender</label>
@@ -53,7 +53,7 @@
                                 <div class="form-group mb-3">
                                     <label for="em">Email Address</label>
                                     <input class="form-control" type="email" id="em" name="email" required="required"
-                                        placeholder="Enter your Email Address">
+                                        placeholder="Enter your Email Address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="password">Password</label>
