@@ -178,7 +178,8 @@
 
             <!--Start Dashboard Content-->
 
-            
+            <img src="images/admin.jpg" style="width: 1800px;height:625px; "
+                                    class="img-fluid"></a>
         <!--End Row-->
 
 

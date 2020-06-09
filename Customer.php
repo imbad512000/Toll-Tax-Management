@@ -143,78 +143,13 @@
 
         <div class="content-wrapper">
             <div class="container-fluid">
-                <br><br>
-                <div>
-                    <center>
-                        <h3>
-                            <p>Welcome to User</p>
-                        </h3>
-                    </center>
-                </div>
-                <br><br>
+              
                 <!--Start Dashboard Content-->
 
-                <div class="row mt-3">
-                    <div class="col-12 col-lg-6 col-xl-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="mb-0">9526 <span class="float-right"><i
-                                            class="fa fa-shopping-cart"></i></span></h5>
-                                <div class="progress my-3" style="height:3px;">
-                                    <div class="progress-bar gradient-deepblue" style="width:55%"></div>
-                                </div>
-                                <p class="mb-0 small-font">Total Orders <span class="float-right">+4.2% <i
-                                            class="zmdi zmdi-long-arrow-up"></i></span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6 col-xl-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="mb-0">8323 <span class="float-right"><i class="fa fa-usd"></i></span></h5>
-                                <div class="progress my-3" style="height:3px;">
-                                    <div class="progress-bar gradient-orange" style="width:55%"></div>
-                                </div>
-                                <p class="mb-0 small-font">Total Revenue <span class="float-right">+1.2% <i
-                                            class="zmdi zmdi-long-arrow-up"></i></span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6 col-xl-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="mb-0">6200 <span class="float-right"><i class="fa fa-eye"></i></span></h5>
-                                <div class="progress my-3" style="height:3px;">
-                                    <div class="progress-bar gradient-ohhappiness" style="width:55%"></div>
-                                </div>
-                                <p class="mb-0 small-font">Visitors <span class="float-right">+5.2% <i
-                                            class="zmdi zmdi-long-arrow-up"></i></span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6 col-xl-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="mb-0">5630 <span class="float-right"><i class="fa fa-envira"></i></span></h5>
-                                <div class="progress my-3" style="height:3px;">
-                                    <div class="progress-bar gradient-ibiza" style="width:55%"></div>
-                                </div>
-                                <p class="mb-0 small-font">Messages <span class="float-right">+2.2% <i
-                                            class="zmdi zmdi-long-arrow-up"></i></span></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--End Row-->
-
-
-
-
-
-            </div>
             <!--End Row-->
 
-
+            <img src="images/customer.jpg" style="width: 1800px;height:625px; "
+                                    class="img-fluid"></a>
             <!--End Row-->
 
 
