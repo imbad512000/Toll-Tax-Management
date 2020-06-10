@@ -80,6 +80,49 @@
 				}
 			
 	}
+
+	// CUSTOMER...................
+
+	// if(isset($_REQUEST['sub2']))
+	// {
+
+	// $con = mysqli_connect("localhost","root","","start");
+
+	// // session_start();
+	
+	// $old_pass=$_REQUEST['pass1'];
+	// $password=$_REQUEST['pass2'];
+	// $retype_password=$_REQUEST['pass3'];
+
+	// $aa = "SELECT * FROM `tbl_employee_registration` WHERE `emp_reg_password`='$old_pass'";
+	// $q1=mysqli_query($con,$aa);
+	// $data=mysqli_fetch_assoc($q1);
+	// $row=mysqli_num_rows($q1);
+	// $pass = "";
+	// if($row == 1){
+	// 	$pass = $data["emp_reg_password"];
+	// }
+
+	// 		if($pass==$old_pass)
+	// 		 {
+	// 				if($password==$retype_password)
+	// 				{
+	// 					$q=mysqli_query($con,"UPDATE `tbl_employee_registration` SET `emp_reg_password`='$password' WHERE `emp_reg_password`='$old_pass'");
+							
+	// 						if($q)
+	// 						{
+	// 							header('location: final_login.php');
+	// 							// echo "Password successfully changed";
+	// 						}
+
+	// 				}
+	// 			}
+	// 			else
+	// 			{
+	// 				echo "<script>alert('Old password and New password not match')</script>";
+	// 			}
+			
+	// }
 	
 
 ?>

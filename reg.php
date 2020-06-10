@@ -184,7 +184,8 @@
                     // }
 
                     $data = $_SESSION["cust_data"];
-                    $_SESSION["cust_id"]=$data["login_Referance_id"];
+                    $_SESSION["emp_id"]=$data["login_Referance_id"];
+
 
                     $name=$_REQUEST['fname'];
                     $lname=$_REQUEST['lname'];

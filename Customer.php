@@ -124,12 +124,12 @@
                                     </div>
                                 </a>
                             </li>
+                            <!-- <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li> -->
                             <li class="dropdown-divider"></li>
-                            <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li>
-                            <li class="dropdown-divider"></li>
-                            <li class="dropdown-item"><i class="icon-wallet mr-2"></i> Account</li>
-                            <li class="dropdown-divider"></li>
-                            <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
+                            <li class="dropdown-item"><a href="Customer_profile.php"><i class="icon-wallet mr-2"></i> Account</li>
+                            <!-- <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li> -->
                             <li class="dropdown-divider"></li>
                             <li class="dropdown-item"><a href="main.php"><i class="icon-power mr-2"></i> Logout</li></a>
                         </ul>

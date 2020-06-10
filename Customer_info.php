@@ -65,13 +65,13 @@
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="sidebar-submenu">
-                        <li><a href="create_pass.php"><i class="zmdi zmdi-dot-circle-alt"></i> Create Pass</a></li>
-                        <li><a href="search_pass.php"><i class="zmdi zmdi-dot-circle-alt"></i> Search Pass</a></li>
+                        <li><a href="Customer_create_pass.php"><i class="zmdi zmdi-dot-circle-alt"></i> Create Pass</a></li>
+                        <li><a href="Customer_search_pass.php"><i class="zmdi zmdi-dot-circle-alt"></i> Search Pass</a></li>
 
 
                     </ul>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="javaScript:void();" class="waves-effect">
                         <i class="zmdi zmdi-format-list-bulleted"></i> <span>Generate Receipt</span>
                         <i class="fa fa-angle-left pull-right"></i>
@@ -84,7 +84,7 @@
 
 
                     </ul>
-                </li>
+                </li> -->
                 </li>
                 <li>
                     <a href="javaScript:void();" class="waves-effect">
@@ -98,7 +98,6 @@
                     </a>
                 </li>
 
-        </div>
         </div>
         <!--End sidebar-wrapper-->
 
@@ -140,13 +139,13 @@
                                 </a>
                             </li>
                             <li class="dropdown-divider"></li>
-                            <!-- <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li>
-                            <li class="dropdown-divider"></li> -->
+                            <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li>
+                            <li class="dropdown-divider"></li>
                             <li class="dropdown-item"><a href="Employee_profile.php"><i class="icon-wallet mr-2"></i>
                                     Account</li>
                             <li class="dropdown-divider"></li>
-                            <!-- <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
-                            <li class="dropdown-divider"></li> -->
+                            <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
+                            <li class="dropdown-divider"></li>
                             <li class="dropdown-item"><a href="main.php"><i class="icon-power mr-2"></i> Logout</li></a>
                         </ul>
                     </li>
@@ -165,7 +164,7 @@
                 <div class="container">
                     <div class="row justify-content-left mr-20">
                         <div class="col-md-8 col-lg-6 col-xl-5">
-                            <div class="card" style="height: 400px; width: 600px;">
+                            <div class="card" style="height: 700px; width: 600px;">
 
                                 <div class="card-body p-4">
 
@@ -203,72 +202,83 @@
                                 Indie music, skiing and hiking. I love the great outdoors.
                             </p>
                         </div> -->
-
-                        <label>
-                             <h4 style="font-family:cursive">Change Password</h4>
-                        </label>
-                        <br><br>
-
-                      
-                                            
-                                            <div class="card-body">
-				<div class="form-group row" style="font-size: 1.5em">
-					<label class="col-5" for="fname">Old Password</label>
-					<input type="text" name="pass1" placeholder="Enter Old password" class="form-control col-7" required>
-				</div>
-				<div class="form-group row" style="font-size: 1.5em">
-					<label class="col-5" for="fname">New Password</label>
-					<input type="text" name="pass2" placeholder="Enter new password" class="form-control col-7" required>
-				</div>
-				<div class="form-group row" style="font-size: 1.5em">
-					<label class="col-5" for="lname">Confirm Password</label>
-					<input type="password" name="pass3" placeholder="Re-enter new password" class="form-control col-7" required>
-				</div>
-				<br>
-				<div class="form-group row" style="font-size: 2em">
-					<input type="submit" name="sub2" value="Submit" class="btn btn-light offset-4 col-4 font-weight-bold"> 
-				</div>
-			</div>
-                                                   
-
-                                                            
-                                                            <!-- <div class="form-group row">
+                        <!-- <div style="width: 125px;height: 125px; position: relative;border-radius: 50%;">
+                                                <img src="../img/" onclick="triggerClick()" id="profileDisplay"  style="display: block;margin: -5px auto;" class="w-100 h-100">
+                                                <input type="file" class="form-control" name="faculty_pic" name="profileImage" id="profileImage" onchange="displayImage(this)" accept="image/*" style="display: none;" value="<?php echo $date['STUDENT_PROFILE_PIC'] ?>" required>
+                                            </div>
+                                            <div class="form-group row">
                                                                 <label
-                                                                    class="col-lg-10 col-form-label form-control-label">
-                                                                    <h6 style="font-family:cursive">Address</h6>
-                                                                </label>
-                                                                <div class="col-lg-11">
-                                                                    <input class="form-control" type="text"
-                                                                        placeholder="Enter full address">
-                                                                </div>
-                                                            </div> -->
-                                                           
-
-                                                            
-
-                                                            <!-- <div class="form-group row">
-                                                                <label
-                                                                    class="col-lg-4 col-form-label form-control-label">
-                                                                    <h6 style="font-family:cursive">Password</h6>
-                                                                </label>
+                                                                    class="col-lg-4 col-form-label form-control-label"></label>
                                                                 <div class="col-lg-9">
-                                                                    <input class="form-control" type="password"
-                                                                        Placeholder="Enter password">
+                                                                    <h6 style="font-family:cursive"><input type="Submit"
+                                                                            class="btn btn-primary" name="upload"
+                                                                            value="upload"></h6>
+
                                                                 </div>
+                                                            </div>
+
+
+                                                        </div> -->
+                                                        <!--/row-->
+                                                    </div>
+
+                                                    <div class="tab-pane" id="edit">
+                                                        <form role="form">
+
+
+
+                                                            <label>
+                                                                <h4 style="font-family:cursive">Account Information</h4>
+                                                            </label>
+                                                            <br><br>
+                                                            <!-- </div> -->
+
+                                                            <div class="form-group row">
+                                                                <label
+                                                                    class="col-lg-6 col-form-label form-control-label">
+                                                                    <h6 style="font-family:cursive">First
+                                                                        name</h6>
+                                                                </label>
+                                                                <!-- <div class="col-lg-11">
+                                                                    <input class="form-control" type="text" name="fname"
+                                                                        placeholder="Enter your first name">
+                                                                </div> -->
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label
                                                                     class="col-lg-4 col-form-label form-control-label">
-                                                                    <h6 style="font-family:cursive">Confirm
-                                                                        password</h6>
+                                                                    <h6 style="font-family:cursive">Last
+                                                                        name</h6>
                                                                 </label>
-                                                                <div class="col-lg-9">
-                                                                    <input class="form-control" type="password"
-                                                                        placeholder="Re-enter your password">
-                                                                </div>
-                                                            </div> -->
-                                                           
+                                                                <!-- <div class="col-lg-11">
+                                                                    <input class="form-control" type="text" name="lname"
+                                                                        placeholder="Enter your last name">
+                                                                </div> -->
                                                             </div>
+
+                                                            <div class="form-group row">
+                                                                <label
+                                                                    class="col-lg-4 col-form-label form-control-label">
+                                                                    <h6 style="font-family:cursive">Email</h6>
+                                                                </label>
+                                                                <!-- <div class="col-lg-11">
+                                                                    <input class="form-control" type="email" name="email"
+                                                                        placeholder="Enter your email">
+                                                                </div> -->
+                                                            </div>
+
+                                                            <div class="form-group row">
+                                                                <label
+                                                                    class="col-lg-6 col-form-label form-control-label">
+                                                                    <h6 style="font-family:cursive">Contact Number</h6>
+                                                                </label>
+                                                                <!-- <div class="col-lg-11">
+                                                                    <input class="form-control" type="number" name="phno"
+                                                                        Placeholder="Enter Contact number">
+                                                                </div> -->
+                                                            </div>
+
+                                                            
                                                     </div>
                                                 </div>
                                             </div>
@@ -367,22 +377,7 @@
                 //     // alert(xmthttp.responseText);
                 // }
 
-                function triggerClick() {
-                    document.querySelector('#profileImage').click();
-                }
-
-                function displayImage(e) 
-                {
-                    if(e.files[0]){
-                        var reader = new FileReader();
-
-                        reader.onload = function(e){
-                            document.querySelector('#profileDisplay').setAttribute('src',e.target.result);
-
-                        }
-                        reader.readAsDataURL(e.files[0]);
-                    }
-                }
+                
 
                 </script>
                 <!-- Index js -->
@@ -397,46 +392,30 @@
 
 <?php
 
-	if(isset($_REQUEST['sub2']))
-	{
+    $con=mysqli_connect("localhost","root","","start");
 
-	$con = mysqli_connect("localhost","root","","start");
+                    
+    // if($_SESSION["emp_reg_id"]==true){
+    //     echo "Oii"." ".$_SESSION["emp_reg_id"];
+    // }
+    // else{
+    //     header('location : Employee_profile.php');
+    // }
 
-	// session_start();
-	
-	$old_pass=$_REQUEST['pass1'];
-	$password=$_REQUEST['pass2'];
-	$retype_password=$_REQUEST['pass3'];
+    // $imgname = $_FILES["faculty_pic"]["name"];
+    // $tmpname = $_FILES["faculty_pic"]["tmp_name"];
+    
+    // move_uploaded_file($tmpname, "../Image/$imgname");
 
-	$aa = "SELECT * FROM `tbl_employee_registration` WHERE `emp_reg_password`='$old_pass'";
-	$q1=mysqli_query($con,$aa);
-	$data=mysqli_fetch_assoc($q1);
-	$row=mysqli_num_rows($q1);
-	$pass = "";
-	if($row == 1){
-		$pass = $data["emp_reg_password"];
-	}
+    
+    $data = $_SESSION["cust_data"];
+    $id=$data["login_Referance_id"];
 
-			if($pass==$old_pass)
-			 {
-					if($password==$retype_password)
-					{
-						$q=mysqli_query($con,"UPDATE `tbl_employee_registration` SET `emp_reg_password`='$password' WHERE `emp_reg_password`='$old_pass'");
-							
-							if($q)
-							{
-								header('location: final_login.php');
-								// echo "Password successfully changed";
-							}
+    $q="SELECT * FROM `tbl_customer_registration` WHERE `cust_reg_id`='$id'";
 
-					}
-				}
-				else
-				{
-					echo "<script>alert('Old password and New password not match')</script>";
-				}
-			
-	}
-	
-
+    $res=mysqli_query($con,$q);
+    
+    $row=mysqli_fetch_array($res);
+                        
+    print_r($row);
 ?>
