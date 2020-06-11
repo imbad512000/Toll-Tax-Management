@@ -460,16 +460,23 @@
                         <h4>Our Newsletter</h4>
                         <p>For customer visit</p>
                         <div class="form">
+
                             <p class="subscribe_success" id="subscribe_success" style="display:none;"></p>
                             <p class="subscribe_error" id="subscribe_error" style="display:none;"></p>
                             <form name="subscribe_form" id="subscribe_form" method="post" action="#"
                                 onSubmit="return false">
-                                <input type="text" data-delay="300" placeholder="Your Name" name="subscribe_name"
-                                    id="subscribe_name" onKeyPress="removeChecks();" class="input">
-                                <input type="text" data-delay="300" placeholder="Email Address" name="subscribe_email"
-                                    id="subscribe_email" onKeyPress="removeChecks();" class="input">
-                                <button class="btn btn-primary" name="Subscribe" type="submit" data-text="Subscribe"
-                                    onClick="validateSubscription();">Subscribe</button>
+                                
+                                <input type="text" data-delay="300" placeholder="Your Name" name="name"
+                                    id="subscribe_name" onKeyPress="removeChecks();" class="input" required>
+
+                                <input type="email" data-delay="300" placeholder="Email Address" name="mail"
+                                    id="subscribe_email" onKeyPress="removeChecks();" class="input" required>
+
+                                <button class="btn btn-primary" name="sub1" type="submit" data-text="Subscribe"
+                                    ">Subscribe</button>
+
+                                   
+
                             </form>
                         </div>
                         <ul class="social">
@@ -549,3 +556,53 @@
 <!-- Mirrored from wahabali.com/work/advisor/index3.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Jan 2020 07:57:56 GMT -->
 
 </html>
+
+<?php
+
+    
+
+    // if($con == TRUE)
+    // // {
+    // //  echo "con";
+    // // }
+    // // else
+    // // {
+    // //  echo "not Con";
+    // // }
+
+    if(isset($_REQUEST['sub1'])){
+
+        $con=mysqli_connect("localhost","root","","start");
+
+        $fname=$_REQUEST['name'];
+        $email=$_REQUEST['mail'];
+
+        $q="INSERT INTO `tbl_newsletter`(`full_name`,`email_address`) VALUES ('$fname','$email')";
+
+        $res=mysqli_query($con,$q);
+
+        if($res){
+
+            $msg = "Hey $fname ,
+
+            Thanks for creating an account as Customer on our website.                    
+
+            From now on You're ready to login into your Toll Account and Modify your account.
+            With this Account You can access your account for pass management..
+            ";
+             //recipient email here
+        $rec = "$email";
+             //send 
+        $sub="Registration Confirmation";
+        
+            mail($rec,$sub,$msg);
+            
+            echo "Registered";
+
+        header('location: https://www.ndtv.com/topic/toll-plaza');
+
+        }
+        
+    }
+
+?>
