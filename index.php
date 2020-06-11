@@ -473,13 +473,13 @@
                             </form>
                         </div>
                         <ul class="social">
-                            <li class="animate bounceIn"><a href="#." class="facebook"><i
+                            <li class="animate bounceIn"><a href="https://www.facebook.com/" class="facebook"><i
                                         class="icon-facebook-1"></i></a></li>
-                            <li class="animate bounceIn" data-delay="100"><a href="#." class="twitter"><i
+                            <li class="animate bounceIn" data-delay="100"><a href="https://twitter.com/login" class="twitter"><i
                                         class="icon-twitter-1"></i></a></li>
-                            <li class="animate bounceIn" data-delay="200"><a href="#." class="google-plus"><i
+                            <li class="animate bounceIn" data-delay="200"><a href=" https://accounts.google.com" class="google-plus"><i
                                         class="icon-google"></i></a></li>
-                            <li class="animate bounceIn" data-delay="300"><a href="#." class="linkedin"><i
+                            <li class="animate bounceIn" data-delay="300"><a href="https://www.linkedin.com/login" class="linkedin"><i
                                         class="icon-linkedin3"></i></a></li>
                         </ul>
                     </div>
