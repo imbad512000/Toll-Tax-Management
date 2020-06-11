@@ -1,3 +1,6 @@
+<?php
+    ob_start();
+?>
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 
@@ -558,9 +561,6 @@
 </html>
 
 <?php
-
-    
-
     // if($con == TRUE)
     // // {
     // //  echo "con";
@@ -599,9 +599,14 @@
             
             echo "Registered";
 
-        header('location: https://www.ndtv.com/topic/toll-plaza');
+        header('location: welcome.php');
 
         }
+        else{
+            echo "error";
+        }
+
+        ob_flush();
         
     }
 
