@@ -175,7 +175,7 @@
                           
                             <li class="dropdown-item"><a href="Employee_profile.php"><i class="icon-wallet mr-2"></i> Account</li>
                             <li class="dropdown-divider"></li>
-                            <li class="dropdown-item"><a href="main.php"><i class="icon-power mr-2"></i> Logout</li></a>
+                            <li class="dropdown-item"><a href="index.php"><i class="icon-power mr-2"></i> Logout</li></a>
                         </ul>
                     </li>
                 </ul>
@@ -315,7 +315,7 @@
                     
 
                              if($uemail==$email){
-                                        echo "<script>alert('User exist already');</script>";
+                                        echo "<center><script>alert('User exist already');</script></center>";
                                 }
                                 else{
                                         //echo "User not exist";

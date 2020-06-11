@@ -105,7 +105,7 @@
             <!-- HEADER INNER -->
             <div class="header clearfix">
 
-                <a href="main.php" class="logo"><img src="images/logo.png" alt=""></a>
+                <a href="index.php" class="logo"><img src="images/logo.png" alt=""></a>
 
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#primary-nav"
                     aria-expanded="false">
@@ -124,7 +124,7 @@
 
                 <nav class="main-nav navbar-collapse collapse" id="primary-nav">
                     <ul class="nav nav-pills">
-                        <li ><a href="main.php">Home </a>
+                        <li ><a href="index.php">Home </a>
 
                         </li>
                         <li class="active"><a href="about.php">About Us</a></li>

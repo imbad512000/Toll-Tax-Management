@@ -59,13 +59,13 @@
 
                                 <div class="form-group mb-3">
                                     <label for="emailaddress">Email address</label>
-                                    <input class="form-control" type="email" id="emailaddress" name="email" required=""
+                                    <input class="form-control" type="email" id="emailaddress" name="email" required=" required"
                                         placeholder="Enter your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                                 </div>
 
                                 <div class="form-group mb-3">
                                     <label for="password">Password</label>
-                                    <input class="form-control" type="password" name="pass" required="" id="password"
+                                    <input class="form-control" type="password" name="pass" required="required" id="password"
                                         placeholder="Enter your password">
                                 </div>
 
@@ -86,7 +86,7 @@
                                 <div class="col-12 text-center">
                                     <p> <a href="forget.php" class="text-muted ml-1">Forgot your password?</a>
                                     </p>
-                                    <p class="text-muted">Don't have an account? <a href="main.php" class=""
+                                    <p class="text-muted">Don't have an account? <a href="index.php" class=""
                                             ss="text-muted ml-1"><b class="font-weight-semibold">Sign Up</b></a></p>
                                 </div> <!-- end col -->
                             </div>
