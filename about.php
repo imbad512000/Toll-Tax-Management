@@ -428,7 +428,7 @@ The Ministry has two wings : Roads wing and Transport wing.
 
                 <div class="row">
                     <div class="col-md-3 col-sm-3">
-                        <div class="footer-logo animate fadeInLeft"><a href="main.php"><img src="images/logo.png"
+                        <div class="footer-logo animate fadeInLeft"><a href="index.php"><img src="images/logo.png"
                                     alt=""></a></div>
                     </div>
                      <div class="footer-left">
@@ -453,12 +453,11 @@ The Ministry has two wings : Roads wing and Transport wing.
                             <div class="usefull-links-widget clearfix">
                                 <h4>Usefull Links</h4>
                                 <ul>
-                                    <li><a href="main.php">Home</a></li>
-                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="index.php">Home</a></li>
+                                    <li><a href="about.php">About Us</a></li>
                                     <!-- <li><a href="#">Services</a></li> -->
                                    <!--  <li><a href="#.">Projects</a></li>
                                     <li><a href="#">News</a></li> -->
-                                    <li><a href="#">Contact Us</a></li>
                                      <li><a href="reg.php">Sign Up</a></li>
                                     <li><a href="final_login.php">Log In</a></li>
                                 </ul>
