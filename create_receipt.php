@@ -240,6 +240,12 @@
                                             <!-- pattern="[G][J][0-9][0-9][A-Z][A-Z][0-9][0-9][0-9][0-9]" -->
                                         </div>
 
+                                        <div class="form-group mb-3">
+                                            <label for="password">E-mail Address</label>
+                                            <input class="form-control" type="email" name="mail" required="" 
+                                                 placeholder="Enter your e-mail address">
+                                        </div>
+
 
 
                                         <div class="form-group mb-3">

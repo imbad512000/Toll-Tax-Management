@@ -172,7 +172,7 @@
                                     </center>
                                     <br><br><br>
 
-                                    <form action="#">
+                                    <form action="#" method="post">
 
                                         <!-- <div class="form-group mb-3">
                                         <label for="id"> Category Id</label>

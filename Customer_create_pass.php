@@ -162,7 +162,7 @@
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-8 col-lg-6 col-xl-5">
-                            <div class="card" style="height: 1010px; width: 450px;">
+                            <div class="card" style="height: 1090px; width: 450px;">
 
                                 <div class="card-body p-4">
 
@@ -222,6 +222,12 @@
                                             <label for="password">Vehicle Number</label>
                                             <input class="form-control" type="text" name="vno" required="" min="0"
                                                 max="10" placeholder="Enter your Vehicle Number">
+                                        </div>
+
+                                        <div class="form-group mb-3">
+                                            <label for="password">E-mail Address</label>
+                                            <input class="form-control" type="email" name="mail" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                                 placeholder="Enter your e-mail address">
                                         </div>
 
                                         <div class="form-group mb-3">
