@@ -61,26 +61,25 @@
 
                 <li>
                     <a href="javaScript:void();" class="waves-effect">
-                        <i class="zmdi zmdi-format-list-bulleted"></i> <span>Generate Pass</span>
+                        <i class="zmdi zmdi-assignment-account"></i> <span>Generate Pass</span>
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="sidebar-submenu">
-                        <li><a href="create_pass.php"><i class="zmdi zmdi-dot-circle-alt"></i> Create Pass</a></li>
-                        <li><a href="#"><i class="zmdi zmdi-dot-circle-alt"></i> Search Pass</a></li>
+                        <li><a href="create_pass.php"><i class="zmdi zmdi-open-in-new"></i> Create Pass</a></li>
+                        <li><a href="search_pass.php"><i class="zmdi zmdi-search-in-file"></i> Search Pass</a></li>
 
 
                     </ul>
                 </li>
                 <li>
                     <a href="javaScript:void();" class="waves-effect">
-                        <i class="zmdi zmdi-format-list-bulleted"></i> <span>Generate Receipt</span>
+                        <i class="zmdi zmdi-assignment-o"></i> <span>Generate Receipt</span>
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="sidebar-submenu">
-                        <li><a href="create_receipt.php"><i class="zmdi zmdi-dot-circle-alt"></i> Create Receipt</a>
+                        <li><a href="create_receipt.php"><i class=" zmdi zmdi-open-in-browser"></i> Create Receipt</a>
                         </li>
-                        <li><a href="search_receipt.php"><i class="zmdi zmdi-dot-circle-alt"></i> Search Receipt</a>
-                        </li>
+                        <li><a href="search_receipt.php"><i class="zmdi zmdi-search-replace"></i> Search Receipt</a></li>
 
 
                     </ul>
@@ -88,18 +87,18 @@
                 </li>
                 <li>
                     <a href="javaScript:void();" class="waves-effect">
-                        <i class="zmdi zmdi-lock"></i> <span>Online Transaction</span>
+                        <i class="zmdi zmdi-collection-text"></i> <span>Online Transaction</span>
 
                     </a>
                 </li>
                 <li>
                     <a href="#" class="waves-effect">
-                        <i class="zmdi zmdi-card-travel"></i> <span>Payement Detail</span>
+                        <i class="zmdi zmdi-balance"></i> <span>Payement Detail</span>
                     </a>
                 </li>
 
         </div>
-        </div>
+        
         <!--End sidebar-wrapper-->
 
         <!--Start topbar header-->
@@ -164,7 +163,7 @@
                 <div class="container">
                     <div class="row justify-content">
                         <div class="col-md-8 col-lg-9 col-xl-5">
-                            <div class="card" style="height: 650px; width: 1010px;">
+                            <div class="card" style="height: 650px; width: 1130px;">
 
                                 <div class="card-body p-10">
 

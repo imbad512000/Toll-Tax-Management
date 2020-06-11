@@ -162,20 +162,20 @@
 
 
                     <li data-transition="fade" data-slotamount="7" data-masterspeed="500"
-                        data-thumb="images/main-banner/3/7.jpg" data-saveperformance="on" data-title="">
+                        data-thumb="images/main-banner/3/5.jpg" data-saveperformance="on" data-title="">
 
                         <!-- MAIN IMAGE -->
-                        <img src="images/main-banner/3/7.jpg" alt="" data-lazyload="images/main-banner/3/7.jpg"
+                        <img src="images/main-banner/3/5.jpg" alt="" data-lazyload="images/main-banner/3/5.jpg"
                             data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
                     </li>
 
 
 
                     <li data-transition="fade" data-slotamount="7" data-masterspeed="500"
-                        data-thumb="images/main-banner/3/5.jpg" data-saveperformance="on" data-title="">
+                        data-thumb="images/main-banner/3/7.jpg" data-saveperformance="on" data-title="">
 
                         <!-- MAIN IMAGE -->
-                        <img src="images/main-banner/3/5.jpg" alt="" data-lazyload="images/main-banner/3/5.jpg"
+                        <img src="images/main-banner/3/7.jpg" alt="" data-lazyload="images/main-banner/3/7.jpg"
                             data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
 
 
@@ -393,7 +393,7 @@
 
                 <div class="row">
                     <div class="col-md-3 col-sm-3">
-                        <div class="footer-logo animate fadeInLeft"><a href="main.php"><img src="images/logo.png"
+                        <div class="footer-logo animate fadeInLeft"><a href="index.php"><img src="images/logo.png"
                                     alt=""></a></div>
                     </div>
                     <div class="col-md-9 col-sm-9">
@@ -424,10 +424,10 @@
                             <div class="usefull-links-widget clearfix">
                                 <h4>Usefull Links</h4>
                                 <ul>
-                                    <li><a href="main.php">Home</a></li>
+                                    <li><a href="index.php">Home</a></li>
                                     <li><a href="about.php">About Us</a></li>
 
-                                    <li><a href="#">Contact Us</a></li>
+                                  
                                     <li><a href="reg.php">Sign Up</a></li>
                                     <li><a href="final_login.php">Log In</a></li>
                                 </ul>
