@@ -53,17 +53,17 @@
 
 
 
-
                 <li>
-                    <a href="Customer_create_pass.php" class="waves-effect">
-                        <i class="zmdi zmdi-format-list-bulleted"></i> <span>Create Pass</span>
+                    <a href="javaScript:void();" class="waves-effect">
+                        <i class="zmdi zmdi-assignment-account"></i> <span>Generate Pass</span>
+                        <i class="fa fa-angle-left pull-right"></i>
                     </a>
+                    <ul class="sidebar-submenu">
+                        <li><a href="Customer_create_pass.php"><i class="zmdi zmdi-open-in-new"></i> Create Pass</a></li>
+                        <li><a href="Customer_search_pass.php"><i class="zmdi zmdi-search-in-file"></i> Search Pass</a></li>
 
-                </li>
-                <li>
-                    <a href="Customer_search_pass.php" class="waves-effect">
-                        <i class="zmdi zmdi-format-list-bulleted"></i> <span>Search Pass</span>
-                    </a>
+
+                    </ul>
                 </li>
 
                 <!-- <li>
@@ -131,7 +131,7 @@
                             <!-- <li class="dropdown-divider"></li>
                             <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li> -->
                             <li class="dropdown-divider"></li>
-                            <li class="dropdown-item"><a href="main.php"><i class="icon-power mr-2"></i> Logout</li></a>
+                            <li class="dropdown-item"><a href="index.php"><i class="icon-power mr-2"></i> Logout</li></a>
                         </ul>
                     </li>
                 </ul>

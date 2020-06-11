@@ -57,7 +57,7 @@
 
                           
                             <!-- item-->
-                            <a href="employee_dash.php" class="dropdown-item notify-item">
+                            <a href="index.php" class="dropdown-item notify-item">
                                 <i class="fe-log-out"></i>
                                 <span>Logout</span>
                             </a>

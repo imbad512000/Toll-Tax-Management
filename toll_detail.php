@@ -58,17 +58,17 @@
 
 
                 <li>
-                    <a href="pass_create.php" class="waves-effect">
-                        <i class="zmdi zmdi-format-list-bulleted"></i> <span>Create Pass</span>
+                    <a href="javaScript:void();" class="waves-effect">
+                        <i class="zmdi zmdi-assignment-account"></i> <span>Generate Pass</span>
+                        <i class="fa fa-angle-left pull-right"></i>
                     </a>
+                    <ul class="sidebar-submenu">
+                        <li><a href="Customer_create_pass.php"><i class="zmdi zmdi-open-in-new"></i> Create Pass</a></li>
+                        <li><a href="Customer_search_pass.php"><i class="zmdi zmdi-search-in-file"></i> Search Pass</a></li>
 
-                </li>
-                <li>
-                    <a href="search_p.php" class="waves-effect">
-                        <i class="zmdi zmdi-format-list-bulleted"></i> <span>Search Pass</span>
-                    </a>
-                </li>
 
+                    </ul>
+                </li>
                 <!-- <li>
         <a href="receiptc.php" class="waves-effect">
           <i class="zmdi zmdi-format-list-bulleted"></i> <span>Generate Receipt</span>
@@ -134,7 +134,7 @@
                             <li class="dropdown-divider"></li>
                             <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
                             <li class="dropdown-divider"></li>
-                            <li class="dropdown-item"><a href="main.php"><i class="icon-power mr-2"></i> Logout</li></a>
+                            <li class="dropdown-item"><a href="index.php"><i class="icon-power mr-2"></i> Logout</li></a>
                         </ul>
                     </li>
                 </ul>
@@ -159,7 +159,7 @@
 
                     <centre>
                         <table>
-                            <a href=""><img src="images/3.jpg" style="width: 1800px;height: 275px; "
+                            <a href=""><img src="images/3.jpg" style="width: 1800px;height: 325px; "
                                     class="img-fluid"></a>
                         </table>
                     </centre>
