@@ -320,7 +320,7 @@
                                                                             class="btn btn-primary" name="sub2"
                                                                             value="SAVE"></h6>
                                                                             <br>
-                                                                            <a href="change_pass.php"><h4 style="font-family:cursive" class="btn btn-secondary">CHANGE PASSWORD</h4>
+                                                                            <a href="change_password.php"><h4 style="font-family:cursive" class="btn btn-secondary">CHANGE PASSWORD</h4>
                                                                             
 
                                                                 </div>
@@ -464,6 +464,7 @@
                     // }
                     $data = $_SESSION["Emp_data"];
                     $id=$data["login_Referance_id"];
+                    
 					$name=$_REQUEST['fname'];
 					$lname=$_REQUEST['lname'];
 					// $gender=$_REQUEST['gender'];
@@ -475,7 +476,9 @@
 					// $aadhar=$_REQUEST['aadhar'];
 
 				
-					$q="UPDATE `tbl_employee_registration` SET `emp_reg_first_name`='$name',`emp_reg_last_name`='$lname',`emp_reg_email`='$email',`emp_reg_contact_num`='$contact' WHERE `emp_reg_id`='$id'";
+                    $q="UPDATE `tbl_employee_registration` SET `emp_reg_first_name`='$name',`emp_reg_last_name`='$lname',`emp_reg_email`='$email',`emp_reg_contact_num`='$contact' WHERE `emp_reg_id`='$id'";
+                    
+                    // $q="UPDATE `tbl_employee_registration` INNER JOIN `tbl_login` ON `tbl_employee_registration`.`emp_reg_email`=`tbl_login`.`login_email` SET `emp_reg_first_name`='$name',`emp_reg_last_name`='$lname',`emp_reg_email`='$email',`emp_reg_contact_num`='$contact' WHERE `emp_reg_id`='$id'";
                     
                     
                     // print_r($_REQUEST);

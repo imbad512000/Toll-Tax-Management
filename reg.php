@@ -183,8 +183,14 @@
                     //  echo "not";
                     // }
 
+<<<<<<< HEAD
                     // $data = $_SESSION["cust_data"];
                     // $_SESSION["cust_id"]=$data["login_Referance_id"];
+=======
+                    $data = $_SESSION["cust_data"];
+                    $_SESSION["emp_id"]=$data["login_Referance_id"];
+
+>>>>>>> 8491e80c9188caa996d8613e26036edd3dca6713
 
                     $name=$_REQUEST['fname'];
                     $lname=$_REQUEST['lname'];

@@ -117,6 +117,9 @@
                     
 
                 $q = "SELECT * FROM `tbl_login` WHERE `login_email`='$email' AND `login_password`='$password'";
+               
+                // $q1="UPDATE `tbl_employee_registration` SET `emp_reg_first_name`='$name',`emp_reg_last_name`='$lname',`emp_reg_email`='$email',`emp_reg_contact_num`='$contact' WHERE `emp_reg_id`='$id'";
+                
                 $res = mysqli_query($con,$q); 
                  
                 $data = mysqli_fetch_assoc($res);       
@@ -138,7 +141,7 @@
                         header("location: Customer.php");
 
                     }elseif($type == "EM"){
-                        // $_SESSION["Emp_data"]=$data;   
+                        $_SESSION["Emp_data"]=$data;   
                         header("location: emp_dash.php");
                     }
                     elseif($type == "AD"){

@@ -141,12 +141,12 @@
                                     </div>
                                 </a>
                             </li>
+                            <!-- <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li> -->
                             <li class="dropdown-divider"></li>
-                            <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li>
-                            <li class="dropdown-divider"></li>
-                            <li class="dropdown-item"><i class="icon-wallet mr-2"></i> Account</li>
-                            <li class="dropdown-divider"></li>
-                            <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
+                            <li class="dropdown-item"><a href="#"><i class="icon-wallet mr-2"></i> Account</li>
+                            <!-- <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li> -->
                             <li class="dropdown-divider"></li>
                             <li class="dropdown-item"><a href="main.php"><i class="icon-power mr-2"></i> Logout</li></a>
                         </ul>
@@ -243,7 +243,7 @@
                                                                 </label>
                                                                 <div class="col-lg-11">
                                                                     <input class="form-control" type="text" name="fname"
-                                                                        placeholder="Enter your first name" pattern="[A-Za-z]{3}" required>
+                                                                        placeholder="Enter your first name" minlength="3" maxlength="15" required>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
@@ -254,7 +254,7 @@
                                                                 </label>
                                                                 <div class="col-lg-11">
                                                                     <input class="form-control" type="text" name="lname"
-                                                                        placeholder="Enter your last name" pattern="[A-Za-z]{3}" required>
+                                                                        placeholder="Enter your last name" minlength="3" maxlength="15" required>
                                                                 </div>
                                                             </div>
 
@@ -479,7 +479,7 @@
 					// {
 					// 	echo "not";
                     // }
-                    $data = $_SESSION["Cust_data"];
+                    $data = $_SESSION["cust_data"];
                     $id=$data["login_Referance_id"];
 
 					$name=$_REQUEST['fname'];
@@ -493,7 +493,7 @@
 					// $aadhar=$_REQUEST['aadhar'];
 
 				
-					$q="UPDATE `tbl_customer_registration` SET `cust_reg_first_name`='$name',`cust_reg_last_name`='$lname',`cust_reg_email`='$email' WHERE `cust_reg_id`=`$id`";
+					$q="UPDATE `tbl_customer_registration` SET `cust_reg_first_name`='$name',`cust_reg_last_name`='$lname',`cust_reg_email`='$email' WHERE `cust_reg_id`='$id'";
                     
                     
                     // print_r($_REQUEST);
@@ -501,7 +501,7 @@
 
 						if($res)
 						{
-							header('location: Welocome_info.php');
+							header('location: Customer_info.php');
 						}
 						else
 						{
