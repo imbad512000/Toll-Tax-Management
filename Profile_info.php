@@ -239,10 +239,10 @@
                                                                     <h6 style="font-family:cursive">First
                                                                         name</h6>
                                                                 </label>
-                                                                <!-- <div class="col-lg-11">
+                                                                <div class="col-lg-11">
                                                                     <input class="form-control" type="text" name="fname"
-                                                                        placeholder="Enter your first name">
-                                                                </div> -->
+                                                                        placeholder="Enter your first name" value="<?php echo 'Your variable';?>" disabled>
+                                                                </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label

@@ -493,10 +493,12 @@
 					// $aadhar=$_REQUEST['aadhar'];
 
 				
-					$q="UPDATE `tbl_customer_registration` SET `cust_reg_first_name`='$name',`cust_reg_last_name`='$lname',`cust_reg_email`='$email' WHERE `cust_reg_id`='$id'";
+                    $q="UPDATE `tbl_customer_registration` SET `cust_reg_first_name`='$name',`cust_reg_last_name`='$lname',`cust_reg_email`='$email' WHERE `cust_reg_id`='$id'";
+                    $q1="UPDATE `tbl_login` SET `login_email`='$email' WHERE `login_referance_id`='$id'";
                     
                     
                     // print_r($_REQUEST);
+                    $res=mysqli_query($con,$q1);
 					$res=mysqli_query($con,$q); 
 
 						if($res)
