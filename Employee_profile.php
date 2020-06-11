@@ -478,12 +478,14 @@
 				
                     $q="UPDATE `tbl_employee_registration` SET `emp_reg_first_name`='$name',`emp_reg_last_name`='$lname',`emp_reg_email`='$email',`emp_reg_contact_num`='$contact' WHERE `emp_reg_id`='$id'";
                     
+                    $q1="UPDATE `tbl_login` SET `login_email`='$email' WHERE `login_referance_id`='$id'";
+
                     // $q="UPDATE `tbl_employee_registration` INNER JOIN `tbl_login` ON `tbl_employee_registration`.`emp_reg_email`=`tbl_login`.`login_email` SET `emp_reg_first_name`='$name',`emp_reg_last_name`='$lname',`emp_reg_email`='$email',`emp_reg_contact_num`='$contact' WHERE `emp_reg_id`='$id'";
-                    
-                    
+                                           
                     // print_r($_REQUEST);
 					$res=mysqli_query($con,$q); 
-
+                    $res1=mysqli_query($con,$q1);
+    
 						if($res)
 						{
 							header('location: Profile_info.php');
