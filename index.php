@@ -585,7 +585,7 @@
             $msg = "Hey $fname ,
 
             Thanks for Subscribe as Customer on our website. We provide you latest news about toll plazas like vehicle category,their price or new mode to pay the toll,
-            Now a days FASTTAG is very popular. because of RFID technology , no security issue also.
+            Now a days FASTTAG is very popular. because of RFID technology,no security issue also.
             
             Also More about toll tax latest news on TOI..
 
