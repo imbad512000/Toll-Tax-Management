@@ -146,7 +146,7 @@
                             <li class="dropdown-divider"></li>
                             <!-- <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
                             <li class="dropdown-divider"></li> -->
-                            <li class="dropdown-item"><a href="main.php"><i class="icon-power mr-2"></i> Logout</li></a>
+                            <li class="dropdown-item"><a href="index.php"><i class="icon-power mr-2"></i> Logout</li></a>
                         </ul>
                     </li>
                 </ul>
@@ -164,7 +164,7 @@
                 <div class="container">
                     <div class="row justify-content-left mr-20">
                         <div class="col-md-8 col-lg-6 col-xl-5">
-                            <div class="card" style="height: 830px; width: 600px;">
+                            <div class="card" style="height: 700px; width: 600px;">
 
                                 <div class="card-body p-4">
 
@@ -208,7 +208,7 @@
                         </label>
                         <br><br>
 
-                        <div style="width: 125px;height: 125px; position: relative;border-radius: 50%;">
+                        <!-- <div style="width: 125px;height: 125px; position: relative;border-radius: 50%;">
                                                 <img src="../img/" onclick="triggerClick()" id="profileDisplay"  style="display: block;margin: -5px auto;" class="w-100 h-100">
                                                 <input type="file" class="form-control" name="faculty_pic" name="profileImage" id="profileImage" onchange="displayImage(this)" accept="image/*" style="display: none;" value="<?php echo $date['STUDENT_PROFILE_PIC'] ?>" required>
                                             </div>
@@ -218,10 +218,10 @@
                                                                 <div class="col-lg-9">
                                                                     <h6 style="font-family:cursive"><input type="Submit"
                                                                             class="btn btn-primary" name="upload"
-                                                                            value="upload"></h6>
+                                                                            value="upload"></h6> -->
 
-                                                                </div>
-                                                            </div>
+                                                                <!-- </div>
+                                                            </div> -->
 
 
                                                         </div>
@@ -300,8 +300,8 @@
                                                                     <input class="form-control" type="password"
                                                                         Placeholder="Enter password">
                                                                 </div>
-                                                            </div>
-                                                            <div class="form-group row">
+                                                            </div> -->
+                                                            <!-- <div class="form-group row">
                                                                 <label
                                                                     class="col-lg-4 col-form-label form-control-label">
                                                                     <h6 style="font-family:cursive">Confirm
@@ -423,22 +423,22 @@
                 //     // alert(xmthttp.responseText);
                 // }
 
-                function triggerClick() {
-                    document.querySelector('#profileImage').click();
-                }
+                // function triggerClick() {
+                //     document.querySelector('#profileImage').click();
+                // }
 
-                function displayImage(e) 
-                {
-                    if(e.files[0]){
-                        var reader = new FileReader();
+                // function displayImage(e) 
+                // {
+                //     if(e.files[0]){
+                //         var reader = new FileReader();
 
-                        reader.onload = function(e){
-                            document.querySelector('#profileDisplay').setAttribute('src',e.target.result);
+                //         reader.onload = function(e){
+                //             document.querySelector('#profileDisplay').setAttribute('src',e.target.result);
 
-                        }
-                        reader.readAsDataURL(e.files[0]);
-                    }
-                }
+                //         }
+                //         reader.readAsDataURL(e.files[0]);
+                //     }
+                // }
 
                 </script>
                 <!-- Index js -->
@@ -469,7 +469,7 @@
 					$lname=$_REQUEST['lname'];
 					// $gender=$_REQUEST['gender'];
 					$email =$_REQUEST['email'];	
-					// $password=$_REQUEST['pass'];
+					$password=$_REQUEST['pass'];
 					// $repeat_password=$_REQUEST['repass'];
 					$contact=$_REQUEST['phno'];
 					// $DOB=$_REQUEST['dob'];
@@ -488,7 +488,8 @@
     
 						if($res)
 						{
-							header('location: Profile_info.php');
+                            header("location: final_login.php");
+                            
 						}
 						else
 						{

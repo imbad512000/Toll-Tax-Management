@@ -159,7 +159,7 @@
 
                     <centre>
                         <table>
-                            <a href=""><img src="images/3.jpg" style="width: 1800px;height: 325px; "
+                            <a href=""><img src="images/3.jpg" style="width: 1800px;height:625px; "
                                     class="img-fluid"></a>
                         </table>
                     </centre>

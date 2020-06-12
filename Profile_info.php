@@ -2,6 +2,35 @@
   ob_start();
   session_start();  
 ?>
+<?php
+
+$con=mysqli_connect("localhost","root","","start");
+
+                
+// if($_SESSION["emp_reg_id"]==true){
+//     echo "Oii"." ".$_SESSION["emp_reg_id"];
+// }
+// else{
+//     header('location : Employee_profile.php');
+// }
+
+// $imgname = $_FILES["faculty_pic"]["name"];
+// $tmpname = $_FILES["faculty_pic"]["tmp_name"];
+
+// move_uploaded_file($tmpname, "../Image/$imgname");
+
+
+$data = $_SESSION["Emp_data"];
+$id=$data["login_Referance_id"];
+
+$q="SELECT * FROM `tbl_employee_registration` WHERE `emp_reg_id`='$id'";
+
+$res=mysqli_query($con,$q);
+
+$row=mysqli_fetch_array($res);
+                    
+// print_r($row);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -220,6 +249,9 @@
 
                                                         </div> -->
                                                         <!--/row-->
+
+                                                
+
                                                     </div>
 
                                                     <div class="tab-pane" id="edit">
@@ -241,7 +273,7 @@
                                                                 </label>
                                                                 <div class="col-lg-11">
                                                                     <input class="form-control" type="text" name="fname"
-                                                                        placeholder="Enter your first name" value="<?php echo 'Your variable';?>" disabled>
+                                                                        placeholder="Enter your first name" value="<?php echo $_GET['name'];?>" disabled>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
@@ -417,5 +449,5 @@
     
     $row=mysqli_fetch_array($res);
                         
-    print_r($row);
+    // print_r($row);
 ?>
