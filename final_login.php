@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="assets2/css/bootstrap.min.css">
     <script src="assets2/js/bootstrap.js" type="text/javascript" charset="utf-8" async defer></script>
     <script src="assets2s/js/bootstrap.min.js" type="text/javascript" charset="utf-8" async defer></script>
-    <title>Login</title>
+    <title>Login Page</title>
 </head>
 
 <!-- 
