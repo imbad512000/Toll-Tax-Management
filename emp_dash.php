@@ -76,7 +76,7 @@
                     <ul class="sidebar-submenu">
                         <li><a href="create_receipt.php"><i class=" zmdi zmdi-open-in-browser"></i> Create Receipt</a>
                         </li>
-                        <li><a href="#"><i class="zmdi zmdi-search-replace"></i> Search Receipt</a></li>
+                        <li><a href="search_receipt.php"><i class="zmdi zmdi-search-replace"></i> Search Receipt</a></li>
 
 
                     </ul>
