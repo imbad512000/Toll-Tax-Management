@@ -1,6 +1,33 @@
-<?php 
-    ob_start();
+<?php
+  ob_start();  
+  session_start();
+  $con=mysqli_connect("localhost","root","","start");
+//   $ldata = $_SESSION["cust_data"];   
+//   $email = $ldata["login_email"];     
 ?>
+<?php 
+      if(strcasecmp($_SERVER['REQUEST_METHOD'], 'POST') == 0){
+        //Request hash
+        $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';	
+        if(strcasecmp($contentType, 'application/json') == 0){
+            $data = json_decode(file_get_contents('php://input'));
+            $hash=hash('sha512', $data->key.'|'.$data->txnid.'|'.$data->amount.'|'.$data->pinfo.'|'.$data->fname.'|'.$data->email.'|||||'.$data->udf5.'||||||'.$data->salt);
+            $json=array();
+            $json['success'] = $hash;
+            echo json_encode($json);
+        
+        }
+        exit(0);
+    }
+
+    function getCallbackUrl()
+    {
+        $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+        return $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] . 'response.php';
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,10 +39,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Employee Home</title>
+    <title>Generate Pass</title>
     <!-- loader-->
     <link href="assets22/css/pace.min.css" rel="stylesheet" />
     <script src="assets22/js/pace.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<!-- this meta viewport is required for BOLT //-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" >
+<!-- BOLT Sandbox/test //-->
+<script id="bolt" src="https://sboxcheckout-static.citruspay.com/bolt/run/bolt.min.js" bolt-
+color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/Bolt-Logo-e14421724859591.png"></script>
     <!--favicon-->
     <link rel="icon" href="assets3/images/logo.png" type="logo-icon" />
     <!-- Vector CSS -->
@@ -45,7 +79,6 @@
         <!--Start sidebar-wrapper-->
         <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
             <div class="brand-logo" style="height: 80px;padding-top: 5px;">
-
                 <a href="emp_dash.php">
                     <img src="assets3/images/logo.png" class="logo-icon" alt="logo icon" style="width: 30%;">
                     <!-- <h5 class="logo-text"> Admin</h5> -->
@@ -158,59 +191,69 @@
             <div class="container-fluid">
 
                 <!--Start Dashboard Content-->
-                <br><br><br>
+                <br><br>
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-8 col-lg-6 col-xl-5">
-                            <div class="card" style="height: 1090px; width: 480px;">
+                            <div class="card" style="height: 1150px; width: 450px;">
 
                                 <div class="card-body p-4">
 
 
 
                                     <center>
-                                        <h3 class="auth-title">Create Receipt</h3>
+                                        <h3 class="auth-title">Create Reciept</h3>
                                     </center>
                                     <br><br><br>
 
-                                    <form action="" method="post">
+                                    <form action="#" id="payment_form" method="post">
+                                    <input type="hidden" id="udf5" name="udf5" value="BOLT_KIT_PHP7" />
+                                    <input type="hidden" id="surl" name="surl" value="<?php echo getCallbackUrl(); ?>" />
+                                    <div class="dv">
+   
+                                    <input type="hidden" id="key"  name="key" placeholder="Merchant Key" value="dFiumMOS" />
+                                    <input type="hidden" id="salt"  name="salt"  placeholder="Merchant Salt" value="luBDnXhT4U" />
 
-                                        <!-- <div class="form-group mb-3">
-                                        <label for="id"> Category Id</label>
-                                        <input class="form-control" type="Number" id="cid" name="id" required="" min="0">
-                                    </div>  -->
+                                    <input type="hidden" id="txnid" name="txnid" placeholder="Transaction ID" value="<?php echo  "Toll".rand(10000,99999999)?>" />
+
+                                    <input type="hidden" id="email" name="email" placeholder="Transaction ID" value="man@gmail.com"/>
 
                                         <div class="form-group mb-3">
-                                            <label for="password">Toll Booth Name</label>
-                                            <input class="form-control" type="text" name="tbname" required=""
-                                                placeholder="Enter your Toll Booth Name" minlength="3" maxlength="15">
+                                            <label for="password">Toll booth name</label>
+                                            <input class="form-control"  type="text" name="tbname" required=""
+                                                placeholder="Enter your Holder Name" minlength="3" maxlength="15">
                                         </div>
 
+                                        <!-- <div class="form-group mb-3">
+                                            <label for="password">Email-Address</label>
+                                            <input class="form-control" id="email" type="email" name="email" required
+                                                placeholder="Enter your email address" value="">
+                                        </div> -->
+
                                         <div class="form-group mb-3">
-                                            <label for="password">Toll Booth Number</label>
-                                            <input class="form-control" type="number" name="tbno" min="0" max="13">
+                                            <label for="password">Toll booth number</label>
+                                            <input class="form-control" type="number" name="tbno" required="">
                                         </div>
 
                                         <div class="form-group mb-3">
                                             <label for="password">Toll Employee Name</label>
-                                            <input class="form-control" type="text" name="ename" required=""
-                                                placeholder="Enter your employee name" minlength="3" maxlength="15">
-                                        </div>
-
-
-                                        <div class="form-group mb-3">
-                                            <label for="password">Receipt Date</label>
-                                            <input class="form-control" type="date" name="pdate" required="" min="2020-01-01" max="2020-12-31">
+                                            <input class="form-control" id="fname" type="text" name="fname" required=""
+                                                placeholder="Enter your Holder Name" minlength="3" maxlength="15">
                                         </div>
 
                                         <div class="form-group mb-3">
-                                            <label for="password">Receipt Time</label>
-                                            <input class="form-control" type="Time" name="ptime">
+                                            <label for="password">Toll Receipt Date</label>
+                                            <input class="form-control" type="date" name="pdate">
+                                        </div>
+
+                                        <div class="form-group mb-3">
+                                            <label for="password">Toll Receipt Time</label>
+                                            <input class="form-control" type="time" name="ptime">
                                         </div>
 
                                         <div class="form-group mb-3">
                                             <label for="inputEmail3" class="col-5 col-form-label">Vehicle
-                                                Category<span class="text-danger"></span></label>
+                                                Type<span class="text-danger"></span></label>
                                             <div id="vtype">
                                             </div>
                                         </div>
@@ -219,7 +262,7 @@
                                             <label for="inputEmail3" class="col-5 col-form-label">Type of Journey<span
                                                     class="text-danger"></span></label>
                                             <div class="">
-                                                <select class="form-control" name="type_of_journey"
+                                                <select class="form-control" name="type_of_vehicle_1"
                                                     data-style="btn-light">
                                                     <!-- <option>Select Journey Type</option> -->
                                                     <option value="sin">Single</option>
@@ -230,45 +273,32 @@
                                             </div>
                                         </div>
 
-
+                                        <div class="form-group mb-3">
+                                            <label for="password">Contact Number</label>
+                                            <input class="form-control" id="mobile" type="tel" name="mobile" required="" maxlength="10" placeholder="Enter your Contact Number">
+                                        </div>
 
 
                                         <div class="form-group mb-3">
                                             <label for="password">Vehicle Number</label>
-                                            <input class="form-control" type="text" name="vno" required=""
-                                                placeholder="Enter your Vehicle Number" pattern="[A-Z][A-Z][0-9][0-9][A-Za-z][A-Za-z][0-9][0-9][0-9][0-9]">
-                                            <!-- pattern="[G][J][0-9][0-9][A-Z][A-Z][0-9][0-9][0-9][0-9]" -->
+                                            <input class="form-control" id="pinfo" type="text" name="pinfo" required="" min="0"
+                                                max="10" placeholder="Enter your Vehicle Number">
                                         </div>
-
-                                        <div class="form-group mb-3">
-                                            <label for="password">E-mail Address</label>
-                                            <input class="form-control" type="email" name="mail" required="" 
-                                                 placeholder="Enter your e-mail address">
-                                        </div>
-
 
 
                                         <div class="form-group mb-3">
                                             <label for="password">Tax Amount</label>
-                                            <input class="form-control" type="number" name="tamount" required="">
-                                            <!-- disabled="disabled" -->
+                                            <input class="form-control" type="Number" id="amount" name="amount" required=""
+                                                min="0">
                                         </div>
 
+                                        <input type="hidden" id="hash" name="hash" placeholder="Hash" value="" />
                                         <br><br>
                                         <div class="form-group mb-0 text-center">
-                                            <button class="btn btn-danger btn-block" type="submit" name="sub1"> Create
-                                                Receipt </button>
+                                        <div><input type="submit" class="btn btn-success btn-block" value="Pay" name="sub1"; onclick="launchBOLT(); return false;" /></div>
                                         </div>
 
-
                                         <br><br><br><br>
-                                        <!-- <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label"> <span class="text-danger"></span></label>
-    <div class="col-3">
-    <input type="submit" name="sub1" value="Add" style="background-color:rgba();width: 150px;height: 40px;">
-
-</div>
-</div> -->
                                         <br>
                                     </form>
                                     <!--End Row-->
@@ -298,16 +328,7 @@
                         <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
                         <!--End Back To Top Button-->
 
-                        <!--Start footer-->
-                        <footer class="footer">
-                            <div class="container">
-                                <div class="text-center">
-                                    Copyright © 2020 Desinged by Siddharth Kansara | Bhavik Desai
-                                </div>
-                            </div>
-                        </footer>
-                        <!--End footer-->
-
+                     
 
 
                     </div>
@@ -355,7 +376,82 @@
                     </script>
                     <!-- Index js -->
                     <script src="assets2/js/index.js"></script>
-
+                    <script type="text/javascript">
+$('#payment_form').bind('keyup blur', function(){
+	$.ajax({
+          url: 'create_receipt.php',
+          type: 'post',
+          data: JSON.stringify({ 
+            key: $('#key').val(),
+			salt: $('#salt').val(),
+			txnid: $('#txnid').val(),
+			amount: $('#amount').val(),
+		    pinfo: $('#pinfo').val(),
+            fname: $('#fname').val(),
+			email: $('#email').val(),
+			mobile: $('#mobile').val(),
+			udf5: $('#udf5').val()
+          }),
+		  contentType: "application/json",
+          dataType: 'json',
+          success: function(json) {
+            if (json['error']) {
+			 $('#alertinfo').html('<i class="fa fa-info-circle"></i>'+json['error']);
+            }
+			else if (json['success']) {	
+				$('#hash').val(json['success']);
+            }
+          }
+        }); 
+});
+//-->
+</script>
+<script type="text/javascript"><!--
+function launchBOLT()
+{
+	bolt.launch({
+	key: $('#key').val(),
+	txnid: $('#txnid').val(), 
+	hash: $('#hash').val(),
+	amount: $('#amount').val(),
+	firstname: $('#fname').val(),
+	email: $('#email').val(),
+	phone: $('#mobile').val(),
+	productinfo: $('#pinfo').val(),
+	udf5: $('#udf5').val(),
+	surl : $('#surl').val(),
+	furl: $('#surl').val(),
+	mode: 'dropout'	
+},{ responseHandler: function(BOLT){
+	console.log( BOLT.response.txnStatus );		
+	if(BOLT.response.txnStatus != 'CANCEL')
+	{
+		//Salt is passd here for demo purpose only. For practical use keep salt at server side only.
+		var fr = '<form action=\"'+$('#surl').val()+'\" method=\"post\">' +
+		'<input type=\"hidden\" name=\"key\" value=\"'+BOLT.response.key+'\" />' +
+		'<input type=\"hidden\" name=\"salt\" value=\"'+$('#salt').val()+'\" />' +
+		'<input type=\"hidden\" name=\"txnid\" value=\"'+BOLT.response.txnid+'\" />' +
+		'<input type=\"hidden\" name=\"amount\" value=\"'+BOLT.response.amount+'\" />' +
+		'<input type=\"hidden\" name=\"productinfo\" value=\"'+BOLT.response.productinfo+'\" />' +
+		'<input type=\"hidden\" name=\"firstname\" value=\"'+BOLT.response.firstname+'\" />' +
+		'<input type=\"hidden\" name=\"email\" value=\"'+BOLT.response.email+'\" />' +
+		'<input type=\"hidden\" name=\"udf5\" value=\"'+BOLT.response.udf5+'\" />' +
+		'<input type=\"hidden\" name=\"mihpayid\" value=\"'+BOLT.response.mihpayid+'\" />' +
+		'<input type=\"hidden\" name=\"status\" value=\"'+BOLT.response.status+'\" />' +
+		'<input type=\"hidden\" name=\"hash\" value=\"'+BOLT.response.hash+'\" />' +
+		'</form>';
+		var form = jQuery(fr);
+		jQuery('body').append(form);								
+		form.submit();
+	}
+},
+	catchException: function(BOLT){
+ 		alert( BOLT.message );
+	}
+});
+}
+//--
+</script>	
 
 </body>
 
@@ -368,33 +464,46 @@
 
     if(isset($_REQUEST['sub1'])){
 
-      $con=mysqli_connect("localhost","root","","start");
+      
 
       // $toll_id=$_REQEST['id'];
       $toll_booth=$_REQUEST['tbname'];
       $toll_booth_no=$_REQUEST['tbno'];
-      $toll_emp_name=$_REQUEST['ename'];
+      $toll_emp_name=$_REQUEST['fname'];
       $receipt_date=$_REQUEST['pdate'];
       $receipt_time=$_REQUEST['ptime'];
+
+      $contact=$_REQUEST['mobile'];
+
       $vehcile_category=$_REQUEST['type_of_vehicle'];
       $type_journey=$_REQUEST['type_of_journey'];
-      $Vehicle_no=$_REQUEST['vno'];
-      $Tax_amount=$_REQUEST['tamount'];
+      $Vehicle_no=$_REQUEST['pinfo'];
+      $Tax_amount=$_REQUEST['amount'];
+
+      $suspage="http://localhost/Toll-Tax-Management/sus.php";
+        $fpage="http://localhost/Toll-Tax-Management/fpage.php";
+        $taxid = "TOLL".mt_rand();
 
       $q="INSERT INTO `tbl_toll_receipt_details`(`toll_receipt_id`, `toll_booth_name`, `toll_booth_no`, `toll_emp_name`, `toll_receipt_date`, `toll_receipt_time`, `type_of_vehicle`, `journey_type`,`vehicle_no`, `toll_amount`) VALUES ('','$toll_booth','$toll_booth_no','$toll_emp_name','$receipt_date','$receipt_time','$vehcile_category','$type_journey','$Vehicle_no','$Tax_amount')";
 
       $res=mysqli_query($con,$q);
 
-      if($res){
-        header("location: search_receipt.php");
-      }
-      else{
-        echo "<script>alert('Error in Query')</script>";
-      }
+    //   if($res){
+    //     header("location: search_receipt.php");
+    //   }
+    //   else{
+    //     echo "<script>alert('Error in Query')</script>";
+    //   }
 
 
-    }
+    // }
     ob_flush();
+    }
 
 
+?>
+
+<?php
+    $MERCHANT_KEY = "dFiumMOS";
+    $SALT = "luBDnXhT4U";
 ?>

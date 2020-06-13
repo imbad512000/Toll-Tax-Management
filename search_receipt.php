@@ -227,7 +227,7 @@
                           
 
                           if(isset($_REQUEST['sub1'])){
-                                $id=$_REQUEST['id'];
+                                $id=$_REQUEST['name'];
                                 $q1="SELECT * FROM `tbl_toll_receipt_details` WHERE CONCAT(`toll_receipt_id`, `toll_booth_name`, `toll_booth_no`, `toll_emp_name`, `toll_receipt_date`, `toll_receipt_time`, `type_of_vehicle`, `journey_type`, `vehicle_no`, `toll_amount`) LIKE '%".$id."%'";
                                 $search_result= filterTable($q1);
                           }
