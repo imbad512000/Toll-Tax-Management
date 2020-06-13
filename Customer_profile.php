@@ -211,7 +211,7 @@
                         </label>
                         <br><br>
 
-                        <div style="width: 125px;height: 125px; position: relative;border-radius: 50%;">
+                        <!-- <div style="width: 125px;height: 125px; position: relative;border-radius: 50%;">
                                                 <img src="../img/" onclick="triggerClick()" id="profileDisplay"  style="display: block;margin: -5px auto;" class="w-100 h-100">
                                                 <input type="file" class="form-control" name="faculty_pic" name="profileImage" id="profileImage" onchange="displayImage(this)" accept="image/*" style="display: none;" value="<?php echo $date['STUDENT_PROFILE_PIC'] ?>" required>
                                             </div>
@@ -224,7 +224,7 @@
                                                                             value="upload"></h6>
 
                                                                 </div>
-                                                            </div>
+                                                            </div> -->
 
 
                                                         </div>
@@ -440,22 +440,22 @@
                     // alert(xmthttp.responseText);
                     }
 
-                    function triggerClick() {
-                    document.querySelector('#profileImage').click();
-                }
+                //     function triggerClick() {
+                //     document.querySelector('#profileImage').click();
+                // }
 
-                function displayImage(e) 
-                {
-                    if(e.files[0]){
-                        var reader = new FileReader();
+                // function displayImage(e) 
+                // {
+                //     if(e.files[0]){
+                //         var reader = new FileReader();
 
-                        reader.onload = function(e){
-                            document.querySelector('#profileDisplay').setAttribute('src',e.target.result);
+                //         reader.onload = function(e){
+                //             document.querySelector('#profileDisplay').setAttribute('src',e.target.result);
 
-                        }
-                        reader.readAsDataURL(e.files[0]);
-                    }
-                }
+                //         }
+                //         reader.readAsDataURL(e.files[0]);
+                //     }
+                // }
 
                     </script>
                     <!-- Index js -->
