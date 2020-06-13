@@ -503,7 +503,7 @@
 
 						if($res)
 						{
-							header('location: Customer_info.php');
+							header('location: final_login.php');
 						}
 						else
 						{

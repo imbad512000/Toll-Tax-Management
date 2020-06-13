@@ -2,8 +2,8 @@
   ob_start();  
   session_start();
   $con=mysqli_connect("localhost","root","","start");
-  $ldata = $_SESSION["cust_data"];   
-  $email = $ldata["login_email"];     
+//   $ldata = $_SESSION["cust_data"];   
+//   $email = $ldata["login_email"];     
   ?>
 
 <?php 
