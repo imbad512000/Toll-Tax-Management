@@ -5,7 +5,6 @@
 //   $ldata = $_SESSION["cust_data"];   
 //   $email = $ldata["login_email"];     
 ?>
-
 <?php 
       if(strcasecmp($_SERVER['REQUEST_METHOD'], 'POST') == 0){
         //Request hash
@@ -214,15 +213,16 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
    
                                     <input type="hidden" id="key"  name="key" placeholder="Merchant Key" value="dFiumMOS" />
                                     <input type="hidden" id="salt"  name="salt"  placeholder="Merchant Salt" value="luBDnXhT4U" />
+
+                                    <input type="hidden" id="txnid" name="txnid" placeholder="Transaction ID" value="<?php echo  "Toll".rand(10000,99999999)?>" />
+
+                                    <input type="hidden" id="email" name="email" placeholder="Transaction ID" value="man@gmail.com"/>
+
                                         <div class="form-group mb-3">
                                             <label for="password">Pass Holder Name</label>
                                             <input class="form-control" id="fname" type="text" name="fname" required=""
                                                 placeholder="Enter your Holder Name" minlength="3" maxlength="15">
                                         </div>
-
-                                        <input type="hidden" id="txnid" name="txnid" placeholder="Transaction ID" value="<?php echo  "Toll".rand(10000,99999999)?>" />
-
-                                        <input type="hidden" id="email" name="email" placeholder="Transaction ID" value="man@gmail.com"/>
 
                                         <!-- <div class="form-group mb-3">
                                             <label for="password">Email-Address</label>
@@ -282,7 +282,7 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
 
                                         <div class="form-group mb-3">
                                             <label for="password">Tax Amount</label>
-                                            <input class="form-control" type="Number" id="amount"  name="amount" required=""
+                                            <input class="form-control" type="Number" id="amount" name="amount" required=""
                                                 min="0">
                                         </div>
 
@@ -491,12 +491,16 @@ function launchBOLT()
     //     echo "<script>alert('Error in Query')</script>";
     //   }          
 
-      $MERCHANT_KEY = "dFiumMOS";
-      $SALT = "luBDnXhT4U";
+     
 
     
-    
+    ob_flush();
       
     }
 
   ?>
+
+<?php
+    $MERCHANT_KEY = "dFiumMOS";
+    $SALT = "luBDnXhT4U";
+?>

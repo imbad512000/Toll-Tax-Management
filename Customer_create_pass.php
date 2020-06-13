@@ -1,6 +1,33 @@
 <?php
   ob_start();  
+  session_start();
+  $con=mysqli_connect("localhost","root","","start");
+//   $ldata = $_SESSION["cust_data"];   
+//   $email = $ldata["login_email"];     
 ?>
+<?php 
+      if(strcasecmp($_SERVER['REQUEST_METHOD'], 'POST') == 0){
+        //Request hash
+        $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';	
+        if(strcasecmp($contentType, 'application/json') == 0){
+            $data = json_decode(file_get_contents('php://input'));
+            $hash=hash('sha512', $data->key.'|'.$data->txnid.'|'.$data->amount.'|'.$data->pinfo.'|'.$data->fname.'|'.$data->email.'|||||'.$data->udf5.'||||||'.$data->salt);
+            $json=array();
+            $json['success'] = $hash;
+            echo json_encode($json);
+        
+        }
+        exit(0);
+    }
+
+    function getCallbackUrl()
+    {
+        $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+        return $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] . 'sus.php';
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +43,13 @@
     <!-- loader-->
     <link href="assets22/css/pace.min.css" rel="stylesheet" />
     <script src="assets22/js/pace.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<!-- this meta viewport is required for BOLT //-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" >
+<!-- BOLT Sandbox/test //-->
+<script id="bolt" src="https://sboxcheckout-static.citruspay.com/bolt/run/bolt.min.js" bolt-
+color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/Bolt-Logo-e14421724859591.png"></script>
     <!--favicon-->
     <link rel="icon" href="assets3/images/logo.png" type="logo-icon" />
     <!-- Vector CSS -->
@@ -45,7 +79,7 @@
         <!--Start sidebar-wrapper-->
         <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
             <div class="brand-logo" style="height: 80px;padding-top: 5px;">
-                <a href="Customer.php">
+                <a href="emp_dash.php">
                     <img src="assets3/images/logo.png" class="logo-icon" alt="logo icon" style="width: 30%;">
                     <!-- <h5 class="logo-text"> Admin</h5> -->
                 </a>
@@ -64,36 +98,35 @@
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="sidebar-submenu">
-                        <li><a href="Customer_create_pass.php"><i class="zmdi zmdi-open-in-new"></i> Create Pass</a></li>
-                        <li><a href="Customer_search_pass.php"><i class="zmdi zmdi-search-in-file"></i> Search Pass</a></li>
+                        <li><a href="create_pass.php"><i class="zmdi zmdi-open-in-new"></i> Create Pass</a></li>
+                        <li><a href="search_pass.php"><i class="zmdi zmdi-search-in-file"></i> Search Pass</a></li>
 
 
                     </ul>
-                </li>
-                <!-- <li>
-                    <a href="javaScript:void();" class="waves-effect">
-                        <i class="zmdi zmdi-format-list-bulleted"></i> <span>Generate Receipt</span>
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </a>
-                    <ul class="sidebar-submenu">
-                        <li><a href="create_receipt.php"><i class="zmdi zmdi-dot-circle-alt"></i> Create Receipt</a>
-                        </li>
-                        <li><a href="search_receipt.php"><i class="zmdi zmdi-dot-circle-alt"></i> Search Receipt</a>
-                        </li>
-
-
-                    </ul>
-                </li> -->
                 </li>
                 <li>
                     <a href="javaScript:void();" class="waves-effect">
-                        <i class="zmdi zmdi-lock"></i> <span>Online Transaction</span>
+                        <i class="zmdi zmdi-assignment-o"></i> <span>Generate Receipt</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="sidebar-submenu">
+                        <li><a href="create_receipt.php"><i class=" zmdi zmdi-open-in-browser"></i> Create Receipt</a>
+                        </li>
+                        <li><a href="search_receipt.php"><i class="zmdi zmdi-search-replace"></i> Search Receipt</a></li>
+
+
+                    </ul>
+                </li>
+                </li>
+                <li>
+                    <a href="javaScript:void();" class="waves-effect">
+                        <i class="zmdi zmdi-collection-text"></i> <span>Online Transaction</span>
 
                     </a>
                 </li>
                 <li>
                     <a href="#" class="waves-effect">
-                        <i class="zmdi zmdi-card-travel"></i> <span>Payement Detail</span>
+                        <i class="zmdi zmdi-balance"></i> <span>Payement Detail</span>
                     </a>
                 </li>
 
@@ -137,13 +170,13 @@
                                     </div>
                                 </a>
                             </li>
-                            <!-- <li class="dropdown-divider"></li>
-                            <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li> -->
                             <li class="dropdown-divider"></li>
-                            <li class="dropdown-item"><a href="Customer_profile.php"><i class="icon-wallet mr-2"></i> Account</li>
-                            <!-- <li class="dropdown-divider"></li>
-                            <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li> -->
+                            <!-- <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li>
+                            <li class="dropdown-divider"></li> -->
+                            <li class="dropdown-item"><a href="Employee_profile.php"><i class="icon-wallet mr-2"></i> Account</li>
                             <li class="dropdown-divider"></li>
+                            <!-- <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
+                            <li class="dropdown-divider"></li> -->
                             <li class="dropdown-item"><a href="index.php"><i class="icon-power mr-2"></i> Logout</li></a>
                         </ul>
                     </li>
@@ -162,7 +195,7 @@
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-8 col-lg-6 col-xl-5">
-                            <div class="card" style="height: 1090px; width: 450px;">
+                            <div class="card" style="height: 1060px; width: 450px;">
 
                                 <div class="card-body p-4">
 
@@ -173,18 +206,29 @@
                                     </center>
                                     <br><br><br>
 
-                                    <form action="#">
+                                    <form action="#" id="payment_form" method="post">
+                                    <input type="hidden" id="udf5" name="udf5" value="BOLT_KIT_PHP7" />
+                                    <input type="hidden" id="surl" name="surl" value="<?php echo getCallbackUrl(); ?>" />
+                                    <div class="dv">
+   
+                                    <input type="hidden" id="key"  name="key" placeholder="Merchant Key" value="dFiumMOS" />
+                                    <input type="hidden" id="salt"  name="salt"  placeholder="Merchant Salt" value="luBDnXhT4U" />
 
-                                        <!-- <div class="form-group mb-3">
-                                        <label for="id"> Category Id</label>
-                                        <input class="form-control" type="Number" id="cid" name="id" required="" min="0">
-                                    </div>  -->
+                                    <input type="hidden" id="txnid" name="txnid" placeholder="Transaction ID" value="<?php echo  "Toll".rand(10000,99999999)?>" />
+
+                                    <input type="hidden" id="email" name="email" placeholder="Transaction ID" value="man@gmail.com"/>
 
                                         <div class="form-group mb-3">
                                             <label for="password">Pass Holder Name</label>
-                                            <input class="form-control" type="text" name="hname" required=""
+                                            <input class="form-control" id="fname" type="text" name="fname" required=""
                                                 placeholder="Enter your Holder Name" minlength="3" maxlength="15">
                                         </div>
+
+                                        <!-- <div class="form-group mb-3">
+                                            <label for="password">Email-Address</label>
+                                            <input class="form-control" id="email" type="email" name="email" required
+                                                placeholder="Enter your email address" value="">
+                                        </div> -->
 
                                         <div class="form-group mb-3">
                                             <label for="password">Pass Date</label>
@@ -200,8 +244,9 @@
                                             <label for="inputEmail3" class="col-5 col-form-label">Type of Journey<span
                                                     class="text-danger"></span></label>
                                             <div class="">
-                                                <select class="form-control" name="type_of_vehicle1"
+                                                <select class="form-control" name="type_of_vehicle_1"
                                                     data-style="btn-light">
+                                                    <!-- <option>Select Journey Type</option> -->
                                                     <option value="sin">Single</option>
                                                     <option value="ret">Return</option>
                                                     <!-- <option value="B">Bus</option> -->
@@ -210,24 +255,23 @@
                                             </div>
                                         </div>
 
+                                        <div class="form-group mb-3">
+                                            <label for="password">Contact Number</label>
+                                            <input class="form-control" id="mobile" type="tel" name="mobile" required="" maxlength="10" placeholder="Enter your Contact Number">
+                                        </div>
+
 
                                         <div class="form-group mb-3">
-                                            <label for="inputEmail3" class="col-5 col-form-label">Vehicle Class<span
-                                                    class="text-danger"></span></label>
+                                            <label for="inputEmail3" class="col-5 col-form-label">Vehicle
+                                                Type<span class="text-danger"></span></label>
                                             <div id="vtype">
                                             </div>
                                         </div>
 
                                         <div class="form-group mb-3">
                                             <label for="password">Vehicle Number</label>
-                                            <input class="form-control" type="text" name="vno" required="" min="0"
+                                            <input class="form-control" id="pinfo" type="text" name="pinfo" required="" min="0"
                                                 max="10" placeholder="Enter your Vehicle Number">
-                                        </div>
-
-                                        <div class="form-group mb-3">
-                                            <label for="password">E-mail Address</label>
-                                            <input class="form-control" type="email" name="mail" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                                                 placeholder="Enter your e-mail address">
                                         </div>
 
                                         <div class="form-group mb-3">
@@ -238,25 +282,17 @@
 
                                         <div class="form-group mb-3">
                                             <label for="password">Tax Amount</label>
-                                            <input class="form-control" type="Number" name="tamount" required="" min="0"
-                                               >
+                                            <input class="form-control" type="Number" id="amount" name="amount" required=""
+                                                min="0">
                                         </div>
 
+                                        <input type="hidden" id="hash" name="hash" placeholder="Hash" value="" />
                                         <br><br>
                                         <div class="form-group mb-0 text-center">
-                                            <button class="btn btn-danger btn-block" type="submit" name="sub1"> Create
-                                                Pass </button>
+                                        <div><input type="submit" class="btn btn-success btn-block" value="Pay" name="sub1"; onclick="launchBOLT(); return false;" /></div>
                                         </div>
 
-
                                         <br><br><br><br>
-                                        <!-- <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label"> <span class="text-danger"></span></label>
-    <div class="col-3">
-    <input type="submit" name="sub1" value="Add" style="background-color:rgba();width: 150px;height: 40px;">
-
-</div>
-</div> -->
                                         <br>
                                     </form>
                                     <!--End Row-->
@@ -286,16 +322,7 @@
                         <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
                         <!--End Back To Top Button-->
 
-                        <!--Start footer-->
-                        <footer class="footer">
-                            <div class="container">
-                                <div class="text-center">
-                                    Copyright © 2020 Desinged by Siddharth Kansara | Bhavik Desai
-                                </div>
-                            </div>
-                        </footer>
-                        <!--End footer-->
-
+                     
 
 
                     </div>
@@ -334,17 +361,91 @@
 
                     function bindvtye() {
 
-                    var xmthttp = new XMLHttpRequest();
-                    xmthttp.open("GET", "bindvtype.php", false);
-                    xmthttp.send(null);
-                    document.getElementById("vtype").innerHTML = xmthttp.responseText;
-                    // alert(xmthttp.responseText);
+                        var xmthttp = new XMLHttpRequest();
+                        xmthttp.open("GET", "bindvtype.php", false);
+                        xmthttp.send(null);
+                        document.getElementById("vtype").innerHTML = xmthttp.responseText;
+                        // alert(xmthttp.responseText);
                     }
-
                     </script>
                     <!-- Index js -->
                     <script src="assets2/js/index.js"></script>
-
+                    <script type="text/javascript">
+$('#payment_form').bind('keyup blur', function(){
+	$.ajax({
+          url: 'Customer_create_pass.php',
+          type: 'post',
+          data: JSON.stringify({ 
+            key: $('#key').val(),
+			salt: $('#salt').val(),
+			txnid: $('#txnid').val(),
+			amount: $('#amount').val(),
+		    pinfo: $('#pinfo').val(),
+            fname: $('#fname').val(),
+			email: $('#email').val(),
+			mobile: $('#mobile').val(),
+			udf5: $('#udf5').val()
+          }),
+		  contentType: "application/json",
+          dataType: 'json',
+          success: function(json) {
+            if (json['error']) {
+			 $('#alertinfo').html('<i class="fa fa-info-circle"></i>'+json['error']);
+            }
+			else if (json['success']) {	
+				$('#hash').val(json['success']);
+            }
+          }
+        }); 
+});
+//-->
+</script>
+<script type="text/javascript"><!--
+function launchBOLT()
+{
+	bolt.launch({
+	key: $('#key').val(),
+	txnid: $('#txnid').val(), 
+	hash: $('#hash').val(),
+	amount: $('#amount').val(),
+	firstname: $('#fname').val(),
+	email: $('#email').val(),
+	phone: $('#mobile').val(),
+	productinfo: $('#pinfo').val(),
+	udf5: $('#udf5').val(),
+	surl : $('#surl').val(),
+	furl: $('#surl').val(),
+	mode: 'dropout'	
+},{ responseHandler: function(BOLT){
+	console.log( BOLT.response.txnStatus );		
+	if(BOLT.response.txnStatus != 'CANCEL')
+	{
+		//Salt is passd here for demo purpose only. For practical use keep salt at server side only.
+		var fr = '<form action=\"'+$('#surl').val()+'\" method=\"post\">' +
+		'<input type=\"hidden\" name=\"key\" value=\"'+BOLT.response.key+'\" />' +
+		'<input type=\"hidden\" name=\"salt\" value=\"'+$('#salt').val()+'\" />' +
+		'<input type=\"hidden\" name=\"txnid\" value=\"'+BOLT.response.txnid+'\" />' +
+		'<input type=\"hidden\" name=\"amount\" value=\"'+BOLT.response.amount+'\" />' +
+		'<input type=\"hidden\" name=\"productinfo\" value=\"'+BOLT.response.productinfo+'\" />' +
+		'<input type=\"hidden\" name=\"firstname\" value=\"'+BOLT.response.firstname+'\" />' +
+		'<input type=\"hidden\" name=\"email\" value=\"'+BOLT.response.email+'\" />' +
+		'<input type=\"hidden\" name=\"udf5\" value=\"'+BOLT.response.udf5+'\" />' +
+		'<input type=\"hidden\" name=\"mihpayid\" value=\"'+BOLT.response.mihpayid+'\" />' +
+		'<input type=\"hidden\" name=\"status\" value=\"'+BOLT.response.status+'\" />' +
+		'<input type=\"hidden\" name=\"hash\" value=\"'+BOLT.response.hash+'\" />' +
+		'</form>';
+		var form = jQuery(fr);
+		jQuery('body').append(form);								
+		form.submit();
+	}
+},
+	catchException: function(BOLT){
+ 		alert( BOLT.message );
+	}
+});
+}
+//--
+</script>	
 
 </body>
 
@@ -355,32 +456,51 @@
 
     if(isset($_REQUEST['sub1'])){
 
-      $con=mysqli_connect("localhost","root","","start");
 
-      // $toll_id=$_REQEST['id'];
-      $pass_holder_name=$_REQUEST['hname'];
+      $pass_holder_name=$_REQUEST['fname'];
       $pass_date=$_REQUEST['pdate'];
       $pass_time=$_REQUEST['ptime'];
-      $type_of_journey_1=$_REQUEST['type_of_vehicle1'];
+      $type_of_journey_1=$_REQUEST['type_of_vehicle_1'];
+
+      $contact_num=$_REQUEST['mobile'];
+
       $vehicle_class=$_REQUEST['type_of_vehicle'];
-      $vehicle_number=$_REQUEST['vno'];
+      $vehicle_number=$_REQUEST['pinfo'];
       $exipry_date=$_REQUEST['edate'];
-      $Tax_amount=$_REQUEST['tamount'];
+      $Tax_amount=$_REQUEST['amount'];
+
+        $suspage="http://localhost/Toll-Tax-Management/sus.php";
+        $fpage="http://localhost/Toll-Tax-Management/fpage.php";
+        $taxid = "TOLL".mt_rand();
+
+    //   echo "$type_of_journey_1";  
 
       $q="INSERT INTO `tbl_toll_pass_details`(`toll_pass_id`, `toll_pass_holder_name`, `toll_pass_date`, `toll_pass_time`, `toll_pass_type`, `toll_pass_vehicle_class`, `toll_pass_vehicle_no`, `toll_pass_duration`, `toll_pass_amount`) VALUES ('','$pass_holder_name','$pass_date','$pass_time','$type_of_journey_1','$vehicle_class','$vehicle_number','$exipry_date','$Tax_amount')";
 
       $res=mysqli_query($con,$q);
+      
 
-      if($res){
-        header("location: Customer_search_pass.php");
-      }
-      else{
-        echo "<script>alert('Error in Query')</script>";
-      }
+    //   $row=mysqli_fetch_assoc($res);
 
+    //   print_r($row);
 
-    }
+    //   if($res){
+    //     header("location: search_pass.php");
+    //   }
+    //   else{
+    //     echo "<script>alert('Error in Query')</script>";
+    //   }          
+
+     
+
+    
     ob_flush();
+      
+    }
 
+  ?>
 
+<?php
+    $MERCHANT_KEY = "dFiumMOS";
+    $SALT = "luBDnXhT4U";
 ?>
