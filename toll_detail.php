@@ -141,59 +141,72 @@
             </nav>
         </header>
         <!--End topbar header-->
-        <br>
-        <div class="clearfix"></div>
+        
+        
+        
+    <div class="clearfix"></div>
 
         <div class="content-wrapper">
             <div class="container-fluid">
 
-                <div>
+                <!--Start Dashboard Content-->
+                <br>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 col-lg-6 col-xl-12">
+                            <div class="card" style="height: 1010px; width: 1080px;">
 
-
-                    <!--Start Dashboard Content-->
-
-                    <!-- <div class="container py-lg-5 py-md-4 py-sm-4 py-3"> -->
-
-                    <!-- <h2 class="title  text-center" style="padding:25px"> Toll Detail </h2> -->
-
-
-                    <centre>
-                        <table>
-                            <a href=""><img src="images/3.jpg" style="width: 1800px;height:625px; "
-                                    class="img-fluid"></a>
-                        </table>
-                    </centre>
-                    <br><br>
-                    <centre>
-                        <table>
-                            <h8>
-                                The Ministry of Road Transport & Highways, an apex organisation under the Central
-                                Government, is entrusted with the task of formulating and administering, in consultation
-                                with other Central Ministries/Departments, State Governments/UT Administrations,
-                                organisations and individuals, policies for Road Transport, National Highways and
-                                Transport Research with a view to increasing the mobility and efficiency of the road
-                                transport system in the country.
-
-                                The Ministry has two wings : Roads wing and Transport wing.
-                                <br><br>
-                                MAIN RESPONSIBILITIES<br>
-                                > Planning, development and maintenance of National Highways in the country.<br>
-                                > Extends technical and financial support to State Governments for the development of
-                                state roads and the roads of inter-state connectivity and economic importance<br>
-                                > Evolves standard specifications for roads and bridges in the country.<br>
-                                > Serves as a repository of technical knowledge on roads and bridges.<br>
-                            </h8>
-
-                        </table>
-                    </centre>
+                                <div class="card-body p-4">
 
 
 
+                                   
 
-                </div>
-            </div>
+                                    
 
+                                        <!-- <div class="form-group mb-3">
+                                        <label for="id"> Category Id</label>
+                                        <input class="form-control" type="Number" id="cid" name="id" required="" min="0">
+                                    </div>  -->
+                                    <section class="blog py-lg-4 py-md-3 py-sm-3 py-3" id="blog">
+      <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
+      <div class="card-header text-center font-weight-bold" style="font-size: 2em">
+				Toll Detail
+			</div>
+            <div class="card-body">
+        <div class="row">
+          <div class="col-lg-6 color-img-three" >
+            <img src="images/t2.jpg"  class="img-fluid" >
+          </div>
+          <div class="col-lg-6 blog-left-sub">
+            
+            <p>During operation and maintenance of tolled stretches of National Highways (NHs), the DBFOT Concessionaires/ OMT Concessionaires / User Fee Collection Contractors have been mandated to collect user fee (toll) from road users. The applicable user-fee (toll) rates for various categories of vehicles shall be displayed at the respective Toll Plaza. Toll Information System (TIS) has been devised to put in place a mechanism, whereby the road users can ascertain through public domain the exact user fee (toll) rates for a particular plaza OR a particular journey between two stations through a selected route. In addition it will also help disseminate information about the concessions/ discounts to local and frequent users, provision of various facilities on toll road, important telephone numbers, etc.</p>
+            
+          </div>
+        </div>
+        <br><br>
+        <div class="row mt-lg-5 mt-md-4 mt-3">
+          <div class="col-lg-6 blog-left-sub">
+           
+           
+            <p>The Ministry of Road Transport & Highways, an apex organisation under the Central Government, is entrusted with the task of formulating and administering, in consultation with other Central Ministries/Departments, State Governments/UT Administrations, organisations and individuals, policies for Road Transport, National Highways and Transport Research with a view to increasing the mobility and efficiency of the road transport system in the country. The Ministry has two wings : Roads wing and Transport wing.
+            </p>
+            
+          </div>
+          <div class="col-lg-6 color-img-three">
+            <img src="images/t3.jpg" alt="news image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    </div>
+    </div>
+    </div>
 
+                                       
+    
+    
 
 
             <!--End Row-->
@@ -202,7 +215,6 @@
 
 
 
-        </div>
         <!--End Row-->
 
 
