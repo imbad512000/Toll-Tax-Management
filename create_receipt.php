@@ -486,7 +486,7 @@ function launchBOLT()
 
       $q="INSERT INTO `tbl_toll_receipt_details`(`toll_receipt_id`, `toll_booth_name`, `toll_booth_no`, `toll_emp_name`, `toll_receipt_date`, `toll_receipt_time`, `type_of_vehicle`, `journey_type`,`vehicle_no`, `toll_amount`) VALUES ('','$toll_booth','$toll_booth_no','$toll_emp_name','$receipt_date','$receipt_time','$vehcile_category','$type_journey','$Vehicle_no','$Tax_amount')";
 
-      $res=mysqli_query($con,$q);
+      $res=mysqli_query($con,$q);  
 
     //   if($res){
     //     header("location: search_receipt.php");
