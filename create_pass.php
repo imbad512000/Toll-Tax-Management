@@ -2,9 +2,9 @@
   ob_start();  
   session_start();
   $con=mysqli_connect("localhost","root","","start");
-  $ldata = $_SESSION["cust_data"];   
-  $email = $ldata["login_email"];     
-  ?>
+//   $ldata = $_SESSION["cust_data"];   
+//   $email = $ldata["login_email"];     
+?>
 
 <?php 
       if(strcasecmp($_SERVER['REQUEST_METHOD'], 'POST') == 0){
@@ -196,7 +196,7 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-8 col-lg-6 col-xl-5">
-                            <div class="card" style="height: 1010px; width: 450px;">
+                            <div class="card" style="height: 1060px; width: 450px;">
 
                                 <div class="card-body p-4">
 
@@ -222,8 +222,13 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
 
                                         <input type="hidden" id="txnid" name="txnid" placeholder="Transaction ID" value="<?php echo  "Toll".rand(10000,99999999)?>" />
 
-                                        <input type="hidden" id="email" name="email" placeholder="Transaction ID" value="man@gmail.com" />
+                                        <input type="hidden" id="email" name="email" placeholder="Transaction ID" value="man@gmail.com"/>
 
+                                        <!-- <div class="form-group mb-3">
+                                            <label for="password">Email-Address</label>
+                                            <input class="form-control" id="email" type="email" name="email" required
+                                                placeholder="Enter your email address" value="">
+                                        </div> -->
 
                                         <div class="form-group mb-3">
                                             <label for="password">Pass Date</label>
@@ -252,7 +257,7 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
 
                                         <div class="form-group mb-3">
                                             <label for="password">Contact Number</label>
-                                            <input class="form-control" id="mobile" type="tel" name="mobile" required="" maxlength="10" placeholder="Enter your Vehicle Number">
+                                            <input class="form-control" id="mobile" type="tel" name="mobile" required="" maxlength="10" placeholder="Enter your Contact Number">
                                         </div>
 
 
@@ -284,7 +289,7 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
                                         <input type="hidden" id="hash" name="hash" placeholder="Hash" value="" />
                                         <br><br>
                                         <div class="form-group mb-0 text-center">
-                                        <div><input type="submit" value="Pay" name="sub1"; onclick="launchBOLT(); return false;" /></div>
+                                        <div><input type="submit" class="btn btn-success btn-block" value="Pay" name="sub1"; onclick="launchBOLT(); return false;" /></div>
                                         </div>
 
                                         <br><br><br><br>
@@ -473,6 +478,11 @@ function launchBOLT()
       $q="INSERT INTO `tbl_toll_pass_details`(`toll_pass_id`, `toll_pass_holder_name`, `toll_pass_date`, `toll_pass_time`, `toll_pass_type`, `toll_pass_vehicle_class`, `toll_pass_vehicle_no`, `toll_pass_duration`, `toll_pass_amount`) VALUES ('','$pass_holder_name','$pass_date','$pass_time','$type_of_journey_1','$vehicle_class','$vehicle_number','$exipry_date','$Tax_amount')";
 
       $res=mysqli_query($con,$q);
+      
+
+    //   $row=mysqli_fetch_assoc($res);
+
+    //   print_r($row);
 
     //   if($res){
     //     header("location: search_pass.php");
