@@ -4,7 +4,12 @@
   $con=mysqli_connect("localhost","root","","start");
 //   $ldata = $_SESSION["cust_data"];   
 //   $email = $ldata["login_email"];     
+<<<<<<< HEAD
+  ?>
+
+=======
 ?>
+>>>>>>> 9ef7b56e11d753089eab4047ecc8c02f7e4f62a7
 <?php 
       if(strcasecmp($_SERVER['REQUEST_METHOD'], 'POST') == 0){
         //Request hash
