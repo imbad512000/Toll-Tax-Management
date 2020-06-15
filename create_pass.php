@@ -397,7 +397,8 @@ $('#payment_form').bind('keyup blur', function(){
 });
 //-->
 </script>
-<script type="text/javascript"><!--
+
+<script type="text/javascript">
 function launchBOLT()
 {
 	bolt.launch({
@@ -466,9 +467,9 @@ function launchBOLT()
       $exipry_date=$_REQUEST['edate'];
       $Tax_amount=$_REQUEST['amount'];
 
-        $suspage="http://localhost/Toll-Tax-Management/sus.php";
-        $fpage="http://localhost/Toll-Tax-Management/fpage.php";
-        $taxid = "TOLL".mt_rand();
+    $suspage="http://localhost/Toll-Tax-Management/sus.php";
+    $fpage="http://localhost/Toll-Tax-Management/fpage.php";
+    $taxid = "TOLL".mt_rand();
 
         // print_r($_REQUEST);
 
