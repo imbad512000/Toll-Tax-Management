@@ -178,6 +178,10 @@
                                                     required="" placeholder="Search Receipt">
                                                 <button class="btn btn-danger btn-block col-1 ml-2" type="submit"
                                                     name="sub1"><i class="fa fa-search"></i></button>
+                                                    <a href="pass_receipt_pdf_download.php" class="offset-4">
+                                                        <button class="btn btn-warning" type="button"
+                                                            name="sub1"><i class="fa fa-download"></i> Download</button>
+                                                    </a>
                                             </div>
                                             </div>
 
