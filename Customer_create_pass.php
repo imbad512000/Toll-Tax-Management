@@ -79,7 +79,7 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
         <!--Start sidebar-wrapper-->
         <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
             <div class="brand-logo" style="height: 80px;padding-top: 5px;">
-                <a href="emp_dash.php">
+                <a href="Customer.php">
                     <img src="assets3/images/logo.png" class="logo-icon" alt="logo icon" style="width: 30%;">
                     <!-- <h5 class="logo-text"> Admin</h5> -->
                 </a>
@@ -98,25 +98,13 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="sidebar-submenu">
-                        <li><a href="create_pass.php"><i class="zmdi zmdi-open-in-new"></i> Create Pass</a></li>
-                        <li><a href="search_pass.php"><i class="zmdi zmdi-search-in-file"></i> Search Pass</a></li>
+                        <li><a href="Customer_create_pass.php"><i class="zmdi zmdi-open-in-new"></i> Create Pass</a></li>
+                        <li><a href="Customer_search_pass.php"><i class="zmdi zmdi-search-in-file"></i> Search Pass</a></li>
 
 
                     </ul>
                 </li>
-                <li>
-                    <a href="javaScript:void();" class="waves-effect">
-                        <i class="zmdi zmdi-assignment-o"></i> <span>Generate Receipt</span>
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </a>
-                    <ul class="sidebar-submenu">
-                        <li><a href="create_receipt.php"><i class=" zmdi zmdi-open-in-browser"></i> Create Receipt</a>
-                        </li>
-                        <li><a href="search_receipt.php"><i class="zmdi zmdi-search-replace"></i> Search Receipt</a></li>
-
-
-                    </ul>
-                </li>
+                
                 </li>
                 <li>
                     <a href="javaScript:void();" class="waves-effect">
