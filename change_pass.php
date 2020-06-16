@@ -177,33 +177,7 @@
 
                                         <div class="row my-2">
                                             <div class="col-lg-8 order-lg-2">
-                                                <!-- <ul class="nav nav-tabs">
-                                                    <li class="nav-item">
-                                                        <a href="" data-target="#profile" data-toggle="tab"
-                                                            class="nav-link active">Profile</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a href="" data-target="#edit" data-toggle="tab"
-                                                            class="nav-link">Edit</a>
-                                                    </li> -->
                                                 
-                                                <!-- <div class="tab-content py-4">
-                                                    <div class="tab-pane active" id="profile">
-                                                        <h3 class="mb-2" style="font-family:cursive">Profile
-                                                            Picture</h3>
-                                                        <div class="row"> -->
-                                                            <!-- <div class="col-md-6">
-                            <h6>About</h6>
-                            <p>
-                                Web Designer, UI/UX Engineer
-                            </p>
-                            <h6>Hobbies</h6>
-                            <p>
-                                Indie music, skiing and hiking. I love the great outdoors.
-                            </p>
-                        </div> -->
-
                         <label>
                              <h4 style="font-family:cursive">Change Password</h4>
                         </label>
@@ -226,64 +200,18 @@
 				</div>
 				<br>
 				<div class="form-group row" style="font-size: 2em">
-					<input type="submit" name="sub2" value="Submit" class="btn btn-light offset-4 col-4 font-weight-bold"> 
+					<input type="button" name="sub2" value="Submit" class="btn btn-light offset-4 col-4 font-weight-bold"> 
 				</div>
 			</div>
                                                    
 
                                                             
-                                                            <!-- <div class="form-group row">
-                                                                <label
-                                                                    class="col-lg-10 col-form-label form-control-label">
-                                                                    <h6 style="font-family:cursive">Address</h6>
-                                                                </label>
-                                                                <div class="col-lg-11">
-                                                                    <input class="form-control" type="text"
-                                                                        placeholder="Enter full address">
-                                                                </div>
-                                                            </div> -->
-                                                           
-
-                                                            
-
-                                                            <!-- <div class="form-group row">
-                                                                <label
-                                                                    class="col-lg-4 col-form-label form-control-label">
-                                                                    <h6 style="font-family:cursive">Password</h6>
-                                                                </label>
-                                                                <div class="col-lg-9">
-                                                                    <input class="form-control" type="password"
-                                                                        Placeholder="Enter password">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group row">
-                                                                <label
-                                                                    class="col-lg-4 col-form-label form-control-label">
-                                                                    <h6 style="font-family:cursive">Confirm
-                                                                        password</h6>
-                                                                </label>
-                                                                <div class="col-lg-9">
-                                                                    <input class="form-control" type="password"
-                                                                        placeholder="Re-enter your password">
-                                                                </div>
-                                                            </div> -->
-                                                           
+                                                        
                                                             </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- <div class="col-lg-4 order-lg-1 text-center"> -->
-                                            <!-- <img src="//placehold.it/350"
-                                                    class="mx-auto img-fluid img-circle d-block" alt="avatar">
-                                                <h6 class="mt-2">Upload a different photo</h6> -->
-                                            <!-- <label class="custom-file">
-                                                <input type="file" id="file" class="custom-file-input">
-                                                <span class="custom-file-control">Choose file</span>
-                                            </label>
-                                            <label class="col-lg-3 col-form-label form-control-label"></label>
-                                            <div class="col-lg-9">
-                                                <input type="file" value="Choose File">
-                                            </div> -->
+                                           
                                         </div>
                                     </div>
                                 </div>
@@ -358,30 +286,6 @@
                     $(".knob").knob();
                 });
 
-                // function bindvtye() {
-
-                //     var xmthttp = new XMLHttpRequest();
-                //     xmthttp.open("GET", "bindvtype.php", false);
-                //     xmthttp.send(null);
-                //     document.getElementById("vtype").innerHTML = xmthttp.responseText;
-                //     // alert(xmthttp.responseText);
-                // }
-
-                function triggerClick() {
-                    document.querySelector('#profileImage').click();
-                }
-
-                function displayImage(e) 
-                {
-                    if(e.files[0]){
-                        var reader = new FileReader();
-
-                        reader.onload = function(e){
-                            document.querySelector('#profileDisplay').setAttribute('src',e.target.result);
-
-                        }
-                        reader.readAsDataURL(e.files[0]);
-                    }
                 }
 
                 </script>
@@ -402,30 +306,36 @@
 
 	$con = mysqli_connect("localhost","root","","start");
 
-	// session_start();
+	
 	
 	$old_pass=$_REQUEST['pass1'];
 	$password=$_REQUEST['pass2'];
 	$retype_password=$_REQUEST['pass3'];
 
+	// print_r($_REQUEST);
+
 	$aa = "SELECT * FROM `tbl_employee_registration` WHERE `emp_reg_password`='$old_pass'";
+	
 	$q1=mysqli_query($con,$aa);
 	$data=mysqli_fetch_assoc($q1);
+	print_r($data);
 	$row=mysqli_num_rows($q1);
 	$pass = "";
-	if($row == 1){
+	$id = "";
+	if($row> 0){
 		$pass = $data["emp_reg_password"];
+		$id=$data["emp_reg_id"];
 	}
 
 			if($pass==$old_pass)
 			 {
 					if($password==$retype_password)
 					{
-						$q=mysqli_query($con,"UPDATE `tbl_employee_registration` SET `emp_reg_password`='$password' WHERE `emp_reg_password`='$old_pass'");
+						$q=mysqli_query($con,"UPDATE `tbl_emplouyee_registration` SET `emp_reg_password`='$password' WHERE `emp_reg_id`='$id'");
 							
 							if($q)
 							{
-								header('location: final_login.php');
+								header('location: emp_dash.php');
 								// echo "Password successfully changed";
 							}
 
@@ -437,6 +347,49 @@
 				}
 			
 	}
+
+	// CUSTOMER...................
+
+	// if(isset($_REQUEST['sub2']))
+	// {
+
+	// $con = mysqli_connect("localhost","root","","start");
+
+	// // session_start();
+	
+	// $old_pass=$_REQUEST['pass1'];
+	// $password=$_REQUEST['pass2'];
+	// $retype_password=$_REQUEST['pass3'];
+
+	// $aa = "SELECT * FROM `tbl_employee_registration` WHERE `emp_reg_password`='$old_pass'";
+	// $q1=mysqli_query($con,$aa);
+	// $data=mysqli_fetch_assoc($q1);
+	// $row=mysqli_num_rows($q1);
+	// $pass = "";
+	// if($row == 1){
+	// 	$pass = $data["emp_reg_password"];
+	// }
+
+	// 		if($pass==$old_pass)
+	// 		 {
+	// 				if($password==$retype_password)
+	// 				{
+	// 					$q=mysqli_query($con,"UPDATE `tbl_employee_registration` SET `emp_reg_password`='$password' WHERE `emp_reg_password`='$old_pass'");
+							
+	// 						if($q)
+	// 						{
+	// 							header('location: final_login.php');
+	// 							// echo "Password successfully changed";
+	// 						}
+
+	// 				}
+	// 			}
+	// 			else
+	// 			{
+	// 				echo "<script>alert('Old password and New password not match')</script>";
+	// 			}
+			
+	// }
 	
 
 ?>

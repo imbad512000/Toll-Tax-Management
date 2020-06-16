@@ -359,26 +359,26 @@
     <div class="funfacts two parallax">
         <div class="container">
             <div class="funfacts-inner">
-                <h2>Helping for Toll Detail</h2>
-                <p>Information Of Toll </p>
+                <h2>Registered Customers</h2>
+                <!-- <p>Information Of Toll </p> -->
                 <div class="row" id="counters">
                     <div class="col-md-3 col-xs-6">
-                        <div class="counter">
-                            <span class="  ">
+                        <!-- <div class="counter">
+                            <span class="  "> -->
                             <?php
-                                $con=mysqli_connect("localhost","root","","start");
+                                // $con=mysqli_connect("localhost","root","","start");
 
-                                $q1="SELECT * FROM `tbl_employee_registration`";
+                                // $q1="SELECT * FROM `tbl_employee_registration`";
                                 
-                                $res=mysqli_query($con,$q1);
+                                // $res=mysqli_query($con,$q1);
 
-                                $f=mysqli_num_rows($res);
-                                echo "$f";
+                                // $f=mysqli_num_rows($res);
+                                // echo "$f";
                             ?>
                             </span>
-                            <h6 class="counter-details">Employees</h6>
-                        </div>
-                    </div>
+                            <!-- <h6 class="counter-details">Employees</h6> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
                     <!-- <div class="col-md-3 col-xs-6">
                         <div class="counter">
                             <span class="">0</span>
@@ -400,7 +400,7 @@
                                 echo "$f";
                             ?>
                             </span>
-                            <h6 class="counter-details">Register Customers</h6>
+                            <h6 class="counter-details">Happy Customers</h6>
                         </div>
                     </div>
                 </div>

@@ -323,7 +323,7 @@
                                                                             class="btn btn-primary" name="sub2"
                                                                             value="SAVE"></h6>
                                                                             <br>
-                                                                            <a href="change_pass.php"><h4 style="font-family:cursive" class="btn btn-secondary">CHANGE PASSWORD</h4>
+                                                                            <a href="change_password.php"><h4 style="font-family:cursive" class="btn btn-secondary">CHANGE PASSWORD</h4>
                                                                             
 
                                                                 </div>

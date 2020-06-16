@@ -56,7 +56,7 @@
 
 	// print_r($_REQUEST);
 
-	$aa = "SELECT * FROM `tbl_customer_registration` WHERE `cust_reg_password`='$old_pass'";
+	$aa = "SELECT * FROM `tbl_employee_registration` WHERE `emp_reg_password`='$old_pass'";
 	
 	$q1=mysqli_query($con,$aa);
 	$data=mysqli_fetch_assoc($q1);
@@ -65,19 +65,19 @@
 	$pass = "";
 	$id = "";
 	if($row> 0){
-		$pass = $data["cust_reg_password"];
-		$id=$data["cust_reg_id"];
+		$pass = $data["emp_reg_password"];
+		$id=$data["emp_reg_id"];
 	}
 
 			if($pass==$old_pass)
 			 {
 					if($password==$retype_password)
 					{
-						$q=mysqli_query($con,"UPDATE `tbl_customer_registration` SET `cust_reg_password`='$password' WHERE `cust_reg_id`='$id'");
+						$q=mysqli_query($con,"UPDATE `tbl_employee_registration` SET `emp_reg_password`='$password' WHERE `emp_reg_id`='$id'");
 							
 							if($q)
 							{
-								header('location: Customer.php');
+								header('location: emp_dash.php');
 								// echo "Password successfully changed";
 							}
 
