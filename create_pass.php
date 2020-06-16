@@ -2,7 +2,14 @@
   ob_start();  
   session_start();
   $con=mysqli_connect("localhost","root","","start");
+<<<<<<< HEAD
+//   $ldata = $_SESSION["cust_data"];   
+//   $email = $ldata["login_email"];     
+?>
+<?php 
+=======
 
+>>>>>>> 33237be0eb7467860421171938cfb8ec4cd813ef
       if(strcasecmp($_SERVER['REQUEST_METHOD'], 'POST') == 0){
         //Request hash
         $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';	
