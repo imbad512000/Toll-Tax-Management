@@ -83,12 +83,12 @@
                                 <div class="form-group mb-3">
                                     <label for="password">Password</label>
                                     <input class="form-control" type="password" name="pass" required="required"
-                                        id="password" placeholder="Enter your Password">
+                                        id="password" placeholder="Enter your Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="cpassword">Re-Password</label>
                                     <input class="form-control" type="password" name="repass" required="required"
-                                        id="password" placeholder="Enter your  Re-Password">
+                                        id="password" placeholder="Enter your  Re-Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                                 </div>
 
                                 <div class="form-group mb-3">

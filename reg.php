@@ -1,6 +1,7 @@
 <?php
     ob_start();
     session_start();
+    error_reporting(0);
 ?>
 <!DOCTYPE html>
 <html>
@@ -58,12 +59,12 @@
                                 <div class="form-group mb-3">
                                     <label for="password">Password</label>
                                     <input class="form-control" type="password" name="pass" required="required"
-                                        id="password" placeholder="Enter your Password">
+                                        id="password" placeholder="Enter your Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="cpassword">Re-Password</label>
                                     <input class="form-control" type="password" name="repass" required="required"
-                                        id="password" placeholder="Enter your  Re-Password">
+                                        id="password" placeholder="Enter your  Re-Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                                 </div>
 
                                 <div class="form-group mb-3">
@@ -74,8 +75,9 @@
 
                                 <div class="form-group mb-3">
                                     <label for="dob">Date Of Birth</label>
-                                    <input class="form-control" type="Date" name="dob" required="required" id="dob">
+                                    <input class="form-control" type="Date" name="dob" required="required" id="dob" max="2002-12-31">
                                 </div>
+
                                 <div class="form-group mb-0 text-center">
                                     <button class="btn btn-danger btn-block" type="submit" name="sub1"> Register
                                     </button>

@@ -216,7 +216,7 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
 
                                     <input type="hidden" id="txnid" name="txnid" placeholder="Transaction ID" value="<?php echo  "Toll".rand(10000,99999999)?>" />
 
-                                    <input type="hidden" id="email" name="email" placeholder="Transaction ID" value="man@gmail.com"/>
+                                    <input type="hidden" id="email" name="email" placeholder="Transaction ID" value="noreply4961@gmail.com"/>
 
                                         <div class="form-group mb-3">
                                             <label for="password">Toll booth name</label>
@@ -243,7 +243,7 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
 
                                         <div class="form-group mb-3">
                                             <label for="password">Toll Receipt Date</label>
-                                            <input class="form-control" type="date" name="pdate">
+                                            <input class="form-control" type="date" name="pdate" min="2020-01-01" max="2020-12-31">
                                         </div>
 
                                         <div class="form-group mb-3">
@@ -486,7 +486,7 @@ function launchBOLT()
 
       $q="INSERT INTO `tbl_toll_receipt_details`(`toll_receipt_id`, `toll_booth_name`, `toll_booth_no`, `toll_emp_name`, `toll_receipt_date`, `toll_receipt_time`, `type_of_vehicle`, `journey_type`,`vehicle_no`, `toll_amount`) VALUES ('','$toll_booth','$toll_booth_no','$toll_emp_name','$receipt_date','$receipt_time','$vehcile_category','$type_journey','$Vehicle_no','$Tax_amount')";
 
-      $res=mysqli_query($con,$q);  
+      $res=mysqli_query($con,$q);
 
     //   if($res){
     //     header("location: search_receipt.php");

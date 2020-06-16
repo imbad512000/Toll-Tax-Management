@@ -2,10 +2,14 @@
   ob_start();  
   session_start();
   $con=mysqli_connect("localhost","root","","start");
+<<<<<<< HEAD
 //   $ldata = $_SESSION["cust_data"];   
 //   $email = $ldata["login_email"];     
 ?>
 <?php 
+=======
+
+>>>>>>> 33237be0eb7467860421171938cfb8ec4cd813ef
       if(strcasecmp($_SERVER['REQUEST_METHOD'], 'POST') == 0){
         //Request hash
         $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';	
@@ -206,7 +210,7 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
                                     </center>
                                     <br><br><br>
 
-                                    <form action="#" id="payment_form" method="post">
+                                    <form action="#" id="payment_form">
                                     <input type="hidden" id="udf5" name="udf5" value="BOLT_KIT_PHP7" />
                                     <input type="hidden" id="surl" name="surl" value="<?php echo getCallbackUrl(); ?>" />
                                     <div class="dv">
@@ -400,7 +404,8 @@ $('#payment_form').bind('keyup blur', function(){
 });
 //-->
 </script>
-<script type="text/javascript"><!--
+
+<script type="text/javascript">
 function launchBOLT()
 {
 	bolt.launch({
@@ -462,16 +467,18 @@ function launchBOLT()
       $pass_time=$_REQUEST['ptime'];
       $type_of_journey_1=$_REQUEST['type_of_vehicle_1'];
 
-      $contact_num=$_REQUEST['mobile'];
+    //   $contact_num=$_REQUEST['mobile'];
 
       $vehicle_class=$_REQUEST['type_of_vehicle'];
       $vehicle_number=$_REQUEST['pinfo'];
       $exipry_date=$_REQUEST['edate'];
       $Tax_amount=$_REQUEST['amount'];
 
-        $suspage="http://localhost/Toll-Tax-Management/sus.php";
-        $fpage="http://localhost/Toll-Tax-Management/fpage.php";
-        $taxid = "TOLL".mt_rand();
+    $suspage="http://localhost/Toll-Tax-Management/sus.php";
+    $fpage="http://localhost/Toll-Tax-Management/fpage.php";
+    $taxid = "TOLL".mt_rand();
+
+        // print_r($_REQUEST);
 
     //   echo "$type_of_journey_1";  
 

@@ -177,9 +177,17 @@
                                         <div class="form-group mb-3">
                                             <div class="row">
                                                 <input class="form-control col-5 ml-2" type="text" id="cid" name="name"
-                                                    required="" placeholder="Search Pass">
-                                                <button class="btn btn-danger btn-block col-1 ml-2" type="submit"
+                                                    placeholder="Search Pass">
+                                                <button class="btn btn-danger col-1 ml-2" type="submit"
                                                     name="sub1"><i class="fa fa-search"></i></button>
+                                                    <a href="pass_pdf_download.php" class="offset-4">
+                                                        <button class="btn btn-warning" type="button"
+                                                            name="sub1"><i class="fa fa-download"></i> Download</button>
+                                                    </a>
+                                            </div>
+
+                                            <div class="row">
+                                                
                                             </div>
 
 
