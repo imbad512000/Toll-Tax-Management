@@ -26,11 +26,11 @@
 				</div>
 				<div class="form-group row" style="font-size: 1.5em">
 					<label class="col-3" for="fname">New Password</label>
-					<input type="text" name="pass2" placeholder="Enter new password" class="form-control col-4" required>
+					<input type="text" name="pass2" placeholder="Enter new password" class="form-control col-4" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
 				</div>
 				<div class="form-group row" style="font-size: 1.5em">
 					<label class="col-3" for="lname">Re-type Password</label>
-					<input type="password" name="pass3" placeholder="Re-enter new password" class="form-control col-4" required>
+					<input type="password" name="pass3" placeholder="Re-enter new password" class="form-control col-4" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
 				</div>
 				<br>
 				<div class="form-group row" style="font-size: 2em">
