@@ -82,7 +82,7 @@
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="password">Password</label>
-                                    <input class="form-control" type="password" name="pass" required="required"
+                                    <input class="form-control" type="text" name="pass" required="required"
                                         id="password" placeholder="Enter your Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                                 </div>
                                 <div class="form-group mb-3">
@@ -99,7 +99,7 @@
 
                                 <div class="form-group mb-3">
                                     <label for="dob">Date Of Birth</label>
-                                    <input class="form-control" type="Date" name="dob" required="required" id="dob">
+                                    <input class="form-control" type="Date" name="dob" required="required" max="2002-12-31" id="dob">
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-3" for="dob">Employee Aadhar-Card Number</label>
