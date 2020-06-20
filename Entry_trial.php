@@ -206,7 +206,7 @@
                                             <label for="" class="col-5 col-form-label" style="margin-left:-8px;">Vehicle
                                                 Number</label>
                                             <input class="form-control" type="text" name="pass" required=""
-                                                placeholder="Enter your Vehicle Number">
+                                                placeholder="Enter your Vehicle Number" pattern="^[A-Z]{2}[ -][0-9]{1,2}(?: [A-Z])?(?: [A-Z]*)? [0-9]{4}$">
                                         </div>
 
                                         <div class="form-group mb-3">

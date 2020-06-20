@@ -241,40 +241,51 @@
                                         echo "<script>alert('User exist already');</script>";
                                 }
                                 else{
+
+                                        if($password==$repeat_password)
+                                        {
+
                                         //echo "User not exist";
                                         $q = "INSERT INTO `tbl_employee_registration`(`emp_reg_id`, `emp_reg_first_name`, `emp_reg_last_name`, `emp_reg_gender`, `emp_reg_email`, `emp_reg_password`, `emp_reg_contact_num`, `emp_reg_DOB`, `emp_aadharcard_number`) VALUES ('','$name','$lname','$gender','$email','$password','$contact','$DOB','$aadhar')";
 
-                                        $res = mysqli_query($con,$q); 
+                                        $res = mysqli_query($con,$q);
+                                         
 
-                                        if($res) 
-                                        {
+                                                if($res) 
+                                                {
 
-                                            $msg = "Hey $name $lname ,
+                                                    $msg = "Hey $name $lname ,
 
-                                            From now on You're ready to login into your Toll Account and Modify your account.
-                                            With this Account You can access your account for toll receipt and pass management..
-                                            ";
-                                             //recipient email here
-                                            $rec = "$email";
-                                             //send 
-                                            $sub="Registration Confirmation";
-                                            
-                                            if(mail($rec,$sub,$msg)){
-                                                echo "Send";
-                                            }else{
-                                                echo "not";
-                                            }
-                                            
-                
-                
-                                            // echo "Registered";
+                                                    From now on You're ready to login into your Toll Account and Modify your account.
+                                                    With this Account You can access your account for toll receipt and pass management..
+                                                    ";
+                                                    //recipient email here
+                                                    $rec = "$email";
+                                                    //send 
+                                                    $sub="Registration Confirmation";
+                                                    
+                                                    if(mail($rec,$sub,$msg)){
+                                                        echo "Send";
+                                                    }else{
+                                                        echo "not";
+                                                    }
+                                                    
+                        
+                        
+                                                    // echo "Registered";
 
-                                            header('location: final_login.php');
+                                                    header('location: final_login.php');
+                                                }
+                                                else
+                                                {
+                                                    echo "Error ";
+                                                }
                                         }
-                                        else
-                                        {
-                                            echo "Error ";
+                                        if($password!=$repeat_password){
+                                            echo "<script>alert('password not match');</script>";
                                         }
+
+                                        
 
                     
                             ob_flush();

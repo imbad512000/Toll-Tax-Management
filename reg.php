@@ -210,38 +210,46 @@
                     
 
                              if($uemail==$email){
-                                        echo "<center><h4>User exist already</h4></center>";
+                                    echo "<script>alert('User exist already');</script>";
                                 }
                                 else{
+
+                                    if($password==$repeat_password){
                                         //echo "User not exist";
                                         $q = "INSERT INTO `tbl_customer_registration`(`cust_reg_id`, `cust_reg_first_name`, `cust_reg_last_name`, `cust_reg_gender`, `cust_reg_email`, `cust_reg_password`, `cust_reg_DOB`) VALUES ('','$name','$lname','$gender','$email','$password','$DOB')";
 
                                         $res = mysqli_query($con,$q); 
 
                                         if($res) 
-                                        {
-                        $msg = "Hey $name $lname ,
+                                            {
+                                                $msg = "Hey $name $lname ,
 
-                            Thanks for creating an account as Customer on our website.                    
+                                                    Thanks for creating an account as Customer on our website.                    
 
-                            From now on You're ready to login into your Toll Account and Modify your account.
-                            With this Account You can access your account for pass management..
-                            ";
-							 //recipient email here
-						$rec = "$email";
-							 //send 
-                        $sub="Registration Confirmation";
-                        
-                            mail($rec,$sub,$msg);
-                            
-							echo "Registered";
+                                                    From now on You're ready to login into your Toll Account and Modify your account.
+                                                    With this Account You can access your account for pass management..
+                                                    ";
+                                                    //recipient email here
+                                                $rec = "$email";
+                                                    //send 
+                                                $sub="Registration Confirmation";
+                                                
+                                                    mail($rec,$sub,$msg);
+                                                    
+                                                    echo "Registered";
 
-                        header('location: final_login.php');
-                    }
-                    else        
-                    {
-                        echo "Error ";
-                    }
+                                                header('location: final_login.php');
+                                            }
+                                            else        
+                                            {
+                                                echo "Error ";
+                                            }
+
+                                        }
+                                        else{
+                                            echo "<script>alert('Password not match');</script>";
+                                        }
+                                    
 
                     
     

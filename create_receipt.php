@@ -1,33 +1,7 @@
 <?php
   ob_start();  
-  session_start();
-  $con=mysqli_connect("localhost","root","","start");
-//   $ldata = $_SESSION["cust_data"];   
-//   $email = $ldata["login_email"];     
+  session_start(); 
 ?>
-<?php 
-      if(strcasecmp($_SERVER['REQUEST_METHOD'], 'POST') == 0){
-        //Request hash
-        $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';	
-        if(strcasecmp($contentType, 'application/json') == 0){
-            $data = json_decode(file_get_contents('php://input'));
-            $hash=hash('sha512', $data->key.'|'.$data->txnid.'|'.$data->amount.'|'.$data->pinfo.'|'.$data->fname.'|'.$data->email.'|||||'.$data->udf5.'||||||'.$data->salt);
-            $json=array();
-            $json['success'] = $hash;
-            echo json_encode($json);
-        
-        }
-        exit(0);
-    }
-
-    function getCallbackUrl()
-    {
-        $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
-        return $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] . 'response.php';
-    }
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -206,17 +180,7 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
                                     </center>
                                     <br><br><br>
 
-                                    <form action="#" id="payment_form" method="post">
-                                    <input type="hidden" id="udf5" name="udf5" value="BOLT_KIT_PHP7" />
-                                    <input type="hidden" id="surl" name="surl" value="<?php echo getCallbackUrl(); ?>" />
-                                    <div class="dv">
-   
-                                    <input type="hidden" id="key"  name="key" placeholder="Merchant Key" value="dFiumMOS" />
-                                    <input type="hidden" id="salt"  name="salt"  placeholder="Merchant Salt" value="luBDnXhT4U" />
-
-                                    <input type="hidden" id="txnid" name="txnid" placeholder="Transaction ID" value="<?php echo  "Toll".rand(10000,99999999)?>" />
-
-                                    <input type="hidden" id="email" name="email" placeholder="Transaction ID" value="noreply4961@gmail.com"/>
+                                    <form action="#" method="post">
 
                                         <div class="form-group mb-3">
                                             <label for="password">Toll booth name</label>
@@ -232,7 +196,7 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
 
                                         <div class="form-group mb-3">
                                             <label for="password">Toll booth number</label>
-                                            <input class="form-control" type="number" name="tbno" required="">
+                                            <input class="form-control" type="number" name="tbno" required="" min="1" max="10">
                                         </div>
 
                                         <div class="form-group mb-3">
@@ -262,11 +226,11 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
                                             <label for="inputEmail3" class="col-5 col-form-label">Type of Journey<span
                                                     class="text-danger"></span></label>
                                             <div class="">
-                                                <select class="form-control" name="type_of_vehicle_1"
+                                                <select class="form-control" name="type_of_journey"
                                                     data-style="btn-light">
                                                     <!-- <option>Select Journey Type</option> -->
-                                                    <option value="sin">Single</option>
-                                                    <option value="ret">Return</option>
+                                                    <option value="Single">Single</option>
+                                                    <option value="Return">Return</option>
                                                     <!-- <option value="B">Bus</option> -->
                                                 </select>
 
@@ -281,8 +245,8 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
 
                                         <div class="form-group mb-3">
                                             <label for="password">Vehicle Number</label>
-                                            <input class="form-control" id="pinfo" type="text" name="pinfo" required="" min="0"
-                                                max="10" placeholder="Enter your Vehicle Number">
+                                            <input class="form-control" id="pinfo" type="text" name="pinfo" required="" 
+                                                 placeholder="Enter your Vehicle Number" pattern="^[A-Z]{2}[ -][0-9]{1,2}(?: [A-Z])?(?: [A-Z]*)? [0-9]{4}$">
                                         </div>
 
 
@@ -292,10 +256,10 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
                                                 min="0">
                                         </div>
 
-                                        <input type="hidden" id="hash" name="hash" placeholder="Hash" value="" />
+                                        <!-- <input type="hidden" id="hash" name="hash" placeholder="Hash" value="" /> -->
                                         <br><br>
                                         <div class="form-group mb-0 text-center">
-                                        <div><input type="submit" class="btn btn-success btn-block" value="Pay" name="sub1"; onclick="launchBOLT(); return false;" /></div>
+                                        <div><input type="submit" class="btn btn-success btn-block" value="Pay" name="sub1" /></div>
                                         </div>
 
                                         <br><br><br><br>
@@ -376,82 +340,6 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
                     </script>
                     <!-- Index js -->
                     <script src="assets2/js/index.js"></script>
-                    <script type="text/javascript">
-$('#payment_form').bind('keyup blur', function(){
-	$.ajax({
-          url: 'create_receipt.php',
-          type: 'post',
-          data: JSON.stringify({ 
-            key: $('#key').val(),
-			salt: $('#salt').val(),
-			txnid: $('#txnid').val(),
-			amount: $('#amount').val(),
-		    pinfo: $('#pinfo').val(),
-            fname: $('#fname').val(),
-			email: $('#email').val(),
-			mobile: $('#mobile').val(),
-			udf5: $('#udf5').val()
-          }),
-		  contentType: "application/json",
-          dataType: 'json',
-          success: function(json) {
-            if (json['error']) {
-			 $('#alertinfo').html('<i class="fa fa-info-circle"></i>'+json['error']);
-            }
-			else if (json['success']) {	
-				$('#hash').val(json['success']);
-            }
-          }
-        }); 
-});
-//-->
-</script>
-<script type="text/javascript"><!--
-function launchBOLT()
-{
-	bolt.launch({
-	key: $('#key').val(),
-	txnid: $('#txnid').val(), 
-	hash: $('#hash').val(),
-	amount: $('#amount').val(),
-	firstname: $('#fname').val(),
-	email: $('#email').val(),
-	phone: $('#mobile').val(),
-	productinfo: $('#pinfo').val(),
-	udf5: $('#udf5').val(),
-	surl : $('#surl').val(),
-	furl: $('#surl').val(),
-	mode: 'dropout'	
-},{ responseHandler: function(BOLT){
-	console.log( BOLT.response.txnStatus );		
-	if(BOLT.response.txnStatus != 'CANCEL')
-	{
-		//Salt is passd here for demo purpose only. For practical use keep salt at server side only.
-		var fr = '<form action=\"'+$('#surl').val()+'\" method=\"post\">' +
-		'<input type=\"hidden\" name=\"key\" value=\"'+BOLT.response.key+'\" />' +
-		'<input type=\"hidden\" name=\"salt\" value=\"'+$('#salt').val()+'\" />' +
-		'<input type=\"hidden\" name=\"txnid\" value=\"'+BOLT.response.txnid+'\" />' +
-		'<input type=\"hidden\" name=\"amount\" value=\"'+BOLT.response.amount+'\" />' +
-		'<input type=\"hidden\" name=\"productinfo\" value=\"'+BOLT.response.productinfo+'\" />' +
-		'<input type=\"hidden\" name=\"firstname\" value=\"'+BOLT.response.firstname+'\" />' +
-		'<input type=\"hidden\" name=\"email\" value=\"'+BOLT.response.email+'\" />' +
-		'<input type=\"hidden\" name=\"udf5\" value=\"'+BOLT.response.udf5+'\" />' +
-		'<input type=\"hidden\" name=\"mihpayid\" value=\"'+BOLT.response.mihpayid+'\" />' +
-		'<input type=\"hidden\" name=\"status\" value=\"'+BOLT.response.status+'\" />' +
-		'<input type=\"hidden\" name=\"hash\" value=\"'+BOLT.response.hash+'\" />' +
-		'</form>';
-		var form = jQuery(fr);
-		jQuery('body').append(form);								
-		form.submit();
-	}
-},
-	catchException: function(BOLT){
- 		alert( BOLT.message );
-	}
-});
-}
-//--
-</script>	
 
 </body>
 
@@ -462,9 +350,10 @@ function launchBOLT()
 
 <?php
 
+    $con=mysqli_connect("localhost","root","","start");
+
     if(isset($_REQUEST['sub1'])){
 
-      
 
       // $toll_id=$_REQEST['id'];
       $toll_booth=$_REQUEST['tbname'];
@@ -473,27 +362,27 @@ function launchBOLT()
       $receipt_date=$_REQUEST['pdate'];
       $receipt_time=$_REQUEST['ptime'];
 
-      $contact=$_REQUEST['mobile'];
+    //   $contact=$_REQUEST['mobile'];
 
       $vehcile_category=$_REQUEST['type_of_vehicle'];
       $type_journey=$_REQUEST['type_of_journey'];
       $Vehicle_no=$_REQUEST['pinfo'];
       $Tax_amount=$_REQUEST['amount'];
 
-      $suspage="http://localhost/Toll-Tax-Management/sus.php";
-        $fpage="http://localhost/Toll-Tax-Management/fpage.php";
-        $taxid = "TOLL".mt_rand();
+    //   $suspage="http://localhost/Toll-Tax-Management/sus.php";
+    //     $fpage="http://localhost/Toll-Tax-Management/fpage.php";
+    //     $taxid = "TOLL".mt_rand();
 
-      $q="INSERT INTO `tbl_toll_receipt_details`(`toll_receipt_id`, `toll_booth_name`, `toll_booth_no`, `toll_emp_name`, `toll_receipt_date`, `toll_receipt_time`, `type_of_vehicle`, `journey_type`,`vehicle_no`, `toll_amount`) VALUES ('','$toll_booth','$toll_booth_no','$toll_emp_name','$receipt_date','$receipt_time','$vehcile_category','$type_journey','$Vehicle_no','$Tax_amount')";
+      $q="INSERT INTO `tbl_toll_receipt_details`(`toll_receipt_id`, `toll_booth_name`, `toll_booth_no`, `toll_emp_name`, `toll_receipt_date`, `toll_receipt_time`, `type_of_vehicle`, `journey_type`, `vehicle_no`, `toll_amount`) VALUES ('','$toll_booth','$toll_booth_no','$toll_emp_name','$receipt_date','$receipt_timer','$vehcile_category','$type_journey','$Vehicle_no','$Tax_amount')";
 
       $res=mysqli_query($con,$q);
 
-    //   if($res){
-    //     header("location: search_receipt.php");
-    //   }
-    //   else{
-    //     echo "<script>alert('Error in Query')</script>";
-    //   }
+      if($res){
+        header("location: search_receipt.php");
+      }
+      else{
+        echo "<script>alert('Error in Query')</script>";
+      }
 
 
     // }
@@ -504,6 +393,6 @@ function launchBOLT()
 ?>
 
 <?php
-    $MERCHANT_KEY = "dFiumMOS";
-    $SALT = "luBDnXhT4U";
+    // $MERCHANT_KEY = "dFiumMOS";
+    // $SALT = "luBDnXhT4U";
 ?>

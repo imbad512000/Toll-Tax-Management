@@ -259,7 +259,7 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
                                         <div class="form-group mb-3">
                                             <label for="password">Vehicle Number</label>
                                             <input class="form-control" id="pinfo" type="text" name="pinfo" required="" min="0"
-                                                max="10" placeholder="Enter your Vehicle Number">
+                                                max="10" placeholder="Enter your Vehicle Number" pattern="^[A-Z]{2}[ -][0-9]{1,2}(?: [A-Z])?(?: [A-Z]*)? [0-9]{4}$">
                                         </div>
 
                                         <div class="form-group mb-3">
