@@ -2,10 +2,6 @@
   ob_start();  
   session_start();
   $con=mysqli_connect("localhost","root","","start");
-<<<<<<< HEAD
-=======
-    
->>>>>>> 73d5bae9b3d57a24d7d4579c8f2b1c7f57dc63f4
 
       if(strcasecmp($_SERVER['REQUEST_METHOD'], 'POST') == 0){
         //Request hash

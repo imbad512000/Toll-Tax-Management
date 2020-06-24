@@ -1,6 +1,45 @@
 <?php
   ob_start();  
   session_start(); 
+  $con=mysqli_connect("localhost","root","","start");
+
+  $data = $_SESSION["Emp_data"];
+//   print_r($_SESSION["Emp_data"]);
+$lid = $data["login_Referance_id"];
+// echo "$lid";
+//   $empname=$data['emp_reg_first_name']." ".$data['emp_reg_last_name'];
+?>
+<?php
+
+    $q2="SELECT * FROM `tbl_employee_registration` WHERE `emp_reg_id`='$lid'";
+    $empdata=mysqli_query($con,$q2);
+    $data1 = mysqli_fetch_assoc($empdata);
+
+    // print_r($data1);
+
+    $empname=$data1['emp_reg_first_name']." ".$data1['emp_reg_last_name'];
+
+  
+
+?>
+
+<?php
+    $q1="SELECT `toll_booth_id`, `toll_booth_number` FROM `tbl_toll_booth_no`";
+
+   
+    $res=mysqli_query($con,$q1);
+
+    // if($res){
+    //     echo"<script>alert('added toll booth successfully')</script>";
+    // }
+    // else{
+    //     echo"not";
+    // }
+
+    date_default_timezone_set("Asia/Kolkata");
+    $datefun= date("Y-m-d");
+    $timefun= date("h:i");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -108,7 +147,7 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
         <!--End sidebar-wrapper-->
 
         <!--Start topbar header-->
-        <header class="topbar-nav">
+        <!-- <header class="topbar-nav">
             <nav id="header-setting" class="navbar navbar-expand fixed-top" style="height: 80px;">
                 <ul class="navbar-nav mr-auto align-items-center">
                     <li class="nav-item">
@@ -145,18 +184,16 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
                                 </a>
                             </li>
                             <li class="dropdown-divider"></li>
-                            <!-- <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li>
-                            <li class="dropdown-divider"></li> -->
+                            
                             <li class="dropdown-item"><a href="Employee_profile.php"><i class="icon-wallet mr-2"></i> Account</li>
                             <li class="dropdown-divider"></li>
-                            <!-- <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
-                            <li class="dropdown-divider"></li> -->
+                            
                             <li class="dropdown-item"><a href="index.php"><i class="icon-power mr-2"></i> Logout</li></a>
                         </ul>
                     </li>
                 </ul>
             </nav>
-        </header>
+        </header> -->
         <!--End topbar header-->
 
         <div class="clearfix"></div>
@@ -195,24 +232,33 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
                                         </div> -->
 
                                         <div class="form-group mb-3">
-                                            <label for="password">Toll booth number</label>
-                                            <input class="form-control" type="number" name="tbno" required="" min="1" max="10">
+                                            <label for="inputEmail3" class="col-5 col-form-label">Toll Booth no<span
+                                                    class="text-danger"></span></label>
+                                            <div class="">
+                                                <select class="form-control" name="booth"
+                                                    data-style="btn-light">
+                                                    <?php  while($row=mysqli_fetch_assoc($res)){ ?>
+                                                          <option value="<?php echo $row["toll_booth_id"]; ?>"> <?php echo $row["toll_booth_number"];  ?> </option> 
+                                                    <?php }?>
+                                                </select>
+
+                                            </div>
                                         </div>
 
                                         <div class="form-group mb-3">
                                             <label for="password">Toll Employee Name</label>
-                                            <input class="form-control" id="fname" type="text" name="fname" required=""
+                                            <input class="form-control" type="text" name="empname" required="" value="<?php echo $empname; ?>"
                                                 placeholder="Enter your Holder Name" minlength="3" maxlength="15">
                                         </div>
 
                                         <div class="form-group mb-3">
                                             <label for="password">Toll Receipt Date</label>
-                                            <input class="form-control" type="date" name="pdate" min="2020-01-01" max="2020-12-31">
+                                            <input class="form-control" type="date" value="<?php echo $datefun;?>" min="2020-01-01" max="2020-12-31">
                                         </div>
 
                                         <div class="form-group mb-3">
                                             <label for="password">Toll Receipt Time</label>
-                                            <input class="form-control" type="time" name="ptime">
+                                            <input class="form-control" type="text" value="<?php echo $timefun;?>" name="ptime">
                                         </div>
 
                                         <div class="form-group mb-3">
@@ -245,14 +291,14 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
 
                                         <div class="form-group mb-3">
                                             <label for="password">Vehicle Number</label>
-                                            <input class="form-control" id="pinfo" type="text" name="pinfo" required="" 
+                                            <input class="form-control" id="pinfo" type="text" name="vno" required="" 
                                                  placeholder="Enter your Vehicle Number" pattern="^[A-Z]{2}[ -][0-9]{1,2}(?: [A-Z])?(?: [A-Z]*)? [0-9]{4}$">
                                         </div>
 
 
                                         <div class="form-group mb-3">
                                             <label for="password">Tax Amount</label>
-                                            <input class="form-control" type="Number" id="amount" name="amount" required=""
+                                            <input class="form-control" type="Number" name="tamount" required=""
                                                 min="0">
                                         </div>
 
@@ -272,7 +318,7 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
 
 
 
-                                </div> 
+                                </div>
                                 <!--End Row-->
 
 
@@ -350,34 +396,34 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
 
 <?php
 
-    $con=mysqli_connect("localhost","root","","start");
-
     if(isset($_REQUEST['sub1'])){
-
+ 
 
       // $toll_id=$_REQEST['id'];
       $toll_booth=$_REQUEST['tbname'];
-      $toll_booth_no=$_REQUEST['tbno'];
-      $toll_emp_name=$_REQUEST['fname'];
+      $toll_booth_no_1=$_REQUEST['booth'];
+      $toll_emp_name_1=$_REQUEST['empname'];
       $receipt_date=$_REQUEST['pdate'];
-      $receipt_time=$_REQUEST['ptime'];
-
-    //   $contact=$_REQUEST['mobile'];
-
+      $toll_receipt_time=$_REQUEST['ptime'];
       $vehcile_category=$_REQUEST['type_of_vehicle'];
       $type_journey=$_REQUEST['type_of_journey'];
-      $Vehicle_no=$_REQUEST['pinfo'];
-      $Tax_amount=$_REQUEST['amount'];
+      $Vehicle_no=$_REQUEST['vno'];
+      $Tax_amount=$_REQUEST['tamount'];
+ 
 
-    //   $suspage="http://localhost/Toll-Tax-Management/sus.php";
-    //     $fpage="http://localhost/Toll-Tax-Management/fpage.php";
-    //     $taxid = "TOLL".mt_rand();
+    //   print_r($_REQUEST);
 
-      $q="INSERT INTO `tbl_toll_receipt_details`(`toll_receipt_id`, `toll_booth_name`, `toll_booth_no`, `toll_emp_name`, `toll_receipt_date`, `toll_receipt_time`, `type_of_vehicle`, `journey_type`, `vehicle_no`, `toll_amount`) VALUES ('','$toll_booth','$toll_booth_no','$toll_emp_name','$receipt_date','$receipt_timer','$vehcile_category','$type_journey','$Vehicle_no','$Tax_amount')";
 
-      $res=mysqli_query($con,$q);
+    $result1 = mysqli_query($con,"INSERT INTO `tbl_toll_receipt_details` VALUES ('','$toll_booth','$toll_booth_no_1','$toll_emp_name_1','$receipt_date','$toll_receipt_time','$vehcile_category','$type_journey','$Vehicle_no','$Tax_amount')") ;
 
-      if($res){
+     
+     
+    // if (!mysqli_query($con,"INSERT INTO `tbl_toll_receipt_details`(`toll_receipt_id`,`toll_booth_name`, `toll_booth_no`, `toll_emp_name`, `toll_receipt_date`, `toll_receipt_time`, `type_of_vehicle`, `journey_type`,`vehicle_no`, `toll_amount`) VALUES ('','$toll_booth','$toll_booth_no_1','$toll_emp_name_1','$receipt_date','$receipt_time','$vehcile_category','$type_journey','$Vehicle_no','$Tax_amount')"))
+    // {
+    // echo("Errorcode: " . mysqli_errno($con));
+    // }
+
+      if($result1){
         header("location: search_receipt.php");
       }
       else{
@@ -385,14 +431,7 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
       }
 
 
-    // }
-    ob_flush();
     }
 
 
-?>
-
-<?php
-    // $MERCHANT_KEY = "dFiumMOS";
-    // $SALT = "luBDnXhT4U";
 ?>

@@ -118,7 +118,7 @@
             </li>
 
             <li>
-                <a href="toll_booth_entry.php" class="waves-effect">
+                <a href="Customer_detail.php" class="waves-effect">
                     <i class="zmdi zmdi-card-travel"></i> <span>New booth Entry</span>
                 </a>
             </li>
@@ -185,10 +185,37 @@
 
             <!--Start Dashboard Content-->
 
-            <img src="images/admin.jpg" style="width: 1800px;height:625px; "
-                                    class="img-fluid"></a>
+            <!-- <img src="images/admin.jpg" style="width: 1800px;height:625px; "
+                                    class="img-fluid"></a> -->
         <!--End Row-->
 
+        <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6 col-xl-5">
+                    <div class="card">
+
+                        <div class="card-body p-4" style="border-style: solid;">
+
+
+
+
+                            <center>
+                                <h3 class="auth-title">Registration</h3>
+                            </center>
+                            <br>
+                            <form action="#">
+
+                                <div class="form-group mb-3">
+                                    <label for="fn">Toll_booth_bo</label>
+                                    <input class="form-control" type="number" id="fn" name="booth_no" required="required"
+                                        placeholder="Enter your No." min="1" max="12">
+                                </div>
+
+                                <div class="form-group mb-0 text-center">
+                                    <button class="btn btn-danger btn-block" type="submit" name="sub1"> Entry
+                                    </button>
+                                </div>
+
+                            </div>
 
         <!--End Row-->
 
@@ -264,5 +291,35 @@ $(function() {
 
 <?php
     $con=mysqli_connect("localhost","root","","start");
+
+    if(isset($_REQUEST['sub1'])){
+
+        $toll_booth_no=$_REQUEST['booth_no'];
+
+        $q1="SELECT * FROM `tbl_toll_booth_no` WHERE `toll_booth_number`='$toll_booth_no'";  
+        
+        $result1=mysqli_query($con,$q1);
+
+        $row=mysqli_fetch_assoc($result1);
+        $bothno="";
+        if(isset($row)){
+        $bothno = $row["toll_booth_number"];
+        }   
+        if($toll_booth_no==$bothno){
+            echo "<script>alert('exist already')</script>";
+        }
+        else{
+            $q="INSERT INTO `tbl_toll_booth_no`(`toll_booth_id`, `toll_booth_number`) VALUES ('','$toll_booth_no')";
+
+            $res=mysqli_query($con,$q);
+
+            if($res){
+                 echo "<script>alert('Inserted successfully')</script>";
+            }
+
+        }
+
+        
+    }
     
 ?>

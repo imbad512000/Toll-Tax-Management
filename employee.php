@@ -120,85 +120,7 @@
                                 </div> <!-- end col -->
                             </div><br><br>
                             <?php
-				// if(isset($_REQUEST['dob2']))
-				// {
-
-				// 	$con = mysqli_connect("localhost","root","","start");
-				// 	// if($con){
-				// 	// 	echo "con";
-				// 	// }else
-				// 	// {
-				// 	// 	echo "not";
-                //     // }
-
-               
-
-
-				// 	$name=$_REQUEST['fname'];
-				// 	$lname=$_REQUEST['lname'];
-				// 	$gender=$_REQUEST['gender'];
-				// 	$email=$_REQUEST['email'];
-				// 	$password=$_REQUEST['pass'];
-				// 	$repeat_password=$_REQUEST['repass'];
-				// 	$contact=$_REQUEST['phno'];
-				// 	$DOB=$_REQUEST['dob'];
-				// 	$aadhar=$_REQUEST['aadhar'];
-
 				
-                // $q="INSERT INTO `tbl_employee_registration`(`emp_reg_id`, `emp_reg_first_name`, `emp_reg_last_name`, `emp_reg_gender`, `emp_reg_email`, `emp_reg_password`, `emp_reg_contact_num`, `emp_reg_DOB`, `emp_aadharcard_number`) VALUES ('','$name','$lname','$gender','$email','$password','$contact','$DOB','$aadhar')";
-                    
-                // $emailErr="";
-
-                // if (empty($_REQUEST['email'])) {
-                //     $emailErr = "Email is required";
-                //   } else {
-                //     $email = ($_REQUEST['email']);
-                //     // check if e-mail address is well-formed
-                //     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                //       $emailErr = "Invalid email format";
-                //     }
-                //   }
-
-                // // if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-                // //     $emailErr = "Invalid email format"; 
-                // // }
-                    
-                //     // print_r($_REQUEST);
-				// 	$res=mysqli_query($con,$q); 
-
-				// 		if($res)
-				// 		{
-                            //  $msg = "Hey $name $lname ,
-
-                            // From now on You're ready to login into your Toll Account and Modify your account.
-                            // With this Account You can access your account for toll receipt and pass management..
-                            // ";
-							//  //recipient email here
-							// $rec = "$email";
-							//  //send 
-							// $sub="Registration Confirmation";
-                            
-                            // if(mail($rec,$sub,$msg)){
-                            //     echo "Send";
-                            // }else{
-                            //     echo "not";
-                            // }
-                            
-
-
-							// // echo "Registered";
-
-
-				// 			header('location: final_login.php');
-				// 		}
-				// 		else
-				// 		{
-				// 			echo "Error";
-                //         }
-                        
-                //     ob_flush();
-
-                // 	}
                 
 
                 if(isset($_REQUEST['dob2']))
@@ -215,6 +137,8 @@
 
                     $data = $_SESSION["Emp_data"];
                     $_SESSION["emp_id"]=$data["login_Referance_id"];
+
+                    
 
 
                     $name=$_REQUEST['fname'];
