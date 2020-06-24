@@ -147,7 +147,7 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
         <!--End sidebar-wrapper-->
 
         <!--Start topbar header-->
-        <!-- <header class="topbar-nav">
+        <header class="topbar-nav">
             <nav id="header-setting" class="navbar navbar-expand fixed-top" style="height: 80px;">
                 <ul class="navbar-nav mr-auto align-items-center">
                     <li class="nav-item">
@@ -193,7 +193,7 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
                     </li>
                 </ul>
             </nav>
-        </header> -->
+        </header>
         <!--End topbar header-->
 
         <div class="clearfix"></div>
