@@ -5,12 +5,17 @@
 
 	$q = "SELECT * FROM `tbl_vehicle_category`";
 	$run = mysqli_query($con,$q); 
-	echo "<select name='type_of_vehicle' class=
-	'form-control'>";
+	echo "<select id='vt' onchange='taxamount()' name='type_of_vehicle' class=
+    'form-control'>";
+     ?>
+        <option data-style="btn-light">
+            Select Vehicle Type
+        </option>
+    <?php
 	while ($data = mysqli_fetch_assoc($run)) 
     {
     	?>e
-<option data-style="btn-light" value="<?php echo $data["vehicle_type"]?>">
+<option data-style="btn-light"  value="<?php echo $data["vehicle_type"];?>">
     <?php echo $data["vehicle_type"]; ?>
 </option>
 <?php

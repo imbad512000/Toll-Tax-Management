@@ -221,8 +221,7 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
 
                                         <div class="form-group mb-3">
                                             <label for="password">Toll booth name</label>
-                                            <input class="form-control"  type="text" name="tbname" required=""
-                                                placeholder="Enter your Holder Name" minlength="3" maxlength="15">
+                                            <input class="form-control"  type="text" id="toll_plaza" value="Bhatia Toll Plaza" name="tbname">
                                         </div>
 
                                         <!-- <div class="form-group mb-3">
@@ -247,13 +246,12 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
 
                                         <div class="form-group mb-3">
                                             <label for="password">Toll Employee Name</label>
-                                            <input class="form-control" type="text" name="empname" required="" value="<?php echo $empname; ?>"
-                                                placeholder="Enter your Holder Name" minlength="3" maxlength="15">
+                                            <input class="form-control" type="text" id="employee_name" name="empname"  value="<?php echo $empname; ?>">
                                         </div>
 
                                         <div class="form-group mb-3">
                                             <label for="password">Toll Receipt Date</label>
-                                            <input class="form-control" type="date" value="<?php echo $datefun;?>" min="2020-01-01" max="2020-12-31">
+                                            <input class="form-control" type="date" name="pdate" value="<?php echo $datefun;?>" min="2020-01-01" max="2020-12-31">
                                         </div>
 
                                         <div class="form-group mb-3">
@@ -272,9 +270,9 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
                                             <label for="inputEmail3" class="col-5 col-form-label">Type of Journey<span
                                                     class="text-danger"></span></label>
                                             <div class="">
-                                                <select class="form-control" name="type_of_journey"
+                                                <select class="form-control" id="tj" onchange='taxamount()' name="type_of_journey"
                                                     data-style="btn-light">
-                                                    <!-- <option>Select Journey Type</option> -->
+                                                    <option>Select Journey Type</option>
                                                     <option value="Single">Single</option>
                                                     <option value="Return">Return</option>
                                                     <!-- <option value="B">Bus</option> -->
@@ -298,8 +296,7 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
 
                                         <div class="form-group mb-3">
                                             <label for="password">Tax Amount</label>
-                                            <input class="form-control" type="Number" name="tamount" required=""
-                                                min="0">
+                                            <input class="form-control"  type="Number" name="tamount" id="txam">
                                         </div>
 
                                         <!-- <input type="hidden" id="hash" name="hash" placeholder="Hash" value="" /> -->
@@ -383,6 +380,21 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
                         document.getElementById("vtype").innerHTML = xmthttp.responseText;
                         // alert(xmthttp.responseText);
                     }
+
+                     function taxamount() {
+                        //  alert(document.getElementById("vt").value);
+                        var xmthttp = new XMLHttpRequest();
+                        xmthttp.open("GET", "taxamount.php?vct="+document.getElementById("vt").value+"&tj="+document.getElementById("tj").value, false);
+                        xmthttp.send(null);
+                        document.getElementById("txam").value = xmthttp.responseText;
+                        // alert(xmthttp.responseText);
+                    }
+
+                    document.getElementById("toll_plaza").readOnly=true;
+                    document.getElementById("employee_name").readOnly=true;
+                    document.getElementById("txam").readOnly=true;
+                    
+
                     </script>
                     <!-- Index js -->
                     <script src="assets2/js/index.js"></script>
@@ -410,8 +422,8 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
       $Vehicle_no=$_REQUEST['vno'];
       $Tax_amount=$_REQUEST['tamount'];
  
-
-    //   print_r($_REQUEST);
+ 
+      print_r($_REQUEST);
 
 
     $result1 = mysqli_query($con,"INSERT INTO `tbl_toll_receipt_details` VALUES ('','$toll_booth','$toll_booth_no_1','$toll_emp_name_1','$receipt_date','$toll_receipt_time','$vehcile_category','$type_journey','$Vehicle_no','$Tax_amount')") ;
@@ -423,12 +435,12 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
     // echo("Errorcode: " . mysqli_errno($con));
     // }
 
-      if($result1){
-        header("location: search_receipt.php");
-      }
-      else{
-        echo "<script>alert('Error in Query')</script>";
-      }
+    //   if($result1){
+    //     header("location: search_receipt.php");
+    //   }
+    //   else{
+    //     echo "<script>alert('Error in Query')</script>";
+    //   }
 
 
     }
