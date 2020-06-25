@@ -423,7 +423,7 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
       $Tax_amount=$_REQUEST['tamount'];
  
  
-      print_r($_REQUEST);
+    //   print_r($_REQUEST);
 
 
     $result1 = mysqli_query($con,"INSERT INTO `tbl_toll_receipt_details` VALUES ('','$toll_booth','$toll_booth_no_1','$toll_emp_name_1','$receipt_date','$toll_receipt_time','$vehcile_category','$type_journey','$Vehicle_no','$Tax_amount')") ;
@@ -435,12 +435,12 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
     // echo("Errorcode: " . mysqli_errno($con));
     // }
 
-    //   if($result1){
-    //     header("location: search_receipt.php");
-    //   }
-    //   else{
-    //     echo "<script>alert('Error in Query')</script>";
-    //   }
+      if($result1){
+        header("location: search_receipt.php");
+      }
+      else{
+        echo "<script>alert('Error in Query')</script>";
+      }
 
 
     }
