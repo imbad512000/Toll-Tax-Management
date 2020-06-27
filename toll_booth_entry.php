@@ -118,7 +118,7 @@
             </li>
 
             <li>
-                <a href="Customer_detail.php" class="waves-effect">
+                <a href="toll_booth_entry.php" class="waves-effect">
                     <i class="zmdi zmdi-card-travel"></i> <span>New booth Entry</span>
                 </a>
             </li>
@@ -163,13 +163,13 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="dropdown-divider"></li>
+                        <!-- <li class="dropdown-divider"></li>
                         <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li>
                         <li class="dropdown-divider"></li>
                         <li class="dropdown-item"><i class="icon-wallet mr-2"></i> Account</li>
                         <li class="dropdown-divider"></li>
                         <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
-                        <li class="dropdown-divider"></li>
+                        <li class="dropdown-divider"></li> -->
                         <li class="dropdown-item"><a href="index.php"><i class="icon-power mr-2"></i> Logout</li></a>
                     </ul>
                 </li>

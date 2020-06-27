@@ -118,6 +118,14 @@
 
                     </a>
 
+                    </li>
+
+                <li>
+                    <a href="toll_booth_entry.php" class="waves-effect">
+                        <i class="zmdi zmdi-card-travel"></i> <span>New booth Entry</span>
+                    </a>
+                </li>
+
         
         </div>
         <!--End sidebar-wrapper-->
@@ -160,7 +168,7 @@
                                 </a>
                             </li>
                           
-                            <li class="dropdown-item"><i class="icon-wallet mr-2"></i> Account</li>
+                            <!-- <li class="dropdown-item"><i class="icon-wallet mr-2"></i> Account</li> -->
                             <li class="dropdown-divider"></li>
                             
                             <li class="dropdown-item"><a href="index.php"><i class="icon-power mr-2"></i> Logout</li></a>

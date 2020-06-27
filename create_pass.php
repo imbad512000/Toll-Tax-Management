@@ -2,6 +2,8 @@
   ob_start();  
   session_start();
   $con=mysqli_connect("localhost","root","","start");
+  ?>
+  <?php
 
       if(strcasecmp($_SERVER['REQUEST_METHOD'], 'POST') == 0){
         //Request hash
@@ -22,6 +24,10 @@
         $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
         return $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] . 'response.php';
     }
+
+    date_default_timezone_set("Asia/Kolkata");
+    $datefun= date("Y-m-d");
+    $timefun= date("h:i");
 
 ?>
 
@@ -192,7 +198,7 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-8 col-lg-6 col-xl-5">
-                            <div class="card" style="height: 1060px; width: 450px;">
+                            <div class="card" style="height: 1160px; width: 450px;">
 
                                 <div class="card-body p-4">
 
@@ -213,7 +219,7 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
 
                                     <input type="hidden" id="txnid" name="txnid" placeholder="Transaction ID" value="<?php echo  "Toll".rand(10000,99999999)?>" />
 
-                                    <input type="hidden" id="email" name="email" placeholder="Transaction ID" value="man@gmail.com"/>
+                                    <input type="hidden" id="email" name="email" placeholder="Transaction ID" value="17bmiit049@gmail.com"/>
 
                                         <div class="form-group mb-3">
                                             <label for="password">Pass Holder Name</label>
@@ -229,19 +235,19 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
 
                                         <div class="form-group mb-3">
                                             <label for="password">Pass Date</label>
-                                            <input class="form-control" type="date" name="pdate" required="">
+                                            <input class="form-control" type="date" id="pdate" name="pdate" value="<?php echo $datefun;?>"  readonly required="">
                                         </div>
 
                                         <div class="form-group mb-3">
                                             <label for="password">Pass Time</label>
-                                            <input class="form-control" type="Time" name="ptime">
+                                            <input class="form-control" type="Time" name="ptime" value="<?php echo $timefun;?>" readonly>
                                         </div>
 
                                         <div class="form-group mb-3">
                                             <label for="inputEmail3" class="col-5 col-form-label">Type of Journey<span
                                                     class="text-danger"></span></label>
                                             <div class="">
-                                                <select class="form-control" name="type_of_vehicle_1"
+                                                <select class="form-control" id="tj" onchange="taxamount()" name="type_of_vehicle_1"
                                                     data-style="btn-light">
                                                     <!-- <option>Select Journey Type</option> -->
                                                     <option value="sin">Single</option>
@@ -272,15 +278,31 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
                                         </div>
 
                                         <div class="form-group mb-3">
+                                            <label for="inputEmail3" class="col-5 col-form-label">Pass Duration<span
+                                                    class="text-danger"></span></label>
+                                            <div class="">
+                                                <select class="form-control" id="duration"  onchange="taxamount()" name="duration"
+                                                    data-style="btn-light">
+                                                    <option>Select Duration</option>
+                                                    <option value="1 month">1 month</option>
+                                                    <option value="3 month">3 month</option>
+                                                    <option value="6 month">6 month</option>
+                                                    <option value="1 year">Valid for Year</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="form-group mb-3">
                                             <label for="password">Exipry Date</label>
-                                            <input class="form-control" type="date" name="edate" required="">
+                                            <input class="form-control" id="pass_date" type="date" onclick="dateset()" name="edate" required="">
                                         </div>
 
 
                                         <div class="form-group mb-3">
                                             <label for="password">Tax Amount</label>
-                                            <input class="form-control" type="Number" id="amount" name="amount" required=""
-                                                min="0">
+                                            <input class="form-control" type="Number" id="amount" name="amount" required readonly>
                                         </div>
 
                                         <input type="hidden" id="hash" name="hash" placeholder="Hash" value="" />
@@ -364,6 +386,31 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
                         document.getElementById("vtype").innerHTML = xmthttp.responseText;
                         // alert(xmthttp.responseText);
                     }
+
+                    function taxamount() {
+                        //  alert(document.getElementById("vt").value);
+                        var xmthttp = new XMLHttpRequest();
+                        xmthttp.open("GET", "pass_taxamount.php?vct="+document.getElementById("vt").value+"&tj="+document.getElementById("tj").value+"&duration="+document.getElementById("duration").value, false);
+                        xmthttp.send(null);
+                        document.getElementById("amount").value = xmthttp.responseText;
+                        // alert(xmthttp.responseText);
+                    }
+
+                    function dateset() {
+                        //  alert(document.getElementById("vt").value);
+                        var xmthttp = new XMLHttpRequest();
+                        xmthttp.open("GET", "dateset.php?pdate="+document.getElementById("pdate").value+"&duration="+document.getElementById("duration").value, false);
+                        xmthttp.send(null);
+                        document.getElementById("pass_date").value = xmthttp.responseText;
+                        document.getElementById("pass_date").readOnly=true;
+
+                        // alert(xmthttp.responseText);
+                        
+                    }   
+
+                    // document.getElementById("").readOnly=true;
+                    // document.getElementById("fname").readOnly=true;
+                    // document.getElementById("amount").readOnly=true; 
                     </script>
                     <!-- Index js -->
                     <script src="assets2/js/index.js"></script>

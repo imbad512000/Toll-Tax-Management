@@ -26,6 +26,10 @@
         return $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] . 'sus.php';
     }
 
+    date_default_timezone_set("Asia/Kolkata");
+    $datefun= date("Y-m-d");
+    $timefun= date("h:i");
+
 ?>
 
 <!DOCTYPE html>
@@ -220,19 +224,19 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
 
                                         <div class="form-group mb-3">
                                             <label for="password">Pass Date</label>
-                                            <input class="form-control" type="date" name="pdate" required="">
+                                            <input class="form-control" type="date" name="pdate" value="<?php echo $datefun;?>" readonly required="">
                                         </div>
 
                                         <div class="form-group mb-3">
                                             <label for="password">Pass Time</label>
-                                            <input class="form-control" type="Time" name="ptime">
+                                            <input class="form-control" type="Time" value="<?php echo $timefun;?>" readonly name="ptime">
                                         </div>
 
                                         <div class="form-group mb-3">
                                             <label for="inputEmail3" class="col-5 col-form-label">Type of Journey<span
                                                     class="text-danger"></span></label>
                                             <div class="">
-                                                <select class="form-control" name="type_of_vehicle_1"
+                                                <select class="form-control" id="tj" onchange="taxamount()" name="type_of_vehicle_1"
                                                     data-style="btn-light">
                                                     <!-- <option>Select Journey Type</option> -->
                                                     <option value="sin">Single</option>
@@ -263,8 +267,23 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
                                         </div>
 
                                         <div class="form-group mb-3">
+                                            <label for="inputEmail3" class="col-5 col-form-label">Pass Duration<span
+                                                    class="text-danger"></span></label>
+                                            <div class="">
+                                                <select class="form-control" id="duration"  onchange="taxamount()" name="duration"
+                                                    data-style="btn-light">
+                                                    <option>Select Duration</option>
+                                                    <option value="1 month">1 month</option>
+                                                    <option value="3 month">3 month</option>
+                                                    <option value="6 month">6 month</option>
+                                                    <option value="1 year">Valid for Year</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group mb-3">
                                             <label for="password">Exipry Date</label>
-                                            <input class="form-control" type="date" name="edate" required="">
+                                            <input class="form-control"  id="pass_date" type="date" onclick="dateset()" required="" readonly>
                                         </div>
 
 
@@ -355,6 +374,28 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
                         document.getElementById("vtype").innerHTML = xmthttp.responseText;
                         // alert(xmthttp.responseText);
                     }
+
+                    function taxamount() {
+                        //  alert(document.getElementById("vt").value);
+                        var xmthttp = new XMLHttpRequest();
+                        xmthttp.open("GET", "pass_taxamount.php?vct="+document.getElementById("vt").value+"&tj="+document.getElementById("tj").value+"&duration="+document.getElementById("duration").value, false);
+                        xmthttp.send(null);
+                        document.getElementById("amount").value = xmthttp.responseText;
+                        // alert(xmthttp.responseText);
+                    }
+
+                    function dateset() {
+                        //  alert(document.getElementById("vt").value);
+                        var xmthttp = new XMLHttpRequest();
+                        xmthttp.open("GET", "dateset.php?pdate="+document.getElementById("pdate").value+"&duration="+document.getElementById("duration").value, false);
+                        xmthttp.send(null);
+                        document.getElementById("pass_date").value = xmthttp.responseText;
+                        document.getElementById("pass_date").readOnly=true;
+
+                        // alert(xmthttp.responseText);
+                        
+                    }
+                    
                     </script>
                     <!-- Index js -->
                     <script src="assets2/js/index.js"></script>

@@ -17,7 +17,7 @@ $lid = $data["login_Referance_id"];
 
     // print_r($data1);
 
-    $empname=$data1['emp_reg_first_name']." ".$data1['emp_reg_last_name'];
+    $fname=$data1['emp_reg_first_name']." ".$data1['emp_reg_last_name'];
 
   
 
@@ -246,17 +246,17 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
 
                                         <div class="form-group mb-3">
                                             <label for="password">Toll Employee Name</label>
-                                            <input class="form-control" type="text" id="employee_name" name="empname"  value="<?php echo $empname; ?>">
+                                            <input class="form-control" type="text" id="fname" name="fname"  value="<?php echo $fname; ?>">
                                         </div>
 
                                         <div class="form-group mb-3">
                                             <label for="password">Toll Receipt Date</label>
-                                            <input class="form-control" type="date" name="pdate" value="<?php echo $datefun;?>" min="2020-01-01" max="2020-12-31">
+                                            <input class="form-control" type="date" name="pdate" value="<?php echo $datefun;?>" readonly>
                                         </div>
 
                                         <div class="form-group mb-3">
                                             <label for="password">Toll Receipt Time</label>
-                                            <input class="form-control" type="text" value="<?php echo $timefun;?>" name="ptime">
+                                            <input class="form-control" type="text" value="<?php echo $timefun;?>" name="ptime" readonly>
                                         </div>
 
                                         <div class="form-group mb-3">
@@ -289,14 +289,14 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
 
                                         <div class="form-group mb-3">
                                             <label for="password">Vehicle Number</label>
-                                            <input class="form-control" id="pinfo" type="text" name="vno" required="" 
+                                            <input class="form-control" id="pinfo" type="text" name="pinfo" required="" 
                                                  placeholder="Enter your Vehicle Number" pattern="^[A-Z]{2}[ -][0-9]{1,2}(?: [A-Z])?(?: [A-Z]*)? [0-9]{4}$">
                                         </div>
 
 
                                         <div class="form-group mb-3">
                                             <label for="password">Tax Amount</label>
-                                            <input class="form-control"  type="Number" name="tamount" id="txam">
+                                            <input class="form-control" id="amount" name="amount" type="Number">
                                         </div>
 
                                         <!-- <input type="hidden" id="hash" name="hash" placeholder="Hash" value="" /> -->
@@ -386,13 +386,13 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
                         var xmthttp = new XMLHttpRequest();
                         xmthttp.open("GET", "taxamount.php?vct="+document.getElementById("vt").value+"&tj="+document.getElementById("tj").value, false);
                         xmthttp.send(null);
-                        document.getElementById("txam").value = xmthttp.responseText;
+                        document.getElementById("amount").value = xmthttp.responseText;
                         // alert(xmthttp.responseText);
                     }
 
                     document.getElementById("toll_plaza").readOnly=true;
-                    document.getElementById("employee_name").readOnly=true;
-                    document.getElementById("txam").readOnly=true;
+                    document.getElementById("fname").readOnly=true;
+                    document.getElementById("amount").readOnly=true;
                     
 
                     </script>
@@ -414,13 +414,13 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
       // $toll_id=$_REQEST['id'];
       $toll_booth=$_REQUEST['tbname'];
       $toll_booth_no_1=$_REQUEST['booth'];
-      $toll_emp_name_1=$_REQUEST['empname'];
+      $toll_emp_name_1=$_REQUEST['fname'];
       $receipt_date=$_REQUEST['pdate'];
       $toll_receipt_time=$_REQUEST['ptime'];
       $vehcile_category=$_REQUEST['type_of_vehicle'];
       $type_journey=$_REQUEST['type_of_journey'];
-      $Vehicle_no=$_REQUEST['vno'];
-      $Tax_amount=$_REQUEST['tamount'];
+      $Vehicle_no=$_REQUEST['pinfo'];
+      $Tax_amount=$_REQUEST['amount'];
  
  
     //   print_r($_REQUEST);
